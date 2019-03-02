@@ -104,6 +104,9 @@
 //     }
 //   }
 // }
+a {
+  text-decoration: none;
+}
 .nav-bar-wrapper{
   display: flex;
   height: 90px;
@@ -182,13 +185,13 @@
   display: flex;
   flex-direction: column;
   width: 330px;
-  color:#eae5dc;
+  color:#e6d6ba;
   text-align: left;
 }
 .titulo-opcion-footer{
   font-family: 'Strait', sans-serif;
   margin-bottom: 30px;
-  color:#eae5dc;
+  color:#e6d6ba;
   text-align: left;
 }
 .footer-margen{
@@ -198,14 +201,14 @@
 .terminos{
   display: flex;
   margin-top: 30px;
-  color:#eae5dc;
+  color:#e6d6ba;
   font-family: 'Strait', sans-serif;
 }
 .politicas{
   display: flex;
   margin-top: 35px;
   margin-bottom:44px;
-  color:#eae5dc;
+  color:#e6d6ba;
   font-family: 'Strait', sans-serif;
 }
 .mapa-footer{
@@ -215,5 +218,24 @@
   margin-top:5px;
   width: 450px;
   height: auto;
+}
+.redes-sociales{
+  display: flex;
+  font-size: 25px;
+  margin-right: 30px;
+  margin-top: 20px;
+  color: #e6d6ba;
+}
+.instagram{
+  margin-left:50px;
+  color:#e6d6ba;
+}
+.footer-link{
+  color: #e6d6ba;
+}
+.logo-cart {
+    color: #e6d6ba;
+    margin-left: 25px;
+    margin-right: 6px;
 }
 </style>

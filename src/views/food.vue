@@ -551,8 +551,12 @@
     align-items: center;
   }
   .conoce-container{
-    width: 200px;
-    height: 200px;
+    width: auto;
+    height: 174px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
   }
   .week-wrapper{
     display: flex;
@@ -629,6 +633,7 @@
   .img-alimentos{
     width: 200px;
     height: 200px;
+    border-radius: 50%;
   }
   .alimento-titulo{
     text-align: center;
