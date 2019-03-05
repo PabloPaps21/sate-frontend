@@ -1,5 +1,9 @@
 <template>
   <div class="envolver">
+    <div class="about-wrapper">
+    <div class="about img-about" style="background-image:url('/food-hero3.jpg')">
+    </div>
+  </div>
     <div class="iconos-wrapper">
       <div class="iconos">
         <div class="eleccion-icono">
@@ -37,12 +41,12 @@
               para crear una experiencia sublime.</p>
           </div>
         </div>
-        <div class="img-grid con-grid" style="background-image:url('/estilismo.jpg')">paps</div>
+        <div class="img-grid con-grid" style="background-image:url('/estilismo.jpg')"></div>
       </div>
     </div>
     <div class="grid-wrapper">
       <div class="grid">
-        <div class="img-grid con-grid" style="background-image:url('/temp2.jpg')">paps</div>
+        <div class="img-grid con-grid" style="background-image:url('/temp2.jpg')"></div>
         <div class="texto-grid-der">
           <div class="texto-titulo-grid">
             Viajes Gastronómicos
@@ -69,6 +73,25 @@
   </div>
 </template>
 <style lang="scss">
+.about-wrapper{
+    display: flex;
+    width: 100%;
+    background-color: #eae5dc;
+    justify-content: center;
+  }
+  .about{
+    display: flex;
+    width: 900px;
+    height: 630px;
+  }
+  .img-about{
+    width: 100%;
+    height: 602px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative;
+  }
   .iconos-wrapper{
   display: flex;
   width: 100%;
@@ -78,12 +101,13 @@
   .iconos{
     display: flex;
     width:900px;
+    margin-bottom:16px;
     margin-top: 50px;
     justify-content: space-between;
   }
   .img-icono{
     height: auto;
-    width: 200px;
+    width: 100px;
   }
   .eleccion-icono{
     display: flex;
@@ -95,7 +119,8 @@
   .titulo-icono{
     text-align: center;
     font-family: 'Strait', sans-serif;
-    font-size: 40px;
+    font-size: 20px;
+    margin-top: 10px;
     color: #3e4e35;
   }
   .grid-wrapper{
@@ -128,6 +153,14 @@
   }
   .imagen-grid{
     width: 50%;
+  }
+  .img-grid{
+    height: 460px;
+    width:450px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
   }
   .texto-titulo-grid{
     font-family: 'Strait', sans-serif;

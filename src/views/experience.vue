@@ -1,8 +1,7 @@
 <template>
   <div class="envolver">
-    <div class="video-wrapper">
-      <div class="video">
-        <!-- video full -->
+    <div class="about-wrapper">
+      <div class="about img-about" style="background-image:url('/food-hero3.jpg')">
       </div>
     </div>
     <div class="cita-wrapper" style="background-image:url('/kraft.jpg')">
@@ -82,12 +81,12 @@
               para crear una experiencia sublime.</p>
           </div>
         </div>
-        <div class="img-grid con-grid" style="background-image:url('/experiencias.jpg')">paps</div>
+        <div class="img-grid con-grid" style="background-image:url('/experiencias.jpg')"></div>
       </div>
     </div>
     <div class="grid-wrapper">
       <div class="grid">
-        <div class="img-grid con-grid" style="background-image:url('/cheff.jpg')">paps</div>
+        <div class="img-grid con-grid" style="background-image:url('/cheff.jpg')"></div>
         <div class="texto-grid-der">
           <div class="texto-titulo-grid">
             Viajes Gastronómicos
@@ -132,12 +131,12 @@
               preparar en minutos.</p>
           </div>
         </div>
-        <div class="img-grid con-grid" style="background-image:url('/temp1.jpg')">paps</div>
+        <div class="img-grid con-grid" style="background-image:url('/temp1.jpg')"></div>
       </div>
     </div>
     <div class="grid-wrapper">
       <div class="grid">
-        <div class="img-grid con-grid" style="background-image:url('/catering3.jpg')">paps</div>
+        <div class="img-grid con-grid" style="background-image:url('/catering3.jpg')"></div>
         <div class="texto-grid-der">
           <div class="texto-titulo-grid">
             Catering
@@ -172,6 +171,25 @@
   </div>
 </template>
 <style lang="scss">
+.about-wrapper{
+    display: flex;
+    width: 100%;
+    background-color: #eae5dc;
+    justify-content: center;
+  }
+  .about{
+    display: flex;
+    width: 900px;
+    height: 630px;
+  }
+  .img-about{
+    width: 100%;
+    height: 602px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative;
+  }
   .cita-wrapper{
     display: flex;
     width: 100%;
@@ -211,11 +229,12 @@
     display: flex;
     width:900px;
     margin-top: 50px;
+    margin-bottom: 16px;
     justify-content: space-between;
   }
   .img-exp{
     height: auto;
-    width: 115px;
+    width: 70px;
   }
   .exp-icono{
     display: flex;
@@ -229,6 +248,7 @@
     font-family: 'Strait', sans-serif;
     font-size: 20px;
     color: #3e4e35;
+    margin-top: 10px;
   }
   .grid-wrapper{
   display: flex;
@@ -257,6 +277,15 @@
     /* align-items: center; */
     width: 50%;
     margin-left: 20px;
+  }
+  .img-grid{
+    display:flex;
+    height: 460px;
+    width:450px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
   }
   .imagen-grid{
     width: 50%;
