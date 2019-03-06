@@ -1,5 +1,9 @@
 <template>
   <div class="envolver">
+    <div class="about-wrapper">
+    <div class="about img-about" style="background-image:url('/food-hero3.jpg')">
+    </div>
+  </div>
     <div class="iconos-wrapper">
       <div class="iconos">
         <div class="eleccion-icono">
@@ -20,21 +24,23 @@
       <div class="grid">
         <div class="texto-grid">
           <div class="texto-titulo-grid">
-            Experiencias Multisensoriales
+            Asesorias
           </div>
           <div class="descripcion-grid">
-            <p>Comer es un proceso mucho más complejo que
-              simplemente degustar con nuestra boca.
-              Inconscientemente todos nuestros sentidos
-              están activos al comer e influyen mucho
-              más de lo que creemos.</p>
-            <p style="margin-top:20px;">Queremos invitarte a percibir la comida
-              como nunca antes. Pondremos en juego
-              tus sentidos para que redescubras
-              como están entrelazados e influyen
-              (cada uno de ellos) en nuestra percepción.
-              Texturas, colores, sonidos y sabores se combinarán
-              para crear una experiencia sublime.</p>
+            <p>En SATÉ contamos con profesionales de la más alta calificación
+              para ayudarte a realizar tus proyectos. Acércate a nosotros para
+              poder orientarte en los siguientes servicios:</p>
+            <p style="margin-top:20px;">
+              <ul>
+                <li><i class="fas fa-dot-circle"></i>  Creación de recetas</li>
+                <li><i class="fas fa-dot-circle"></i> Desarrollo de menús</li>
+                <li><i class="fas fa-dot-circle"></i> Campañas publicitarias</li>
+                <li><i class="fas fa-dot-circle"></i> Fotografía de Alimentos</li>
+                <li><i class="fas fa-dot-circle"></i> Diseño gráfico</li>
+                <li><i class="fas fa-dot-circle"></i> Asesoría para restaurantes</li>
+                <li><i class="fas fa-dot-circle"></i> Capacitación para personal</li>
+              </ul>
+            </p>
           </div>
         </div>
         <div class="img-grid con-grid" style="background-image:url('/estilismo.jpg')"></div>
@@ -48,23 +54,13 @@
             Viajes Gastronómicos
           </div>
           <div class="descripcion-grid">
-            <p>
-              Una de las mejores maneras para
-              conocer un país es a través de su
-              comida por lo que SATÉ organiza y
-              diseña viajes culinarios en varias
-              partes del mundo. A través de su
-              gastronomía podrás conocer a profundidad
-              la historia y riqueza cultural que ofrecen.
-            </p>
-            <p style="margin-top:20px;">
-              Nos adentraremos en mercados locales para descubrir
-              sus ingredientes nativos, exploraremos todas
-              sus facetas culinarias para develar su esencia,
-              desde la comida callejera hasta restaurantes de
-              gran nivel. Así mismo conoceremos cocineros locales
-              que nos mostraran nuevos platillos y técnicas culinarias.
-            </p>
+            <p>Dentro de la gama de servicios en SATÉ,
+              ofrecemos estilismo de alimentos que consiste
+              en presentar la comida de manera armónica y
+              atractiva. Dicha presentación tiene varios
+              objetivos, como lo son: fotografía para empaques,
+              medios publicitarios y editoriales así como videos
+              promocionales dentro de la industria de la gastronomía.</p>
           </div>
         </div>
       </div>
@@ -81,12 +77,13 @@
   .iconos {
     display: flex;
     width:900px;
+    margin-bottom:16px;
     margin-top: 50px;
     justify-content: space-between;
   }
   .img-icono {
     height: auto;
-    width: 200px;
+    width: 100px;
   }
   .eleccion-icono {
     display: flex;
@@ -98,7 +95,8 @@
   .titulo-icono {
     text-align: center;
     font-family: 'Strait', sans-serif;
-    font-size: 40px;
+    font-size: 20px;
+    margin-top: 10px;
     color: #3e4e35;
   }
   .grid-wrapper {

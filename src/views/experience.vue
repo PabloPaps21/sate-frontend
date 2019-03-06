@@ -1,8 +1,7 @@
 <template>
   <div class="envolver">
-    <div class="video-wrapper">
-      <div class="video">
-        <!-- video full -->
+    <div class="about-wrapper">
+      <div class="about img-about" style="background-image:url('/food-hero3.jpg')">
       </div>
     </div>
     <div class="cita-wrapper" style="background-image:url('/kraft.jpg')">
@@ -211,11 +210,12 @@
     display: flex;
     width:900px;
     margin-top: 50px;
+    margin-bottom: 16px;
     justify-content: space-between;
   }
   .img-exp {
     height: auto;
-    width: 115px;
+    width: 70px;
   }
   .exp-icono {
     display: flex;
@@ -229,6 +229,7 @@
     font-family: 'Strait', sans-serif;
     font-size: 20px;
     color: #3e4e35;
+    margin-top: 10px;
   }
   .grid-wrapper {
     display: flex;
