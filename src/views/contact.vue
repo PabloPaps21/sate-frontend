@@ -44,7 +44,7 @@
   </div>
 </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
   .contactanos-wrapper{
     display: flex;
     width: 100%;

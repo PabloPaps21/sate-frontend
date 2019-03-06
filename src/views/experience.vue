@@ -82,12 +82,12 @@
               para crear una experiencia sublime.</p>
           </div>
         </div>
-        <div class="img-grid con-grid" style="background-image:url('/experiencias.jpg')">paps</div>
+        <div class="img-grid con-grid" style="background-image:url('/experiencias.jpg')"></div>
       </div>
     </div>
     <div class="grid-wrapper">
       <div class="grid">
-        <div class="img-grid con-grid" style="background-image:url('/cheff.jpg')">paps</div>
+        <div class="img-grid con-grid" style="background-image:url('/cheff.jpg')"></div>
         <div class="texto-grid-der">
           <div class="texto-titulo-grid">
             Viajes Gastronómicos
@@ -132,12 +132,12 @@
               preparar en minutos.</p>
           </div>
         </div>
-        <div class="img-grid con-grid" style="background-image:url('/temp1.jpg')">paps</div>
+        <div class="img-grid con-grid" style="background-image:url('/temp1.jpg')"></div>
       </div>
     </div>
     <div class="grid-wrapper">
       <div class="grid">
-        <div class="img-grid con-grid" style="background-image:url('/catering3.jpg')">paps</div>
+        <div class="img-grid con-grid" style="background-image:url('/catering3.jpg')"></div>
         <div class="texto-grid-der">
           <div class="texto-titulo-grid">
             Catering
@@ -171,86 +171,86 @@
     </div>
   </div>
 </template>
-<style lang="scss">
-  .cita-wrapper{
+<style lang="scss" scoped>
+  .cita-wrapper {
     display: flex;
     width: 100%;
     height: 500px;
     justify-content: center;
   }
-  .cita{
+  .cita {
     display: flex;
     width:900px;
     margin-top: 34px;
   }
-  .cita-texto{
+  .cita-texto {
     display: flex;
     flex-direction: column;
   }
-  .cita-texto p{
+  .cita-texto p {
     margin-top: 30px;
     font-family: 'Strait', sans-serif;
     font-size: 18px;
     line-height: 25px;
   }
-  .texto{
+  .texto {
     font-size: 20px;
   }
-  .ricardo{
+  .ricardo {
     font-size: 40px !important;
     font-family: kristi !important;
     font-weight: 600 !important;
   }
-  .exp-wrapper{
+  .exp-wrapper {
   display: flex;
   width: 100%;
   justify-content: center;
     background-color: #eae5dc;
   }
-  .exp{
+  .exp {
     display: flex;
     width:900px;
     margin-top: 50px;
     justify-content: space-between;
   }
-  .img-exp{
+  .img-exp {
     height: auto;
     width: 115px;
   }
-  .exp-icono{
+  .exp-icono {
     display: flex;
     width: 400px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .titulo-exp{
+  .titulo-exp {
     text-align: center;
     font-family: 'Strait', sans-serif;
     font-size: 20px;
     color: #3e4e35;
   }
-  .grid-wrapper{
-  display: flex;
-  width: 100%;
-  background-color: #eae5dc;
-  justify-content: center
+  .grid-wrapper {
+    display: flex;
+    width: 100%;
+    background-color: #eae5dc;
+    justify-content: center
   }
-  .grid{
+  .grid {
     display: flex;
     width: 900px;
     justify-content: center;
     margin-top: 40px;
     margin-bottom: 40px;
   }
-  .texto-grid{
+  .texto-grid {
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
     width: 50%;
   }
-  .texto-grid-der{
+  .texto-grid-der {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -258,41 +258,44 @@
     width: 50%;
     margin-left: 20px;
   }
-  .imagen-grid{
+  .img-grid {
     width: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  .texto-titulo-grid{
+  .texto-titulo-grid {
     font-family: 'Strait', sans-serif;
     font-size: 49px;
     margin-bottom: 20px;
   }
-  .descripcion-grid{
+  .descripcion-grid {
     font-family: 'Strait', sans-serif;
     font-size: 13px;
     line-height: 19px;
     padding: 20px;
     text-align: left;
   }
-  .banner-wrapper{
-  display: flex;
-  width: 100%;
-  height: 140px;
-  background-color: #403726;
-  justify-content: center;
-  align-items: center;
+  .banner-wrapper {
+    display: flex;
+    width: 100%;
+    height: 140px;
+    background-color: #403726;
+    justify-content: center;
+    align-items: center;
   }
-  .banner{
+  .banner {
     display: flex;
     width: 900px;
     color:#fff;
     justify-content: space-between;
     align-items: center;
   }
-  .texto-banner{
+  .texto-banner {
     font-size: 22px;
     font-family: 'Strait', sans-serif;
   }
-  .btn-contactanos{
+  .btn-contactanos {
     background-color: #403726;
     color: #fff;
     border: 2px solid #fff;

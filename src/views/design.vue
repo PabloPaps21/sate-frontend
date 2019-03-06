@@ -37,88 +37,91 @@
               para crear una experiencia sublime.</p>
           </div>
         </div>
-        <div class="img-grid con-grid" style="background-image:url('/estilismo.jpg')">paps</div>
+        <div class="img-grid con-grid" style="background-image:url('/estilismo.jpg')"></div>
       </div>
     </div>
     <div class="grid-wrapper">
       <div class="grid">
-        <div class="img-grid con-grid" style="background-image:url('/temp2.jpg')">paps</div>
+        <div class="img-grid con-grid" style="background-image:url('/temp2.jpg')"></div>
         <div class="texto-grid-der">
           <div class="texto-titulo-grid">
             Viajes Gastronómicos
           </div>
           <div class="descripcion-grid">
-            <p>Una de las mejores maneras para
+            <p>
+              Una de las mejores maneras para
               conocer un país es a través de su
               comida por lo que SATÉ organiza y
               diseña viajes culinarios en varias
               partes del mundo. A través de su
               gastronomía podrás conocer a profundidad
-              la historia y riqueza cultural que ofrecen.</p>
-              <p style="margin-top:20px;">Nos adentraremos
-                en mercados locales para descubrir sus
-                ingredientes nativos, exploraremos todas
-                sus facetas culinarias para develar su esencia,
-                desde la comida callejera hasta restaurantes de
-                gran nivel. Así mismo conoceremos cocineros locales
-                que nos mostraran nuevos platillos y técnicas culinarias.</p>
+              la historia y riqueza cultural que ofrecen.
+            </p>
+            <p style="margin-top:20px;">
+              Nos adentraremos en mercados locales para descubrir
+              sus ingredientes nativos, exploraremos todas
+              sus facetas culinarias para develar su esencia,
+              desde la comida callejera hasta restaurantes de
+              gran nivel. Así mismo conoceremos cocineros locales
+              que nos mostraran nuevos platillos y técnicas culinarias.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-<style lang="scss">
-  .iconos-wrapper{
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  background-color: #eae5dc;
+<style lang="scss" scoped>
+  .iconos-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #eae5dc;
   }
-  .iconos{
+  .iconos {
     display: flex;
     width:900px;
     margin-top: 50px;
     justify-content: space-between;
   }
-  .img-icono{
+  .img-icono {
     height: auto;
     width: 200px;
   }
-  .eleccion-icono{
+  .eleccion-icono {
     display: flex;
     width: 400px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .titulo-icono{
+  .titulo-icono {
     text-align: center;
     font-family: 'Strait', sans-serif;
     font-size: 40px;
     color: #3e4e35;
   }
-  .grid-wrapper{
-  display: flex;
-  width: 100%;
-  background-color: #eae5dc;
-  justify-content: center
+  .grid-wrapper {
+    display: flex;
+    width: 100%;
+    background-color: #eae5dc;
+    justify-content: center
   }
-  .grid{
+  .grid {
     display: flex;
     width: 900px;
     justify-content: center;
     margin-top: 40px;
     margin-bottom: 40px;
   }
-  .texto-grid{
+  .texto-grid {
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
     width: 50%;
   }
-  .texto-grid-der{
+  .texto-grid-der {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -126,15 +129,18 @@
     width: 50%;
     margin-left: 20px;
   }
-  .imagen-grid{
+  .img-grid{
     width: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  .texto-titulo-grid{
+  .texto-titulo-grid {
     font-family: 'Strait', sans-serif;
     font-size: 49px;
     margin-bottom: 20px;
   }
-  .descripcion-grid{
+  .descripcion-grid {
     font-family: 'Strait', sans-serif;
     font-size: 13px;
     line-height: 19px;

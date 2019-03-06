@@ -74,62 +74,62 @@
 </template>
 
 <style lang="scss">
-  .about-wrapper{
+  .about-wrapper {
     display: flex;
     width: 100%;
     background-color: #eae5dc;
     justify-content: center;
   }
-  .about{
+  .about {
     display: flex;
     width: 900px;
     height: 630px;
   }
-  .img-about{
+  .img-about {
     width: 100%;
     height: 602px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     position: relative;
   }
-  .cita-wrapper{
+  .cita-wrapper {
   display: flex;
   width: 100%;
   height: 500px;
   justify-content: center;
   }
-  .cita{
+  .cita {
     display: flex;
     width:900px;
     margin-top: 34px;
     text-align: left;
   }
-  .cita-texto{
+  .cita-texto {
     display: flex;
     flex-direction: column;
   }
-  .cita-texto p{
+  .cita-texto p {
     margin-top: 30px;
     font-family: 'Strait', sans-serif;
     font-size: 18px;
     line-height: 25px;
   }
-  .texto{
+  .texto {
     font-size: 20px;
   }
-  .ricardo{
+  .ricardo {
     font-size: 40px !important;
     font-family: kristi !important;
     font-weight: 600 !important;
   }
-  .prox-cursos-titlew{
+  .prox-cursos-titlew {
   display: flex;
   justify-content: center;
   width: 100%;
   background-color: #f5f3ef;
   }
-  .prox-cursos-title{
+  .prox-cursos-title {
     display: flex;
     justify-content: center;
     width: 900px;
@@ -138,19 +138,19 @@
     margin-top: 50px;
     margin-bottom: 50px;
   }
-  .proximos-cursos-wrapper{
+  .proximos-cursos-wrapper {
     display: flex;
     justify-content: center;
     width: 100%;
     background-color: #f5f3ef;
   }
-  .proximos-cursos{
+  .proximos-cursos {
     display: flex;
     width: 900px;
     justify-content: space-around;
     margin-bottom: 50px;
   }
-  .curso{
+  .curso {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -158,19 +158,19 @@
     height: 347px;
     border: 2px solid #000;
   }
-  .fecha-curso{
+  .fecha-curso {
     font-family: 'Strait', sans-serif;
     font-size: 20px;
     text-align: center;
     // margin-left: 30px;
   }
-  .titulo-curso{
+  .titulo-curso {
     font-family: 'Strait', sans-serif;
     font-size: 20px;
     margin-left: 1px;
     text-align: center;
   }
-  .add-curso{
+  .add-curso {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,26 +183,26 @@
     background-color: #f5f3ef;
     border: 2px solid black;
   }
-  .banner-wrapper{
-  display: flex;
-  width: 100%;
-  height: 140px;
-  background-color: #403726;
-  justify-content: center;
-  align-items: center;
+  .banner-wrapper {
+    display: flex;
+    width: 100%;
+    height: 140px;
+    background-color: #403726;
+    justify-content: center;
+    align-items: center;
   }
-  .banner{
+  .banner {
     display: flex;
     width: 900px;
     color:#fff;
     justify-content: space-between;
     align-items: center;
   }
-  .texto-banner{
+  .texto-banner {
     font-size: 22px;
     font-family: 'Strait', sans-serif;
   }
-  .btn-contactanos{
+  .btn-contactanos {
     background-color: #403726;
     color: #fff;
     border: 2px solid #fff;

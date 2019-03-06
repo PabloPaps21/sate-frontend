@@ -460,7 +460,7 @@
     </div>
   </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
   .img-slide-wrapper{
     display: flex;
     height: 444px;

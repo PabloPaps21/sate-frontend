@@ -1,18 +1,8 @@
 <template>
   <div id="app">
-    <!-- ¿¿¿<div id="nav">
-       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>|
-      <router-link to="/inicio">Inicio</router-link>|
-      <router-link to="/food">Comida en casa</router-link>|
-      <router-link to="/market">Mercado digital</router-link>|
-      <router-link to="/experience">Experiencias culinarias</router-link>|
-      <router-link to="/design">Food design</router-link>|
-      <router-link to="/contact">Contacto</router-link>
-    </div> -->
     <div class="nav-bar-wrapper">
       <div class="nav-bar">
-        <img src="/logo.png" alt="Saté" class="logo">
+        <img src="/logo.png" alt="Saté" class="logo" @click="$router.push('/')">
         <div class="elementos">
           <div class="search-bar" style="margin-right:10xp;">
             <input type="search" placeholder="Buscar productos..." class="buscar-bar">
@@ -27,13 +17,13 @@
     <div class="nav-link-wrapper">
       <div class="nav-link">
         <div class="link">
-          <router-link to="/inicio" class="margin-link">Inicio</router-link>
+          <router-link to="/" class="margin-link">Inicio</router-link>
           <router-link to="/food" class="margin-link">Comida en casa</router-link>
           <router-link to="/market" class="margin-link">Mercado digital</router-link>
           <router-link to="/experience" class="margin-link">Experiencias culinarias</router-link>
           <router-link to="/design" class="margin-link">Food design</router-link>
           <router-link to="/contact" class="margin-link">Contacto</router-link>
-          <router-link to="/about">About</router-link>
+          <router-link to="/about" class="margin-link">About</router-link>
         </div>
       </div>
     </div>
@@ -86,54 +76,37 @@
   </div>
 </template>
 
-<style lang="scss">
-// #app {
-//   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   text-align: center;
-//   color: #2c3e50;
-// }
-// #nav {
-//   padding: 30px;
-//   a {
-//     font-weight: bold;
-//     color: #2c3e50;
-//     &.router-link-exact-active {
-//       color: #42b983;
-//     }
-//   }
-// }
+<style lang="scss" scoped>
 a {
   text-decoration: none;
 }
-.nav-bar-wrapper{
+.nav-bar-wrapper {
   display: flex;
   height: 90px;
   width: 100%;
   background-color: #3e4e35;
   justify-content: center;
 }
-.nav-bar{
+.nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 900px;
 }
-.logo{
+.logo {
   width: auto;
   height: 71px;
 }
-.elementos{
+.elementos {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.cart{
+.cart {
   display: flex;
   color: #e6d6ba;
 }
-.nav-link-wrapper{
+.nav-link-wrapper {
   display: flex;
   height: 90px;
   width: 100%;
@@ -142,13 +115,13 @@ a {
   /* position: fixed;
   z-index: 1; */
 }
-.nav-link{
+.nav-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 900px;
 }
-.link{
+.link {
   font-family: 'Strait', sans-serif;
   font-weight: 400;
   display: flex;
@@ -156,62 +129,62 @@ a {
   justify-content: space-between;
   font-size: 14px;
 }
-.margin-link{
+.margin-link {
   /* margin-right: 40px; */
   color: #e6d6ba;
 }
-.buscar-bar{
+.buscar-bar {
   border: none;
   height: 18px;
   font-family: 'Strait', sans-serif;
   font-size: 16px;
   margin-right: 10px;
 }
-.footer-wrapper{
+.footer-wrapper {
   display: flex;
   justify-content: center;
   width: 100%;
   height: auto;
   background-color: #414f3a;
 }
-.footer{
+.footer {
   display: flex;
   justify-content: space-between;
   width: 900px;
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.footer-opciones{
+.footer-opciones {
   display: flex;
   flex-direction: column;
   width: 330px;
   color:#e6d6ba;
   text-align: left;
 }
-.titulo-opcion-footer{
+.titulo-opcion-footer {
   font-family: 'Strait', sans-serif;
   margin-bottom: 30px;
   color:#e6d6ba;
   text-align: left;
 }
-.footer-margen{
+.footer-margen {
   margin-top: 10px;
   margin-bottom: 20px;
 }
-.terminos{
+.terminos {
   display: flex;
   margin-top: 30px;
   color:#e6d6ba;
   font-family: 'Strait', sans-serif;
 }
-.politicas{
+.politicas {
   display: flex;
   margin-top: 35px;
   margin-bottom:44px;
   color:#e6d6ba;
   font-family: 'Strait', sans-serif;
 }
-.mapa-footer{
+.mapa-footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,23 +192,23 @@ a {
   width: 450px;
   height: auto;
 }
-.redes-sociales{
+.redes-sociales {
   display: flex;
   font-size: 25px;
   margin-right: 30px;
   margin-top: 20px;
   color: #e6d6ba;
 }
-.instagram{
+.instagram {
   margin-left:50px;
   color:#e6d6ba;
 }
-.footer-link{
+.footer-link {
   color: #e6d6ba;
 }
 .logo-cart {
-    color: #e6d6ba;
-    margin-left: 25px;
-    margin-right: 6px;
+  color: #e6d6ba;
+  margin-left: 25px;
+  margin-right: 6px;
 }
 </style>
