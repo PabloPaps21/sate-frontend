@@ -2,7 +2,7 @@
   <div class="envolver">
     <div class="detalle-wrapper">
       <div class="detalle-producto">
-        <img src="/ensalada.png" alt="" class="img-detalle-producto">
+        <img src="/almohadas.png" alt="" class="img-detalle-producto">
         <div class="detalle">
           <div class="nombre-producto aire">
             Producto temporal
@@ -107,7 +107,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .detalle-wrapper{
   display: flex;
   width: 100%;

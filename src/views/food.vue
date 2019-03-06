@@ -74,36 +74,7 @@
     </div>
     <div class="alimentos-wrapper">
     <div class="alimentos">
-      <div class="alimento-opcion">
-        <a href="comida.html"><img src="/ensalada.png" alt="" class="img-alimentos"></a>
-        <div class="alimento-titulo">
-          Ensalada 1
-        </div>
-        <div class="alimento-precio">
-          $70.00
-        </div>
-        <div class="alimento-descripcion">
-            Clásica preparada con lechuga, jitomate, huevo duro y aceitunas con aceite de oliva.
-        </div>
-        <div>
-          <a href="#" class="add-comida">Añadir</a>
-        </div>
-      </div>
-      <div class="alimento-opcion">
-        <a href="comida.html"><img src="/ensalada.png" alt="" class="img-alimentos"></a>
-          <div class="alimento-titulo">
-            Ensalada 1
-          </div>
-          <div class="alimento-precio">
-            $70.00
-          </div>
-          <div class="alimento-descripcion">
-              Clásica preparada con lechuga, jitomate, huevo duro y aceitunas con aceite de oliva.
-          </div>
-          <div>
-            <a href="#" class="add-comida">Añadir</a>
-          </div>
-        </div>
+      <cards/>
     </div>
   </div>
   <div class="menu-wrapper">
@@ -115,69 +86,9 @@
   </div>
   <div class="alimentos-wrapper">
     <div class="alimentos">
-      <div class="alimento-opcion">
-        <a href="comida.html"><img src="/sopa.png" alt="" class="img-alimentos"></a>
-        <div class="alimento-titulo">
-          Sopa 1
-        </div>
-        <div class="alimento-precio">
-          $70.00
-        </div>
-        <div class="alimento-descripcion">
-            Clásica preparada con lechuga, jitomate, huevo duro y aceitunas con aceite de oliva.
-        </div>
-        <div>
-          <a href="#" class="add-comida">Añadir</a>
-        </div>
-      </div>
-      <div class="alimento-opcion">
-        <a href="comida.html"><img src="/sopa.png" alt="" class="img-alimentos"></a>
-          <div class="alimento-titulo">
-            Sopa 1
-          </div>
-          <div class="alimento-precio">
-            $70.00
-          </div>
-          <div class="alimento-descripcion">
-              Clásica preparada con lechuga, jitomate, huevo duro y aceitunas con aceite de oliva.
-          </div>
-          <div>
-            <a href="#" class="add-comida">Añadir</a>
-          </div>
-        </div>
-        <div class="alimento-opcion">
-          <a href="comida.html"><img src="/sopa.png" alt="" class="img-alimentos"></a>
-            <div class="alimento-titulo">
-              Sopa 1
-            </div>
-            <div class="alimento-precio">
-              $70.00
-            </div>
-            <div class="alimento-descripcion">
-                Clásica preparada con lechuga, jitomate, huevo duro y aceitunas con aceite de oliva.
-            </div>
-            <div>
-              <a href="#" class="add-comida">Añadir</a>
-            </div>
-          </div>
-          <div class="alimento-opcion">
-            <a href="comida.html"><img src="/sopa.png" alt="" class="img-alimentos"></a>
-              <div class="alimento-titulo">
-                Sopa 1
-              </div>
-              <div class="alimento-precio">
-                $70.00
-              </div>
-              <div class="alimento-descripcion">
-                  Clásica preparada con lechuga, jitomate,
-                  huevo duro y aceitunas con aceite de oliva.
-              </div>
-              <div>
-                <a href="#" class="add-comida">Añadir</a>
-              </div>
-            </div>
-      </div>
+    <cards/>
     </div>
+  </div>
     <div class="menu-wrapper">
       <div class="menu">
         <div class="menu-title">
@@ -187,51 +98,7 @@
     </div>
     <div class="alimentos-wrapper">
       <div class="alimentos">
-        <div class="alimento-opcion">
-          <a href="comida.html"><img src="/platillos.png" alt="" class="img-alimentos"></a>
-          <div class="alimento-titulo">
-            Platillo 1
-          </div>
-          <div class="alimento-precio">
-            $120.00
-          </div>
-          <div class="alimento-descripcion">
-              Jugosa carne de res molida con zanahoria, chícharos y papa.
-          </div>
-          <div>
-            <a href="#" class="add-comida">Añadir</a>
-          </div>
-        </div>
-        <div class="alimento-opcion">
-          <a href="comida.html"><img src="/platillos.png" alt="" class="img-alimentos"></a>
-            <div class="alimento-titulo">
-              Platillo 1
-            </div>
-            <div class="alimento-precio">
-              $120.00
-            </div>
-            <div class="alimento-descripcion">
-                Jugosa carne de res molida con zanahoria, chícharos y papa.
-            </div>
-            <div>
-              <a href="#" class="add-comida">Añadir</a>
-            </div>
-          </div>
-          <div class="alimento-opcion">
-            <a href="comida.html"><img src="/platillos.png" alt="" class="img-alimentos"></a>
-              <div class="alimento-titulo">
-                Platillo 1
-              </div>
-              <div class="alimento-precio">
-                $120.00
-              </div>
-              <div class="alimento-descripcion">
-                  Jugosa carne de res molida con zanahoria, chícharos y papa.
-              </div>
-              <div>
-                <a href="#" class="add-comida">Añadir</a>
-              </div>
-            </div>
+        <cards/>
       </div>
     </div>
     <div class="menu-wrapper">
@@ -243,51 +110,7 @@
   </div>
     <div class="alimentos-wrapper">
       <div class="alimentos">
-        <div class="alimento-opcion">
-          <a href="comida.html"><img src="/guarnicion.png" alt="" class="img-alimentos"></a>
-          <div class="alimento-titulo">
-            Guarnición 1
-          </div>
-          <div class="alimento-precio">
-            $45.00
-          </div>
-          <div class="alimento-descripcion">
-              Preparada con leche de coco, acompañado de crutones y cilantro.
-          </div>
-          <div>
-            <a href="#" class="add-comida">Añadir</a>
-          </div>
-        </div>
-        <div class="alimento-opcion">
-          <a href="comida.html"><img src="/guarnicion.png" alt="" class="img-alimentos"></a>
-            <div class="alimento-titulo">
-              Guarnición 1
-            </div>
-            <div class="alimento-precio">
-              $45.00
-            </div>
-            <div class="alimento-descripcion">
-                Preparada con leche de coco, acompañado de crutones y cilantro.
-            </div>
-            <div>
-              <a href="#" class="add-comida">Añadir</a>
-            </div>
-          </div>
-          <div class="alimento-opcion">
-            <a href="comida.html"><img src="/guarnicion.png" alt="" class="img-alimentos"></a>
-              <div class="alimento-titulo">
-                Guarnición 1
-              </div>
-              <div class="alimento-precio">
-                $45.00
-              </div>
-              <div class="alimento-descripcion">
-                  Preparada con leche de coco, acompañado de crutones y cilantro.
-              </div>
-              <div>
-                <a href="#" class="add-comida">Añadir</a>
-              </div>
-            </div>
+        <cards/>
       </div>
     </div>
     <div class="menu-wrapper">
@@ -299,51 +122,7 @@
       </div>
       <div class="alimentos-wrapper">
         <div class="alimentos">
-          <div class="alimento-opcion">
-            <a href="comida.html"><img src="/dips.png" alt="" class="img-alimentos"></a>
-            <div class="alimento-titulo">
-              Salsa 1
-            </div>
-            <div class="alimento-precio">
-              $45.00
-            </div>
-            <div class="alimento-descripcion">
-               Clásico caldo&nbsp; acompañado de zanahoria, chayote y cilantro.
-            </div>
-            <div>
-              <a href="#" class="add-comida">Añadir</a>
-            </div>
-          </div>
-          <div class="alimento-opcion">
-            <a href="comida.html"><img src="/dips.png" alt="" class="img-alimentos"></a>
-              <div class="alimento-titulo">
-                Salsa 2
-              </div>
-              <div class="alimento-precio">
-                $45.00
-              </div>
-              <div class="alimento-descripcion">
-                 Clásico caldo&nbsp; acompañado de zanahoria, chayote y cilantro.
-              </div>
-              <div>
-                <a href="#" class="add-comida">Añadir</a>
-              </div>
-            </div>
-            <div class="alimento-opcion">
-              <a href="comida.html"><img src="/dips.png" alt="" class="img-alimentos"></a>
-                <div class="alimento-titulo">
-                  Salsa 3
-                </div>
-                <div class="alimento-precio">
-                  $45.00
-                </div>
-                <div class="alimento-descripcion">
-                   Clásico caldo&nbsp; acompañado de zanahoria, chayote y cilantro.
-                </div>
-                <div>
-                  <a href="#" class="add-comida">Añadir</a>
-                </div>
-              </div>
+          <cards/>
         </div>
       </div>
       <div class="menu-wrapper">
@@ -355,53 +134,9 @@
   </div>
   <div class="alimentos-wrapper">
     <div class="alimentos">
-      <div class="alimento-opcion">
-        <a href="comida.html"><img src="/botanas.png" alt="" class="img-alimentos"></a>
-        <div class="alimento-titulo">
-          Botana 1
-        </div>
-        <div class="alimento-precio">
-          $40.00
-        </div>
-        <div class="alimento-descripcion">
-           Chips de papas, de camote, de betabel y de todo lo que te imagines.
-        </div>
-        <div>
-          <a href="#" class="add-comida">Añadir</a>
-        </div>
-      </div>
-      <div class="alimento-opcion">
-        <a href="comida.html"><img src="/botanas.png" alt="" class="img-alimentos"></a>
-          <div class="alimento-titulo">
-            Botana 2
-          </div>
-          <div class="alimento-precio">
-            $40.00
-          </div>
-          <div class="alimento-descripcion">
-             Chips de papas, de camote, de betabel y de todo lo que te imagines.
-          </div>
-          <div>
-            <a href="#" class="add-comida">Añadir</a>
-          </div>
-        </div>
-        <div class="alimento-opcion">
-          <a href="comida.html"><img src="/botanas.png" alt="" class="img-alimentos"></a>
-            <div class="alimento-titulo">
-              Botanas 3
-            </div>
-            <div class="alimento-precio">
-              $40.00
-            </div>
-            <div class="alimento-descripcion">
-               Chips de papas, de camote, de betabel y de todo lo que te imagines.
-            </div>
-            <div>
-              <a href="#" class="add-comida">Añadir</a>
-            </div>
-          </div>
-      </div>
+      <cards/>
     </div>
+  </div>
     <div class="menu-wrapper">
       <div class="menu">
         <div class="menu-title">
@@ -411,57 +146,24 @@
     </div>
     <div class="alimentos-wrapper">
       <div class="alimentos">
-        <div class="alimento-opcion">
-          <a href="comida.html"><img src="/postres.png" alt="" class="img-alimentos"></a>
-          <div class="alimento-titulo">
-            Postre 1
-          </div>
-          <div class="alimento-precio">
-            $50.00
-          </div>
-          <div class="alimento-descripcion">
-            La especialidad de la casa, cremoso relleno de queso cubiero con coulis de frutas.
-          </div>
-          <div>
-            <a href="#" class="add-comida">Añadir</a>
-          </div>
-        </div>
-        <div class="alimento-opcion">
-          <a href="comida.html"><img src="/postres.png" alt="" class="img-alimentos"></a>
-            <div class="alimento-titulo">
-              Postre 2
-            </div>
-            <div class="alimento-precio">
-              $50.00
-            </div>
-            <div class="alimento-descripcion">
-              La especialidad de la casa, cremoso relleno de queso cubiero con coulis de frutas.
-            </div>
-            <div>
-              <a href="#" class="add-comida">Añadir</a>
-            </div>
-          </div>
-          <div class="alimento-opcion">
-            <a href="comida.html"><img src="/postres.png" alt="" class="img-alimentos"></a>
-              <div class="alimento-titulo">
-                Postres 3
-              </div>
-              <div class="alimento-precio">
-                $50.00
-              </div>
-              <div class="alimento-descripcion">
-                La especialidad de la casa, cremoso relleno de queso cubiero con coulis de frutas.
-              </div>
-              <div>
-                <a href="#" class="add-comida">Añadir</a>
-              </div>
-            </div>
+        <cards/>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+import cards from '@/components/cards.vue';
+
+export default {
+  components: {
+    cards,
+  },
+};
+</script>
+
 <style lang="scss" scoped>
-  .img-slide-wrapper{
+  .img-slide-wrapper {
     display: flex;
     height: 444px;
     width: 100%;
@@ -473,56 +175,56 @@
     background-size: cover;
     position: relative;
   }
-  .slide-title{
+  .slide-title {
     color: #fff;
     margin-bottom: 30px;
     font-size: 56px;
     font-family: 'Strait', sans-serif;
     font-weight: 400;
   }
-  .instructions-wrapper{
+  .instructions-wrapper {
     display: flex;
     height: 350px;
     width: 100%;
     justify-content: center;
   }
-  .instructions{
+  .instructions {
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
     margin-bottom: 20px;
     width: 900px;
   }
-  .order{
+  .order {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 330px;
   }
-  .img-order{
+  .img-order {
     width: 100px;
     height: auto;
   }
-  .title-order{
+  .title-order {
     text-align: center;
     margin-bottom: 20px;
     font-family: 'Strait', sans-serif;
     font-size: 20px;
   }
-  .subtitle-order{
+  .subtitle-order {
     text-align: center;
     font-family: 'Strait', sans-serif;
     font-size: 15px;
     line-height: 25px;
   }
-  .conoce-titulo-wrapper{
+  .conoce-titulo-wrapper {
     display: flex;
     width: 100%;
     height: 100px;
     justify-content: center;
     background-color: #eae5dc;
   }
-  .conoce-titulo{
+  .conoce-titulo {
     display: flex;
     width: 900px;
     justify-content: center;
@@ -531,26 +233,26 @@
     align-items: center;
     margin-top: 40px;
   }
-  .conoce-wrapper{
+  .conoce-wrapper {
     display: flex;
     height: 230px;
     width: 100%;
     justify-content: center;
     background-color: #eae5dc;
   }
-  .conoce{
+  .conoce {
     display:  flex;
     width: 900px;
     justify-content: space-evenly;
     margin-top: 40px;
   }
-  .video-conoce{
+  .video-conoce {
     display: flex;
     width: 400px;
     flex-direction: column;
     align-items: center;
   }
-  .conoce-container{
+  .conoce-container {
     width: auto;
     height: 174px;
     background-position: center;
@@ -558,14 +260,14 @@
     background-size: cover;
     position: relative;
   }
-  .week-wrapper{
+  .week-wrapper {
     display: flex;
     width: 100%;
     height: auto;
     background-color: #eae5dc;
     justify-content: center;
   }
-  .week{
+  .week {
     display: flex;
     width: 900px;
     justify-content: center;
@@ -573,7 +275,7 @@
     align-items: center;
     margin-top: 50px;
   }
-  .week-title{
+  .week-title {
     text-align: center;
     margin-bottom: 30px;
     margin-top: 30px;
@@ -582,71 +284,71 @@
     font-weight: 400;
     font-size: 35px;
   }
-  .week-date{
+  .week-date {
     text-align: center;
     margin-bottom: 50px;
     font-family: 'Strait', sans-serif;
     font-weight: 400;
     font-size: 35px;
   }
-  .cita-index{
+  .cita-index {
     text-align: center;
     margin-bottom: 20px;
     font-family: 'Strait', sans-serif;
     font-size: 16px;
   }
-  .menu-wrapper{
+  .menu-wrapper {
     display: flex;
     width: 100%;
     height: auto;
     background-color: #eae5dc;
     justify-content: center;
   }
-  .menu{
+  .menu {
     display: flex;
     width: 900px;
   }
-  .menu-title{
+  .menu-title {
     font-size: 30px;
     margin-bottom: 30px;
     margin-top:30px;
     font-family: 'Strait', sans-serif;
   }
-  .alimentos-wrapper{
+  .alimentos-wrapper {
     display: flex;
     width: 100%;
     justify-content: center;
     background-color: #eae5dc;
   }
-  .alimentos{
+  .alimentos {
     display: flex;
     justify-content: space-around;
     width: 900px;
     margin-bottom: 50px;
   }
-  .alimento-opcion{
+  .alimento-opcion {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 202px;
   }
-  .img-alimentos{
+  .img-alimentos {
     width: 200px;
     height: 200px;
     border-radius: 50%;
   }
-  .alimento-titulo{
+  .alimento-titulo {
     text-align: center;
     margin-top: 20px;
     font-family: 'Strait', sans-serif;
   }
-  .alimento-precio{
+  .alimento-precio {
     text-align: center;
     margin-top: 15px;
     margin-bottom: 15px;
     font-family: 'Strait', sans-serif;
   }
-  .alimento-descripcion{
+  .alimento-descripcion {
     text-align: center;
     margin-top: 15px;
     margin-bottom: 20px;
@@ -654,7 +356,7 @@
     line-height: 2;
     font-family: 'Strait', sans-serif;
   }
-  .alimento-add{
+  .alimento-add {
     width: 69px;
     height: 35px;
     background-color:#eae5dc;
@@ -662,7 +364,7 @@
     border: 2px solid #555555;
     margin-bottom: 20px;
   }
-  .alimento-add-button{
+  .alimento-add-button {
     width: 136px;
     height: 39px;
     background-color:#eae5dc;
@@ -671,7 +373,7 @@
     margin-bottom: 20px;
     font-family: 'Strait', sans-serif;
   }
-  .add-comida{
+  .add-comida {
     display: flex;
     align-items: center;
     justify-content: center;

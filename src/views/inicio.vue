@@ -73,7 +73,7 @@
 </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .about-wrapper {
     display: flex;
     width: 100%;

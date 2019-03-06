@@ -45,42 +45,42 @@
 </div>
 </template>
 <style lang="scss" scoped>
-  .contactanos-wrapper{
+  .contactanos-wrapper {
     display: flex;
     width: 100%;
     background-color: #eae5dc;
     justify-content: center;
   }
-  .contactanos{
+  .contactanos {
     display: flex;
     width: 900px;
     margin-top: 30px;
     font-family: 'Strait', sans-serif;
   }
-  .contactanos-titulo{
+  .contactanos-titulo {
     font-size: 30px;
     margin-bottom: 5%;
   }
-  .formulario-contactanos-wrapper{
+  .formulario-contactanos-wrapper {
   display: flex;
   width: 100%;
   justify-content: center;
   background-color: #eae5dc;
   }
-  .formulario-contactanos{
+  .formulario-contactanos {
     display: flex;
     width: 900px;
     flex-direction: column;
     text-align: left;
   }
-  .nombre-usr{
+  .nombre-usr {
     font-family: 'Strait', sans-serif;
     font-size: 20px;
   }
-  .advertencia{
+  .advertencia {
     color:red;
   }
-  .campo-formulario{
+  .campo-formulario {
     width: 900px;
     margin-top: 20px;
     border:none;
@@ -88,17 +88,17 @@
     font-family: 'Strait', sans-serif;
     font-size: 20px;
   }
-  .confirmar-wrapper{
+  .confirmar-wrapper {
   display:flex;
   width: 100%;
   justify-content: center;
   background-color: #eae5dc;
   }
-  .confirmar{
+  .confirmar {
     display: flex;
     width: 900px;
   }
-  .btn-acceder{
+  .btn-acceder {
     width: 69px;
     height: 35px;
     background-color:#eae5dc;
@@ -107,7 +107,7 @@
     margin-bottom: 20px;
     font-family: 'Strait', sans-serif;
   }
-  .pass-usr{
+  .pass-usr {
     margin-top: 20px;
     font-family: 'Strait', sans-serif;
     font-size: 20px;

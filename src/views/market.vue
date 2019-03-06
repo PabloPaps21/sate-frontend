@@ -28,36 +28,7 @@
     </div>
     <div class="alimentos-wrapper">
       <div class="alimentos">
-        <div class="alimento-opcion">
-          <a href="comida.html"><img src="/almohadas.png" alt="" class="img-alimentos"></a>
-          <div class="alimento-titulo">
-            Almohadas 1
-          </div>
-          <div class="alimento-precio">
-            $70.00
-          </div>
-          <div class="alimento-descripcion">
-              Clásica preparada con lechuga, jitomate, huevo duro y aceitunas con aceite de oliva.
-          </div>
-          <div>
-            <a href="#" class="add-comida">Añadir</a>
-          </div>
-        </div>
-        <div class="alimento-opcion">
-          <a href="comida.html"><img src="/almohadas.png" alt="" class="img-alimentos"></a>
-            <div class="alimento-titulo">
-              Ensalada 1
-            </div>
-            <div class="alimento-precio">
-              $70.00
-            </div>
-            <div class="alimento-descripcion">
-                Clásica preparada con lechuga, jitomate, huevo duro y aceitunas con aceite de oliva.
-            </div>
-            <div>
-              <a href="#" class="add-comida">Añadir</a>
-            </div>
-          </div>
+        <cards/>
       </div>
     </div>
     <div class="menu-wrapper">
@@ -69,45 +40,21 @@
     </div>
     <div class="alimentos-wrapper">
       <div class="alimentos">
-        <div class="alimento-opcion">
-          <a href="comida.html">
-            <img src="/avion.png" alt="" class="img-alimentos con-grid">
-          </a>
-          <div class="alimento-titulo">
-            Almohadas 1
-          </div>
-          <div class="alimento-precio">
-            $70.00
-          </div>
-          <div class="alimento-descripcion">
-              Clásica preparada con lechuga, jitomate, huevo duro y aceitunas con aceite de oliva.
-          </div>
-          <div>
-            <a href="#" class="add-comida">Añadir</a>
-          </div>
-        </div>
-        <div class="alimento-opcion">
-          <a href="comida.html">
-            <div class="img-alimentos con-grid" style="background-image:url('/avion.png')">
-            </div>
-          </a>
-            <div class="alimento-titulo">
-              Ensalada 1
-            </div>
-            <div class="alimento-precio">
-              $70.00
-            </div>
-            <div class="alimento-descripcion">
-                Clásica preparada con lechuga, jitomate, huevo duro y aceitunas con aceite de oliva.
-            </div>
-            <div>
-              <a href="#" class="add-comida">Añadir</a>
-            </div>
-          </div>
+        <cards/>
       </div>
     </div>
   </div>
 </template>
+<script>
+import cards from '@/components/cards.vue';
+
+export default {
+  components: {
+    cards,
+  },
+};
+</script>
+
 <style lang="scss" scoped>
   .img-slide-wrapper{
     display: flex;
