@@ -211,4 +211,12 @@ a {
   margin-left: 25px;
   margin-right: 6px;
 }
+@media screen and (max-width: 500px) {
+  .footer {
+    flex-direction: column;
+  }
+  .mapa-footer {
+    width: 361px;
+  }
+}
 </style>

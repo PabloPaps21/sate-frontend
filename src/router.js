@@ -46,5 +46,9 @@ export default new Router({
       path: '/register',
       component: () => import('./views/register.vue'),
     },
+    {
+      path: '/checkout',
+      component: () => import('./views/checkout.vue'),
+    },
   ],
 });
