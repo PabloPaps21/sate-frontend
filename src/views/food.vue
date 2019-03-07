@@ -65,99 +65,48 @@
         </div>
       </div>
     </div>
-    <div class="menu-wrapper">
-      <div class="menu">
-        <div class="menu-title">
-          Ensaladas
-        </div>
-      </div>
-    </div>
-    <div class="alimentos-wrapper">
-    <div class="alimentos">
-      <cards/>
-    </div>
-  </div>
-  <div class="menu-wrapper">
-    <div class="menu">
-      <div class="menu-title">
-        Sopas
-      </div>
-    </div>
-  </div>
-  <div class="alimentos-wrapper">
-    <div class="alimentos">
-    <cards/>
-    </div>
-  </div>
-    <div class="menu-wrapper">
-      <div class="menu">
-        <div class="menu-title">
-          Platillos
-        </div>
-      </div>
-    </div>
-    <div class="alimentos-wrapper">
-      <div class="alimentos">
-        <cards/>
-      </div>
-    </div>
-    <div class="menu-wrapper">
-      <div class="menu">
-        <div class="menu-title">
-          Guarniciones
-        </div>
-      </div>
-  </div>
-    <div class="alimentos-wrapper">
-      <div class="alimentos">
-        <cards/>
-      </div>
-    </div>
-    <div class="menu-wrapper">
+    <div class="category" v-for="category in allProducts" :key="category.id">
+      <div class="menu-wrapper">
         <div class="menu">
           <div class="menu-title">
-            Salsas y dips
+            {{ category.name }}
           </div>
         </div>
       </div>
       <div class="alimentos-wrapper">
         <div class="alimentos">
-          <cards/>
+          <cards
+            v-for="product in category.products"
+            :key="product.id"
+            :product="product" />
         </div>
-      </div>
-      <div class="menu-wrapper">
-    <div class="menu">
-      <div class="menu-title">
-      Botanas
-      </div>
-    </div>
-  </div>
-  <div class="alimentos-wrapper">
-    <div class="alimentos">
-      <cards/>
-    </div>
-  </div>
-    <div class="menu-wrapper">
-      <div class="menu">
-        <div class="menu-title">
-        Postres
-        </div>
-      </div>
-    </div>
-    <div class="alimentos-wrapper">
-      <div class="alimentos">
-        <cards/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex';
 import cards from '@/components/cards.vue';
+
+const { mapState, mapActions } = createNamespacedHelpers('products');
 
 export default {
   components: {
     cards,
+  },
+  computed: {
+    ...mapState([
+      'allProducts',
+    ]),
+  },
+  methods: {
+    ...mapActions([
+      'getAllProducts',
+    ]),
+  },
+  mounted() {
+    this.getAllProducts();
   },
 };
 </script>

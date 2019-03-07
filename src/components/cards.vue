@@ -3,20 +3,31 @@
   <div class="productos-wrapper">
     <div class="productos">
       <div class="productos-opcion">
-        <a href="detail.vue"> <img src="/ensalada.png" alt="" class="img-productos"></a>
+        <div class="img-productos" style="position: relative;">
+          <div style="position: absolute; z-index: 2">{{ quantity }}</div>
+          <div class="img-productos"
+            style="position: absolute; z-index: 0"
+            :class="{ active: quantity }"
+            :style="{ backgroundImage: `url(${'/ensalada.png'})` }">
+          </div>
+        </div>
         <div class="producto-titulo">
-          Producto 1
+          {{ product.name }}
         </div>
         <div class="producto-precio">
-          $70.00
+          ${{ product.price }}
         </div>
         <div class="producto-descripcion">
-            Clásica preparada con lechuga,
-            jitomate, huevo duro y aceitunas
-            con aceite de oliva.
+            {{ product.description }}
         </div>
-        <div>
-          <a href="#" class="add-producto">Añadir</a>
+        <div v-if="!quantity">
+          <div class="add-producto" @click="addProduct">Añadir</div>
+        </div>
+        <div class="buttons" v-else>
+          <div class="add-producto" @click="removeProduct" style="margin-right: 10px">
+            -
+          </div>
+          <div class="add-producto" @click="addProduct">+</div>
         </div>
       </div>
     </div>
@@ -26,7 +37,37 @@
 
 
 <script>
+import { createNamespacedHelpers } from 'vuex';
+
+const { mapState, mapMutations } = createNamespacedHelpers('cart');
 export default {
+  props: {
+    product: Object,
+  },
+  computed: {
+    quantity() {
+      const cartItem = this.items.find(item => item.product.id === this.product.id);
+      if (!cartItem) {
+        return null;
+      }
+      return cartItem.quantity;
+    },
+    ...mapState([
+      'items',
+    ]),
+  },
+  methods: {
+    addProduct() {
+      this.addToCart(this.product);
+    },
+    removeProduct() {
+      this.removeFromCart(this.product);
+    },
+    ...mapMutations([
+      'addToCart',
+      'removeFromCart',
+    ]),
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -48,9 +89,15 @@ export default {
   align-items: center;
   width: 202px;
 }
-.img-prductos{
+.img-productos{
   width: 200px;
   height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Strait', sans-serif;
+  font-size: 48px;
 }
 .producto-titulo{
   text-align: center;
@@ -74,6 +121,7 @@ export default {
   color:black;
   background-color: #eae5dc;
   border: 2px solid black;
+  cursor: pointer;
 }
 .producto-descripcion{
   text-align: center;
@@ -82,5 +130,11 @@ export default {
   color: #4d5d44;
   line-height: 2;
   font-family: 'Strait', sans-serif;
+}
+.active {
+  filter: opacity(30%);
+}
+.buttons {
+  display: flex;
 }
 </style>

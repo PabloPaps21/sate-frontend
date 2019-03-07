@@ -8,7 +8,7 @@
             <input type="search" placeholder="Buscar productos..." class="buscar-bar">
           </div>
           <div class="cart">
-             <p>0 productos</p>
+             <p>{{ totalItems }} productos</p>
              <a href="cuenta.html"><i class="fas fa-shopping-basket logo-cart"></i></a>
           </div>
         </div>
@@ -75,6 +75,15 @@
     </footer>
   </div>
 </template>
+<script>
+export default {
+  computed: {
+    totalItems() {
+      return this.$store.getters['cart/cartTotalItems'];
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 a {
@@ -86,6 +95,9 @@ a {
   width: 100%;
   background-color: #3e4e35;
   justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 .nav-bar {
   display: flex;
