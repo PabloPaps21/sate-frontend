@@ -5,7 +5,12 @@
         <img src="/almohadas.png" alt="" class="img-detalle-producto">
         <div class="detalle">
           <div class="nombre-producto aire">
-            Producto temporal
+            <div class="nom-product">
+              Producto temporal
+            </div>
+            <div class="cerrar">
+             <button class="btn-cancel-check">X</button>
+            </div>
           </div>
           <div class="descripcion-producto aire">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -89,12 +94,18 @@ export default {
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  width: 50%;
   font-family: 'Strait', sans-serif;
 }
 .nombre-producto {
+  display: flex;
+  justify-content: space-between;
   font-family: 'Strait', sans-serif;
   font-size: 30px;
+}
+.cerrar {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
 }
 .aire {
   margin-top: 20px;
@@ -102,6 +113,7 @@ export default {
 }
 .add-to-cart {
   display:flex;
+  justify-content: space-between;
 }
 .img-detalle-producto {
   height: auto;
@@ -262,14 +274,36 @@ export default {
   margin-top: 30px;
 }
 .btn-qty{
-  border:none;
-  font-size: 20px;
+  // border:none;
+  // font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 20px;
+  font-family: 'Strait', sans-serif;
+  font-size: 15px;
+  color:black;
+  background-color: #eae5dc;
+  border: 2px solid black;
+}
+.btn-cancel-check {
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 20px;
+  font-family: 'Strait', sans-serif;
+  font-size: 15px;
+  color: #b92929;
+  background-color: #eae5dc;
+  border: 2px solid #b92929;
 }
 .numero{
   font-size: 30px;
 }
 .botones {
   display: flex;
-  flex-direction: column;
+  margin-top: 25px;
 }
 </style>

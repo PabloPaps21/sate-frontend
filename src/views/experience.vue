@@ -43,15 +43,15 @@
     <div class="exp-wrapper">
       <div class="exp">
         <div class="exp-icono">
-          <img src="/jump.png" alt="" class="img-exp">
+          <img src="/e.multisensoriales.svg" alt="" class="img-exp">
           <div class="titulo-exp">EXPERIENCIAS MULTISENSORIALES</div>
         </div>
         <div class="exp-icono">
-          <img src="/world.png" alt="" class="img-exp">
+          <img src="/viajes_gastronomicos.svg" alt="" class="img-exp">
           <div class="titulo-exp">VIAJES GASTRONÓMICOS</div>
         </div>
         <div class="exp-icono">
-          <img src="/hat.png" alt="" class="img-exp">
+          <img src="/clases_cocina.svg" alt="" class="img-exp">
           <div class="titulo-exp">CLASES DE COCINA</div>
         </div>
         <div class="exp-icono">

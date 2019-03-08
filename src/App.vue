@@ -55,7 +55,7 @@
             <div class="titulo-opcion-footer">
               Comunícate con nosotros
             </div>
-            <div class="footer-margen contacto-footer">
+            <div class="footer-margen direccion">
               contacto@sate.com.mx
             </div>
             <div class="contacto-footer direccion">
@@ -259,6 +259,9 @@ a {
   color: #e6d6ba;
   font-size: 25px;
   margin-left: 10px;
+}
+.direccion {
+  font-family: 'Strait', sans-serif;
 }
 @media screen and (max-width: 500px) {
   .footer {

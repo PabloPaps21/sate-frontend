@@ -84,7 +84,16 @@ export default {
   width: 33%;
 }
 .btn-qty{
-  border:none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 20px;
+  font-family: 'Strait', sans-serif;
+  font-size: 15px;
+  color:black;
+  background-color: #eae5dc;
+  border: 2px solid black;
 }
 .numeros {
   display: flex;
@@ -104,6 +113,18 @@ export default {
   display: flex;
   width: 33%;
   justify-content: center;
+}
+.btn-cancel-check {
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 20px;
+  font-family: 'Strait', sans-serif;
+  font-size: 15px;
+  color: #b92929;
+  background-color: #eae5dc;
+  border: 2px solid #b92929;
 }
 @media screen and (max-width: 500px) {
  .columnas-particular {
