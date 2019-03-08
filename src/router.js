@@ -50,5 +50,9 @@ export default new Router({
       path: '/checkout',
       component: () => import('./views/checkout.vue'),
     },
+    {
+      path: '/resume',
+      component: () => import('./views/resume.vue'),
+    },
   ],
 });
