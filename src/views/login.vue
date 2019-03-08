@@ -47,6 +47,13 @@
         </div>
       </div>
     </div>
+    <div class="registro-wrapper">
+      <div class="registro">
+        <div class="titulo-registro">
+           <router-link to="/register" class="titulo-registro">Regístrate en Saté</router-link>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -64,8 +71,8 @@
 }
 .cuenta-titulo {
   font-size: 30px;
-  margin-top: 15%;
-  margin-bottom: 15%;
+  margin-top: 10%;
+  margin-bottom: 10%;
   font-family: 'Strait', sans-serif;
 }
 .acceder-wrapper {
@@ -142,9 +149,25 @@
 .olvidaste {
   display: flex;
   width: 900px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  margin-top: 16px;
 }
 .titulo-olvidaste {
+  color: #3e4e35;
+  font-family: 'Strait', sans-serif;
+}
+.registro-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: #eae5dc;
+}
+.registro {
+  display: flex;
+  width: 900px;
+  margin-bottom: 6%;
+}
+.titulo-registro {
   color: #3e4e35;
   font-family: 'Strait', sans-serif;
 }

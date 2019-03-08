@@ -12,10 +12,21 @@
             Architecto sapiente, molestiae nesciunt commodi quis aliquid.
           </div>
           <div class="add-to-cart" style="margin-bottom:10px">
-            <div class="contador">
-              <input type="number" name="quantity" min="1" max="20" class="contador-input">
+            <div class="cantidad">
+              <button class="btn-qty"> + </button>
+                <div class="numero">
+                  0
+                </div>
+              <button class="btn-qty"> - </button>
             </div>
-            <button style="margin-left:10px;" class="alimento-add-button">Añadir al carrito</button>
+            <div class="botones">
+              <button style="margin-left:10px;" class="alimento-add-button">
+                Añadir al carrito
+              </button>
+              <button style="margin-left:10px;" class="wishlist-add-button">
+                Añadir a la wishlist
+              </button>
+            </div>
           </div>
           <div class="categoria">
             Categoría: primera.
@@ -63,17 +74,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.detalle-wrapper{
+.detalle-wrapper {
   display: flex;
   width: 100%;
   justify-content: center;
 }
-.detalle-producto{
+.detalle-producto {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
-.detalle{
+.detalle {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -81,23 +92,23 @@ export default {
   width: 50%;
   font-family: 'Strait', sans-serif;
 }
-.nombre-producto{
+.nombre-producto {
   font-family: 'Strait', sans-serif;
   font-size: 30px;
 }
-.aire{
+.aire {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.add-to-cart{
+.add-to-cart {
   display:flex;
 }
-.img-detalle-producto{
+.img-detalle-producto {
   height: auto;
   width: 257px;
   margin-right: 91px;
 }
-.contador-input{
+.contador-input {
   width: 59px;
   height: 39px;
   border: none;
@@ -106,13 +117,22 @@ export default {
   font-family: 'Strait', sans-serif;
   text-align: center;
 }
-.alimento-add-button{
+.alimento-add-button {
   width: 136px;
   height: 39px;
   color: black;
   border: 2px solid black;
   margin-bottom: 20px;
   font-family: 'Strait', sans-serif;
+}
+.wishlist-add-button{
+  width: 136px;
+  height: 39px;
+  color: #e6d6ba;
+  border: 2px solid black;
+  margin-bottom: 20px;
+  font-family: 'Strait', sans-serif;
+  background-color: #414f3a;
 }
 .descripcion-wrapper{
   display: flex;
@@ -231,5 +251,25 @@ export default {
   font-size: 12px;
   color:black;
   border: 2px solid black;
+}
+.cantidad {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: 'Strait', sans-serif;
+  width: 33%;
+  height: 30px;
+  margin-top: 30px;
+}
+.btn-qty{
+  border:none;
+  font-size: 20px;
+}
+.numero{
+  font-size: 30px;
+}
+.botones {
+  display: flex;
+  flex-direction: column;
 }
 </style>

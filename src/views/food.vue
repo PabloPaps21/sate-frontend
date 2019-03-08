@@ -28,24 +28,26 @@
     </div>
     <div class="conoce-titulo-wrapper">
       <div class="conoce-titulo">
-        Conoce más (videos)
+        Conoce más
         <!-- revisar tamaño de los videos  -->
       </div>
     </div>
     <div class="conoce-wrapper">
       <div class="conoce">
-        <div class="video-conoce">
-          <img src="/conoce.jpg" alt="menu" class="conoce-container">
-          <div class="conoce-etapa"> paso 1</div>
+        <div class="video-conoce" style="background-color: coral;">
+          <video width="300" controls autoplay>
+            <source src="/videos/delivery_que_es.mov" type="video/mp4">
+          </video>
         </div>
         <div class="video-conoce">
-          <img src="/conoce.jpg" alt="menu" class="conoce-container">
-          <div class="conoce-etapa"> paso 2</div>
-
+          <video width="300" controls autoplay>
+            <source src="/videos/delivery_como_funciona_final.mov" type="video/mp4">
+          </video>
         </div>
         <div class="video-conoce">
-          <img src="/conoce.jpg" alt="menu" class="conoce-container">
-          <div class="conoce-etapa"> paso 3</div>
+          <video width="300" controls autoplay>
+            <source src="/videos/delivery_como_calentar.mov" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
@@ -198,8 +200,11 @@ export default {
   .video-conoce {
     display: flex;
     width: 400px;
+    height: 174px;
     flex-direction: column;
     align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .conoce-container {
     width: auto;
@@ -222,7 +227,7 @@ export default {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 130px;
   }
   .week-title {
     text-align: center;

@@ -11,6 +11,9 @@
              <p>{{ totalItems }} productos</p>
              <a href="cuenta.html"><i class="fas fa-shopping-basket logo-cart"></i></a>
           </div>
+          <div class="login">
+          <router-link to="/login" class="login"><i class="fas fa-sign-in-alt"></i></router-link>
+          </div>
         </div>
       </div>
     </div>
@@ -222,6 +225,11 @@ a {
   color: #e6d6ba;
   margin-left: 25px;
   margin-right: 6px;
+}
+.login{
+  color: #e6d6ba;
+  font-size: 25px;
+  margin-left: 10px;
 }
 @media screen and (max-width: 500px) {
   .footer {
