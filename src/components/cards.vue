@@ -1,5 +1,4 @@
 <template>
-<div class="envolver">
   <div class="productos-wrapper">
     <div class="productos">
       <div class="productos-opcion">
@@ -32,7 +31,6 @@
       </div>
     </div>
   </div>
-</div>
 </template>
 
 
@@ -73,14 +71,13 @@ export default {
 <style lang="scss" scoped>
 .productos-wrapper{
   display: flex;
-  width: 100%;
+  width: 30%;
   justify-content: center;
   background-color: #eae5dc;
 }
 .productos{
   display: flex;
   justify-content: space-around;
-  width: 900px;
   margin-bottom: 50px;
 }
 .productos-opcion{

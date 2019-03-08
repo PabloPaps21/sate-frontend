@@ -11,6 +11,12 @@ const getters = {
     }
     return total;
   },
+  foodItems: (state) => {
+    return state.items.filter(item => item.product.type === 'FOOD');
+  },
+  marketItems: (state) => {
+    return state.items.filter(item => item.product.type === 'MARKET');
+  },
 };
 
 const mutations = {

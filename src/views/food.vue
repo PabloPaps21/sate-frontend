@@ -67,7 +67,7 @@
         </div>
       </div>
     </div>
-    <div class="category" v-for="category in allProducts" :key="category.id">
+    <div class="category" v-for="category in allFood" :key="category.id">
       <div class="menu-wrapper">
         <div class="menu">
           <div class="menu-title">
@@ -99,16 +99,16 @@ export default {
   },
   computed: {
     ...mapState([
-      'allProducts',
+      'allFood',
     ]),
   },
   methods: {
     ...mapActions([
-      'getAllProducts',
+      'getAllFood',
     ]),
   },
   mounted() {
-    this.getAllProducts();
+    this.getAllFood();
   },
 };
 </script>

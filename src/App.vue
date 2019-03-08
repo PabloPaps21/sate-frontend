@@ -7,9 +7,9 @@
           <div class="search-bar" style="margin-right:10xp;">
             <input type="search" placeholder="Buscar productos..." class="buscar-bar">
           </div>
-          <div class="cart">
+          <div class="cart" @click="showCart = true">
              <p>{{ totalItems }} productos</p>
-             <a href="cuenta.html"><i class="fas fa-shopping-basket logo-cart"></i></a>
+             <a href="#"><i class="fas fa-shopping-basket logo-cart"></i></a>
           </div>
           <div class="login">
           <router-link to="/login" class="login"><i class="fas fa-sign-in-alt"></i></router-link>
@@ -76,15 +76,26 @@
         </div>
       </div>
     </footer>
+    <cart @close="showCart = false" :show="showCart"/>
   </div>
 </template>
 <script>
+import cart from '@/components/cart.vue';
+
 export default {
+  data() {
+    return {
+      showCart: false,
+    };
+  },
   computed: {
     totalItems() {
       return this.$store.getters['cart/cartTotalItems'];
     },
   },
+  components: {
+    cart,
+  }
 };
 </script>
 
@@ -120,6 +131,7 @@ a {
 .cart {
   display: flex;
   color: #e6d6ba;
+  cursor: pointer;
 }
 .nav-link-wrapper {
   display: flex;

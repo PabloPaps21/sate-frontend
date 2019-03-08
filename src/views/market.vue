@@ -19,38 +19,39 @@
         </div> -->
       </div>
     </div>
-    <div class="menu-wrapper">
-      <div class="menu">
-        <div class="menu-title">
-          Producto 1
-        </div>
-      </div>
-    </div>
     <div class="alimentos-wrapper">
       <div class="alimentos">
-        <cards/>
-      </div>
-    </div>
-    <div class="menu-wrapper">
-      <div class="menu">
-        <div class="menu-title">
-          Producto 2
-        </div>
-      </div>
-    </div>
-    <div class="alimentos-wrapper">
-      <div class="alimentos">
-        <cards/>
+        <cards
+          v-for="product in allProducts"
+          :key="product.id"
+          :product="product" />
       </div>
     </div>
   </div>
 </template>
+
 <script>
+import { createNamespacedHelpers } from 'vuex';
 import cards from '@/components/cards.vue';
+
+const { mapState, mapActions } = createNamespacedHelpers('products');
 
 export default {
   components: {
     cards,
+  },
+  computed: {
+    ...mapState([
+      'allProducts',
+    ]),
+  },
+  methods: {
+    ...mapActions([
+      'getAllProducts',
+    ]),
+  },
+  mounted() {
+    this.getAllProducts();
   },
 };
 </script>
@@ -100,10 +101,10 @@ export default {
     font-size: 35px;
   }
   .cita-index{
-  text-align: center;
-  margin-bottom: 20px;
-  font-family: 'Strait', sans-serif;
-  font-size: 16px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Strait', sans-serif;
+    font-size: 16px;
   }
   .menu-wrapper{
     display: flex;
@@ -133,6 +134,7 @@ export default {
     justify-content: space-around;
     width: 900px;
     margin-bottom: 50px;
+    flex-wrap: wrap;
   }
   .alimento-opcion{
     display: flex;

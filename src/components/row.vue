@@ -60,8 +60,8 @@ export default {
   width: 100%;
 }
 .img-descripcion-checkout{
-  width: auto;
-  height: 100px;
+  height: auto;
+  width: 80px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
