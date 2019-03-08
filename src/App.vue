@@ -95,7 +95,7 @@ export default {
   },
   components: {
     cart,
-  }
+  },
 };
 </script>
 

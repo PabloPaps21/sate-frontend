@@ -1,8 +1,16 @@
 <template>
 <div class="cart-wrapper" :style="{ display: show ? 'flex' : 'none' }" @click.self="closeModal">
   <div class="cart">
+    <div class="titulo-wrapper">
+      <div class="titulo">
+        Carrito
+      </div>
+      <div class="cerrar">
+        <i class="fas fa-window-close"></i>
+      </div>
+    </div>
     <row/>
-    <row/>
+    <div class="linea-verde"></div>
     <row/>
     <div class="debajo-producto-wrapper">
       <div class="debajo-producto">
@@ -15,7 +23,7 @@
               $180.00
             </div>
           </div>
-          <button class="paypal">paypal</button>
+          <button class="pagar">PAGAR</button>
         </div>
       </div>
     </div>
@@ -55,7 +63,29 @@ export default {
 }
 .cart {
   background-color: #eae5dc;
-  width: 400px;
+  width: 30%;
+  padding: 20px;
+  box-sizing: border-box;
+  max-height: 100%;
+}
+.titulo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Strait', sans-serif;
+  color:#3e4e35;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.titulo {
+ display: flex;
+ width: 100%;
+ font-size: 30px;
+}
+.cerrar {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  width: 100%;
 }
 .btn-espacio {
   width: 30px;
@@ -82,12 +112,15 @@ export default {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  margin-top: 30px;
 }
 .cantidad-pagar {
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  max-height: 100%;
 }
 .subtotal-pagar {
   font-family: 'Strait', sans-serif;
@@ -98,8 +131,27 @@ export default {
   font-size: 17px;
   font-weight: 600;
 }
-.paypal {
+.pagar {
   width:70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  font-family: 'Strait', sans-serif;
+  font-size: 12px;
+  color:black;
+  margin-left: 30px;
+  height: 38px;
+  background-color: #eae5dc;
+  border: 2px solid black;
+}
+.linea-verde{
+  display: flex;
+  border-bottom: 1px solid #3e4e357c;
+  font-size: 2px;
+  height: 2px;
+  margin-bottom: 15px;
+  margin-right: 15px;
 }
 /deep/ .columnas-particular {
   flex-direction: column;
@@ -107,5 +159,9 @@ export default {
 }
 /deep/ .numeros {
   margin-right: 43px;
+  height: 70px;
+}
+/deep/ .descripcion {
+  height: 80px;
 }
 </style>
