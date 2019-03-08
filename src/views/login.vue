@@ -20,24 +20,24 @@
           Correo electrónico  <span class="advertencia">*</span>
         </div>
         <div class="campo">
-          <input type="text" class="campo-formulario">
+          <input type="text" class="campo-formulario" v-model="data.email">
         </div>
         <div class="pass-usr" style="margin-top: 20px;">
           Contraseña <span class="advertencia">*</span>
         </div>
         <div class="campo">
-          <input type="text" class="campo-formulario">
+          <input type="text" class="campo-formulario" v-model="data.password">
         </div>
       </div>
     </div>
     <div class="confirmar-wrapper">
       <div class="confirmar" style="margin-top: 20px;">
         <div class="acceder-btn">
-          <button class="btn-acceder">Acceder</button>
+          <button class="btn-acceder" @click="loginButton">Acceder</button>
         </div>
-        <div class="recuerdame-confirmar">
+        <!-- <div class="recuerdame-confirmar">
           <input type="checkbox">Recuérdame
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="olvidaste-wrapper">
@@ -56,6 +56,33 @@
     </div>
   </div>
 </template>
+
+<script>
+import { createNamespacedHelpers } from 'vuex';
+
+const { mapActions } = createNamespacedHelpers('user');
+
+export default {
+  data() {
+    return {
+      data: {
+        email: '',
+        password: '',
+      },
+    };
+  },
+  methods: {
+    loginButton() {
+      this.login(this.data).then(() => {
+        this.$router.push('/');
+      });
+    },
+    ...mapActions([
+      'login',
+    ]),
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .cuenta-wrapper {

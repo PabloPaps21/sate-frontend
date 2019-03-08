@@ -23,25 +23,25 @@
           Nombre completo <span class="advertencia">*</span>
         </div>
         <div class="campo">
-          <input type="text" class="campo-formulario">
+          <input type="text" class="campo-formulario" v-model="data.name">
         </div>
         <div class="pass-usr" style="margin-top: 20px;">
           Correo electrónico  <span class="advertencia">*</span>
         </div>
         <div class="campo">
-          <input type="text" class="campo-formulario">
+          <input type="text" class="campo-formulario" v-model="data.email">
         </div>
         <div class="pass-usr" style="margin-top: 20px;">
           Contraseña <span class="advertencia">*</span>
         </div>
         <div class="campo">
-          <input type="text" class="campo-formulario">
+          <input type="text" class="campo-formulario" v-model="data.password">
         </div>
         <div class="pass-usr" style="margin-top: 20px;">
           Repetir contraseña <span class="advertencia">*</span>
         </div>
         <div class="campo">
-          <input type="text" class="campo-formulario">
+          <input type="text" class="campo-formulario" v-model="passwordConfirmation">
         </div>
         </div>
     </div>
@@ -65,44 +65,44 @@
           Dirección <span class="advertencia">*</span>
         </div>
         <div class="campo">
-          <input type="text" class="campo-formulario">
+          <input type="text" class="campo-formulario" v-model="data.address">
         </div>
         <div class="pass-usr" style="margin-top: 20px;">
           Apartamento/Habitación,etc. (opcional)
         </div>
         <div class="campo">
-          <input type="text" class="campo-formulario">
+          <input type="text" class="campo-formulario" v-model="data.apartment">
         </div>
         <div class="pass-usr" style="margin-top: 20px;">
           Localidad / Ciudad <span class="advertencia">*</span>
         </div>
         <div class="campo">
-          <input type="text" class="campo-formulario">
+          <input type="text" class="campo-formulario" v-model="data.city">
         </div>
         <div class="pass-usr" style="margin-top: 20px;">
           Región / Provincia <span class="advertencia">*</span>
         </div>
         <div class="campo">
-          <input type="text" class="campo-formulario">
+          <input type="text" class="campo-formulario" v-model="data.state">
         </div>
         <div class="pass-usr" style="margin-top: 20px;">
           Código postal <span class="advertencia">*</span>
         </div>
         <div class="campo">
-          <input type="text" class="campo-formulario">
+          <input type="text" class="campo-formulario" v-model="data.postal_code">
         </div>
         <div class="pass-usr" style="margin-top: 20px;">
           Teléfono <span class="advertencia">*</span>
         </div>
         <div class="campo">
-          <input type="text" class="campo-formulario">
+          <input type="text" class="campo-formulario" v-model="data.phone_number">
         </div>
       </div>
     </div>
     <div class="confirmar-wrapper">
       <div class="confirmar" style="margin-top: 20px;">
         <div class="acceder-btn">
-          <button class="btn-acceder">Registro</button>
+          <button class="btn-acceder" @click="newUser">Registro</button>
         </div>
         <!-- <div class="recuerdame-confirmar">
           <input type="checkbox">Recuérdame
@@ -111,6 +111,40 @@
     </div>
   </div>
 </template>
+<script>
+import { createNamespacedHelpers } from 'vuex';
+
+const { mapActions } = createNamespacedHelpers('user');
+
+export default {
+  data() {
+    return {
+      data: {
+        name: '',
+        email: '',
+        password: '',
+        address: '',
+        apartment: '',
+        city: '',
+        state: '',
+        postal_code: '',
+        phone_number: '',
+      },
+      passwordConfirmation: '',
+    };
+  },
+  methods: {
+    newUser() {
+      this.createUser(this.data).then(() => {
+        this.$router.push('/');
+      });
+    },
+    ...mapActions([
+      'createUser',
+    ]),
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .cuenta-wrapper {

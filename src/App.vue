@@ -80,7 +80,11 @@
   </div>
 </template>
 <script>
+import axios from 'axios';
+import { createNamespacedHelpers } from 'vuex';
 import cart from '@/components/cart.vue';
+
+const { mapActions } = createNamespacedHelpers('user');
 
 export default {
   data() {
@@ -95,6 +99,19 @@ export default {
   },
   components: {
     cart,
+  },
+  methods: {
+    ...mapActions([
+      'getUser',
+    ]),
+  },
+  mounted() {
+    const token = localStorage.getItem('token');
+
+    if (token) {
+      axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+      this.getUser();
+    }
   },
 };
 </script>
