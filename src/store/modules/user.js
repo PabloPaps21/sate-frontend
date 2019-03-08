@@ -7,16 +7,17 @@ const actions = {
     return axios.post('http://127.0.0.1:3333/user', payload);
   },
   // eslint-disable-next-line
-  login({}, payload) {
+  login({ dispatch }, payload) {
     return axios.post('http://127.0.0.1:3333/login', payload)
       .then((response) => {
         localStorage.setItem('token', response.data.token);
         axios.defaults.headers.common.Authorization = `Bearer ${response.data.token}`;
+        dispatch('getUser');
       });
   },
   logout({ commit }) {
     localStorage.removeItem('token');
-    commit('setUser', {});
+    commit('setUser', null);
   },
   getUser({ commit }) {
     return axios.get('http://127.0.0.1:3333/user')
@@ -25,7 +26,7 @@ const actions = {
       })
       .catch(() => {
         localStorage.removeItem('token');
-        commit('setUser', {});
+        commit('setUser', null);
         router.push('/login');
       });
   },
@@ -38,7 +39,7 @@ const mutations = {
 };
 
 const state = {
-  user: {},
+  user: null,
 };
 
 export default {

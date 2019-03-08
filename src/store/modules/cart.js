@@ -11,6 +11,14 @@ const getters = {
     }
     return total;
   },
+  cartTotalPrice: (state) => {
+    let total = 0;
+    for (let i = 0; i < state.items.length; i += 1) {
+      const item = state.items[i];
+      total += item.quantity * item.product.price;
+    }
+    return total;
+  },
   foodItems: state => state.items.filter(item => item.product.type === 'FOOD'),
   marketItems: state => state.items.filter(item => item.product.type === 'MARKET'),
 };

@@ -33,7 +33,6 @@
   </div>
 </template>
 
-
 <script>
 import { createNamespacedHelpers } from 'vuex';
 
@@ -68,6 +67,7 @@ export default {
   },
 };
 </script>
+
 <style lang="scss" scoped>
 .productos-wrapper{
   display: flex;
