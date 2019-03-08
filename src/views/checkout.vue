@@ -1,47 +1,47 @@
 <template>
 <div class="envolver">
   <div class="columnas-header-wrapper">
-      <div class="columnas-header">
-          <div class="encabezado">
-              <div class="head-producto">
-                  PRODUCTO
-              </div>
-              <div class="segunda-mitad">
-              <div class="head-precio">
-                  PRECIO
-              </div>
-              <div class="head-cantidad">
-                  CANTIDAD
-              </div>
-              <div class="head-total">
-                  TOTAL
-              </div>
-              <div class="btn-espacio">
-              </div>
-              </div>
+    <div class="columnas-header">
+      <div class="encabezado">
+        <div class="head-producto">
+          PRODUCTO
+        </div>
+        <div class="segunda-mitad">
+          <div class="head-precio">
+            PRECIO
           </div>
+          <div class="head-cantidad">
+            CANTIDAD
+          </div>
+          <div class="head-total">
+            TOTAL
+          </div>
+          <div class="btn-espacio">
+          </div>
+        </div>
       </div>
+    </div>
   </div>
   <row/>
   <row/>
   <row/>
-      <div class="debajo-producto-wrapper">
-        <div class="debajo-producto">
-          <div class="vacio">
+  <div class="debajo-producto-wrapper">
+    <div class="debajo-producto">
+      <div class="vacio">
+      </div>
+      <div class="checkout">
+        <div class="cantidad-pagar">
+          <div class="subtotal-pagar">
+            SUBTOTAL
           </div>
-          <div class="checkout">
-            <div class="cantidad-pagar">
-              <div class="subtotal-pagar">
-                SUBTOTAL
-              </div>
-              <div class="cantidad-subtotal">
-                $180.00
-              </div>
-            </div>
-            <button class="paypal">paypal</button>
+          <div class="cantidad-subtotal">
+            $180.00
           </div>
         </div>
+        <button class="paypal">paypal</button>
       </div>
+    </div>
+  </div>
 </div>
 </template>
 
@@ -56,7 +56,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .columnas-header-wrapper {
+.columnas-header-wrapper {
   display: flex;
   width: 100%;
   justify-content: center;

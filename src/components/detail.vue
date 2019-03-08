@@ -45,60 +45,15 @@
         </div>
       </div>
     </div>
-    <div class="prod-rel-wrapper">
+    <!-- <div class="prod-rel-wrapper">
       <div class="prod-rel-titulo">
         PRODUCTOS RELACIONADOS
       </div>
     </div>
     <div class="productos-relacionados-w">
       <div class="productos-relacionados">
-        <div class="producto-opcion">
-          <img src="/platillos.png" alt="" class="img-productos">
-          <div class="producto-titulo">
-            Producto 1
-          </div>
-          <div class="producto-precio">
-            $120.00
-          </div>
-          <div class="producto-descripcion">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit
-          </div>
-          <div>
-            <a href="#" class="add-producto">Añadir</a>
-          </div>
-        </div>
-        <div class="producto-opcion">
-          <img src="/platillos.png" alt="" class="img-productos">
-          <div class="producto-titulo">
-            Producto 1
-          </div>
-          <div class="producto-precio">
-            $120.00
-          </div>
-          <div class="producto-descripcion">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit
-          </div>
-          <div>
-            <a href="#" class="add-producto">Añadir</a>
-          </div>
-        </div>
-        <div class="producto-opcion">
-          <img src="/platillos.png" alt="" class="img-productos">
-          <div class="producto-titulo">
-            Producto 1
-          </div>
-          <div class="producto-precio">
-            $120.00
-          </div>
-          <div class="producto-descripcion">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit
-          </div>
-          <div>
-            <a href="#" class="add-producto">Añadir</a>
-          </div>
-        </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -111,14 +66,11 @@ export default {
 .detalle-wrapper{
   display: flex;
   width: 100%;
-  background-color: #eae5dc;
   justify-content: center;
 }
 .detalle-producto{
   display: flex;
-  width: 900px;
   justify-content: center;
-  margin-top: 50px;
   margin-bottom: 50px;
 }
 .detalle{
@@ -149,7 +101,6 @@ export default {
   width: 59px;
   height: 39px;
   border: none;
-  background-color: #e6d6ba;
   color:#414f3a;
   font-size: 20px;
   font-family: 'Strait', sans-serif;
@@ -158,7 +109,6 @@ export default {
 .alimento-add-button{
   width: 136px;
   height: 39px;
-  background-color:#eae5dc;
   color: black;
   border: 2px solid black;
   margin-bottom: 20px;
@@ -167,7 +117,6 @@ export default {
 .descripcion-wrapper{
   display: flex;
   width:100%;
-  background-color: #eae5dc;
   justify-content: center;
 }
 .descripcion{
@@ -186,7 +135,6 @@ export default {
   display: flex;
   width: 100%;
   justify-content: center;
-  background-color: #eae5dc;
 }
 .prod-relacionados{
   display: flex;
@@ -218,13 +166,11 @@ export default {
   width: 100%;
   height: 100px;
   justify-content: center;
-  background-color: #eae5dc;
 }
 .prod-rel-wrapper{
   display: flex;
   width: 100%;
   justify-content: center;
-  background-color: #eae5dc;
 }
 .prod-rel-titulo{
   display: flex;
@@ -239,7 +185,6 @@ export default {
   display: flex;
   width: 100%;
   justify-content: center;
-  background-color: #eae5dc;
 }
 .productos-relacionados{
   display: flex;
@@ -285,7 +230,6 @@ export default {
   font-family: 'Strait', sans-serif;
   font-size: 12px;
   color:black;
-  background-color: #eae5dc;
   border: 2px solid black;
 }
 </style>
