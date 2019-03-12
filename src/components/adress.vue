@@ -73,7 +73,7 @@
   background-color: #3e4e35;
   margin-top: 50px;
   margin-bottom: 50px;
-  color: #e6d6ba;
+  color: #eae5dc;
   font-family: 'Strait', sans-serif;
   font-size: 30px;
 }
@@ -99,13 +99,17 @@
 .campo-formulario {
   width: 100%;
   margin-top: 20px;
-  border:none;
+  border: 2px solid #3e4e35;
+  background-color: #e6d6ba;
+  color: #3e4e35;
   height: 25px;
   font-family: 'Strait', sans-serif;
   font-size: 20px;
+
 }
 .pass-usr {
   font-family: 'Strait', sans-serif;
   font-size: 20px;
+  color:#3e4e35;
 }
 </style>

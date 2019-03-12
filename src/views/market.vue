@@ -70,7 +70,7 @@ export default {
     position: relative;
   }
   .slide-title{
-    color: #fff;
+    color:#e6d6ba;
     margin-bottom: 30px;
     font-size: 56px;
     font-family: 'Strait', sans-serif;
@@ -80,7 +80,7 @@ export default {
     display: flex;
     width: 100%;
     height: auto;
-    background-color: #eae5dc;
+    background-color:#e6d6ba;
     justify-content: center;
   }
   .week{
@@ -99,12 +99,14 @@ export default {
     font-family: 'Strait', sans-serif;
     font-weight: 400;
     font-size: 35px;
+    color: #3e4e35;
   }
   .cita-index{
     text-align: center;
     margin-bottom: 40px;
     font-family: 'Strait', sans-serif;
     font-size: 16px;
+    color: #3e4e35;
   }
   .menu-wrapper{
     display: flex;
@@ -127,7 +129,7 @@ export default {
     display: flex;
     width: 100%;
     justify-content: center;
-    background-color: #eae5dc;
+    background-color: #e6d6ba;
   }
   .alimentos{
     display: flex;

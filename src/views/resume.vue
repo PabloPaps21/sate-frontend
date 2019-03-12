@@ -35,7 +35,7 @@
                       $180.00
                     </div>
                   </div>
-                  <button class="pagar">PAGAR</button>
+                  <button class="pagar">COMPLETAR</button>
                 </div>
               </div>
             </div>

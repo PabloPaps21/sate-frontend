@@ -1,5 +1,10 @@
 <template>
   <div class="envolver">
+    <div class="img-slide-wrapper" style="background-image:url('/food-hero3.jpg')">
+      <div class="slide-title">
+        Food Design
+      </div>
+    </div>
     <div class="about-wrapper">
     <div class="about img-about" style="background-image:url('/food-hero3.jpg')">
     </div>
@@ -7,13 +12,13 @@
     <div class="iconos-wrapper">
       <div class="iconos">
         <div class="eleccion-icono">
-          <img src="/hands.png" alt="" class="img-icono">
+          <img src="/asesorías.svg" alt="" class="img-icono">
           <div class="titulo-icono">
             ASESORIAS
           </div>
         </div>
         <div class="eleccion-icono">
-          <img src="/spoon.png" alt="" class="img-icono">
+          <img src="/estilismo.svg" alt="" class="img-icono">
           <div class="titulo-icono">
             ESTILISMO DE ALIMENTOS
           </div>
@@ -65,9 +70,37 @@
         </div>
       </div>
     </div>
+    <div class="banner-wrapper">
+      <div class="banner">
+        <div class="texto-banner">
+            Se parte de la experiencia Saté
+        </div>
+        <!-- <button class="btn-contactanos">CONTÁCTANOS</button> -->
+        <a href="contacto.html" class="btn-contactanos">CONTÁCTANOS</a>
+      </div>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
+.img-slide-wrapper {
+    display: flex;
+    height: 444px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .slide-title {
+    color:  #e6d6ba;
+    margin-bottom: 30px;
+    font-size: 56px;
+    font-family: 'Strait', sans-serif;
+    font-weight: 400;
+  }
   .iconos-wrapper {
     display: flex;
     width: 100%;
@@ -140,9 +173,40 @@
   }
   .descripcion-grid {
     font-family: 'Strait', sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 19px;
     padding: 20px;
     text-align: left;
+  }
+   .banner-wrapper {
+    display: flex;
+    width: 100%;
+    height: 140px;
+    background-color: #403726;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner {
+    display: flex;
+    width: 900px;
+    color:#fff;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .texto-banner {
+    font-size: 22px;
+    font-family: 'Strait', sans-serif;
+  }
+  .btn-contactanos {
+    background-color: #403726;
+    color: #fff;
+    border: 2px solid #fff;
+    width:120px;
+    height:48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Strait', sans-serif;
   }
 </style>

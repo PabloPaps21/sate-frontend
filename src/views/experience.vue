@@ -1,7 +1,32 @@
 <template>
   <div class="envolver">
+    <div class="img-slide-wrapper" style="background-image:url('/food-hero3.jpg')">
+      <div class="slide-title">
+        Experiencia Saté
+      </div>
+    </div>
     <div class="about-wrapper">
       <div class="about img-about" style="background-image:url('/food-hero3.jpg')">
+      </div>
+    </div>
+    <div class="exp-wrapper">
+      <div class="exp">
+        <div class="exp-icono">
+          <img src="/e.multisensoriales.svg" alt="" class="img-exp">
+          <div class="titulo-exp">EXPERIENCIAS MULTISENSORIALES</div>
+        </div>
+        <div class="exp-icono">
+          <img src="/viajes_gastronomicos.svg" alt="" class="img-exp">
+          <div class="titulo-exp">VIAJES GASTRONÓMICOS</div>
+        </div>
+        <div class="exp-icono">
+          <img src="/clases_cocina.svg" alt="" class="img-exp">
+          <div class="titulo-exp">CLASES DE COCINA</div>
+        </div>
+        <div class="exp-icono">
+          <img src="/banquetes.svg" alt="" class="img-exp">
+          <div class="titulo-exp">CATERING</div>
+        </div>
       </div>
     </div>
     <div class="cita-wrapper" style="background-image:url('/kraft.jpg')">
@@ -40,23 +65,26 @@
         </div>
       </div>
     </div>
-    <div class="exp-wrapper">
-      <div class="exp">
-        <div class="exp-icono">
-          <img src="/e.multisensoriales.svg" alt="" class="img-exp">
-          <div class="titulo-exp">EXPERIENCIAS MULTISENSORIALES</div>
-        </div>
-        <div class="exp-icono">
-          <img src="/viajes_gastronomicos.svg" alt="" class="img-exp">
-          <div class="titulo-exp">VIAJES GASTRONÓMICOS</div>
-        </div>
-        <div class="exp-icono">
-          <img src="/clases_cocina.svg" alt="" class="img-exp">
-          <div class="titulo-exp">CLASES DE COCINA</div>
-        </div>
-        <div class="exp-icono">
-          <img src="/room.png" alt="" class="img-exp">
-          <div class="titulo-exp">CATERING</div>
+    <div class="grid-wrapper">
+      <div class="grid">
+        <div class="img-grid con-grid" style="background-image:url('/temp3g.jpg')"></div>
+        <div class="texto-grid-der">
+          <div class="texto-titulo-grid">
+            Experiencias culinarias
+          </div>
+          <div class="descripcion-grid">
+            <p>Date la oportunidad de descubrir el placer
+              de cocinar. Una habilidad básica de vida que
+              te permitirá alimentarte sanamente, ahorrar dinero
+              y ante todo, preparar deliciosos platillos para ti
+              y tus seres queridos. Aprenderás en un ambiente relajado
+              con una dinámica divertida donde todo el grupo participará
+              activamente en la elaboración de comida. </p>
+              <p style="margin-top:20px;">Saté ofrece una amplia gama de
+              cursos en los que podrás aprender a preparar pasta fresca,
+              servir una cena japonesa completa o, si lo tuyo es la falta
+              de tiempo, recetas fáciles que podrás preparar en minutos.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -86,7 +114,8 @@
     </div>
     <div class="grid-wrapper">
       <div class="grid">
-        <div class="img-grid con-grid" style="background-image:url('/cheff.jpg')"></div>
+        <div class="img-grid con-grid"
+        style="background-image:url('/cheff.jpg')"></div>
         <div class="texto-grid-der">
           <div class="texto-titulo-grid">
             Viajes Gastronómicos
@@ -171,6 +200,25 @@
   </div>
 </template>
 <style lang="scss" scoped>
+.img-slide-wrapper {
+    display: flex;
+    height: 444px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .slide-title {
+    color:  #e6d6ba;
+    margin-bottom: 30px;
+    font-size: 56px;
+    font-family: 'Strait', sans-serif;
+    font-weight: 400;
+  }
   .cita-wrapper {
     display: flex;
     width: 100%;
@@ -272,7 +320,7 @@
   }
   .descripcion-grid {
     font-family: 'Strait', sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 19px;
     padding: 20px;
     text-align: left;

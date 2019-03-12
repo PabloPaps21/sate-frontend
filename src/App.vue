@@ -204,6 +204,7 @@ a {
   width: 330px;
   color:#e6d6ba;
   text-align: left;
+  font-size: 16px;
 }
 .titulo-opcion-footer {
   font-family: 'Strait', sans-serif;
@@ -262,6 +263,7 @@ a {
 }
 .direccion {
   font-family: 'Strait', sans-serif;
+  line-height: 24px;
 }
 @media screen and (max-width: 500px) {
   .footer {

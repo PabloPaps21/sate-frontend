@@ -1,5 +1,10 @@
 <template>
 <div class="envolver">
+  <div class="img-slide-wrapper" style="background-image:url('/food-hero3.jpg')">
+    <div class="slide-title">
+      Contacto
+    </div>
+  </div>
   <div class="contactanos-wrapper">
     <div class="contactanos">
       <div class="contactanos-titulo">
@@ -15,7 +20,7 @@
       <div class="campo">
         <input type="text" class="campo-formulario">
       </div>
-      <div class="pass-usr">
+      <div class="nombre-usr" style="margin-top:20px;">
         Email <span class="advertencia">*</span>
       </div>
       <div class="campo">
@@ -28,10 +33,16 @@
         <input type="text" class="campo-formulario">
       </div>
       <div class="nombre-usr" style="margin-top:20px;">
-        Mensaje<span class="advertencia">*</span>
+        Área de interés
       </div>
       <div class="campo">
         <input type="text" class="campo-formulario">
+      </div>
+      <div class="nombre-usr" style="margin-top:20px;">
+        Mensaje<span class="advertencia">*</span>
+      </div>
+      <div class="campo">
+        <input type="text" class="campo-formulario-m">
       </div>
     </div>
   </div>
@@ -45,6 +56,25 @@
 </div>
 </template>
 <style lang="scss" scoped>
+  .img-slide-wrapper {
+    display: flex;
+    height: 444px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .slide-title {
+    color:  #e6d6ba;
+    margin-bottom: 30px;
+    font-size: 56px;
+    font-family: 'Strait', sans-serif;
+    font-weight: 400;
+  }
   .contactanos-wrapper {
     display: flex;
     width: 100%;
@@ -54,18 +84,19 @@
   .contactanos {
     display: flex;
     width: 900px;
-    margin-top: 30px;
+    margin-top: 70px;
     font-family: 'Strait', sans-serif;
   }
   .contactanos-titulo {
     font-size: 30px;
     margin-bottom: 5%;
+    color:#3e4e35;
   }
   .formulario-contactanos-wrapper {
   display: flex;
   width: 100%;
   justify-content: center;
-  background-color: #eae5dc;
+  background-color: #e6d6ba;
   }
   .formulario-contactanos {
     display: flex;
@@ -73,18 +104,35 @@
     flex-direction: column;
     text-align: left;
   }
+  .campo {
+    display: flex;
+    justify-content: center;
+  }
   .nombre-usr {
     font-family: 'Strait', sans-serif;
     font-size: 20px;
+    color:#3e4e35;
   }
   .advertencia {
     color:red;
   }
   .campo-formulario {
-    width: 900px;
+    width: 700px;
     margin-top: 20px;
-    border:none;
+    border: 2px solid #3e4e35;
+    color:#3e4e35;
+    background-color: #e6d6ba;
     height: 25px;
+    font-family: 'Strait', sans-serif;
+    font-size: 20px;
+  }
+  .campo-formulario-m {
+    width: 700px;
+    margin-top: 20px;
+    border: 2px solid #3e4e35;
+    color:#3e4e35;
+    background-color: #e6d6ba;
+    height:200px;
     font-family: 'Strait', sans-serif;
     font-size: 20px;
   }
@@ -92,20 +140,23 @@
   display:flex;
   width: 100%;
   justify-content: center;
-  background-color: #eae5dc;
+  background-color: #e6d6ba;
   }
   .confirmar {
     display: flex;
     width: 900px;
+    margin-bottom: 50px;
   }
   .btn-acceder {
-    width: 69px;
+    width: 80px;
     height: 35px;
     background-color:#eae5dc;
-    color: black;
-    border: 2px solid #555555;
+    color: #3e4e35;
+    border: 2px solid #3e4e35;
     margin-bottom: 20px;
     font-family: 'Strait', sans-serif;
+    font-size: 20px;
+    margin-left: 96px;
   }
   .pass-usr {
     margin-top: 20px;

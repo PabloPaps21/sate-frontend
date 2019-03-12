@@ -127,7 +127,7 @@ export default {
     position: relative;
   }
   .slide-title {
-    color: #fff;
+    color:  #e6d6ba;
     margin-bottom: 30px;
     font-size: 56px;
     font-family: 'Strait', sans-serif;
@@ -165,7 +165,7 @@ export default {
   .subtitle-order {
     text-align: center;
     font-family: 'Strait', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 25px;
   }
   .conoce-titulo-wrapper {
