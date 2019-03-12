@@ -2,7 +2,7 @@
   <div class="productos-wrapper">
     <div class="productos">
       <div class="productos-opcion">
-        <div class="img-productos" style="position: relative;">
+        <div class="img-productos" style="position: relative;" @click="showDetail = true;">
           <div style="position: absolute; z-index: 2">{{ quantity }}</div>
           <div class="img-productos"
             style="position: absolute; z-index: 0"
@@ -30,15 +30,25 @@
         </div>
       </div>
     </div>
+    <div class="background" v-show="showDetail"  @click.self="showDetail = false">
+      <div class="window">
+        <detail :product="product"/>
+      </div>
+    </div>
   </div>
 </template>
 
-
 <script>
 import { createNamespacedHelpers } from 'vuex';
+import detail from '@/components/detail.vue';
 
 const { mapState, mapMutations } = createNamespacedHelpers('cart');
 export default {
+  data() {
+    return {
+      showDetail: false,
+    };
+  },
   props: {
     product: Object,
   },
@@ -54,6 +64,9 @@ export default {
       'items',
     ]),
   },
+  components: {
+    detail,
+  },
   methods: {
     addProduct() {
       this.addToCart(this.product);
@@ -68,7 +81,26 @@ export default {
   },
 };
 </script>
+
 <style lang="scss" scoped>
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(19, 18, 18, 0.555);
+  padding-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+.window {
+  width: 900px;
+  background-color: #eae5dc;
+  padding: 40px 20px;
+}
 .productos-wrapper{
   display: flex;
   width: 30%;

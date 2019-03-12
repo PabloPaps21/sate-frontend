@@ -6,12 +6,17 @@
         Carrito
       </div>
       <div class="cerrar">
-        <i class="fas fa-window-close"></i>
+        <i class="fas fa-window-close" @click.self="closeModal"></i>
       </div>
     </div>
-    <row/>
-    <div class="linea-verde"></div>
-    <row/>
+    <div v-for="item in foodItems" :key="item.id">
+      <row :product="item.product"/>
+      <div class="linea-verde"></div>
+    </div>
+    <div v-for="item in marketItems" :key="item.id">
+      <row :product="item.product"/>
+      <div class="linea-verde"></div>
+    </div>
     <div class="debajo-producto-wrapper">
       <div class="debajo-producto">
         <div class="checkout">
@@ -20,10 +25,10 @@
               SUBTOTAL
             </div>
             <div class="cantidad-subtotal">
-              $180.00
+              ${{ cartTotalPrice }}
             </div>
           </div>
-          <button class="pagar">PAGAR</button>
+          <button class="pagar" @click="$router.push('/resume'); closeModal()">PAGAR</button>
         </div>
       </div>
     </div>
@@ -32,11 +37,21 @@
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex';
 import row from '@/components/row.vue';
+
+const { mapGetters } = createNamespacedHelpers('cart');
 
 export default {
   props: {
     show: Boolean,
+  },
+  computed: {
+    ...mapGetters([
+      'foodItems',
+      'marketItems',
+      'cartTotalPrice',
+    ]),
   },
   methods: {
     closeModal() {
@@ -86,6 +101,10 @@ export default {
   justify-content: flex-end;
   margin-right: 20px;
   width: 100%;
+
+  i {
+    cursor: pointer;
+  }
 }
 .btn-espacio {
   width: 30px;

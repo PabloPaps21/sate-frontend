@@ -4,33 +4,69 @@
       <div class="columnas">
         <div class="columnas-particular">
           <div class="descripcion">
-            <img src="/avion.png" alt="" class="img-descripcion-checkout">
+            <img src="/ensalada.png" alt="" class="img-descripcion-checkout">
             <div class="texto-checkout">
-              <div>Sandalias1</div>
-              <div>$9.99</div>
+              <div>{{ product.name }}</div>
+              <div>${{ product.price }}</div>
             </div>
           </div>
           <div class="numeros">
             <div class="precio-unitario">
-              $9.99
+              ${{ product.price }}
             </div>
             <div class="cantidad">
-              <button class="btn-qty"> + </button>
-              0
-              <button class="btn-qty"> - </button>
+              <button class="btn-qty" @click="removeProduct"> - </button>
+              {{ quantity }}
+              <button class="btn-qty" @click="addProduct"> + </button>
             </div>
             <div class="cuenta-check">
-              $9.99
+              ${{ quantity * product.price }}
             </div>
-            <button class="btn-cancel-check">X</button>
+            <button class="btn-cancel-check" @click="removeAll">X</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
 <script>
+import { createNamespacedHelpers } from 'vuex';
+
+const { mapState, mapMutations } = createNamespacedHelpers('cart');
 export default {
+  props: {
+    product: Object,
+  },
+  computed: {
+    quantity() {
+      const cartItem = this.items.find(item => item.product.id === this.product.id);
+      if (!cartItem) {
+        return null;
+      }
+      return cartItem.quantity;
+    },
+    ...mapState([
+      'items',
+    ]),
+  },
+  methods: {
+    addProduct() {
+      this.addToCart(this.product);
+    },
+    removeProduct() {
+      this.removeFromCart(this.product);
+    },
+    removeAll() {
+      while (this.quantity > 0) {
+        this.removeFromCart(this.product);
+      }
+    },
+    ...mapMutations([
+      'addToCart',
+      'removeFromCart',
+    ]),
+  },
 };
 </script>
 

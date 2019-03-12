@@ -1,48 +1,47 @@
 <template>
   <div class="envolver">
     <div class="detalle-wrapper">
-      <div class="detalle-producto">
-        <img src="/almohadas.png" alt="" class="img-detalle-producto">
-        <div class="detalle">
+      <div class="detalle-producto" style="width: 90%">
+        <img src="/ensalada.png" alt="" class="img-detalle-producto">
+        <div class="detalle" style="width: 80%">
           <div class="nombre-producto aire">
             <div class="nom-product">
-              Producto temporal
+              {{ product.name }}
             </div>
-            <div class="cerrar">
+            <!-- <div class="cerrar">
              <button class="btn-cancel-check">X</button>
-            </div>
+            </div> -->
           </div>
           <div class="descripcion-producto aire">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Architecto sapiente, molestiae nesciunt commodi quis aliquid.
+            {{ product.description }}
           </div>
           <div class="add-to-cart" style="margin-bottom:10px">
             <div class="cantidad">
-              <button class="btn-qty"> + </button>
+              <button class="btn-qty" @click="removeProduct"> - </button>
                 <div class="numero">
-                  0
+                  {{ quantity }}
                 </div>
-              <button class="btn-qty"> - </button>
+              <button class="btn-qty" @click="addProduct"> + </button>
             </div>
             <div class="botones">
-              <button style="margin-left:10px;" class="alimento-add-button">
+              <!-- <button style="margin-left:10px;" class="alimento-add-button">
                 Añadir al carrito
-              </button>
+              </button> -->
               <button style="margin-left:10px;" class="wishlist-add-button">
                 Añadir a la wishlist
               </button>
             </div>
           </div>
           <div class="categoria">
-            Categoría: primera.
+            Categoría: pendiente.
           </div>
           <div class="etiqueta">
-            Etiqueta: primera.
+            Etiqueta: pendiente.
           </div>
         </div>
       </div>
     </div>
-    <div class="descripcion-wrapper">
+    <!-- <div class="descripcion-wrapper">
       <div class="descripcion">
         <div class="tags">
           <div class="descripcion-tag descripcion-tag-fuente" style="margin-bottom:30px;">
@@ -54,13 +53,10 @@
         </div>
         <div class="texto-descripcion descripcion-tag-fuente">
           <div style="margin-bottom:30px;">Descripción</div>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-             Odio molestiae obcaecati fuga vitae eligendi nam animi
-             repellat quam itaque neque, aliquid non aperiam praesentium
-             ab, molestias unde odit repellendus eos!</p>
+           <p>{{ product.description }}</p>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- <div class="prod-rel-wrapper">
       <div class="prod-rel-titulo">
         PRODUCTOS RELACIONADOS
@@ -74,7 +70,37 @@
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex';
+
+const { mapState, mapMutations } = createNamespacedHelpers('cart');
 export default {
+  props: {
+    product: Object,
+  },
+  computed: {
+    quantity() {
+      const cartItem = this.items.find(item => item.product.id === this.product.id);
+      if (!cartItem) {
+        return 0;
+      }
+      return cartItem.quantity;
+    },
+    ...mapState([
+      'items',
+    ]),
+  },
+  methods: {
+    addProduct() {
+      this.addToCart(this.product);
+    },
+    removeProduct() {
+      this.removeFromCart(this.product);
+    },
+    ...mapMutations([
+      'addToCart',
+      'removeFromCart',
+    ]),
+  },
 };
 </script>
 
@@ -87,7 +113,7 @@ export default {
 .detalle-producto {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .detalle {
   display: flex;
@@ -116,7 +142,7 @@ export default {
   justify-content: space-between;
 }
 .img-detalle-producto {
-  height: auto;
+  height: 257px;
   width: 257px;
   margin-right: 91px;
 }

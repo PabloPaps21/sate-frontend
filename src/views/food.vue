@@ -34,7 +34,7 @@
     </div>
     <div class="conoce-wrapper">
       <div class="conoce">
-        <div class="video-conoce" style="background-color: coral;">
+        <div class="video-conoce">
           <video width="300" controls autoplay>
             <source src="/videos/delivery_que_es.mov" type="video/mp4">
           </video>

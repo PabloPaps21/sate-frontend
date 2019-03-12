@@ -12,7 +12,8 @@
              <a href="#"><i class="fas fa-shopping-basket logo-cart"></i></a>
           </div>
           <div class="login">
-          <router-link to="/login" class="login"><i class="fas fa-sign-in-alt"></i></router-link>
+            <div v-if="!user" @click="$router.push('/login')">Iniciar sesión/Registrarse</div>
+            <div v-else @click="logout">Cerrar sesión</div>
           </div>
         </div>
       </div>
@@ -26,7 +27,6 @@
           <router-link to="/experience" class="margin-link">Experiencias culinarias</router-link>
           <router-link to="/design" class="margin-link">Food design</router-link>
           <router-link to="/contact" class="margin-link">Contacto</router-link>
-          <router-link to="/about" class="margin-link">About</router-link>
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@ import axios from 'axios';
 import { createNamespacedHelpers } from 'vuex';
 import cart from '@/components/cart.vue';
 
-const { mapActions } = createNamespacedHelpers('user');
+const { mapActions, mapState } = createNamespacedHelpers('user');
 
 export default {
   data() {
@@ -96,6 +96,9 @@ export default {
     totalItems() {
       return this.$store.getters['cart/cartTotalItems'];
     },
+    ...mapState([
+      'user',
+    ]),
   },
   components: {
     cart,
@@ -103,6 +106,7 @@ export default {
   methods: {
     ...mapActions([
       'getUser',
+      'logout',
     ]),
   },
   mounted() {
@@ -139,6 +143,7 @@ a {
 .logo {
   width: auto;
   height: 71px;
+  cursor: pointer;
 }
 .elementos {
   display: flex;
@@ -258,8 +263,10 @@ a {
 }
 .login{
   color: #e6d6ba;
-  font-size: 25px;
-  margin-left: 10px;
+  font-size: 16px;
+  margin-left: 30px;
+  display: flex;
+  cursor: pointer;
 }
 .direccion {
   font-family: 'Strait', sans-serif;

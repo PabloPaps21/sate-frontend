@@ -1,15 +1,67 @@
 <template>
-  <div class="envolver">
+  <div class="envolver" style="background-color: #e6d6ba;">
     <div class="titulo-resumen-wrapper">
       <div class="titulo-resumen">
         Resumen de la compra
       </div>
     </div>
     <!--  -->
-    <div class="cuerpo-wrapper">
+    <div class="cuerpo-wrapper" v-if="!success">
       <div class="cuerpo">
         <div class="direccion">
-          <adress/>
+          <div class="separador-wrapper">
+            <div class="separador">
+              <div class="titulo-separador">
+                Datos Envío
+              </div>
+              <div class="separador-sub">
+                Datos que nos serviran para realizar el envío
+              </div>
+            </div>
+          </div>
+          <div class="formulario-adress-wrapper">
+            <div class="formulario-adress">
+              <div class="pass-usr" style="margin-top: 20px;">
+                País: <span class="advertencia">*</span>  México
+              </div>
+              <div class="pass-usr" style="margin-top: 20px;">
+                Dirección <span class="advertencia">*</span>
+              </div>
+              <div class="campo">
+                <input type="text" class="campo-formulario" v-model="data.address">
+              </div>
+              <div class="pass-usr" style="margin-top: 20px;">
+                Apartamento/Habitación,etc. (opcional)
+              </div>
+              <div class="campo">
+                <input type="text" class="campo-formulario" v-model="data.apartment">
+              </div>
+              <div class="pass-usr" style="margin-top: 20px;">
+                Localidad / Ciudad <span class="advertencia">*</span>
+              </div>
+              <div class="campo">
+                <input type="text" class="campo-formulario" v-model="data.city">
+              </div>
+              <div class="pass-usr" style="margin-top: 20px;">
+                Región / Provincia <span class="advertencia">*</span>
+              </div>
+              <div class="campo">
+                <input type="text" class="campo-formulario" v-model="data.state">
+              </div>
+              <div class="pass-usr" style="margin-top: 20px;">
+                Código postal <span class="advertencia">*</span>
+              </div>
+              <div class="campo">
+                <input type="text" class="campo-formulario" v-model="data.postal_code">
+              </div>
+              <div class="pass-usr" style="margin-top: 20px;">
+                Teléfono <span class="advertencia">*</span>
+              </div>
+              <div class="campo">
+                <input type="text" class="campo-formulario" v-model="data.phone_number">
+              </div>
+            </div>
+          </div>
         </div>
         <!--  -->
         <div class="carrito">
@@ -21,38 +73,99 @@
               <i class="fas fa-window-close"></i>
             </div>
           </div>
-          <row/>
-          <div class="linea-verde"></div>
-          <row/>
-            <div class="debajo-producto-wrapper">
-              <div class="debajo-producto">
-                <div class="checkout">
-                  <div class="cantidad-pagar">
-                    <div class="subtotal-pagar">
-                      SUBTOTAL
-                    </div>
-                    <div class="cantidad-subtotal">
-                      $180.00
-                    </div>
+          <div v-for="item in foodItems" :key="item.id">
+            <row :product="item.product"/>
+            <div class="linea-verde"></div>
+          </div>
+          <div v-for="item in marketItems" :key="item.id">
+            <row :product="item.product"/>
+            <div class="linea-verde"></div>
+          </div>
+          <div class="debajo-producto-wrapper">
+            <div class="debajo-producto">
+              <div class="checkout">
+                <div class="cantidad-pagar">
+                  <div class="subtotal-pagar">
+                    SUBTOTAL
                   </div>
-                  <button class="pagar">COMPLETAR</button>
+                  <div class="cantidad-subtotal">
+                    ${{ cartTotalPrice }}
+                  </div>
                 </div>
+                <div id="paypal-button-container"></div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div
+      v-else
+      style="display: flex; height: 400px; justify-content: center; align-items: center;">
+      Tu orden se ha procesado correctamente. Gracias por tu compra. <a href="/">Ir a inicio</a>
     </div>
   </div>
 </template>
 
 <script>
-import adress from '@/components/adress.vue';
+/* global paypal */
+import { createNamespacedHelpers } from 'vuex';
 import row from '@/components/row.vue';
 
+const { mapGetters } = createNamespacedHelpers('cart');
+
 export default {
+  data() {
+    return {
+      data: {
+        address: '',
+        apartment: '',
+        city: '',
+        state: '',
+        postal_code: '',
+        phone_number: '',
+      },
+      success: false,
+    };
+  },
+  props: {
+    show: Boolean,
+  },
+  computed: {
+    user() {
+      return this.$store.state.user.user;
+    },
+    ...mapGetters([
+      'foodItems',
+      'marketItems',
+      'cartTotalPrice',
+    ]),
+  },
+  methods: {
+    closeModal() {
+      this.$emit('close');
+    },
+  },
   components: {
-    adress,
     row,
+  },
+  mounted() {
+    if (this.user) {
+      this.data = this.user.addresses[0];
+    }
+    paypal.Buttons({
+      createOrder: (data, actions) => actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: this.cartTotalPrice,
+          },
+        }],
+      }),
+      onApprove: (data, actions) => actions.order.capture()
+        .then(() => {
+          this.success = true;
+        }),
+    }).render('#paypal-button-container');
   },
 };
 </script>
@@ -177,10 +290,10 @@ export default {
 }
 .carrito{
   width: 48%;
-  margin-top: 100px;
+  margin-top: 40px;
 }
-/deep/ .separador-wrapper {
-    background-color: #e6d6ba;
+/deep/ .columnas-wrapper {
+  background-color: transparent;
 }
 /deep/ .cerrar {
   display: none;
@@ -190,19 +303,58 @@ export default {
   margin-left: 12px;
 }
 /deep/ .formulario-adress-wrapper {
-  background-color: #e6d6ba;
   padding: 0px;
-}
-/deep/ .descripcion {
-  background-color: #e6d6ba;
-}
-/deep/ .numeros {
-  background-color: #e6d6ba;
-}
-/deep/ .pagar {
-  background-color: #e6d6ba;
 }
 /deep/ .formulario-adress {
   padding: 0px;
+}
+.separador-wrapper{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.separador{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  background-color: #3e4e35;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  color: #e6d6ba;
+  font-family: 'Strait', sans-serif;
+  font-size: 30px;
+}
+.separador-sub{
+  font-family: 'Strait', sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.formulario-adress-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.formulario-adress {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.advertencia {
+  color:red;
+}
+.campo-formulario {
+  width: 100%;
+  margin-top: 20px;
+  border:none;
+  height: 25px;
+  font-family: 'Strait', sans-serif;
+  font-size: 20px;
+}
+.pass-usr {
+  font-family: 'Strait', sans-serif;
+  font-size: 20px;
 }
 </style>
