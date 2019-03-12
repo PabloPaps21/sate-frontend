@@ -239,7 +239,7 @@ a {
   justify-content: center;
   align-items: center;
   margin-top:5px;
-  width: 450px;
+  width: 100%;
   height: auto;
 }
 .redes-sociales {
