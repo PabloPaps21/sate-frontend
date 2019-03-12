@@ -27,7 +27,6 @@
           <router-link to="/experience" class="margin-link">Experiencias culinarias</router-link>
           <router-link to="/design" class="margin-link">Food design</router-link>
           <router-link to="/contact" class="margin-link">Contacto</router-link>
-          <router-link to="/about" class="margin-link">About</router-link>
         </div>
       </div>
     </div>

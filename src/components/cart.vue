@@ -13,6 +13,10 @@
       <row :product="item.product"/>
       <div class="linea-verde"></div>
     </div>
+    <div v-for="item in marketItems" :key="item.id">
+      <row :product="item.product"/>
+      <div class="linea-verde"></div>
+    </div>
     <div class="debajo-producto-wrapper">
       <div class="debajo-producto">
         <div class="checkout">
@@ -24,7 +28,7 @@
               ${{ cartTotalPrice }}
             </div>
           </div>
-          <button class="pagar">PAGAR</button>
+          <button class="pagar" @click="$router.push('/resume'); closeModal()">PAGAR</button>
         </div>
       </div>
     </div>

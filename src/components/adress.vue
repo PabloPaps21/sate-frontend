@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="formulario-adress-wrapper">
-      <div class="formulario-adresS">
+      <div class="formulario-adress">
         <div class="pass-usr" style="margin-top: 20px;">
           País: <span class="advertencia">*</span>  México
         </div>
