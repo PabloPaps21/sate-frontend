@@ -78,7 +78,7 @@
   .contactanos-wrapper {
     display: flex;
     width: 100%;
-    background-color: #eae5dc;
+    background-color: #e6d6ba;
     justify-content: center;
   }
   .contactanos {
@@ -150,7 +150,7 @@
   .btn-acceder {
     width: 80px;
     height: 35px;
-    background-color:#eae5dc;
+    background-color:#e6d6ba;
     color: #3e4e35;
     border: 2px solid #3e4e35;
     margin-bottom: 20px;

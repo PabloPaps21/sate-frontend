@@ -3,6 +3,25 @@
     <div class="img-slide-wrapper" style="background-image:url('/food-hero3.jpg')">
       <div class="slide-title"> Mercado Digital</div>
     </div>
+    <div class="conoce-wrapper">
+      <div class="conoce">
+        <div class="video-conoce">
+          <video width="300" controls autoplay>
+            <source src="/videos/delivery_que_es.mov" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-conoce">
+          <video width="300" controls autoplay>
+            <source src="/videos/delivery_como_funciona_final.mov" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-conoce">
+          <video width="300" controls autoplay>
+            <source src="/videos/delivery_como_calentar.mov" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
     <div class="week-wrapper">
       <div class="week">
         <div class="week-title">
@@ -57,6 +76,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+ .conoce-wrapper {
+    display: flex;
+    height: 386px;
+    width: 100%;
+    justify-content: center;
+    background-color: #e6d6ba;
+  }
+  .conoce {
+    display:  flex;
+    width: 900px;
+    justify-content: space-evenly;
+    margin-top: 40px;
+  }
+  .video-conoce {
+    display: flex;
+    width: 400px;
+    height: 174px;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
   .img-slide-wrapper{
     display: flex;
     height: 444px;

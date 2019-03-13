@@ -28,7 +28,7 @@
               ${{ cartTotalPrice }}
             </div>
           </div>
-          <button class="pagar" @click="$router.push('/resume'); closeModal()">PAGAR</button>
+          <button class="pagar" @click="$router.push('/resume'); closeModal()">COMPLETAR</button>
         </div>
       </div>
     </div>

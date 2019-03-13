@@ -184,7 +184,7 @@ export default {
   width: 900px;
   font-family: 'Strait', sans-serif;
   font-size: 30px;
-  color: black;
+  color: #3e4e35;
   height: 80px;
   margin-top: 40px;
 }
@@ -348,7 +348,9 @@ export default {
 .campo-formulario {
   width: 100%;
   margin-top: 20px;
-  border:none;
+  border: 2px solid #3e4e35;
+  color: #3e4e35;
+  background-color: #e6d6ba;
   height: 25px;
   font-family: 'Strait', sans-serif;
   font-size: 20px;
@@ -356,5 +358,6 @@ export default {
 .pass-usr {
   font-family: 'Strait', sans-serif;
   font-size: 20px;
+  color: #3e4e35;
 }
 </style>

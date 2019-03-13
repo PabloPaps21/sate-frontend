@@ -67,7 +67,8 @@
           Se parte de la experiencia Saté
       </div>
       <!-- <button class="btn-contactanos">CONTÁCTANOS</button> -->
-      <a href="contacto.html" class="btn-contactanos">CONTÁCTANOS</a>
+      <router-link to="/contact" class="btn-contactanos">CONTÁCTANOS</router-link>
+      <!-- <a href="contacto.html" class="btn-contactanos">CONTÁCTANOS</a> -->
     </div>
   </div>
 </div>
