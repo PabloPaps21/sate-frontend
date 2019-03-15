@@ -3,6 +3,11 @@
     <div class="img-slide-wrapper" style="background-image:url('/food-hero3.jpg')">
       <div class="slide-title"> Mercado Digital</div>
     </div>
+    <div class="explicar-wrapper">
+      <div class="explicar">
+        explicación
+      </div>
+    </div>
     <div class="conoce-wrapper">
       <div class="conoce">
         <div class="video-conoce">
@@ -97,6 +102,20 @@ export default {
     align-items: center;
     margin-left: 10px;
     margin-right: 10px;
+  }
+  .explicar-wrapper {
+    display: flex;
+    height: 386px;
+    width: 100%;
+    justify-content: center;
+    background-color: #e6d6ba;
+  }
+  .explicar {
+    display:  flex;
+    width: 900px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
   }
   .img-slide-wrapper{
     display: flex;
