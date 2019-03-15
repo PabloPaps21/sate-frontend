@@ -54,5 +54,17 @@ export default new Router({
       path: '/resume',
       component: () => import('./views/resume.vue'),
     },
+    {
+      path: '/categories',
+      component: () => import('./views/categories.vue'),
+    },
+    {
+      path: '/tags',
+      component: () => import('./views/tags.vue'),
+    },
+    {
+      path: '/products',
+      component: () => import('./views/products.vue'),
+    },
   ],
 });

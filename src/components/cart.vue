@@ -86,15 +86,20 @@ export default {
 .titulo-wrapper {
   display: flex;
   justify-content: space-between;
-  font-family: 'Strait', sans-serif;
+  font-family: 'Adelle Sans Book';
+  font-weight: normal;
+  font-style: normal;
   color:#3e4e35;
   margin-top: 20px;
   margin-bottom: 40px;
 }
 .titulo {
- display: flex;
- width: 100%;
- font-size: 30px;
+  display: flex;
+  width: 100%;
+  font-size: 30px;
+  font-family: 'Adelle Sans Book';
+  font-weight: normal;
+  font-style: normal;
 }
 .cerrar {
   display: flex;

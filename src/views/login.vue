@@ -110,7 +110,7 @@ export default {
 }
 .acceder {
   display: flex;
-  width: 900px;
+  width: 600px;
 }
 .acceder-titulo {
   font-size: 30px;
@@ -132,12 +132,14 @@ export default {
   color:red;
 }
 .campo-formulario {
-  width: 900px;
+  width: 600px;
   margin-top: 20px;
-  border:none;
   height: 25px;
   font-family: 'Strait', sans-serif;
   font-size: 20px;
+  border: 2px solid #3e4e35;
+  color: #3e4e35;
+  background-color: #eae5dc;
 }
 .pass-usr {
   font-family: 'Strait', sans-serif;
@@ -151,7 +153,7 @@ export default {
 }
 .confirmar {
   display: flex;
-  width: 900px;
+  width: 600px;
 }
 .btn-acceder {
   width: 69px;
@@ -175,7 +177,7 @@ export default {
 }
 .olvidaste {
   display: flex;
-  width: 900px;
+  width: 600px;
   margin-bottom: 30px;
   margin-top: 16px;
 }
@@ -191,7 +193,7 @@ export default {
 }
 .registro {
   display: flex;
-  width: 900px;
+  width: 600px;
   margin-bottom: 6%;
 }
 .titulo-registro {

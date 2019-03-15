@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Adelle Sans Book';
+    src: url('AdelleSans-Book.woff2') format('woff2'),
+        url('AdelleSans-Book.woff') format('woff'),
+        url('AdelleSans-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

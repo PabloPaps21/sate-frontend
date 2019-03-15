@@ -159,7 +159,9 @@ export default {
   .title-order {
     text-align: center;
     margin-bottom: 20px;
-    font-family: 'Strait', sans-serif;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
     font-size: 20px;
   }
   .subtitle-order {
@@ -179,7 +181,9 @@ export default {
     display: flex;
     width: 900px;
     justify-content: center;
-    font-family: 'Strait', sans-serif;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
     font-size: 40px;
     align-items: center;
     margin-top: 40px;
@@ -234,8 +238,9 @@ export default {
     margin-bottom: 30px;
     margin-top: 30px;
     font-size: 20px;
-    font-family: 'Strait', sans-serif;
-    font-weight: 400;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
     font-size: 35px;
   }
   .week-date {
@@ -266,7 +271,10 @@ export default {
     font-size: 30px;
     margin-bottom: 30px;
     margin-top:30px;
-    font-family: 'Strait', sans-serif;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
+    color:#3e4e35;
   }
   .alimentos-wrapper {
     display: flex;

@@ -36,14 +36,14 @@
               para ayudarte a realizar tus proyectos. Acércate a nosotros para
               poder orientarte en los siguientes servicios:</p>
             <p style="margin-top:20px;">
-              <ul>
-                <li><i class="fas fa-dot-circle"></i>  Creación de recetas</li>
-                <li><i class="fas fa-dot-circle"></i> Desarrollo de menús</li>
-                <li><i class="fas fa-dot-circle"></i> Campañas publicitarias</li>
-                <li><i class="fas fa-dot-circle"></i> Fotografía de Alimentos</li>
-                <li><i class="fas fa-dot-circle"></i> Diseño gráfico</li>
-                <li><i class="fas fa-dot-circle"></i> Asesoría para restaurantes</li>
-                <li><i class="fas fa-dot-circle"></i> Capacitación para personal</li>
+              <ul class="lista">
+                <li><i class="fas fa-circle punto"></i> Creación de recetas</li>
+                <li><i class="fas fa-circle punto"></i> Desarrollo de menús</li>
+                <li><i class="fas fa-circle punto"></i> Campañas publicitarias</li>
+                <li><i class="fas fa-circle punto"></i> Fotografía de Alimentos</li>
+                <li><i class="fas fa-circle punto"></i> Diseño gráfico</li>
+                <li><i class="fas fa-circle punto"></i> Asesoría para restaurantes</li>
+                <li><i class="fas fa-circle punto"></i> Capacitación para personal</li>
               </ul>
             </p>
           </div>
@@ -56,16 +56,15 @@
         <div class="img-grid con-grid" style="background-image:url('/temp2.jpg')"></div>
         <div class="texto-grid-der">
           <div class="texto-titulo-grid">
-            Viajes Gastronómicos
+            Estilismo de Alimentos
           </div>
           <div class="descripcion-grid">
             <p>Dentro de la gama de servicios en SATÉ,
               ofrecemos estilismo de alimentos que consiste
-              en presentar la comida de manera armónica y
-              atractiva. Dicha presentación tiene varios
-              objetivos, como lo son: fotografía para empaques,
-              medios publicitarios y editoriales así como videos
-              promocionales dentro de la industria de la gastronomía.</p>
+              en presentar la comida de manera armónica y atractiva.
+              Dicha presentación tiene varios objetivos, como lo son:
+              fotografía para empaques, medios publicitarios y editoriales
+              así como videos promocionales dentro de la industria de la gastronomía.</p>
           </div>
         </div>
       </div>
@@ -127,7 +126,9 @@
   }
   .titulo-icono {
     text-align: center;
-    font-family: 'Strait', sans-serif;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
     font-size: 20px;
     margin-top: 10px;
     color: #3e4e35;
@@ -167,8 +168,10 @@
     background-size: cover;
   }
   .texto-titulo-grid {
-    font-family: 'Strait', sans-serif;
-    font-size: 49px;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 35px;
     margin-bottom: 20px;
   }
   .descripcion-grid {
@@ -195,7 +198,9 @@
   }
   .texto-banner {
     font-size: 22px;
-    font-family: 'Strait', sans-serif;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
   }
   .btn-contactanos {
     background-color: #403726;
@@ -206,7 +211,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 13px;
     font-family: 'Strait', sans-serif;
+  }
+  .punto {
+    font-size: 8px;
+  }
+  .lista {
+    line-height: 30px;
   }
 </style>

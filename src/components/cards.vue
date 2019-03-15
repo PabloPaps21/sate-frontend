@@ -131,7 +131,9 @@ export default {
 .producto-titulo{
   text-align: center;
   margin-top: 20px;
-  font-family: 'Strait', sans-serif;
+  font-family: 'Adelle Sans Book';
+  font-weight: normal;
+  font-style: normal;
 }
 .producto-precio{
   text-align: center;
@@ -147,9 +149,9 @@ export default {
   height: 30px;
   font-family: 'Strait', sans-serif;
   font-size: 12px;
-  color:black;
+  color:#3e4e35;
   background-color: #eae5dc;
-  border: 2px solid black;
+  border: 2px solid #3e4e35;
   cursor: pointer;
 }
 .producto-descripcion{

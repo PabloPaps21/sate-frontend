@@ -74,11 +74,15 @@
   margin-top: 50px;
   margin-bottom: 50px;
   color: #eae5dc;
-  font-family: 'Strait', sans-serif;
+  font-family: 'Adelle Sans Book';
+  font-weight: normal;
+  font-style: normal;
   font-size: 30px;
 }
 .separador-sub{
-  font-family: 'Strait', sans-serif;
+  font-family: 'Adelle Sans Book';
+  font-weight: normal;
+  font-style: normal;
   font-size: 20px;
   margin-top: 20px;
 }
@@ -112,4 +116,9 @@
   font-size: 20px;
   color:#3e4e35;
 }
+.titulo-separador {
+  font-family: 'Adelle Sans Book';
+  font-weight: normal;
+  font-style: normal;
+} 
 </style>

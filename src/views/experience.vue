@@ -192,7 +192,7 @@
     <div class="banner-wrapper">
       <div class="banner">
         <div class="texto-banner">
-          Se paerte de la experiencia Saté
+          Se parte de la experiencia Saté
         </div>
         <a href="contacto.html" class="btn-contactanos">CONTÁCTANOS</a>
       </div>
@@ -236,7 +236,9 @@
   }
   .cita-texto p {
     margin-top: 30px;
-    font-family: 'Strait', sans-serif;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
     font-size: 18px;
     line-height: 25px;
   }
@@ -258,7 +260,7 @@
     display: flex;
     width:900px;
     margin-top: 50px;
-    margin-bottom: 16px;
+    margin-bottom: 50px;
     justify-content: space-between;
   }
   .img-exp {
@@ -274,7 +276,9 @@
   }
   .titulo-exp {
     text-align: center;
-    font-family: 'Strait', sans-serif;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
     font-size: 20px;
     color: #3e4e35;
     margin-top: 10px;
@@ -314,8 +318,10 @@
     background-size: cover;
   }
   .texto-titulo-grid {
-    font-family: 'Strait', sans-serif;
-    font-size: 49px;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 35px;
     margin-bottom: 20px;
   }
   .descripcion-grid {
@@ -342,7 +348,9 @@
   }
   .texto-banner {
     font-size: 22px;
-    font-family: 'Strait', sans-serif;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
   }
   .btn-contactanos {
     background-color: #403726;

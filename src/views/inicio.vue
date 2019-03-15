@@ -112,7 +112,9 @@
   }
   .cita-texto p {
     margin-top: 30px;
-    font-family: 'Strait', sans-serif;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
     font-size: 18px;
     line-height: 25px;
   }
@@ -134,7 +136,9 @@
     display: flex;
     justify-content: center;
     width: 900px;
-    font-family: 'Strait', sans-serif;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
     font-size: 50px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -201,7 +205,9 @@
   }
   .texto-banner {
     font-size: 22px;
-    font-family: 'Strait', sans-serif;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
   }
   .btn-contactanos {
     background-color: #403726;

@@ -69,8 +69,9 @@ export default {
   margin-top: 20px;
 }
 .encabezado {
-  font-family: 'Strait', sans-serif;
-  font-weight: 400;
+  font-family: 'Adelle Sans Book';
+  font-weight: normal;
+  font-style: normal;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -120,7 +121,6 @@ export default {
   display: flex;
   width: 50%;
   height: 150px;
-  background-color: coral;
 }
 .checkout {
   display: flex;

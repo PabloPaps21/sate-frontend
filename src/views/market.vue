@@ -86,7 +86,7 @@ export default {
     height: 386px;
     width: 100%;
     justify-content: center;
-    background-color: #e6d6ba;
+    background-color: #eae5dc
   }
   .conoce {
     display:  flex;
@@ -130,7 +130,7 @@ export default {
     position: relative;
   }
   .slide-title{
-    color:#e6d6ba;
+    color:#eae5dc;
     margin-bottom: 30px;
     font-size: 56px;
     font-family: 'Strait', sans-serif;
@@ -140,7 +140,7 @@ export default {
     display: flex;
     width: 100%;
     height: auto;
-    background-color:#e6d6ba;
+    background-color:#eae5dc;
     justify-content: center;
   }
   .week{
@@ -156,15 +156,18 @@ export default {
     margin-bottom: 30px;
     margin-top: 30px;
     font-size: 20px;
-    font-family: 'Strait', sans-serif;
-    font-weight: 400;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
     font-size: 35px;
     color: #3e4e35;
   }
   .cita-index{
     text-align: center;
     margin-bottom: 40px;
-    font-family: 'Strait', sans-serif;
+   font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
     font-size: 16px;
     color: #3e4e35;
   }
@@ -189,7 +192,7 @@ export default {
     display: flex;
     width: 100%;
     justify-content: center;
-    background-color: #e6d6ba;
+    background-color: #eae5dc;
   }
   .alimentos{
     display: flex;

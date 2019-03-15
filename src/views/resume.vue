@@ -175,14 +175,16 @@ export default {
   display: flex;
   justify-content: center;
   width:100%;
-  background-color: #e6d6ba;
+  background-color: #eae5dc;
 }
 .titulo-resumen {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 900px;
-  font-family: 'Strait', sans-serif;
+  font-family: 'Adelle Sans Book';
+  font-weight: normal;
+  font-style: normal;
   font-size: 30px;
   color: #3e4e35;
   height: 80px;
@@ -192,7 +194,7 @@ export default {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color:  #e6d6ba;
+  background-color:  #eae5dc;
 }
 .cuerpo {
   display: flex;
@@ -350,7 +352,7 @@ export default {
   margin-top: 20px;
   border: 2px solid #3e4e35;
   color: #3e4e35;
-  background-color: #e6d6ba;
+  background-color: #eae5dc;
   height: 25px;
   font-family: 'Strait', sans-serif;
   font-size: 20px;

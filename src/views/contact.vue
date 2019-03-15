@@ -36,7 +36,13 @@
         Área de interés
       </div>
       <div class="campo">
-        <input type="text" class="campo-formulario">
+        <!-- <input type="select" class="campo-formulario"> -->
+        <select class="campo-formulario-s">
+          <option value="food">Comida en Casa</option>
+          <option value="market">Mercado Digital</option>
+          <option value="experience">Experiencias Culinarias</option>
+          <option value="design">Food Design</option>
+        </select>
       </div>
       <div class="nombre-usr" style="margin-top:20px;">
         Mensaje<span class="advertencia">*</span>
@@ -78,12 +84,12 @@
   .contactanos-wrapper {
     display: flex;
     width: 100%;
-    background-color: #e6d6ba;
+    background-color: #eae5dc;
     justify-content: center;
   }
   .contactanos {
     display: flex;
-    width: 900px;
+    width: 700px;
     margin-top: 70px;
     font-family: 'Strait', sans-serif;
   }
@@ -91,16 +97,19 @@
     font-size: 30px;
     margin-bottom: 5%;
     color:#3e4e35;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
   }
   .formulario-contactanos-wrapper {
   display: flex;
   width: 100%;
   justify-content: center;
-  background-color: #e6d6ba;
+  background-color: #eae5dc;
   }
   .formulario-contactanos {
     display: flex;
-    width: 900px;
+    width: 700px;
     flex-direction: column;
     text-align: left;
   }
@@ -121,7 +130,7 @@
     margin-top: 20px;
     border: 2px solid #3e4e35;
     color:#3e4e35;
-    background-color: #e6d6ba;
+    background-color: #eae5dc;
     height: 25px;
     font-family: 'Strait', sans-serif;
     font-size: 20px;
@@ -131,8 +140,18 @@
     margin-top: 20px;
     border: 2px solid #3e4e35;
     color:#3e4e35;
-    background-color: #e6d6ba;
+    background-color: #eae5dc;
     height:200px;
+    font-family: 'Strait', sans-serif;
+    font-size: 20px;
+  }
+  .campo-formulario-s {
+    width: 700px;
+    margin-top: 20px;
+    border: 2px solid #3e4e35;
+    color:#3e4e35;
+    background-color: #eae5dc;
+    height: 30px;
     font-family: 'Strait', sans-serif;
     font-size: 20px;
   }
@@ -140,23 +159,22 @@
   display:flex;
   width: 100%;
   justify-content: center;
-  background-color: #e6d6ba;
+  background-color: #eae5dc;
   }
   .confirmar {
     display: flex;
-    width: 900px;
+    width: 700px;
     margin-bottom: 50px;
   }
   .btn-acceder {
     width: 80px;
     height: 35px;
-    background-color:#e6d6ba;
+    background-color:#eae5dc;
     color: #3e4e35;
     border: 2px solid #3e4e35;
     margin-bottom: 20px;
     font-family: 'Strait', sans-serif;
     font-size: 20px;
-    margin-left: 96px;
   }
   .pass-usr {
     margin-top: 20px;

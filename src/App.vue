@@ -40,8 +40,16 @@
               Síguenos en:
             </div>
             <div class="redes-sociales">
-              <i class="fab fa-facebook-f"></i>
-              <i class="fab fa-instagram instagram"></i>
+              <i class="fab fa-facebook-f">
+                <span class="redes-fuente">
+                  Facebook
+                </span>
+              </i>
+              <i class="fab fa-instagram instagram">
+                <span class="redes-fuente">
+                  Instagram
+                </span>
+              </i>
             </div>
             <div class="terminos">
               <a href="#" class="footer-link">Terminos y condiciones</a>
@@ -213,7 +221,7 @@ a {
 }
 .titulo-opcion-footer {
   font-family: 'Strait', sans-serif;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   color:#e6d6ba;
   text-align: left;
 }
@@ -244,13 +252,20 @@ a {
 }
 .redes-sociales {
   display: flex;
-  font-size: 25px;
+  flex-direction: column;
+  font-family: 'Strait', sans-serif;
+  font-size: 20px;
   margin-right: 30px;
   margin-top: 20px;
   color: #e6d6ba;
 }
+.redes-fuente {
+  font-family: 'Strait', sans-serif;
+  font-size: 20px;
+  color: #e6d6ba;
+}
 .instagram {
-  margin-left:50px;
+  margin-top:20px;
   color:#e6d6ba;
 }
 .footer-link {
