@@ -13,6 +13,12 @@ const actions = {
         commit('setProducts', response.data);
       });
   },
+  getTags({ commit }) {
+    return axios.get('http://127.0.0.1:3333/tags')
+      .then((response) => {
+        commit('setTags', response.data);
+      });
+  },
 };
 
 const mutations = {
@@ -22,11 +28,15 @@ const mutations = {
   setProducts(state, products) {
     state.allProducts = products;
   },
+  setTags(state, tags) {
+    state.tags = tags;
+  },
 };
 
 const state = {
   allFood: [],
   allProducts: [],
+  tags: [],
 };
 
 export default {

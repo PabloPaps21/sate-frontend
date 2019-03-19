@@ -51,7 +51,7 @@
         </div>
       </div>
     </div>
-     <div class="week-wrapper">
+    <div class="week-wrapper">
       <div class="week">
         <div class="week-title">
           Menú de la semana
@@ -67,7 +67,19 @@
         </div>
       </div>
     </div>
-    <div class="category" v-for="category in allFood" :key="category.id">
+    <div class="tags-wrapper">
+      <div class="tags">
+        <div
+          class="tag"
+          v-for="tag in tags"
+          :class="[selectedTags.includes(tag.id) ? '' : 'unselected']"
+          @click="clickTag(tag.id)"
+          :key="tag.id">
+          {{ tag.name }}
+        </div>
+      </div>
+    </div>
+    <div class="category" v-for="category in filteredFood" :key="category.id">
       <div class="menu-wrapper">
         <div class="menu">
           <div class="menu-title">
@@ -94,21 +106,55 @@ import cards from '@/components/cards.vue';
 const { mapState, mapActions } = createNamespacedHelpers('products');
 
 export default {
+  data() {
+    return {
+      selectedTags: [],
+    };
+  },
   components: {
     cards,
   },
   computed: {
+    filteredFood() {
+      if (this.selectedTags.length > 0) {
+        const result = this.allFood
+          .map(category => ({
+            id: category.id,
+            name: category.name,
+            products: category.products.filter(product => product.tags
+              .some(tag => this.selectedTags.includes(tag.id))),
+          }));
+        return result;
+      }
+      return this.allFood;
+    },
     ...mapState([
       'allFood',
+      'tags',
     ]),
   },
   methods: {
+    clickTag(id) {
+      const index = this.selectedTags.indexOf(id);
+      if (index !== -1) {
+        this.selectedTags.splice(index, 1);
+      } else {
+        this.selectedTags.push(id);
+      }
+    },
     ...mapActions([
       'getAllFood',
+      'getTags',
     ]),
   },
   mounted() {
     this.getAllFood();
+    this.getTags().then(() => {
+      for (let i = 0; i < this.tags.length; i += 1) {
+        const element = this.tags[i];
+        this.selectedTags.push(element.id);
+      }
+    });
   },
 };
 </script>
@@ -346,5 +392,28 @@ export default {
     color:black;
     background-color: #eae5dc;
     border: 2px solid black;
+  }
+  .tags-wrapper {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: #eae5dc;
+    justify-content: center;
+  }
+  .tags {
+    width: 900px;
+    display: flex;
+  }
+  .tag {
+    border: 2px solid #3e4e35;
+    padding: 6px 10px;
+    cursor: pointer;
+
+    &+ .tag {
+      margin-left: 16px;
+    }
+  }
+  .unselected {
+    filter: opacity(.5);
   }
 </style>
