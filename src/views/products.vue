@@ -48,7 +48,7 @@
 import products from '@/components/products-detail.vue';
 
 export default {
-  components:{
+  components: {
     products,
   },
 };

@@ -41,12 +41,12 @@
 </template>
 
 <script>
-import tags from  '@/components/tags-detail.vue';
+import tags from '@/components/tags-detail.vue';
 
 export default {
-  components:{
+  components: {
     tags,
-  }, 
+  },
 };
 </script>
 <style style lang="scss" scoped>

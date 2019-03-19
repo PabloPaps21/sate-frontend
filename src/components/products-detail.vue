@@ -49,7 +49,12 @@
                Elige una imagen
               </div>
               <div class="campo">
-                  <input type="file" id="imagen" name="imagen" accept="image/png, image/jpeg" class="campo-formulario">
+                <input
+                  type="file"
+                  id="imagen"
+                  name="imagen"
+                  accept="image/png, image/jpeg"
+                  class="campo-formulario">
               </div>
             </div>
             <div class="renglon">
@@ -158,7 +163,7 @@
   .renglon {
     display: flex;
     justify-content: space-between;
-    align-items: center;  
+    align-items: center;
     margin-top: 10px;
   }
   .lista-etiqueta {

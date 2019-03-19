@@ -44,7 +44,7 @@
 import categories from '@/components/categories-detail.vue';
 
 export default {
-  components:{
+  components: {
     categories,
   },
 };
@@ -124,4 +124,3 @@ export default {
     margin-right: 8px;
   }
 </style>
-

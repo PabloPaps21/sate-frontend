@@ -151,7 +151,7 @@ export default {
   },
   mounted() {
     if (this.user) {
-      this.data = this.user.addresses[0];
+      [this.data] = this.user.addresses;
     }
     paypal.Buttons({
       createOrder: (data, actions) => actions.order.create({
