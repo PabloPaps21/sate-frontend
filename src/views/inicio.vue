@@ -34,6 +34,14 @@
       </div>
     </div>
   </div>
+  <div class="mapa-wrapper">
+    <div class="mapa">
+      <div class="titulo-mapa">
+        ¿Cómo funciona?
+      </div>
+      <img src="/mapa_machote.jpg" alt="sate" class="img-mapa">
+    </div>
+  </div>
   <div class="prox-cursos-titlew">
     <div class="prox-cursos-title">
       PRÓXIMOS CURSOS
@@ -125,6 +133,32 @@
     font-size: 40px !important;
     font-family: kristi !important;
     font-weight: 600 !important;
+  }
+  .mapa-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #f5f3ef;
+  }
+  .mapa {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .titulo-mapa {
+     font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  .img-mapa {
+    width: 900px;
+    height: auto;
   }
   .prox-cursos-titlew {
   display: flex;
