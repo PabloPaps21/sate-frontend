@@ -14,7 +14,7 @@
                 Nombre
               </div>
               <div class="campo">
-                <input type="text" class="campo-formulario">
+                <input type="text" class="campo-formulario" v-model="data.name">
               </div>
             </div>
             <div class="renglon">
@@ -22,7 +22,7 @@
                 Descripción
               </div>
               <div class="campo">
-                <input type="text" class="campo-formulario">
+                <input type="text" class="campo-formulario" v-model="data.description">
               </div>
             </div>
             <div class="renglon">
@@ -30,7 +30,7 @@
                Precio
               </div>
               <div class="campo">
-                <input type="text" class="campo-formulario">
+                <input type="text" class="campo-formulario" v-model="data.price">
               </div>
             </div>
             <div class="renglon">
@@ -38,9 +38,21 @@
                Tipo producto
               </div>
               <div class="campo">
-               <select class="campo-formulario">
-                <option value="food">Mercado</option>
-                <option value="market">Alimento</option>
+               <select class="campo-formulario" v-model="data.type">
+                <option value="FOOD">Mercado</option>
+                <option value="MARKET">Alimento</option>
+              </select>
+              </div>
+            </div>
+            <div class="renglon">
+              <div class="nombre-campo">
+               Categoria
+              </div>
+              <div class="campo">
+               <select class="campo-formulario" v-model="data.category">
+                <option v-for="category in categories" :key="category.id" :value="category.id">
+                  {{ category.name }}
+                </option>
               </select>
               </div>
             </div>
@@ -62,15 +74,18 @@
                 Elige etiqueta
               </div>
               <div class="campo">
-                <form action="/action_page.php" class="lista-etiqueta">
-                   <input type="checkbox" name="etiqueta1" value="Bike"> Sin gluten
-                   <input type="checkbox" name="etiqueta4" value="Car"> No azucar
-                   <input type="checkbox" name="etiqueta3" value="Boat"> Vegetal
-                </form>
+                <div class="lista-etiqueta">
+                  <div v-for="tag in tags" :key="tag.id">
+                    <input type="checkbox" name="etiqueta1" :value="tag.id" v-model="data.tags">
+                    {{ tag.name }}
+                  </div>
+                </div>
               </div>
             </div>
             <div class="guardar-btn">
-               <button class="btn-guardar" style="margin-top:20px;">Guardar</button>
+              <button class="btn-guardar" style="margin-top:20px;" @click="newProduct">
+                Guardar
+              </button>
             </div>
           </div>
         </div>
@@ -78,6 +93,50 @@
     </div>
   </div>
 </template>
+
+<script>
+import { createNamespacedHelpers } from 'vuex';
+
+const { mapState, mapActions } = createNamespacedHelpers('admin');
+export default {
+  data() {
+    return {
+      data: {
+        name: '',
+        description: '',
+        price: '',
+        type: 'FOOD',
+        image: '',
+        tags: [],
+        category: null,
+      },
+    };
+  },
+  computed: {
+    ...mapState([
+      'tags',
+      'categories',
+    ]),
+  },
+  methods: {
+    newProduct() {
+      this.createProduct(this.data)
+        .then(() => {
+          this.$emit('close');
+        });
+    },
+    ...mapActions([
+      'getTags',
+      'getCategories',
+      'createProduct',
+    ]),
+  },
+  mounted() {
+    this.getTags();
+    this.getCategories();
+  },
+};
+</script>
 
 <style lang="scss">
   .background {

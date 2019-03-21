@@ -1,6 +1,6 @@
 <template>
   <div class="envolver">
-    <categories/>
+    <categories v-if="openModal" @close="openModal = false"/>
     <div class="title-wrapper">
       <div class="title">
         Crear Categorías
@@ -9,43 +9,48 @@
     <div class="agregar-wrapper">
       <div class="agregar" style="margin-top: 20px;">
         <div class="agregar-btn">
-          <button class="btn-agregar">Agregar</button>
+          <button class="btn-agregar" @click="openModal = true">Agregar</button>
         </div>
       </div>
     </div>
-    <div class="renglon-wrapper">
+    <div class="renglon-wrapper" v-for="category in categories" :key="category.id">
       <div class="renglon">
         <div class="nombre-categoria">
-          Ensaladas
+          {{ category.name }}
         </div>
-        <button class="btn-eliminar">X</button>
-      </div>
-    </div>
-    <div class="renglon-wrapper">
-      <div class="renglon">
-        <div class="nombre-categoria">
-          Postres
-        </div>
-        <button class="btn-eliminar">X</button>
-      </div>
-    </div>
-    <div class="renglon-wrapper">
-      <div class="renglon">
-        <div class="nombre-categoria">
-          Panadería
-        </div>
-        <button class="btn-eliminar">X</button>
+        <button class="btn-eliminar" @click="deleteCategory(category.id)">X</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex';
 import categories from '@/components/categories-detail.vue';
 
+const { mapState, mapActions } = createNamespacedHelpers('admin');
 export default {
+  data() {
+    return {
+      openModal: false,
+    };
+  },
+  computed: {
+    ...mapState([
+      'categories',
+    ]),
+  },
+  methods: {
+    ...mapActions([
+      'getCategories',
+      'deleteCategory',
+    ]),
+  },
   components: {
     categories,
+  },
+  mounted() {
+    this.getCategories();
   },
 };
 </script>

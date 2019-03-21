@@ -92,6 +92,7 @@
           <cards
             v-for="product in category.products"
             :key="product.id"
+            :category="category.name"
             :product="product" />
         </div>
       </div>
@@ -333,6 +334,7 @@ export default {
     justify-content: space-around;
     width: 900px;
     margin-bottom: 50px;
+    flex-wrap: wrap;
   }
   .alimento-opcion {
     display: flex;

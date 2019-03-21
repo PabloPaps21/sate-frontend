@@ -17,7 +17,8 @@
           ${{ product.price }}
         </div>
         <div class="producto-descripcion">
-            {{ product.description }}
+            {{ product.description.substring(0, 55) }}
+            {{ product.description.length > 55 ? '...' : '' }}
         </div>
         <div v-if="!quantity">
           <div class="add-producto" @click="addProduct">Añadir</div>
@@ -32,7 +33,7 @@
     </div>
     <div class="background" v-show="showDetail"  @click.self="showDetail = false">
       <div class="window">
-        <detail :product="product"/>
+        <detail :product="product" :category="category"/>
       </div>
     </div>
   </div>
@@ -51,6 +52,7 @@ export default {
   },
   props: {
     product: Object,
+    category: String,
   },
   computed: {
     quantity() {
@@ -104,6 +106,7 @@ export default {
 .productos-wrapper{
   display: flex;
   width: 30%;
+  min-width: 30%;
   justify-content: center;
   background-color: #eae5dc;
 }
@@ -159,8 +162,9 @@ export default {
   margin-top: 15px;
   margin-bottom: 20px;
   color: #4d5d44;
-  line-height: 2;
+  line-height: 1.5;
   font-family: 'Strait', sans-serif;
+  height: 50px;
 }
 .active {
   filter: opacity(30%);
