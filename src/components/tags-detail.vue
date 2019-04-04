@@ -13,15 +13,41 @@
               Nombre Etiqueta
             </div>
             <div class="campo">
-              <input type="text" class="campo-formulario">
+              <input type="text" class="campo-formulario" v-model="data.name">
             </div>
-            <button class="btn-guardar">Guardar</button>
+            <button class="btn-guardar" @click="newTag">Guardar</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+import { createNamespacedHelpers } from 'vuex';
+
+const { mapActions } = createNamespacedHelpers('admin');
+export default {
+  data() {
+    return {
+      data: {
+        name: '',
+      },
+    };
+  },
+  methods: {
+    newTag() {
+      this.createTag(this.data)
+        .then(() => {
+          this.$emit('close');
+        });
+    },
+    ...mapActions([
+      'createTag',
+    ]),
+  },
+};
+</script>
 
 <style lang="scss">
   .background {

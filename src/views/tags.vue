@@ -1,6 +1,6 @@
 <template>
   <div class="envolver">
-    <tags/>
+    <tags v-if="openModal" @close="openModal = false"/>
     <div class="title-wrapper">
       <div class="title">
         Crear Etiquetas
@@ -9,43 +9,48 @@
     <div class="agregar-wrapper">
       <div class="agregar" style="margin-top: 20px;">
         <div class="agregar-btn">
-          <button class="btn-agregar">Agregar</button>
+          <button class="btn-agregar" @click="openModal = true">Agregar</button>
         </div>
       </div>
     </div>
-    <div class="renglon-wrapper">
+    <div class="renglon-wrapper" v-for="tag in tags" :key="tag.id">
       <div class="renglon">
         <div class="nombre-categoria">
-          Ensaladas sin sales
+          {{ tag.name }}
         </div>
-        <button class="btn-eliminar">X</button>
-      </div>
-    </div>
-    <div class="renglon-wrapper">
-      <div class="renglon">
-        <div class="nombre-categoria">
-          No Gluten
-        </div>
-        <button class="btn-eliminar">X</button>
-      </div>
-    </div>
-    <div class="renglon-wrapper">
-      <div class="renglon">
-        <div class="nombre-categoria">
-          Sin Azúcar
-        </div>
-        <button class="btn-eliminar">X</button>
+        <button class="btn-eliminar" @click="deleteTag(tag.id)">X</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex';
 import tags from '@/components/tags-detail.vue';
 
+const { mapState, mapActions } = createNamespacedHelpers('admin');
 export default {
+  data() {
+    return {
+      openModal: false,
+    };
+  },
+  computed: {
+    ...mapState([
+      'tags',
+    ]),
+  },
+  methods: {
+    ...mapActions([
+      'getTags',
+      'deleteTag',
+    ]),
+  },
   components: {
     tags,
+  },
+  mounted() {
+    this.getTags();
   },
 };
 </script>

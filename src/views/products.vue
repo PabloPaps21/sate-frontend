@@ -1,6 +1,6 @@
 <template>
   <div class="envolver">
-    <products/>
+    <products v-if="openModal" @close="openModal = false"/>
     <div class="title-wrapper">
       <div class="title">
         Crear Productos
@@ -9,56 +9,63 @@
     <div class="agregar-wrapper">
       <div class="agregar" style="margin-top: 20px;">
         <div class="agregar-btn">
-          <button class="btn-agregar">Agregar</button>
+          <button class="btn-agregar" @click="openModal = true">Agregar</button>
         </div>
       </div>
     </div>
-    <div class="renglon-wrapper">
+    <div class="renglon-wrapper" v-for="product in products" :key="product.id">
       <div class="renglon">
         <div class="img-prod">
           <img src="avion.png" alt="" class="img-prod">
         </div>
         <div class="nombre-categoria">
-          Ensaladas
+          {{ product.name }}
         </div>
         <div class="precio">
-          $400.00
+          ${{ product.price }}
         </div>
-        <button class="btn-eliminar">X</button>
-      </div>
-    </div>
-    <div class="renglon-wrapper">
-      <div class="renglon">
-        <div class="img-prod">
-          <img src="platillos.png" alt="" class="img-prod">
-        </div>
-        <div class="nombre-categoria">
-          Ensaladas
-        </div>
-        <div class="precio">
-          $400.00
-        </div>
-        <button class="btn-eliminar">X</button>
+        <button class="btn-eliminar" @click="deleteProduct(product.id)">X</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex';
 import products from '@/components/products-detail.vue';
 
+const { mapState, mapActions } = createNamespacedHelpers('admin');
 export default {
+  data() {
+    return {
+      openModal: false,
+    };
+  },
+  computed: {
+    ...mapState([
+      'products',
+    ]),
+  },
+  methods: {
+    ...mapActions([
+      'getProducts',
+      'deleteProduct',
+    ]),
+  },
   components: {
     products,
+  },
+  mounted() {
+    this.getProducts();
   },
 };
 </script>
 <style style lang="scss" scoped>
   .title-wrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background-color: #eae5dc;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #eae5dc;
   }
   .title {
     display: flex;

@@ -33,10 +33,10 @@
             </div>
           </div>
           <div class="categoria">
-            Categoría: pendiente.
+            Categoría: {{ category }}
           </div>
           <div class="etiqueta">
-            Etiqueta: pendiente.
+            Etiqueta: <span v-for="tag in product.tags" :key="tag.id">{{ tag.name }}</span>
           </div>
         </div>
       </div>
@@ -76,6 +76,7 @@ const { mapState, mapMutations } = createNamespacedHelpers('cart');
 export default {
   props: {
     product: Object,
+    category: String,
   },
   computed: {
     quantity() {
