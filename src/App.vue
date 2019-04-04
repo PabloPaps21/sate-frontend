@@ -2,7 +2,7 @@
   <div id="app">
     <div class="nav-bar-wrapper">
       <div class="nav-bar">
-        <img src="/logo.png" alt="Saté" class="logo" @click="$router.push('/')">
+        <img src="/logo.svg" alt="Saté" class="logo" @click="$router.push('/')">
         <div class="elementos">
           <div class="search-bar" style="margin-right:10xp;">
             <input type="search" placeholder="Buscar productos..." class="buscar-bar">
@@ -40,7 +40,19 @@
               Síguenos en:
             </div>
             <div class="redes-sociales">
-              <i class="fab fa-facebook-f">
+              <!-- <div class="logos-redes">
+                <img src="/face.svg" alt="" class="color-logo">
+                <span class="redes-fuente">
+                  Facebook
+                </span>
+              </div>
+              <div class="logos-redes">
+                <img src="/insta.svg" alt="" class="color-logo">
+                <span class="redes-fuente">
+                  Instagram
+                </span>
+              </div> -->
+              <i class="fab fa-facebook">
                 <span class="redes-fuente">
                   Facebook
                 </span>
@@ -52,10 +64,10 @@
               </i>
             </div>
             <div class="terminos">
-              <a href="#" class="footer-link">Terminos y condiciones</a>
+             <router-link to="/tyc" class="margin-link">Términos y Condiciones</router-link>
             </div>
             <div class="politicas">
-              <a href="#" class="footer-link">Políticas de privacidad</a>
+              <router-link to="/politics" class="margin-link">Políticas de privacidad</router-link>
             </div>
           </div>
           <!-- 2 direccion-->
@@ -147,6 +159,7 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 900px;
+   font-family: 'Strait', sans-serif;
 }
 .logo {
   width: auto;
@@ -224,6 +237,7 @@ a {
   margin-bottom: 16px;
   color:#e6d6ba;
   text-align: left;
+  font-size: 16px;
 }
 .footer-margen {
   margin-top: 10px;
@@ -254,14 +268,13 @@ a {
   display: flex;
   flex-direction: column;
   font-family: 'Strait', sans-serif;
-  font-size: 20px;
   margin-right: 30px;
   margin-top: 20px;
   color: #e6d6ba;
 }
 .redes-fuente {
   font-family: 'Strait', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   color: #e6d6ba;
 }
 .instagram {
@@ -286,6 +299,11 @@ a {
 .direccion {
   font-family: 'Strait', sans-serif;
   line-height: 24px;
+  font-size: 16px;
+}
+.logos-redes {
+  width: 20px;
+  height: 20px;
 }
 @media screen and (max-width: 500px) {
   .footer {

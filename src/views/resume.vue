@@ -67,7 +67,7 @@
         <div class="carrito">
           <div class="titulo-wrapper">
             <div class="titulo">
-              Carrito
+              <!-- Carrito -->
             </div>
             <div class="cerrar">
               <i class="fas fa-window-close"></i>
@@ -247,6 +247,7 @@ export default {
   align-items: center;
   flex-direction: column;
   margin-top: 30px;
+  z-index: 0;
 }
 .cantidad-pagar {
   width: 100%;

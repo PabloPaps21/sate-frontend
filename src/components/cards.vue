@@ -20,7 +20,7 @@
             {{ product.description }}
         </div>
         <div v-if="!quantity">
-          <div class="add-producto" @click="addProduct">Añadir</div>
+          <div class="add-producto-font" @click="addProduct">Añadir</div>
         </div>
         <div class="buttons" v-else>
           <div class="add-producto" @click="removeProduct" style="margin-right: 10px">
@@ -148,7 +148,21 @@ export default {
   width: 69px;
   height: 30px;
   font-family: 'Strait', sans-serif;
-  font-size: 12px;
+  font-size: 26px;
+  color:#3e4e35;
+  background-color: #eae5dc;
+  border: 2px solid #3e4e35;
+  cursor: pointer;
+}
+.add-producto-font {
+  font-family: 'Strait', sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 69px;
+  height: 30px;
+  font-family: 'Strait', sans-serif;
   color:#3e4e35;
   background-color: #eae5dc;
   border: 2px solid #3e4e35;

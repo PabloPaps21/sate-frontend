@@ -9,65 +9,69 @@
       <div class="about img-about" style="background-image:url('/food-hero3.jpg')">
       </div>
     </div>
+    <div class="exp-titulo-wrapper">
+      <div class="exp-titulo">
+        Experiencias Culinarias
+      </div>
+    </div>
+    <div class="experiencia-wrapper">
+      <div class="experiencia">
+        <p>
+          Date la oportunidad de descubrir el placer
+          de cocinar. Una habilidad básica de vida que
+          te permitirá alimentarte sanamente, ahorrar dinero
+          y ante todo, preparar deliciosos platillos para ti
+          y tus seres queridos. Aprenderás en un ambiente relajado
+          con una dinámica divertida donde todo el grupo participará
+          activamente en la elaboración de comida.
+        </p>
+        <p style="margin-top:20px;">
+          Saté ofrece una amplia gama de
+          cursos en los que podrás aprender a preparar pasta fresca,
+          servir una cena japonesa completa o, si lo tuyo es la falta
+          de tiempo, recetas fáciles que podrás preparar en minutos.
+        </p>
+      </div>
+    </div>
+
     <div class="exp-wrapper">
       <div class="exp">
         <div class="exp-icono">
-          <img src="/e.multisensoriales.svg" alt="" class="img-exp">
+          <div class="icono-container">
+            <img src="/e.multisensoriales2.svg" alt="" class="img-exp"
+            style="width:70px; height:61;">
+          </div>
           <div class="titulo-exp">EXPERIENCIAS MULTISENSORIALES</div>
         </div>
         <div class="exp-icono">
-          <img src="/viajes_gastronomicos.svg" alt="" class="img-exp">
-          <div class="titulo-exp">VIAJES GASTRONÓMICOS</div>
+          <div class="icono-container">
+            <img src="/viajes_gastronomicos.svg" alt="" class="img-exp">
+          </div>
+          <div class="titulo-exp">VIAJES
+            <br>GASTRONÓMICOS</div>
         </div>
         <div class="exp-icono">
-          <img src="/clases_cocina.svg" alt="" class="img-exp">
-          <div class="titulo-exp">CLASES DE COCINA</div>
+          <div class="icono-container">
+            <img src="/clases_cocina2.svg" alt="" class="img-exp">
+          </div>
+          <div class="titulo-exp">
+            CLASES DE
+            <br>
+            COCINA
+             </div>
         </div>
         <div class="exp-icono">
-          <img src="/banquetes.svg" alt="" class="img-exp">
-          <div class="titulo-exp">CATERING</div>
+          <div class="icono-container">
+            <img src="/banquetes.svg" alt="" class="img-exp">
+          </div>
+          <div class="titulo-exp">CATERING Y
+            <br> EVENTOS</div>
         </div>
       </div>
     </div>
-    <div class="cita-wrapper" style="background-image:url('/kraft.jpg')">
-      <div class="cita">
-        <div class="cita-texto">
-          <p class="texto">
-            SATÉ es un proyecto multidisciplinario
-            que integra diferentes industrias relacionadas
-            con la alimentación. El objetivo es ofrecer un
-            lugar de encuentro para las personas interesadas
-            en mejorar su alimentación y lograr un modo de
-            vida más consciente y feliz donde podrán obtener información,
-            compartir ideas y experiencias.
-          </p>
-          <p class="texto">
-            Creemos que la comida es un agente de cambio
-            crucial en temas como nutrición, agricultura,
-            economía y sustentabilidad. Al ser también el
-            centro de la vida social es un factor de conectividad
-            cultural entre todas las personas.
-          </p>
-          <p class="texto">
-            En SATÉ encontrarás la posibilidad de
-            mejorar tus habilidades para cocinar,
-            descubrir nuevos ingredientes y lugares
-            así como ampliar tu perspectiva sobre lo
-            que involucra comer.
-          </p>
-          <p class="texto">
-            Te invitamos a sembrar las semillas del
-            futuro que queremos hacer realidad.
-          </p>
-          <p class="ricardo">
-            Ricardo Rafael
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="grid-wrapper">
+    <!-- <div class="grid-wrapper">
       <div class="grid">
-        <div class="img-grid con-grid" style="background-image:url('/temp3g.jpg')"></div>
+        <div class="img-grid con-grid" style="background-image:url('/temp3g.jpg');"></div>
         <div class="texto-grid-der">
           <div class="texto-titulo-grid">
             Experiencias culinarias
@@ -87,7 +91,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="grid-wrapper">
       <div class="grid">
         <div class="texto-grid">
@@ -115,7 +119,7 @@
     <div class="grid-wrapper">
       <div class="grid">
         <div class="img-grid con-grid"
-        style="background-image:url('/cheff.jpg')"></div>
+        style="background-image:url('/viaje_gastro2.jpg')"></div>
         <div class="texto-grid-der">
           <div class="texto-titulo-grid">
             Viajes Gastronómicos
@@ -160,7 +164,7 @@
               preparar en minutos.</p>
           </div>
         </div>
-        <div class="img-grid con-grid" style="background-image:url('/temp1.jpg')"></div>
+        <div class="img-grid con-grid" style="background-image:url('/clases_cocina3.jpg')"></div>
       </div>
     </div>
     <div class="grid-wrapper">
@@ -168,7 +172,7 @@
         <div class="img-grid con-grid" style="background-image:url('/catering3.jpg')"></div>
         <div class="texto-grid-der">
           <div class="texto-titulo-grid">
-            Catering
+            Catering y eventos
           </div>
           <div class="descripcion-grid">
             <p>La comida es el centro de la vida social
@@ -225,6 +229,38 @@
     height: 500px;
     justify-content: center;
   }
+  .exp-titulo-wrapper {
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #eae5dc;
+  }
+  .exp-titulo {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    font-size: 40px;
+    font-family: 'Strait', sans-serif;
+    margin-top: 50px;
+  }
+  .experiencia-wrapper {
+    display: flex;
+    justify-content: center;
+    background-color:#eae5dc;
+  }
+  .experiencia {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    margin-top: 30px;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 25px;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
   .cita {
     display: flex;
     width:900px;
@@ -269,19 +305,21 @@
   }
   .exp-icono {
     display: flex;
-    width: 400px;
+    width: 180px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+  .icono-container {
+    height: 70px;
+    width: 70px;
+  }
   .titulo-exp {
     text-align: center;
-    font-family: 'Adelle Sans Book';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 20px;
+    font-family: 'Strait', sans-serif;
+    font-size: 18px;
     color: #3e4e35;
-    margin-top: 10px;
+    margin-top: 16px;
   }
   .grid-wrapper {
     display: flex;
@@ -318,14 +356,15 @@
     background-size: cover;
   }
   .texto-titulo-grid {
+    font-family: 'Strait', sans-serif;
+    font-size: 35px;
+    margin-bottom: 20px;
+    margin-left: 17px;
+  }
+  .descripcion-grid {
     font-family: 'Adelle Sans Book';
     font-weight: normal;
     font-style: normal;
-    font-size: 35px;
-    margin-bottom: 20px;
-  }
-  .descripcion-grid {
-    font-family: 'Strait', sans-serif;
     font-size: 16px;
     line-height: 19px;
     padding: 20px;
@@ -363,5 +402,6 @@
     align-items: center;
     font-size: 13px;
     font-family: 'Strait', sans-serif;
+    text-decoration: none;
   }
 </style>

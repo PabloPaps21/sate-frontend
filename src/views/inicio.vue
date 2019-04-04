@@ -1,7 +1,11 @@
 <template>
 <div class="envolver">
   <div class="about-wrapper">
-    <div class="about img-about" style="background-image:url('/food-hero3.jpg')">
+    <!-- <div class="about img-about" style="background-image:url('/food-hero3.jpg')"> -->
+    <div class="about img-about">
+      <video width="900" controls autoplay>
+            <source src="/videos/Video_sate.mov" type="video/mp4">
+      </video>
     </div>
   </div>
   <div class="cita-wrapper" style="background-image:url('/kraft.jpg')">
@@ -34,20 +38,228 @@
       </div>
     </div>
   </div>
+  <!-- MAPA -->
   <div class="mapa-wrapper">
     <div class="mapa">
-      <div class="titulo-mapa">
-        ¿Cómo funciona?
+      <!-- arriba renglon-->
+      <div class="renglon" style="justify-content: center;">
+        <div class="celda">
+          <div class="renglon-interior">
+            <div class="celda-interior">
+              <div class="img-size">
+                <img src="/asesorias.svg" alt="" >
+              </div>
+              <div class="cheftext menu-img">Menú</div>
+            </div>
+            <div class="celda-interior">
+              <div class="img-size">
+                <img src="/zero-waste.svg" alt="" >
+              </div>
+              <div class="cheftext">Zero Waste</div>
+            </div>
+          </div>
+          <div class="renglon-interior">
+            <div class="celda-interior">
+               <div class="img-size">
+                <img src="/estilismo-camara.svg" alt="" >
+              </div>
+              <div class="cheftext camara-img">Cámara</div>
+            </div>
+            <div class="celda-interior">
+              <div class="img-size">
+                <img src="/food-design-N.svg" alt="" >
+              </div>
+              <div class="cheftext food-design-img">
+                <router-link to="/design" class="font-link">
+                  Food Design
+                </router-link>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="renglon-interior"></div> -->
+        </div>
+        <div class="celda" style="width:180px;"></div>
+        <div class="celda">
+          <div class="renglon-interior" >
+            <div class="celda-interior">
+              <div class="img-size">
+                <img src="/delivery3.svg" alt="" >
+              </div>
+              <div class="cheftext verduras-img" style="margin-top: 2px;">
+                Verduras
+              </div>
+            </div>
+            <div class="celda-interior"></div>
+          </div>
+          <div class="renglon-interior">
+            <div class="celda-interior">
+              <div class="img-size">
+                <img src="/delivery2.svg" alt="" >
+              </div>
+              <div class="cheftext delivery-img">
+                  <router-link to="/food" class="font-link">
+                    Delivery
+                  </router-link>
+                </div>
+            </div>
+            <div class="celda-interior">
+              <div class="img-size">
+                <img src="/delivery1.svg" alt="" >
+              </div>
+              <div class="cheftext" style="margin-top: -10px;">Lunch</div>
+            </div>
+          </div>
+          <div class="renglon-interior"></div>
+        </div>
       </div>
-      <img src="/mapa_machote.jpg" alt="sate" class="img-mapa">
+      <!-- centro renglon-->
+      <div class="renglon" style="height: 150px; display: flex; align-items: center;">
+        <div class="celda"></div>
+        <div class="celda-centro">
+          <div class="img-center  chefftip">
+            <img src="/chef-yo2.svg" alt="">
+          </div>
+          <!-- <div class="cheftext">Saté</div> -->
+          <!-- <div class="renglon-interior" style="background-color:purple">
+            <div class="celda-interior" style="background-color:chocolate">
+              <div class="img-size">
+                <img src="/delivery1.svg" alt="" >
+              </div>
+            </div>
+            <div class="celda-interior" style="background-color:yellowgreen"></div>
+            <div class="celda-interior" style="background-color:chocolate">
+              <div class="img-size">
+                <img src="/delivery1.svg" alt="" >
+              </div>
+            </div>
+          </div> -->
+          <!-- <div class="renglon-interior">
+            <div class="celda-interior" style="background-color:yellowgreen"></div>
+            <div class="celda-interior" style="background-color:chocolate">
+              <div class="img-size">
+                <img src="/delivery1.svg" alt="" >
+              </div>
+            </div>
+            <div class="celda-interior" style="background-color:yellowgreen"></div>
+          </div> -->
+          <!-- <div class="renglon-interior" style="background-color:purple">
+            <div class="celda-interior" style="background-color:chocolate">
+              <div class="img-size">
+                <img src="/delivery1.svg" alt="" >
+              </div>
+            </div>
+            <div class="celda-interior" style="background-color:yellowgreen"></div>
+            <div class="celda-interior" style="background-color:chocolate">
+              <div class="img-size">
+                <img src="/delivery1.svg" alt="" >
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <div class="celda"></div>
+      </div>
+      <!-- abajo renglon-+-->
+      <div class="renglon" style="justify-content: center;">
+        <div class="celda">
+          <!-- <div class="renglon-interior">
+            <div class="celda-interior"></div>
+            <div class="celda-interior"></div>
+            <div class="celda-interior"></div>
+          </div> -->
+          <div class="renglon-interior">
+            <div class="celda-interior">
+              <div class="img-size">
+                <img src="/catering.svg" alt="" >
+              </div>
+              <div class="cheftext catering-img">Catering</div>
+            </div>
+            <div class="celda-interior">
+              <div class="img-size">
+                <img src="/e-culinarias.svg" alt="" >
+              </div>
+              <div class="cheftext culi-img">
+                  <router-link to="/experience" class="font-link">
+                    Experiencias culinarias
+                  </router-link>
+                </div>
+            </div>
+            <div class="celda-interior"></div>
+          </div>
+          <div class="renglon-interior" style="justify-content:space-around;">
+            <div class="celda-interior">
+              <div class="img-size">
+                <img src="/v-gastronomicos.svg" alt="" >
+              </div>
+              <div class="cheftext" style="margin-top: -6px;">Viajes Gastronómicos</div>
+            </div>
+            <div class="celda-interior">
+              <div class="img-size">
+                <img src="/clases-cocina.svg" alt="" >
+              </div>
+              <div class="cheftext clases-img">Clases de cocina</div>
+            </div>
+            <div class="celda-interior">
+              <div class="img-size">
+                <img src="/e-multi.svg" alt="" >
+              </div>
+              <div class="cheftext multi-img">
+                Experiencias multisensoriales
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="celda" style="width:180px;"></div>
+        <div class="celda">
+          <!-- <div class="renglon-interior">
+            <div class="celda-interior"></div>
+            <div class="celda-interior"></div>
+            <div class="celda-interior"></div>
+          </div> -->
+          <div class="renglon-interior">
+            <!-- <div class="celda-interior"></div> -->
+            <div class="celda-interior">
+              <div class="img-size">
+                <img src="/mercado.svg" alt="" >
+              </div>
+              <div class="cheftext market-img">
+                <router-link to="/market" class="font-link">
+                  Mercado Digital
+                </router-link>
+              </div>
+            </div>
+            <div class="celda-interior">
+              <div class="img-size">
+                <img src="/moda.svg" alt="" >
+              </div>
+              <div class="cheftext moda-img">Moda</div>
+            </div>
+          </div>
+          <div class="renglon-interior">
+            <!-- <div class="celda-interior"></div> -->
+            <div class="celda-interior">
+              <div class="img-size">
+                <img src="/accesorios.svg" alt="" >
+              </div>
+               <div class="cheftext bolsa-img">Bolsa</div>
+            </div>
+            <div class="celda-interior">
+              <div class="img-size">
+                <img src="/cocina.svg" alt="" >
+              </div>
+              <div class="cheftext">Cuchillo</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="prox-cursos-titlew">
+  <!-- MAPA -->
+  <div class="prox-cursos-titlew"  style="background-image:url('/kraft.jpg')">
     <div class="prox-cursos-title">
       PRÓXIMOS CURSOS
     </div>
   </div>
-  <div class="proximos-cursos-wrapper">
+  <div class="proximos-cursos-wrapper"  style="background-image:url('/kraft.jpg')">
     <div class="proximos-cursos">
       <div class="curso">
         <div class="fecha-curso">
@@ -74,9 +286,7 @@
       <div class="texto-banner">
           Se parte de la experiencia Saté
       </div>
-      <!-- <button class="btn-contactanos">CONTÁCTANOS</button> -->
       <router-link to="/contact" class="btn-contactanos">CONTÁCTANOS</router-link>
-      <!-- <a href="contacto.html" class="btn-contactanos">CONTÁCTANOS</a> -->
     </div>
   </div>
 </div>
@@ -91,16 +301,9 @@
   }
   .about {
     display: flex;
+    justify-content: center;
     width: 900px;
     height: 630px;
-  }
-  .img-about {
-    width: 100%;
-    height: 602px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
   }
   .cita-wrapper {
   display: flex;
@@ -134,32 +337,6 @@
     font-family: kristi !important;
     font-weight: 600 !important;
   }
-  .mapa-wrapper {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    background-color: #f5f3ef;
-  }
-  .mapa {
-    display: flex;
-    justify-content: center;
-    width: 900px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    flex-direction: column;
-    align-items: center;
-  }
-  .titulo-mapa {
-     font-family: 'Adelle Sans Book';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 40px;
-    margin-bottom: 50px;
-  }
-  .img-mapa {
-    width: 900px;
-    height: auto;
-  }
   .prox-cursos-titlew {
   display: flex;
   justify-content: center;
@@ -170,10 +347,8 @@
     display: flex;
     justify-content: center;
     width: 900px;
-    font-family: 'Adelle Sans Book';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 50px;
+    font-family: 'Strait', sans-serif;
+    font-size: 40px;
     margin-top: 50px;
     margin-bottom: 50px;
   }
@@ -219,8 +394,9 @@
     color:black;
     margin-left: 30px;
     height: 38px;
-    background-color: #f5f3ef;
+    background-color: #d8c7ad;
     border: 2px solid black;
+    text-decoration: none;
   }
   .banner-wrapper {
     display: flex;
@@ -254,5 +430,109 @@
     align-items: center;
     font-size: 13px;
     font-family: 'Strait', sans-serif;
+    text-decoration: none;
+  }
+  .mapa-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #eae5dc;
+  }
+  .mapa {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    // margin-top: 50px;
+    margin-top: 126px;
+    margin-bottom: 153px;
+    flex-direction: column;
+    align-items: center;
+  }
+  // .titulo-mapa {
+  //   font-family: 'Strait', sans-serif;
+  //   font-size: 40px;
+  //   margin-bottom: 80px;
+  // }
+  .img-mapa {
+    width: 900px;
+    height: auto;
+    // background-color: coral, crimson, cyan, aquamarine, yellowgreen;
+  }
+  .renglon {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: 1200px;
+  }
+  .celda {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    width: 36%;
+  }
+  .renglon-interior {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+  .celda-centro {
+    display: flex;
+    justify-content: center;
+  }
+  .img-size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .img-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  //hover
+  .celda-interior {
+    display: flex;
+    justify-content: center;
+    // width: 100%;
+    position: relative;
+    cursor: pointer;
+  }
+  .celda-interior .cheftext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    width: 110px;
+    height: 110px;
+    background-color: rgba(62,78,53,0.8);
+    color: #e6d6ba;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px 5px 5px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    font-family: 'Strait', sans-serif;
+  }
+  .celda-interior:hover .cheftext {
+    visibility: visible;
+  }
+  .celda-interior:hover {
+    visibility:hidden;
+  }
+  .font-link {
+    color: #e6d6ba;
+  text-decoration: none;
   }
 </style>

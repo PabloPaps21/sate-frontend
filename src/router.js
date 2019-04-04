@@ -66,5 +66,13 @@ export default new Router({
       path: '/products',
       component: () => import('./views/products.vue'),
     },
+    {
+      path: '/tyc',
+      component: () => import('./views/tyc.vue'),
+    },
+    {
+      path: '/politics',
+      component: () => import('./views/politics.vue'),
+    },
   ],
 });

@@ -12,13 +12,17 @@
     <div class="iconos-wrapper">
       <div class="iconos">
         <div class="eleccion-icono">
-          <img src="/asesorías.svg" alt="" class="img-icono">
+           <div class="icono-container">
+             <img src="/asesorías.svg" alt="" class="img-icono">
+           </div>
           <div class="titulo-icono">
             ASESORIAS
           </div>
         </div>
         <div class="eleccion-icono">
-          <img src="/estilismo.svg" alt="" class="img-icono">
+          <div class="icono-container">
+            <img src="/estilismo.svg" alt="" class="img-icono">
+          </div>
           <div class="titulo-icono">
             ESTILISMO DE ALIMENTOS
           </div>
@@ -48,12 +52,12 @@
             </p>
           </div>
         </div>
-        <div class="img-grid con-grid" style="background-image:url('/estilismo.jpg')"></div>
+        <div class="img-grid con-grid" style="background-image:url('/asesorias.jpg')"></div>
       </div>
     </div>
     <div class="grid-wrapper">
       <div class="grid">
-        <div class="img-grid con-grid" style="background-image:url('/temp2.jpg')"></div>
+        <div class="img-grid con-grid" style="background-image:url('/estilismo2.jpg')"></div>
         <div class="texto-grid-der">
           <div class="texto-titulo-grid">
             Estilismo de Alimentos
@@ -113,9 +117,13 @@
     margin-top: 50px;
     justify-content: space-between;
   }
+   .icono-container {
+    height: 70px;
+    width: 70px;
+  }
   .img-icono {
-    height: auto;
-    width: 100px;
+    height: 61px;
+    width: 70px;
   }
   .eleccion-icono {
     display: flex;
@@ -126,10 +134,8 @@
   }
   .titulo-icono {
     text-align: center;
-    font-family: 'Adelle Sans Book';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 20px;
+    font-family: 'Strait', sans-serif;
+    font-size: 18px;
     margin-top: 10px;
     color: #3e4e35;
   }
@@ -168,18 +174,20 @@
     background-size: cover;
   }
   .texto-titulo-grid {
+    font-family: 'Strait', sans-serif;
+    font-size: 35px;
+    margin-bottom: 20px;
+    margin-left: 17px;
+  }
+  .descripcion-grid {
     font-family: 'Adelle Sans Book';
     font-weight: normal;
     font-style: normal;
-    font-size: 35px;
-    margin-bottom: 20px;
-  }
-  .descripcion-grid {
-    font-family: 'Strait', sans-serif;
     font-size: 16px;
     line-height: 19px;
     padding: 20px;
     text-align: left;
+    line-height: 25px;
   }
    .banner-wrapper {
     display: flex;
@@ -213,6 +221,7 @@
     align-items: center;
     font-size: 13px;
     font-family: 'Strait', sans-serif;
+    text-decoration: none;
   }
   .punto {
     font-size: 8px;

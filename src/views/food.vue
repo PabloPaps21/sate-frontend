@@ -18,7 +18,7 @@
               los pedidos, evitando desperdicio de comida.</div>
         </div>
         <div class="order">
-            <img src="/sate-icono-02-1.png" alt="menu">
+            <img src="/recibe.png" alt="menu">
             <div class="title-order">3. Recibe tu pedido</div>
             <div class="subtitle-order">Recibirás tu pedido el domingo por la tarde en
               la puerta de tu casa.
@@ -94,6 +94,11 @@
             :key="product.id"
             :product="product" />
         </div>
+      </div>
+    </div>
+    <div class="completar-wrapper">
+      <div class="completar">
+        <router-link to="/resume" class="btn-completar">COMPLETAR PEDIDO</router-link>
       </div>
     </div>
   </div>
@@ -196,7 +201,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 330px;
+    width: 260px;
   }
   .img-order {
     width: 100px;
@@ -204,15 +209,16 @@ export default {
   }
   .title-order {
     text-align: center;
+    font-family: 'Strait', sans-serif;
     margin-bottom: 20px;
-    font-family: 'Adelle Sans Book';
-    font-weight: normal;
-    font-style: normal;
+    margin-top: 20px;
     font-size: 20px;
   }
   .subtitle-order {
     text-align: center;
-    font-family: 'Strait', sans-serif;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
     font-size: 16px;
     line-height: 25px;
   }
@@ -227,9 +233,7 @@ export default {
     display: flex;
     width: 900px;
     justify-content: center;
-    font-family: 'Adelle Sans Book';
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Strait', sans-serif;
     font-size: 40px;
     align-items: center;
     margin-top: 40px;
@@ -283,10 +287,7 @@ export default {
     text-align: center;
     margin-bottom: 30px;
     margin-top: 30px;
-    font-size: 20px;
-    font-family: 'Adelle Sans Book';
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Strait', sans-serif;
     font-size: 35px;
   }
   .week-date {
@@ -299,7 +300,10 @@ export default {
   .cita-index {
     text-align: center;
     margin-bottom: 20px;
-    font-family: 'Strait', sans-serif;
+    // font-family: 'Strait', sans-serif;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
     font-size: 16px;
   }
   .menu-wrapper {
@@ -415,5 +419,30 @@ export default {
   }
   .unselected {
     filter: opacity(.5);
+  }
+  .completar-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #eae5dc;
+  }
+  .completar {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    margin-bottom: 50px;
+  }
+  .btn-completar {
+    background-color: #414f3a;
+    color: #fff;
+    border: 2px solid #414f3a;
+    width:190px;
+    height:48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Strait', sans-serif;
+    text-decoration: none;
   }
 </style>

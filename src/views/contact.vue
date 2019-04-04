@@ -33,16 +33,30 @@
         <input type="text" class="campo-formulario">
       </div>
       <div class="nombre-usr" style="margin-top:20px;">
-        Área de interés
+        Área de interés <span class="advertencia">*</span>
       </div>
       <div class="campo">
         <!-- <input type="select" class="campo-formulario"> -->
-        <select class="campo-formulario-s">
+        <!-- <select class="campo-formulario-s">
           <option value="food">Comida en Casa</option>
           <option value="market">Mercado Digital</option>
           <option value="experience">Experiencias Culinarias</option>
           <option value="design">Food Design</option>
-        </select>
+        </select> -->
+        <ul class="lista-area">
+          <li>
+            <input type="checkbox" name="food" value="food"> Comida en casa
+          </li>
+          <li>
+            <input type="checkbox" name="market" value="market"> Mercado Digital
+          </li>
+          <li>
+            <input type="checkbox" name="experience" value="experience"> Experiencias Culinarias
+          </li>
+          <li>
+            <input type="checkbox" name="design" value="design"> Food Design
+          </li>
+        </ul>
       </div>
       <div class="nombre-usr" style="margin-top:20px;">
         Mensaje<span class="advertencia">*</span>
@@ -115,7 +129,7 @@
   }
   .campo {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
   .nombre-usr {
     font-family: 'Strait', sans-serif;
@@ -180,5 +194,12 @@
     margin-top: 20px;
     font-family: 'Strait', sans-serif;
     font-size: 20px;
+  }
+  .lista-area {
+    margin-top: 20px;
+    font-family: 'Strait', sans-serif;
+    font-size: 20px;
+    color: #3e4e35;
+    line-height: 30px;
   }
 </style>

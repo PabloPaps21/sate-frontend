@@ -28,7 +28,9 @@
               ${{ cartTotalPrice }}
             </div>
           </div>
-          <button class="pagar" @click="$router.push('/resume'); closeModal()">COMPLETAR</button>
+          <button class="pagar" @click="$router.push('/resume'); closeModal()">
+            COMPLETAR PEDIDO
+          </button>
         </div>
       </div>
     </div>
@@ -160,14 +162,15 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
+  width: 160px;
   font-family: 'Strait', sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   color:black;
   margin-left: 30px;
-  height: 38px;
+  height: 45px;
   background-color: #eae5dc;
   border: 2px solid black;
+  line-height: 20px;
 }
 .linea-verde{
   display: flex;

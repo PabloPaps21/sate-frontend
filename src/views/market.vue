@@ -8,25 +8,6 @@
         explicación
       </div>
     </div>
-    <div class="conoce-wrapper">
-      <div class="conoce">
-        <div class="video-conoce">
-          <video width="300" controls autoplay>
-            <source src="/videos/delivery_que_es.mov" type="video/mp4">
-          </video>
-        </div>
-        <div class="video-conoce">
-          <video width="300" controls autoplay>
-            <source src="/videos/delivery_como_funciona_final.mov" type="video/mp4">
-          </video>
-        </div>
-        <div class="video-conoce">
-          <video width="300" controls autoplay>
-            <source src="/videos/delivery_como_calentar.mov" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
     <div class="week-wrapper">
       <div class="week">
         <div class="week-title">
@@ -156,11 +137,9 @@ export default {
     margin-bottom: 30px;
     margin-top: 30px;
     font-size: 20px;
-    font-family: 'Adelle Sans Book';
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Strait', sans-serif;
     font-size: 35px;
-    color: #3e4e35;
+    color: black;
   }
   .cita-index{
     text-align: center;
@@ -169,7 +148,7 @@ export default {
     font-weight: normal;
     font-style: normal;
     font-size: 16px;
-    color: #3e4e35;
+    color: black;
   }
   .menu-wrapper{
     display: flex;
