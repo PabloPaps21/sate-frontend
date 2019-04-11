@@ -26,7 +26,7 @@
           Contraseña <span class="advertencia">*</span>
         </div>
         <div class="campo">
-          <input type="text" class="campo-formulario" v-model="data.password">
+          <input type="password" class="campo-formulario" v-model="data.password">
         </div>
       </div>
     </div>

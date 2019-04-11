@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <div class="background" v-show="showDetail"  @click.self="showDetail = false">
+    <div class="background" v-if="showDetail"  @click.self="showDetail = false">
       <div class="window">
         <detail :product="product" :category="category"/>
       </div>

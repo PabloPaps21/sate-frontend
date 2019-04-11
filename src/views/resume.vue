@@ -98,7 +98,9 @@
           </div>
         </div>
       </div>
+      <steps v-model="currentStep" :items="steps"/>
     </div>
+    <component v-bind:is="`step${currentStep+1}`" v-if="!success" @next="currentStep += 1" />
     <div
       v-else
       style="display: flex; height: 400px; justify-content: center; align-items: center;">
@@ -110,13 +112,18 @@
 <script>
 /* global paypal */
 import { createNamespacedHelpers } from 'vuex';
-import row from '@/components/row.vue';
+import steps from '@/components/steps.vue';
+import delivery from '@/components/delivery.vue';
+import summary from '@/components/summary.vue';
+import payment from '@/components/payment.vue';
 
 const { mapGetters } = createNamespacedHelpers('cart');
 
 export default {
   data() {
     return {
+      steps: ['Resumen', 'Envio', 'Pago'],
+      currentStep: 0,
       data: {
         address: '',
         apartment: '',
@@ -147,7 +154,10 @@ export default {
     },
   },
   components: {
-    row,
+    steps,
+    step1: summary,
+    step2: delivery,
+    step3: payment,
   },
   mounted() {
     if (this.user) {
@@ -174,8 +184,10 @@ export default {
 .titulo-resumen-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   width:100%;
   background-color: #eae5dc;
+  flex-direction: column;
 }
 .titulo-resumen {
   display: flex;
@@ -211,9 +223,9 @@ export default {
   margin-bottom: 40px;
 }
 .titulo {
- display: flex;
- width: 100%;
- font-size: 30px;
+  display: flex;
+  width: 100%;
+  font-size: 30px;
 }
 .cerrar {
   display: flex;

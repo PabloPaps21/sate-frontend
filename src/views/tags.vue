@@ -56,10 +56,10 @@ export default {
 </script>
 <style style lang="scss" scoped>
   .title-wrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background-color: #eae5dc;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #eae5dc;
   }
   .title {
     display: flex;
@@ -73,10 +73,10 @@ export default {
     margin-bottom: 50px;
   }
   .agregar-wrapper {
-  display:flex;
-  width: 100%;
-  justify-content: center;
-  background-color: #eae5dc;
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #eae5dc;
   }
   .agregar {
     display: flex;

@@ -9,13 +9,18 @@
         <i class="fas fa-window-close" @click.self="closeModal"></i>
       </div>
     </div>
-    <div v-for="item in foodItems" :key="item.id">
-      <row :product="item.product"/>
-      <div class="linea-verde"></div>
-    </div>
-    <div v-for="item in marketItems" :key="item.id">
-      <row :product="item.product"/>
-      <div class="linea-verde"></div>
+    <div class="cart-products">
+      <div v-for="item in foodItems" :key="item.id">
+        <row :product="item.product"/>
+        <div class="linea-verde"></div>
+      </div>
+      <div v-for="item in marketItems" :key="item.id">
+        <row :product="item.product"/>
+        <div class="linea-verde"></div>
+      </div>
+      <div v-if="foodItems.length === 0 && marketItems.length === 0">
+        Aun no haz agregado productos a tu carrito de compra.
+      </div>
     </div>
     <div class="debajo-producto-wrapper">
       <div class="debajo-producto">
@@ -72,6 +77,7 @@ export default {
   top: 0;
   width: 100vw;
   height: 100vh;
+  max-height: 100vh;
   background-color: rgba(19, 18, 18, 0.555);
   padding-top: 0px;
   display: flex;
@@ -84,6 +90,8 @@ export default {
   padding: 20px;
   box-sizing: border-box;
   max-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .titulo-wrapper {
   display: flex;
@@ -190,5 +198,9 @@ export default {
 }
 /deep/ .descripcion {
   height: 80px;
+}
+.cart-products {
+  flex-grow: 1;
+  overflow-y: scroll;
 }
 </style>

@@ -74,5 +74,17 @@ export default new Router({
       path: '/politics',
       component: () => import('./views/politics.vue'),
     },
+    {
+      path: '/account',
+      component: () => import('./views/account.vue'),
+    },
+    {
+      path: '/wishlist',
+      component: () => import('./views/wishlist.vue'),
+    },
+    {
+      path: '/delivery',
+      component: () => import('./components/delivery.vue'),
+    },
   ],
 });

@@ -23,12 +23,23 @@
                 </div>
               <button class="btn-qty" @click="addProduct"> + </button>
             </div>
-            <div class="botones">
+            <div class="botones" v-if="product.type === 'MARKET'">
               <!-- <button style="margin-left:10px;" class="alimento-add-button">
                 Añadir al carrito
               </button> -->
-              <button style="margin-left:10px;" class="wishlist-add-button">
+              <button
+                style="margin-left:10px;"
+                class="wishlist-add-button"
+                @click="addToWishlist"
+                v-if="!isOnWishlist">
                 Añadir a la wishlist
+              </button>
+              <button
+                style="margin-left:10px;"
+                class="wishlist-add-button"
+                @click="removeFromWishlist"
+                v-else>
+                Quitar de la wishlist
               </button>
             </div>
           </div>
@@ -86,11 +97,20 @@ export default {
       }
       return cartItem.quantity;
     },
+    isOnWishlist() {
+      return this.$store.state.wishlist.wishlist.some(item => item.id === this.product.id);
+    },
     ...mapState([
       'items',
     ]),
   },
   methods: {
+    addToWishlist() {
+      this.$store.dispatch('wishlist/addToWishlist', this.product.id);
+    },
+    removeFromWishlist() {
+      this.$store.dispatch('wishlist/removeFromWishlist', this.product.id);
+    },
     addProduct() {
       this.addToCart(this.product);
     },
@@ -101,6 +121,9 @@ export default {
       'addToCart',
       'removeFromCart',
     ]),
+  },
+  mounted() {
+    this.$store.dispatch('wishlist/getWishlist');
   },
 };
 </script>

@@ -13,7 +13,8 @@
           </div>
           <div class="login">
             <div v-if="!user" @click="$router.push('/login')">Iniciar sesión/Registrarse</div>
-            <div v-else @click="logout">Cerrar sesión</div>
+            <div v-if="user" style="margin-right: 18px;">Cuenta</div>
+            <div v-if="user" @click="logout">Cerrar sesión</div>
           </div>
         </div>
       </div>

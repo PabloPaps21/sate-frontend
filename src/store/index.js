@@ -4,6 +4,7 @@ import cart from './modules/cart';
 import products from './modules/products';
 import user from './modules/user';
 import admin from './modules/admin';
+import wishlist from './modules/wishlist';
 // import createLogger from '../../../src/plugins/logger'
 
 Vue.use(Vuex);
@@ -16,6 +17,7 @@ export default new Vuex.Store({
     products,
     user,
     admin,
+    wishlist,
   },
   strict: true,
 });

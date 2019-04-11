@@ -43,9 +43,8 @@
         <div class="campo">
           <input type="text" class="campo-formulario" v-model="passwordConfirmation">
         </div>
-        </div>
+      </div>
     </div>
-        <!--  -->
     <div class="separador-wrapper">
       <div class="separador">
         <div class="titulo-separador">

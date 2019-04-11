@@ -19,6 +19,16 @@ const getters = {
     }
     return total;
   },
+  recipientsPrice: (state) => {
+    let total = 0;
+    for (let i = 0; i < state.items.length; i += 1) {
+      const item = state.items[i];
+      if (item.container) {
+        total += item.container * 10;
+      }
+    }
+    return total;
+  },
   foodItems: state => state.items.filter(item => item.product.type === 'FOOD'),
   marketItems: state => state.items.filter(item => item.product.type === 'MARKET'),
 };
@@ -43,10 +53,14 @@ const mutations = {
       state.items = state.items.filter(item => item.product.id !== product.id);
     }
   },
+  setDeliveryFee(state, fee) {
+    state.deliveryFee = fee;
+  },
 };
 
 const state = {
   items: [],
+  deliveryFee: null,
 };
 
 export default {

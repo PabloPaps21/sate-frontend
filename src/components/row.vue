@@ -91,9 +91,11 @@ export default {
 .descripcion {
   display: flex;
   height: 150px;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
+  flex-grow: 0;
+  flex-shrink: 2;
 }
 .img-descripcion-checkout{
   height: auto;
@@ -138,7 +140,9 @@ export default {
   align-items: center;
   font-family: 'Strait', sans-serif;
   font-size: 15px;
-  justify-content: center
+  justify-content: center;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 .precio-unitario {
   display: flex;

@@ -270,10 +270,10 @@
     width: 900px;
   }
   .cita-wrapper {
-  display: flex;
-  width: 100%;
-  height: 500px;
-  justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 500px;
+    justify-content: center;
   }
   .cita {
     display: flex;
@@ -301,11 +301,37 @@
     font-family: kristi !important;
     font-weight: 600 !important;
   }
+  .mapa-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #f5f3ef;
+  }
+  .mapa {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .titulo-mapa {
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  .img-mapa {
+    width: 900px;
+    height: auto;
+  }
   .prox-cursos-titlew {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background-color: #f5f3ef;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #f5f3ef;
   }
   .prox-cursos-title {
     display: flex;
