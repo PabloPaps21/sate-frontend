@@ -132,6 +132,7 @@ export default {
   color:red;
 }
 .campo-formulario {
+  display: flex;
   width: 600px;
   margin-top: 20px;
   height: 25px;
@@ -199,5 +200,26 @@ export default {
 .titulo-registro {
   color: #3e4e35;
   font-family: 'Strait', sans-serif;
+}
+@media screen and (max-width: 375px) {
+  .acceder {
+    width: 360px;
+  }
+  .formulario {
+    width: 360px;
+  }
+  .campo-formulario {
+    width: 350px;
+    justify-content: center;
+  }
+  .confirmar {
+    width: 360px;
+  }
+  .olvidaste {
+    width: 360px;
+  }
+  .registro {
+    width: 360px;
+  }
 }
 </style>

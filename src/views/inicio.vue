@@ -3,8 +3,8 @@
   <div class="about-wrapper">
     <!-- <div class="about img-about" style="background-image:url('/food-hero3.jpg')"> -->
     <div class="about img-about">
-      <video width="900" controls autoplay>
-            <source src="/videos/Video_sate.mov" type="video/mp4">
+      <video controls autoplay>
+        <source src="/videos/Video_sate.mov" type="video/mp4" style="width=100%">
       </video>
     </div>
   </div>
@@ -116,45 +116,10 @@
       <div class="renglon" style="height: 150px; display: flex; align-items: center;">
         <div class="celda"></div>
         <div class="celda-centro">
-          <div class="img-center  chefftip">
+          <div class="img-center">
             <img src="/chef-yo2.svg" alt="">
           </div>
-          <!-- <div class="cheftext">Saté</div> -->
-          <!-- <div class="renglon-interior" style="background-color:purple">
-            <div class="celda-interior" style="background-color:chocolate">
-              <div class="img-size">
-                <img src="/delivery1.svg" alt="" >
-              </div>
-            </div>
-            <div class="celda-interior" style="background-color:yellowgreen"></div>
-            <div class="celda-interior" style="background-color:chocolate">
-              <div class="img-size">
-                <img src="/delivery1.svg" alt="" >
-              </div>
-            </div>
-          </div> -->
-          <!-- <div class="renglon-interior">
-            <div class="celda-interior" style="background-color:yellowgreen"></div>
-            <div class="celda-interior" style="background-color:chocolate">
-              <div class="img-size">
-                <img src="/delivery1.svg" alt="" >
-              </div>
-            </div>
-            <div class="celda-interior" style="background-color:yellowgreen"></div>
-          </div> -->
-          <!-- <div class="renglon-interior" style="background-color:purple">
-            <div class="celda-interior" style="background-color:chocolate">
-              <div class="img-size">
-                <img src="/delivery1.svg" alt="" >
-              </div>
-            </div>
-            <div class="celda-interior" style="background-color:yellowgreen"></div>
-            <div class="celda-interior" style="background-color:chocolate">
-              <div class="img-size">
-                <img src="/delivery1.svg" alt="" >
-              </div>
-            </div>
-          </div> -->
+          <div class="chefcentro">Sate</div>
         </div>
         <div class="celda"></div>
       </div>
@@ -303,7 +268,6 @@
     display: flex;
     justify-content: center;
     width: 900px;
-    height: 630px;
   }
   .cita-wrapper {
   display: flex;
@@ -439,7 +403,8 @@
     background-color: #eae5dc;
   }
   .mapa {
-    display: flex;
+    display: none;
+    // display: flex;
     justify-content: center;
     width: 900px;
     // margin-top: 50px;
@@ -534,5 +499,129 @@
   .font-link {
     color: #e6d6ba;
   text-decoration: none;
+  }
+  //centro
+  .celda-centro {
+    display: flex;
+    justify-content: center;
+    // width: 100%;
+    position: relative;
+    cursor: pointer;
+  }
+  .celda-centro .chefcentro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(62,78,53,0.8);
+    color: #e6d6ba;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px 5px 5px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    font-family: 'Strait', sans-serif;
+  }
+  .celda-centro:hover .chefcentro {
+    visibility: visible;
+  }
+  .celda-centro:hover {
+    visibility:hidden;
+  }
+  .font-link {
+    color: #e6d6ba;
+  text-decoration: none;
+  }
+  //  @media screen and (max-width: 906px){
+  //    .banner {
+  //     width: 790px;
+  //   }
+  //   .cita {
+  //     width: 90%;
+  //     padding: 0 20px;
+  //   }
+  //  }
+  @media screen and (max-width: 900px) {
+    .about {
+      width: 90%;
+    }
+    .proximos-cursos {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .prox-cursos-title {
+      font-size: 27px;
+    }
+    .cita-wrapper {
+       height: auto;
+    }
+    .cita {
+      width: 90%;
+      padding: 0 20px;
+    }
+    .cita-texto p {
+      font-size: 16px;
+    }
+    .ricardo {
+      font-size: 30px !important;
+    }
+    .banner {
+      flex-direction: column;
+    }
+    .mapa {
+      display: none;
+    }
+    .btn-contactanos {
+      margin-top: 5px;
+    }
+    .curso {
+      margin-top: 10px;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    .proximos-cursos {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .prox-cursos-title {
+      font-size: 25px;
+    }
+    .cita-wrapper {
+       height: auto;
+    }
+    .cita {
+      width: 250px;
+    }
+    .cita-texto p {
+      font-size: 16px;
+    }
+    .ricardo {
+      font-size: 30px !important;
+    }
+    .banner {
+      flex-direction: column;
+    }
+    .about {
+      width: 200px;
+      height: 150px;
+      margin-top: 10px;
+      margin-bottom:10px;
+    }
+    .mapa {
+      display: none;
+    }
+    .btn-contactanos {
+      margin-top: 5px;
+    }
+    .curso {
+      margin-top: 10px;
+    }
   }
 </style>

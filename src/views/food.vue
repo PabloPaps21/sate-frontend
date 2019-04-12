@@ -6,19 +6,19 @@
     <div class="instructions-wrapper" style="background-image:url('/kraft.jpg')">
       <div class="instructions">
         <div class="order">
-          <img src="/sate-icono-02-1.png" alt="menu" class="img-order">
+          <img src="/sate-icono-02-1.png" alt="menu" class="img-order" style="width=100%">
             <div class="title-order">1. Haz tu pedido</div>
             <div class="subtitle-order">Elige la comida del menú  y
               completa tu orden hasta el viernes.</div>
         </div>
         <div class="order">
-            <img src="/sate-icono-04-1.png" alt="menu">
+            <img src="/sate-icono-04-1.png" alt="menu" class="img-order" style="width=100%">
             <div class="title-order">2. Prepararemos tu comida</div>
             <div class="subtitle-order">Se compran únicamente los ingredientes necesarios para
               los pedidos, evitando desperdicio de comida.</div>
         </div>
         <div class="order">
-            <img src="/recibe.png" alt="menu">
+            <img src="/recibe.png" alt="menu" class="img-order" style="width=100%">
             <div class="title-order">3. Recibe tu pedido</div>
             <div class="subtitle-order">Recibirás tu pedido el domingo por la tarde en
               la puerta de tu casa.
@@ -36,17 +36,18 @@
       <div class="conoce">
         <div class="video-conoce">
           <video width="300" controls autoplay>
-            <source src="/videos/delivery_que_es.mov" type="video/mp4">
+            <source src="/videos/delivery_que_es.mov" type="video/mp4" style="width=100%">
           </video>
         </div>
         <div class="video-conoce">
           <video width="300" controls autoplay>
-            <source src="/videos/delivery_como_funciona_final.mov" type="video/mp4">
+            <source src="/videos/delivery_como_funciona_final.mov"
+            type="video/mp4" style="width=100%">
           </video>
         </div>
         <div class="video-conoce">
           <video width="300" controls autoplay>
-            <source src="/videos/delivery_como_calentar.mov" type="video/mp4">
+            <source src="/videos/delivery_como_calentar.mov" type="video/mp4" style="width=100%">
           </video>
         </div>
       </div>
@@ -446,5 +447,66 @@ export default {
     font-size: 16px;
     font-family: 'Strait', sans-serif;
     text-decoration: none;
+  }
+  ///query
+  @media screen and (max-width: 980px) {
+    .conoce {
+      width: 80%;
+    }
+    .instructions-wrapper {
+      height: 1000px;
+    }
+    .instructions {
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+       margin-top: 20px;
+    }
+    .conoce-wrapper {
+      height: 900px;
+    }
+    .conoce {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .week-title {
+      font-size: 30px;
+    }
+    .week-date {
+      font-size: 30px;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    .img-slide-wrapper {
+      height: 136px;
+    }
+    .slide-title {
+      font-size: 30px;
+      margin-bottom: 2px;
+    }
+    .instructions-wrapper {
+      height: 1000px;
+    }
+    .instructions {
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+       margin-top: 20px;
+    }
+    .conoce-wrapper {
+      height: 900px;
+    }
+    .conoce {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .week-title {
+      font-size: 30px;
+    }
+    .week-date {
+      font-size: 30px;
+    }
   }
 </style>

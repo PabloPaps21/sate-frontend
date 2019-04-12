@@ -33,7 +33,6 @@
         </p>
       </div>
     </div>
-
     <div class="exp-wrapper">
       <div class="exp">
         <div class="exp-icono">
@@ -69,29 +68,7 @@
         </div>
       </div>
     </div>
-    <!-- <div class="grid-wrapper">
-      <div class="grid">
-        <div class="img-grid con-grid" style="background-image:url('/temp3g.jpg');"></div>
-        <div class="texto-grid-der">
-          <div class="texto-titulo-grid">
-            Experiencias culinarias
-          </div>
-          <div class="descripcion-grid">
-            <p>Date la oportunidad de descubrir el placer
-              de cocinar. Una habilidad básica de vida que
-              te permitirá alimentarte sanamente, ahorrar dinero
-              y ante todo, preparar deliciosos platillos para ti
-              y tus seres queridos. Aprenderás en un ambiente relajado
-              con una dinámica divertida donde todo el grupo participará
-              activamente en la elaboración de comida. </p>
-              <p style="margin-top:20px;">Saté ofrece una amplia gama de
-              cursos en los que podrás aprender a preparar pasta fresca,
-              servir una cena japonesa completa o, si lo tuyo es la falta
-              de tiempo, recetas fáciles que podrás preparar en minutos.</p>
-          </div>
-        </div>
-      </div>
-    </div> -->
+    <!-- EXPERIENCIAS -->
     <div class="grid-wrapper">
       <div class="grid">
         <div class="texto-grid">
@@ -113,7 +90,7 @@
               para crear una experiencia sublime.</p>
           </div>
         </div>
-        <div class="img-grid con-grid" style="background-image:url('/experiencias.jpg')"></div>
+        <div class="img-grid con-grid" style="background-image:url('/experiencias.jpg');"></div>
       </div>
     </div>
     <div class="grid-wrapper">
@@ -193,12 +170,107 @@
         </div>
       </div>
     </div>
+     <!--FIN EXPERIENCIAS -->
+    <!-- EXPERIENCIAS MOVIL -->
+    <div class="grid-w-m">
+      <div class="grid-m">
+        <div class="img-grid" style="background-image:url('/experiencias.jpg');"></div>
+        <div class="descripcion-movil">
+          <div class="titulo-movil">
+            Experiencias Multisensoriales
+          </div>
+          <p>Comer es un proceso mucho más complejo que
+              simplemente degustar con nuestra boca.
+              Inconscientemente todos nuestros sentidos
+              están activos al comer e influyen mucho
+              más de lo que creemos.</p>
+            <p style="margin-top:20px;">Queremos invitarte a percibir la comida
+              como nunca antes. Pondremos en juego
+              tus sentidos para que redescubras
+              como están entrelazados e influyen
+              (cada uno de ellos) en nuestra percepción.
+              Texturas, colores, sonidos y sabores se combinarán
+              para crear una experiencia sublime.</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-w-m">
+      <div class="grid-m">
+        <div class="img-grid" style="background-image:url('/viaje_gastro2.jpg');"></div>
+        <div class="descripcion-movil">
+          <div class="titulo-movil">
+            Viajes gastronómicos
+          </div>
+          <p>Una de las mejores maneras para
+              conocer un país es a través de su
+              comida por lo que SATÉ organiza y
+              diseña viajes culinarios en varias
+              partes del mundo. A través de su
+              gastronomía podrás conocer a profundidad
+              la historia y riqueza cultural que ofrecen.</p>
+              <p style="margin-top:20px;">Nos adentraremos
+                en mercados locales para descubrir sus
+                ingredientes nativos, exploraremos todas
+                sus facetas culinarias para develar su esencia,
+                desde la comida callejera hasta restaurantes de
+                gran nivel. Así mismo conoceremos cocineros locales
+                que nos mostraran nuevos platillos y técnicas culinarias.</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-w-m">
+      <div class="grid-m">
+        <div class="img-grid" style="background-image:url('/clases_cocina3.jpg');"></div>
+        <div class="descripcion-movil">
+          <div class="titulo-movil">
+            Clases de cocina
+          </div>
+           <p>Date la oportunidad de descubrir el placer
+              de cocinar. Una habilidad básica de vida que
+              te permitirá alimentarte sanamente, ahorrar
+              dinero y ante todo, preparar deliciosos platillos
+              para ti y tus seres queridos. Aprenderás en un ambiente
+              relajado con una dinámica divertida donde todo el grupo
+              participará activamente en la elaboración de comida.</p>
+            <p style="margin-top:20px;">Saté ofrece una amplia gama
+              de cursos en los que podrás aprender a preparar pasta
+              fresca, servir una cena japonesa completa o, si lo
+              tuyo es la falta de tiempo, recetas fáciles que podrás
+              preparar en minutos.</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-w-m">
+      <div class="grid-m">
+        <div class="img-grid" style="background-image:url('/catering3.jpg');"></div>
+        <div class="descripcion-movil">
+          <div class="titulo-movil">
+            Catering y eventos
+          </div>
+          <p>La comida es el centro de la vida social
+              y por lo tanto la calidad de los alimentos
+              en cualquier tipo de evento es fundamental.
+              Estamos constantemente investigando para poder
+              innovar no solamente en términos de sabores y
+              platillos sino en la forma de presentarlos y
+              servirlos. Utilizamos diversas dinámicas de servicio
+              para generar una mayor integración entre los invitados.</p>
+              <p style="margin-top:20px;">La satisfacción de nuestros
+                clientes es nuestra prioridad. Para ello contamos con
+                una vasta red de proveedores en México que nos permite crear
+                todo tipo de eventos en términos de estilo y tamaño.
+                Servimos desde una cena privada en casa para invitados
+                especiales o familia hasta bodas o eventos empresariales.</p>
+        </div>
+      </div>
+    </div>
+    <!-- EXPERIENCIAS MOVIL -->
     <div class="banner-wrapper">
       <div class="banner">
         <div class="texto-banner">
           Se parte de la experiencia Saté
         </div>
-        <a href="contacto.html" class="btn-contactanos">CONTÁCTANOS</a>
+        <router-link to="/contact" class="btn-contactanos">CONTÁCTANOS</router-link>
       </div>
     </div>
   </div>
@@ -403,5 +475,130 @@
     font-size: 13px;
     font-family: 'Strait', sans-serif;
     text-decoration: none;
+  }
+  .grid-w-m {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #e6d6ba;
+  }
+  .grid-m {
+    display: flex;
+    width: 350px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .img-movil{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .titulo-movil {
+    display: flex;
+    justify-content: center;
+    font-family: 'Strait', sans-serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .descripcion-movil {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+  }
+  ///movil
+  @media screen and (max-width: 980px) {
+    .exp {
+      width: 90%;
+    }
+    .experiencia {
+      width: 90%;
+    }
+    .titulo-exp {
+      font-style: 15px;
+    }
+  }
+  @media screen and (min-width: 376px) {
+    .grid-w-m {
+      display: none;
+    }
+    .img-grid {
+      width: 45%;
+      height: auto;
+    }
+  }
+  ////media
+  @media screen and (max-width: 375px) {
+    .img-slide-wrapper {
+      height: 136px;
+    }
+    .slide-title {
+      font-size: 30px;
+      margin-bottom: 2px;
+    }
+    .exp-titulo {
+      font-size: 25px;
+    }
+    .experiencia {
+      font-size: 16px;
+      width: 250px;
+    }
+    .exp {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .grid {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 350px;
+    }
+     .grid-wrapper {
+     justify-content: center;
+     flex-direction: column;
+     width: 375px;
+    }
+    .descripcion-grid {
+      padding: 20px 2px;
+      width: 300px;
+      justify-content: center;
+    }
+    .img-grid {
+      width: 150px;
+      height: 150px;
+    }
+    .banner {
+      flex-direction: column;
+    }
+    .btn-contactanos {
+      margin-top: 10px;
+    }
+    .exp-icono {
+      margin-top: 20px;
+    }
+    .titulo-exp {
+      margin-top: 10px;
+    }
+    .texto-grid {
+      width: 200px;
+    }
+    .texto-grid-der {
+      width: 250px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0px;
+    }
+    .grid-wrapper {
+      display:none;
+    }
   }
 </style>

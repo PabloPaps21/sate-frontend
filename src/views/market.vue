@@ -221,4 +221,13 @@ export default {
     background-color: #eae5dc;
     border: 2px solid black;
   }
+   @media screen and (max-width: 375px){
+    .img-slide-wrapper {
+      height: 136px;
+    }
+    .slide-title {
+      font-size: 30px;
+      margin-bottom: 2px;
+    }
+  }
 </style>

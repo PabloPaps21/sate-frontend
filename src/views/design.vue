@@ -27,6 +27,14 @@
             ESTILISMO DE ALIMENTOS
           </div>
         </div>
+        <div class="eleccion-icono">
+          <div class="icono-container">
+            <img src="/estilismo.svg" alt="" class="img-icono">
+          </div>
+          <div class="titulo-icono">
+            ZERO WASTE
+          </div>
+        </div>
       </div>
     </div>
     <div class="grid-wrapper">
@@ -73,6 +81,88 @@
         </div>
       </div>
     </div>
+    <div class="grid-wrapper">
+      <div class="grid">
+        <div class="texto-grid">
+          <div class="texto-titulo-grid">
+            Zero Waste
+          </div>
+          <div class="descripcion-grid">
+            <p>En SATÉ contamos con profesionales de la más alta calificación
+              para ayudarte a realizar tus proyectos. Acércate a nosotros para
+              poder orientarte en los siguientes servicios:</p>
+            <p style="margin-top:20px;">
+            </p>
+          </div>
+        </div>
+        <div class="img-grid con-grid" style="background-image:url('/asesorias.jpg')"></div>
+      </div>
+    </div>
+    <!-- MOVIL -->
+    <div class="grid-w-m">
+      <div class="grid-m">
+        <div class="img-grid" style="background-image:url('/asesorias.jpg')"></div>
+        <div class="descripcion-movil">
+          <div class="titulo-movil">
+            Asesorias
+          </div>
+          <p>En SATÉ contamos con profesionales de la más alta calificación
+              para ayudarte a realizar tus proyectos. Acércate a nosotros para
+              poder orientarte en los siguientes servicios:</p>
+           <p style="margin-top:20px;">
+              <ul class="lista">
+                <li><i class="fas fa-circle punto"></i> Creación de recetas</li>
+                <li><i class="fas fa-circle punto"></i> Desarrollo de menús</li>
+                <li><i class="fas fa-circle punto"></i> Campañas publicitarias</li>
+                <li><i class="fas fa-circle punto"></i> Fotografía de Alimentos</li>
+                <li><i class="fas fa-circle punto"></i> Diseño gráfico</li>
+                <li><i class="fas fa-circle punto"></i> Asesoría para restaurantes</li>
+                <li><i class="fas fa-circle punto"></i> Capacitación para personal</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="grid-w-m">
+      <div class="grid-m">
+        <div class="img-grid" style="background-image:url('/asesorias.jpg')"></div>
+        <div class="descripcion-movil">
+          <div class="titulo-movil">
+            Asesorias
+          </div>
+          <p>En SATÉ contamos con profesionales de la más alta calificación
+              para ayudarte a realizar tus proyectos. Acércate a nosotros para
+              poder orientarte en los siguientes servicios:</p>
+           <p style="margin-top:20px;">
+              <ul class="lista">
+                <li><i class="fas fa-circle punto"></i> Creación de recetas</li>
+                <li><i class="fas fa-circle punto"></i> Desarrollo de menús</li>
+                <li><i class="fas fa-circle punto"></i> Campañas publicitarias</li>
+                <li><i class="fas fa-circle punto"></i> Fotografía de Alimentos</li>
+                <li><i class="fas fa-circle punto"></i> Diseño gráfico</li>
+                <li><i class="fas fa-circle punto"></i> Asesoría para restaurantes</li>
+                <li><i class="fas fa-circle punto"></i> Capacitación para personal</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="grid-w-m">
+      <div class="grid-m">
+        <div class="img-grid" style="background-image:url('/asesorias.jpg')"></div>
+        <div class="descripcion-movil">
+          <div class="titulo-movil">
+            Zero Waste
+          </div>
+          <p>En SATÉ contamos con profesionales de la más alta calificación
+              para ayudarte a realizar tus proyectos. Acércate a nosotros para
+              poder orientarte en los siguientes servicios:</p>
+          <p style="margin-top:20px;">
+          </p>
+          </div>
+        </div>
+      </div>
+    <!-- fin-movil -->
     <div class="banner-wrapper">
       <div class="banner">
         <div class="texto-banner">
@@ -228,5 +318,113 @@
   }
   .lista {
     line-height: 30px;
+  }
+  .grid-w-m {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #eae5dc;
+  }
+  .grid-m {
+    display: flex;
+    width: 350px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .img-movil{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .titulo-movil {
+    display: flex;
+    justify-content: center;
+    font-family: 'Strait', sans-serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .descripcion-movil {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+  }
+  ///movil
+  @media screen and (min-width: 376px) {
+    .grid-w-m {
+      display: none;
+    }
+  }
+  ////media
+  @media screen and (max-width: 375px) {
+    .img-slide-wrapper {
+      height: 136px;
+    }
+    .slide-title {
+      font-size: 30px;
+      margin-bottom: 2px;
+    }
+    .iconos {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .grid {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 300px;
+    }
+    .grid-wrapper {
+      display:none;
+      justify-content: center;
+      flex-direction: column;
+      width: 375px;
+    }
+     .texto-grid {
+      width: 200px;
+    }
+    .img-grid {
+      width: 150px;
+      height: 150px;
+    }
+    .descripcion-grid {
+      padding: 20px 2px;
+      width: 300px;
+      justify-content: center;
+    }
+    .banner {
+      flex-direction: column;
+    }
+    .btn-contactanos {
+      margin-top: 10px;
+    }
+    .descripcion-movil {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    }
+    .grid-m {
+    display: flex;
+    width: 350px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    }
   }
 </style>

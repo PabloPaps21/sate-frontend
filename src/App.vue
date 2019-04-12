@@ -90,7 +90,7 @@
               Encuentranos en:
             </div>
             <div class="mapa-footer">
-              <img src="/mapa.png" alt="mapa" class="mapa-footer">
+              <img src="/mapa.png" alt="mapa" class="mapa-footer" style="width=100%">
             </div>
           </div>
         </div>
@@ -305,12 +305,34 @@ a {
   width: 20px;
   height: 20px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 980px) {
   .footer {
     flex-direction: column;
+    align-items: center;
   }
   .mapa-footer {
-    width: 361px;
+    width: 280px;
+  }
+  .nav-bar-wrapper {
+    display: none;
+  }
+  .nav-link-wrapper{
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mapa-footer {
+    width: 280px;
+  }
+  .nav-bar-wrapper {
+    display: none;
+  }
+  .nav-link-wrapper{
+    display: none;
   }
 }
 </style>

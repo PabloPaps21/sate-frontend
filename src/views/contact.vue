@@ -202,4 +202,19 @@
     color: #3e4e35;
     line-height: 30px;
   }
+  @media screen and (max-width: 375px) {
+    .img-slide-wrapper {
+      height: 136px;
+    }
+    .slide-title {
+      font-size: 30px;
+      margin-bottom: 2px;
+    }
+    .formulario-contactanos {
+      width: 360px;
+    }
+    .confirmar {
+      width: 360px;
+    }
+  }
 </style>
