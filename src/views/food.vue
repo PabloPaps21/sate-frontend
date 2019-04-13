@@ -515,6 +515,8 @@ export default {
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+      width: 100%;
+      overflow-x: hidden;
     }
     .week-title {
       font-size: 30px;

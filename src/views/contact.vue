@@ -211,13 +211,13 @@
       margin-bottom: 2px;
     }
     .contactanos {
-      width: 90%;
+      width: 70%;
     }
     .formulario-contactanos {
-      width: 90%;
+      width: 70%;
     }
     .confirmar {
-      width: 90%;
+      width: 70%;
     }
   }
   @media screen and (max-width: 375px) {
@@ -229,10 +229,10 @@
       margin-bottom: 2px;
     }
     .formulario-contactanos {
-      width: 360px;
+      width: 60%;
     }
     .confirmar {
-      width: 360px;
+      width: 60%x;
     }
   }
 </style>
