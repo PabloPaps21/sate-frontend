@@ -201,6 +201,27 @@ export default {
   color: #3e4e35;
   font-family: 'Strait', sans-serif;
 }
+@media screen and (max-width: 680px) {
+   .acceder {
+    width: 95%;
+  }
+  .formulario {
+    width: 95%;
+  }
+  .campo-formulario {
+    width: 95%;
+    justify-content: center;
+  }
+  .confirmar {
+    width: 95%;
+  }
+  .olvidaste {
+    width: 95%;
+  }
+  .registro {
+    width: 95%;
+  }
+}
 @media screen and (max-width: 375px) {
   .acceder {
     width: 360px;

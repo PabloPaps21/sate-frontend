@@ -477,10 +477,11 @@
     text-decoration: none;
   }
   .grid-w-m {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: #e6d6ba;
+    display: none;
+    // display: flex;
+    // justify-content: center;
+    // width: 100%;
+    // background-color: #eae5dc;
   }
   .grid-m {
     display: flex;
@@ -525,14 +526,82 @@
     .titulo-exp {
       font-style: 15px;
     }
+    .grid {
+      width: 90%;
+    }
+    .banner {
+      width: 90%;
+    }
   }
-  @media screen and (min-width: 376px) {
-    .grid-w-m {
-      display: none;
+  @media screen and (max-width: 680px) {
+    .img-slide-wrapper {
+      height: 136px;
+    }
+    .slide-title {
+      font-size: 30px;
+      margin-bottom: 2px;
+    }
+    .exp {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .grid {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .grid-wrapper {
+      display:none;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+    }
+     .texto-grid {
+      width: 100%;
     }
     .img-grid {
-      width: 45%;
-      height: auto;
+      width: 150px;
+      height: 150px;
+    }
+    .descripcion-grid {
+      padding: 20px 2px;
+      width: 300px;
+      justify-content: center;
+    }
+    .banner {
+      flex-direction: column;
+    }
+    .btn-contactanos {
+      margin-top: 10px;
+    }
+    .descripcion-movil {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    }
+    .grid-m {
+    display: flex;
+    // width: 350px;
+    width: 90%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    }
+    .grid-w-m {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #eae5dc;
     }
   }
   ////media
