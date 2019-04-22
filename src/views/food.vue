@@ -476,6 +476,20 @@ export default {
     .week-date {
       font-size: 30px;
     }
+    .alimentos {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .menu {
+      width: 100%;
+      justify-content: center;
+    }
+    .conoce {
+      width: 90%;
+    }
   }
   @media screen and (max-width: 375px) {
     .img-slide-wrapper {
@@ -501,12 +515,17 @@ export default {
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+      width: 100%;
+      overflow-x: hidden;
     }
     .week-title {
       font-size: 30px;
     }
     .week-date {
       font-size: 30px;
+    }
+    .conoce {
+      width: 90%;
     }
   }
 </style>

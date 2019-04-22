@@ -268,6 +268,7 @@
     display: flex;
     justify-content: center;
     width: 900px;
+    overflow-x: hidden;
   }
   .cita-wrapper {
     display: flex;
@@ -306,15 +307,17 @@
     width: 100%;
     justify-content: center;
     background-color: #f5f3ef;
+    overflow-x: hidden;
   }
   .mapa {
     display: flex;
     justify-content: center;
-    width: 900px;
+    width: 1022px;
     margin-top: 50px;
     margin-bottom: 20px;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
   }
   .titulo-mapa {
     font-family: 'Adelle Sans Book';
@@ -429,8 +432,7 @@
     background-color: #eae5dc;
   }
   .mapa {
-    display: none;
-    // display: flex;
+    display: flex;
     justify-content: center;
     width: 900px;
     // margin-top: 50px;
@@ -570,9 +572,9 @@
   //     padding: 0 20px;
   //   }
   //  }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 980px) {
     .about {
-      width: 90%;
+      width: 100%;
     }
     .proximos-cursos {
       flex-direction: column;
@@ -600,13 +602,18 @@
       flex-direction: column;
     }
     .mapa {
-      display: none;
+      display: 80%;
     }
     .btn-contactanos {
       margin-top: 5px;
     }
     .curso {
       margin-top: 10px;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .mapa {
+      display: none;
     }
   }
   @media screen and (max-width: 375px) {
@@ -635,7 +642,7 @@
       flex-direction: column;
     }
     .about {
-      width: 200px;
+      width: 100%;
       height: 150px;
       margin-top: 10px;
       margin-bottom:10px;

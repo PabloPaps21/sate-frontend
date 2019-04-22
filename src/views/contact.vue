@@ -202,6 +202,24 @@
     color: #3e4e35;
     line-height: 30px;
   }
+   @media screen and (max-width: 710px) {
+    .img-slide-wrapper {
+      height: 100px;
+    }
+    .slide-title {
+      font-size: 30px;
+      margin-bottom: 2px;
+    }
+    .contactanos {
+      width: 70%;
+    }
+    .formulario-contactanos {
+      width: 70%;
+    }
+    .confirmar {
+      width: 70%;
+    }
+  }
   @media screen and (max-width: 375px) {
     .img-slide-wrapper {
       height: 136px;
@@ -211,10 +229,10 @@
       margin-bottom: 2px;
     }
     .formulario-contactanos {
-      width: 360px;
+      width: 60%;
     }
     .confirmar {
-      width: 360px;
+      width: 60%x;
     }
   }
 </style>
