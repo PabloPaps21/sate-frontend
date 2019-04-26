@@ -128,4 +128,22 @@ export default {
     font-size: 20px;
     margin-right: 8px;
   }
+   @media screen and (max-width: 980px) {
+    .title {
+      width: 100%;
+    }
+    .renglon {
+      width: 90%;
+    }
+    .agregar {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width:  375px) {
+    .title {
+      font-family: 'Strait', sans-serif;
+      font-size: 25px;
+    }
+  }
 </style>

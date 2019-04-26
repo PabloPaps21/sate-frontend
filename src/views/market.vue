@@ -221,6 +221,15 @@ export default {
     background-color: #eae5dc;
     border: 2px solid black;
   }
+  @media screen and (max-width: 980px){
+    .alimentos {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  }
    @media screen and (max-width: 375px){
     .img-slide-wrapper {
       height: 136px;
@@ -228,6 +237,13 @@ export default {
     .slide-title {
       font-size: 30px;
       margin-bottom: 2px;
+    }
+    .alimentos {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
     }
   }
 </style>

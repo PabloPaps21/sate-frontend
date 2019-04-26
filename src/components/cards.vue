@@ -186,4 +186,19 @@ export default {
 .buttons {
   display: flex;
 }
+@media screen and (max-width: 980px) {
+  .window {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .window {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .window {
+    width: 80%;
+  }
+}
 </style>

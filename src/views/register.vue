@@ -56,7 +56,7 @@
       </div>
     </div>
     <div class="formulario-adress-wrapper">
-      <div class="formulario-adresS">
+      <div class="formulario-adress">
         <div class="pass-usr" style="margin-top: 20px;">
           País: <span class="advertencia">*</span>  México
         </div>
@@ -281,5 +281,30 @@ export default {
   font-family: 'Strait', sans-serif;
   font-size: 20px;
   margin-top: 20px;
+}
+@media screen and (max-width: 980px ) {
+  .separador {
+    width: 90%;
+  }
+  .formulario-cuenta {
+    width: 90%;
+  }
+  .campo-formulario {
+    width: 100%;
+  }
+  .formulario-adress {
+    width: 90%;
+  }
+  .confirmar {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .separador {
+    font-size: 20px;
+  }
+  .separador-sub {
+    font-size: 16px;
+  }
 }
 </style>

@@ -123,4 +123,22 @@ export default {
     font-family: 'Strait', sans-serif;
     font-size: 20px;
   }
+  @media screen and (max-width: 950px) {
+    .window {
+      width: 80%;
+    }
+    .formulario-contactanos {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .campo-formulario {
+      margin: 20px 0 20px 0;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    .title {
+      font-size: 25px;
+    }
+  }
 </style>

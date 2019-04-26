@@ -5,10 +5,30 @@
         Mi cuenta
       </div>
       <div class="menu">
-        <div class="menu-item">Datos</div>
-        <div class="menu-item">Direcciones</div>
-        <div class="menu-item">Lista de deseos</div>
-        <div class="menu-item">Mis pedidos</div>
+        <div class="menu-item">
+          Datos
+          <div class="img-line">
+            <img src="/mi_cuenta.svg" alt="">
+          </div>
+        </div>
+        <div class="menu-item">
+          Direcciones
+          <div class="img-line">
+            <img src="/direcciones.svg" alt="">
+          </div>
+        </div>
+        <div class="menu-item">
+          Lista de deseos
+          <div class="img-line">
+            <img src="/wish_list.svg" alt="">
+          </div>
+        </div>
+        <div class="menu-item">
+          Mis pedidos
+          <div class="img-line">
+            <img src="/mis_pedidos.svg" alt="">
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -42,15 +62,32 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
 }
 .menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border: 2px solid #000;
   width: 48%;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 10px 20px 10px 20px;
   box-sizing: border-box;
   font-family: 'Strait', sans-serif;
   font-size: 20px;
   cursor: pointer;
+}
+.img-line {
+  width: 50px;
+}
+@media screen and (max-width: 380px) {
+  .header {
+    font-size: 30px;
+  }
+  .menu-item {
+    width: 50%;
+    font-size: 16px;
+  }
 }
 </style>

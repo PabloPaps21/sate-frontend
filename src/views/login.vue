@@ -224,23 +224,23 @@ export default {
 }
 @media screen and (max-width: 375px) {
   .acceder {
-    width: 360px;
+    width: 90%;
   }
   .formulario {
-    width: 360px;
+    width: 90%;
   }
   .campo-formulario {
-    width: 350px;
+    width: 90%;
     justify-content: center;
   }
   .confirmar {
-    width: 360px;
+    width: 90%;
   }
   .olvidaste {
-    width: 360px;
+    width: 90%;
   }
   .registro {
-    width: 360px;
+    width: 90%;
   }
 }
 </style>

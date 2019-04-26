@@ -2,16 +2,18 @@
 <div class="envolver">
   <div class="about-wrapper">
     <!-- <div class="about img-about" style="background-image:url('/food-hero3.jpg')"> -->
-    <div class="about img-about">
-      <video controls autoplay>
+    <div class="about">
+      <div class="video-about">
+        <video controls autoplay>
         <source src="/videos/Video_sate.mov" type="video/mp4" style="width=100%">
       </video>
+      </div>
     </div>
   </div>
   <div class="cita-wrapper" style="background-image:url('/kraft.jpg')">
     <div class="cita">
       <div class="cita-texto">
-        <p class="texto">
+        <!-- <p class="texto">
           SATÉ es un proyecto multidisciplinario que integra diferentes industrias relacionadas
           con la alimentación.
           El objetivo es ofrecer un lugar de encuentro para las personas interesadas
@@ -31,6 +33,27 @@
         </p>
         <p class="texto">
           Te invitamos a sembrar las semillas del futuro que queremos hacer realidad.
+        </p> -->
+        <p class="texto">
+          SATÉ es un proyecto multidisciplinario que
+          integra diferentes industrias relacionadas
+          con la alimentación. El objetivo es ofrecer
+          un lugar de encuentro para las personas
+          interesadas en mejorar su alimentación y lograr
+          un modo de vida más consciente y feliz donde podrán
+          obtener información, compartir ideas y experiencias.
+          Creemos que la comida es un agente de cambio crucial
+          en temas como nutrición, agricultura, economía y sustentabilidad.
+          Al ser también el centro de la vida social es un factor de
+          conectividad cultural entre todas las personas.
+        </p>
+        <p class="texto">
+          En SATÉ encontrarás la posibilidad de mejorar tus
+          habilidades para cocinar, descubrir nuevos
+          ingredientes y lugares, así como ampliar tu
+          perspectiva sobre lo que involucra comer. Te
+          invitamos a formar parte del futuro que queremos
+          hacer realidad.
         </p>
         <p class="ricardo">
           Ricardo Rafael
@@ -267,9 +290,25 @@
   .about {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 900px;
     overflow-x: hidden;
   }
+  .video-about {
+    display: flex;
+    justify-content: center;
+    width:100%;
+    height:auto;
+  }
+/*
+ display: flex;
+    width: 400px;
+    height: 174px;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;*/
+
   .cita-wrapper {
     display: flex;
     width: 100%;

@@ -29,7 +29,7 @@
         </div>
         <div class="eleccion-icono">
           <div class="icono-container">
-            <img src="/estilismo.svg" alt="" class="img-icono">
+            <img src="/zero_wasted.svg" alt="" class="img-icono">
           </div>
           <div class="titulo-icono">
             ZERO WASTE
@@ -44,19 +44,15 @@
             Asesorias
           </div>
           <div class="descripcion-grid">
-            <p>En SATÉ contamos con profesionales de la más alta calificación
-              para ayudarte a realizar tus proyectos. Acércate a nosotros para
-              poder orientarte en los siguientes servicios:</p>
-            <p style="margin-top:20px;">
-              <ul class="lista">
-                <li><i class="fas fa-circle punto"></i> Creación de recetas</li>
-                <li><i class="fas fa-circle punto"></i> Desarrollo de menús</li>
-                <li><i class="fas fa-circle punto"></i> Campañas publicitarias</li>
-                <li><i class="fas fa-circle punto"></i> Fotografía de Alimentos</li>
-                <li><i class="fas fa-circle punto"></i> Diseño gráfico</li>
-                <li><i class="fas fa-circle punto"></i> Asesoría para restaurantes</li>
-                <li><i class="fas fa-circle punto"></i> Capacitación para personal</li>
-              </ul>
+            <p>
+              En Saté contamos con profesionales con
+            experiencia en cocina, diseño o administración
+            para poder ayudarte a hacer tus proyectos realidad
+            de la mejor manera. Acércate a nosotros con tus ideas
+            y nosotros te orientamos en áreas que incluyen creación
+            de recetas, desarrollo de menús, campañas publicitarias,
+            fotografía de alimentos, diseño de productos para tu cocina,
+            asesoría para restaurantes y capacitación de personal.
             </p>
           </div>
         </div>
@@ -88,14 +84,24 @@
             Zero Waste
           </div>
           <div class="descripcion-grid">
-            <p>En SATÉ contamos con profesionales de la más alta calificación
-              para ayudarte a realizar tus proyectos. Acércate a nosotros para
-              poder orientarte en los siguientes servicios:</p>
+            <p>
+              Para nosotros es muy importante ser una empresa
+              sustentable, que no genere desechos y sea saludable
+              para todos, queremos que nuestros usuarios consuman
+              conscientemente, para esto ofrecemos una gama de productos
+              hechos a partir de materiales naturales que evitan el consumo
+              innecesario de plástico.
+            </p>
             <p style="margin-top:20px;">
+              Con nuestra experiencia en esta área y los
+              productos que manejamos queremos ayudarte a
+              convertir tu negocio en uno que no genere
+              desechos y que invite a la gente a reducir su
+              consumo de plástico.
             </p>
           </div>
         </div>
-        <div class="img-grid con-grid" style="background-image:url('/asesorias.jpg')"></div>
+        <div class="img-grid con-grid" style="background-image:url('/zero_waste.jpg')"></div>
       </div>
     </div>
     <!-- MOVIL -->
@@ -106,59 +112,60 @@
           <div class="titulo-movil">
             Asesorias
           </div>
-          <p>En SATÉ contamos con profesionales de la más alta calificación
-              para ayudarte a realizar tus proyectos. Acércate a nosotros para
-              poder orientarte en los siguientes servicios:</p>
-           <p style="margin-top:20px;">
-              <ul class="lista">
-                <li><i class="fas fa-circle punto"></i> Creación de recetas</li>
-                <li><i class="fas fa-circle punto"></i> Desarrollo de menús</li>
-                <li><i class="fas fa-circle punto"></i> Campañas publicitarias</li>
-                <li><i class="fas fa-circle punto"></i> Fotografía de Alimentos</li>
-                <li><i class="fas fa-circle punto"></i> Diseño gráfico</li>
-                <li><i class="fas fa-circle punto"></i> Asesoría para restaurantes</li>
-                <li><i class="fas fa-circle punto"></i> Capacitación para personal</li>
-              </ul>
-            </p>
+          <p>
+            En Saté contamos con profesionales con
+            experiencia en cocina, diseño o administración
+            para poder ayudarte a hacer tus proyectos realidad
+            de la mejor manera. Acércate a nosotros con tus ideas
+            y nosotros te orientamos en áreas que incluyen creación
+            de recetas, desarrollo de menús, campañas publicitarias,
+            fotografía de alimentos, diseño de productos para tu cocina,
+            asesoría para restaurantes y capacitación de personal.
+          </p>
           </div>
         </div>
       </div>
       <div class="grid-w-m">
       <div class="grid-m">
-        <div class="img-grid" style="background-image:url('/asesorias.jpg')"></div>
+        <div class="img-grid" style="background-image:url('/estilismo2.jpg')"></div>
         <div class="descripcion-movil">
           <div class="titulo-movil">
-            Asesorias
+            Estilismo de Alimentos
           </div>
-          <p>En SATÉ contamos con profesionales de la más alta calificación
-              para ayudarte a realizar tus proyectos. Acércate a nosotros para
-              poder orientarte en los siguientes servicios:</p>
-           <p style="margin-top:20px;">
-              <ul class="lista">
-                <li><i class="fas fa-circle punto"></i> Creación de recetas</li>
-                <li><i class="fas fa-circle punto"></i> Desarrollo de menús</li>
-                <li><i class="fas fa-circle punto"></i> Campañas publicitarias</li>
-                <li><i class="fas fa-circle punto"></i> Fotografía de Alimentos</li>
-                <li><i class="fas fa-circle punto"></i> Diseño gráfico</li>
-                <li><i class="fas fa-circle punto"></i> Asesoría para restaurantes</li>
-                <li><i class="fas fa-circle punto"></i> Capacitación para personal</li>
-              </ul>
+            <p>
+              Dentro de la gama de servicios en SATÉ,
+              ofrecemos estilismo de alimentos que consiste
+              en presentar la comida de manera armónica y
+              atractiva. Dicha presentación tiene varios objetivos,
+              como lo son: fotografía para empaques, medios publicitarios
+              y editoriales así como videos promocionales dentro de la
+              industria de la gastronomía.
             </p>
           </div>
         </div>
       </div>
       <div class="grid-w-m">
       <div class="grid-m">
-        <div class="img-grid" style="background-image:url('/asesorias.jpg')"></div>
+        <div class="img-grid" style="background-image:url('/zero_waste.jpg')"></div>
         <div class="descripcion-movil">
           <div class="titulo-movil">
             Zero Waste
           </div>
-          <p>En SATÉ contamos con profesionales de la más alta calificación
-              para ayudarte a realizar tus proyectos. Acércate a nosotros para
-              poder orientarte en los siguientes servicios:</p>
-          <p style="margin-top:20px;">
-          </p>
+            <p>
+              Para nosotros es muy importante ser una empresa
+              sustentable, que no genere desechos y sea saludable
+              para todos, queremos que nuestros usuarios consuman
+              conscientemente, para esto ofrecemos una gama de productos
+              hechos a partir de materiales naturales que evitan el consumo
+              innecesario de plástico.
+            </p>
+            <p style="margin-top:20px;">
+              Con nuestra experiencia en esta área y los
+              productos que manejamos queremos ayudarte a
+              convertir tu negocio en uno que no genere
+              desechos y que invite a la gente a reducir su
+              consumo de plástico.
+            </p>
           </div>
         </div>
       </div>
@@ -371,6 +378,12 @@
     .banner {
       width: 90%;
     }
+    .exp-icono {
+      margin-top: 20px;
+    }
+    .titulo-exp {
+      margin-top: 0px;
+    }
   }
   @media screen and (max-width: 680px) {
     .img-slide-wrapper {
@@ -441,6 +454,12 @@
     width: 100%;
     background-color: #eae5dc;
     }
+    .exp-icono {
+      margin-top: 20px;
+    }
+    .titulo-exp {
+      margin-top: 0px;
+    }
   }
   ///movil
   // @media screen and (min-width: 376px) {
@@ -510,6 +529,12 @@
     align-items: center;
     margin-top: 50px;
     margin-bottom: 50px;
+    }
+    .exp-icono {
+      margin-top: 20px;
+    }
+    .titulo-exp {
+      margin-top: 0px;
     }
   }
 </style>

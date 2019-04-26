@@ -166,8 +166,8 @@ export default {
   justify-content: space-between;
 }
 .img-detalle-producto {
-  height: 257px;
-  width: 257px;
+  height: auto;
+  width: 320px;
   margin-right: 91px;
 }
 .contador-input {
@@ -355,5 +355,43 @@ export default {
 .botones {
   display: flex;
   margin-top: 25px;
+}
+@media screen and (max-width: 980px) {
+  .detalle-producto {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .img-detalle-producto {
+    width: 224px;
+    height: 224px;
+    margin-left: 33%;
+  }
+  .detalle {
+    margin-left: 11%;
+  }
+}
+@media screen and (max-width: 750px) {
+   .detalle-producto {
+    flex-direction: column;
+  }
+  .img-detalle-producto {
+    width: 211px;
+    margin-left: 53px;
+  }
+  .detalle {
+    margin-left: 37px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .detalle-producto {
+    flex-direction: column;
+  }
+  .img-detalle-producto {
+    width: 211px;
+    margin-left: 36px;
+  }
+  .detalle {
+    margin-left: 37px;
+  }
 }
 </style>

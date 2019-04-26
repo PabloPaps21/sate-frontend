@@ -17,20 +17,23 @@
     <div class="experiencia-wrapper">
       <div class="experiencia">
         <p>
-          Date la oportunidad de descubrir el placer
-          de cocinar. Una habilidad básica de vida que
-          te permitirá alimentarte sanamente, ahorrar dinero
-          y ante todo, preparar deliciosos platillos para ti
-          y tus seres queridos. Aprenderás en un ambiente relajado
-          con una dinámica divertida donde todo el grupo participará
-          activamente en la elaboración de comida.
+          Los sabores los podemos percibir de ciertas
+          formas que van mucho más allá del paladar,
+          podemos degustar con la vista, a través de
+          olores o incluso de experiencias que relacionan
+          nuestro entorno con la comida. Queremos que vivas
+          la comida de todas las maneras que no imaginas
+          posibles, para esto diseñamos una serie de experiencias
+          culinarias que cambian de acuerdo a la temporada y que
+          le van a dar un giro a la manera en la que consumes tus
+          alimentos.
         </p>
-        <p style="margin-top:20px;">
+        <!-- <p style="margin-top:20px;">
           Saté ofrece una amplia gama de
           cursos en los que podrás aprender a preparar pasta fresca,
           servir una cena japonesa completa o, si lo tuyo es la falta
           de tiempo, recetas fáciles que podrás preparar en minutos.
-        </p>
+        </p> -->
       </div>
     </div>
     <div class="exp-wrapper">
@@ -90,7 +93,8 @@
               para crear una experiencia sublime.</p>
           </div>
         </div>
-        <div class="img-grid con-grid" style="background-image:url('/experiencias.jpg');"></div>
+        <div class="img-grid con-grid" style="background-image:url('/experiencias_multi.jpg');">
+        </div>
       </div>
     </div>
     <div class="grid-wrapper">
@@ -174,7 +178,7 @@
     <!-- EXPERIENCIAS MOVIL -->
     <div class="grid-w-m">
       <div class="grid-m">
-        <div class="img-grid" style="background-image:url('/experiencias.jpg');"></div>
+        <div class="img-grid" style="background-image:url('/experiencias_multi.jpg');"></div>
         <div class="descripcion-movil">
           <div class="titulo-movil">
             Experiencias Multisensoriales
@@ -531,6 +535,12 @@
     }
     .banner {
       width: 90%;
+    }
+    .exp-icono {
+      margin-top: 30px;
+    }
+    .titulo-exp {
+      margin-top: 0px;
     }
   }
   @media screen and (max-width: 680px) {

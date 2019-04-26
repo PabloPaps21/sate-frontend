@@ -232,4 +232,16 @@ export default {
     margin-top: 5px;
     margin-bottom: 5px;
   }
+  @media screen and (max-width: 375px) {
+    .title {
+      font-size: 30px;
+    }
+    .campo {
+      margin: 10px 0 10px 0;
+    }
+    .btn-guardar {
+      justify-content: center;
+      margin-top:30px;
+    }
+  }
 </style>

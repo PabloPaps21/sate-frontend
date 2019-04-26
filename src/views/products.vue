@@ -141,4 +141,22 @@ export default {
     background-size: cover;
     margin-left: 8px;
   }
+  @media screen and (max-width: 980px) {
+    .title {
+      width: 90%;
+    }
+    .renglon {
+      width: 90%;
+    }
+    .agregar {
+      width: 90%;
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width:  375px) {
+    .title {
+      font-family: 'Strait', sans-serif;
+      font-size: 25px;
+    }
+  }
 </style>

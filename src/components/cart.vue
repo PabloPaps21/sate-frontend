@@ -203,4 +203,19 @@ export default {
   flex-grow: 1;
   overflow-y: scroll;
 }
+@media screen and (max-width: 980px){
+  .cart {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .cart {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .cart {
+    width: 100%;
+  }
+}
 </style>
