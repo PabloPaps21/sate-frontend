@@ -102,7 +102,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 900px;
+  width: 100%;
   font-family: 'Adelle Sans Book';
   font-weight: normal;
   font-style: normal;
@@ -283,5 +283,11 @@ export default {
   font-family: 'Strait', sans-serif;
   font-size: 20px;
   color: #3e4e35;
+}
+@media screen and (max-width: 375px) {
+  .titulo-resumen {
+    width: 100%;
+    font-size: 25px;
+  }
 }
 </style>

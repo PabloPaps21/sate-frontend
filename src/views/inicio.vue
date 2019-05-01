@@ -351,12 +351,13 @@
   .mapa {
     display: flex;
     justify-content: center;
-    width: 1022px;
+    width: 700px;
     margin-top: 50px;
     margin-bottom: 20px;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
+    background-color: coral;
+    // overflow-x: hidden;
   }
   .titulo-mapa {
     font-family: 'Adelle Sans Book';
@@ -474,21 +475,14 @@
     display: flex;
     justify-content: center;
     width: 900px;
-    // margin-top: 50px;
     margin-top: 126px;
     margin-bottom: 153px;
     flex-direction: column;
     align-items: center;
   }
-  // .titulo-mapa {
-  //   font-family: 'Strait', sans-serif;
-  //   font-size: 40px;
-  //   margin-bottom: 80px;
-  // }
   .img-mapa {
     width: 900px;
     height: auto;
-    // background-color: coral, crimson, cyan, aquamarine, yellowgreen;
   }
   .renglon {
     display: flex;
@@ -624,9 +618,6 @@
     .prox-cursos-title {
       font-size: 27px;
     }
-    .cita-wrapper {
-       height: auto;
-    }
     .cita {
       width: 90%;
       padding: 0 20px;
@@ -641,7 +632,18 @@
       flex-direction: column;
     }
     .mapa {
-      display: 80%;
+      display: 70%;
+    }
+    .img-size {
+      height: 75px;
+      width: 75px;
+    }
+    .renglon {
+      width:967px;
+    }
+    .cheftext {
+      height: 75px;
+      width: 75px;
     }
     .btn-contactanos {
       margin-top: 5px;
@@ -650,7 +652,7 @@
       margin-top: 10px;
     }
   }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 870px) {
     .mapa {
       display: none;
     }

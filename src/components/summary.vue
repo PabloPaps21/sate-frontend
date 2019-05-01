@@ -116,4 +116,18 @@ export default {
   background-color: #eae5dc;
   border: 2px solid black;
 }
+@media screen  and (max-width: 980px) {
+  .debajo-producto {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 375px) {
+  .debajo-producto {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+}
 </style>

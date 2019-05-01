@@ -89,7 +89,7 @@ export default {
     background-color: #3e4e35 !important;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 100px) {
   .step-text {
     display: none;
   }

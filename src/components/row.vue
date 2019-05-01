@@ -82,6 +82,7 @@ export default {
   width: 900px;
   justify-content: space-around;
   flex-direction: column;
+  // background-color: purple;
 }
 .columnas-particular {
   display: flex;
@@ -166,12 +167,33 @@ export default {
   background-color: #eae5dc;
   border: 2px solid #b92929;
 }
+@media screen and (max-width: 814px) {
+  .descripcion {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 500px) {
- .columnas-particular {
+ .columnas {
    flex-direction: column;
+   width: 100%;
+  //  background-color: yellowgreen;
  }
  .numeros {
    margin-right: 43px;
+   flex-direction: column;
  }
+ .descripcion {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 375px) {
+  .columas {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 </style>

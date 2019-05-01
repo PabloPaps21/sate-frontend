@@ -152,4 +152,11 @@ export default {
   background-color: #eae5dc;
   border: 2px solid black;
 }
+@media screen and (max-width: 980px) {
+  .delivery {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 </style>

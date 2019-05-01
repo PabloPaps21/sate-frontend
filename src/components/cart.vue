@@ -210,7 +210,7 @@ export default {
 }
 @media screen and (max-width: 550px) {
   .cart {
-    width: 80%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 375px) {
