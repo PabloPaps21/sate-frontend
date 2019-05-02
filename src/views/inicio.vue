@@ -2,10 +2,9 @@
 <div class="envolver">
   <div class="about-wrapper">
     <!-- <div class="about img-about" style="background-image:url('/food-hero3.jpg')"> -->
-    <div class="about">
-      <div class="video-about">
-        <video controls autoplay>
-        <source src="/videos/Video_sate.mov" type="video/mp4" style="width=100%">
+    <div class="about img-about">
+      <video controls autoplay>
+        <source src="/videos/video.mp4" type="video/mp4" style="width=100%">
       </video>
       </div>
     </div>
