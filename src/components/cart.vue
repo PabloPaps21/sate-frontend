@@ -86,7 +86,7 @@ export default {
 }
 .cart {
   background-color: #eae5dc;
-  width: 30%;
+  width: 40%;
   padding: 20px;
   box-sizing: border-box;
   max-height: 100%;
@@ -189,7 +189,7 @@ export default {
   margin-right: 15px;
 }
 /deep/ .columnas-particular {
-  flex-direction: column;
+  // flex-direction: column;
   justify-content: flex-start;
 }
 /deep/ .numeros {
@@ -205,7 +205,7 @@ export default {
 }
 @media screen and (max-width: 980px){
   .cart {
-    width: 75%;
+    width: 80%;
   }
 }
 @media screen and (max-width: 550px) {
@@ -213,9 +213,17 @@ export default {
     width: 100%;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   .cart {
     width: 100%;
+  }
+  .checkout{
+    width: 100%;
+  }
+  .linea-verde {
+    margin-top: 100px;
+    margin-bottom: 15px;
+    margin-right: 15px;
   }
 }
 </style>

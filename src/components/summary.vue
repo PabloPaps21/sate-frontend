@@ -123,11 +123,12 @@ export default {
     align-items: center;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   .debajo-producto {
     width: 50%;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
   }
 }
 </style>

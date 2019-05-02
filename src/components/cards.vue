@@ -196,9 +196,10 @@ export default {
     width: 80%;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 410px) {
   .window {
     width: 80%;
+    margin-right: 20px;
   }
 }
 </style>

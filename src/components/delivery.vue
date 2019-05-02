@@ -159,4 +159,18 @@ export default {
     align-items: center;
   }
 }
+@media screen and (max-width: 480px) {
+  .addresses {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 17px;
+  }
+  .delivery-fare {
+    margin-top: 15px;
+  }
+  .address-selection {
+    margin-left: 13px;
+  }
+}
 </style>

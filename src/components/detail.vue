@@ -3,7 +3,7 @@
     <div class="detalle-wrapper">
       <div class="detalle-producto" style="width: 90%">
         <img src="/ensalada.png" alt="" class="img-detalle-producto">
-        <div class="detalle" style="width: 80%">
+        <div class="detalle">
           <div class="nombre-producto aire">
             <div class="nom-product">
               {{ product.name }}
@@ -145,6 +145,7 @@ export default {
   align-content: center;
   justify-content: center;
   font-family: 'Strait', sans-serif;
+  width: 50%
 }
 .nombre-producto {
   display: flex;
@@ -358,13 +359,17 @@ export default {
 }
 @media screen and (max-width: 980px) {
   .detalle-producto {
+    display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
   .img-detalle-producto {
     width: 224px;
     height: 224px;
-    margin-left: 33%;
+    margin-left: 85px;
+    display: flex;
+    justify-content: center;
   }
   .detalle {
     margin-left: 11%;
@@ -372,26 +377,35 @@ export default {
 }
 @media screen and (max-width: 750px) {
    .detalle-producto {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .img-detalle-producto {
     width: 211px;
-    margin-left: 53px;
+    margin-left: 85px;
   }
   .detalle {
     margin-left: 37px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 410px) {
   .detalle-producto {
     flex-direction: column;
   }
   .img-detalle-producto {
     width: 211px;
-    margin-left: 36px;
+    margin-left: 99px;
   }
   .detalle {
     margin-left: 37px;
+  }
+  .add-to-cart {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 46px;
   }
 }
 </style>

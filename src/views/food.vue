@@ -491,12 +491,12 @@ export default {
       width: 90%;
     }
   }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 480px) {
     .img-slide-wrapper {
       height: 136px;
     }
     .slide-title {
-      font-size: 30px;
+      font-size: 25px;
       margin-bottom: 2px;
     }
     .instructions-wrapper {

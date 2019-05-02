@@ -136,7 +136,7 @@ export default {
       margin: 20px 0 20px 0;
     }
   }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 480px) {
     .title {
       font-size: 25px;
     }

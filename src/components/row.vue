@@ -79,9 +79,10 @@ export default {
 }
 .columnas {
   display: flex;
-  width: 900px;
+  width: 100%;
   justify-content: space-around;
   flex-direction: column;
+  height: 140px;
   // background-color: purple;
 }
 .columnas-particular {
@@ -172,28 +173,77 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 26%;
   }
-}
-@media screen and (max-width: 500px) {
- .columnas {
-   flex-direction: column;
-   width: 100%;
-  //  background-color: yellowgreen;
- }
- .numeros {
+  .texto-checkout {
+    justify-content: center;
+    align-items: center;
+  }
+   .numeros {
    margin-right: 43px;
-   flex-direction: column;
+   //flex-direction: column;
+   width: 50%;
  }
- .descripcion {
+}
+// @media screen and (max-width: 375px) {
+//   .columnas-particular {
+//     flex-direction: column;
+//     justify-content: center;
+//     height: 10%;
+//   }
+//   .descripcion {
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     width: 40%;
+//   }
+//   .numeros {
+//   //  flex-direction: column;
+//    width: 60%;
+//    justify-content: center;
+//   }
+//   .precio-unitario {
+//     width: 14%;
+//   }
+//   .cantidad {
+//     width: 26%;
+//   }
+//   .cuenta-check {
+//     width: 18%;
+//   }
+// }
+@media screen and (max-width: 480px) {
+  .columnas-particular {
+    flex-direction: column;
+    justify-content: center;
+    height: 20%;
+  }
+  .columnas {
+    height: 140px;
+    margin-top: 50px;
+    // background-color: purple;
+  }
+  .descripcion {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 40%;
+    margin-bottom: 60px;
   }
-}
-@media screen and (max-width: 375px) {
-  .columas {
-    flex-direction: column;
-    width: 100%;
+  .numeros {
+  //  flex-direction: column;
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+  }
+  .precio-unitario {
+    width: 20%;
+  }
+  .cantidad {
+    width: 26%;
+  }
+  .cuenta-check {
+    width: 18%;
   }
 }
 </style>

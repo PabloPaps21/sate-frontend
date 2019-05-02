@@ -94,4 +94,9 @@ export default {
     display: none;
   }
 }
+@media screen and (max-width: 480px) {
+  .steps {
+    width: 100%;
+  }
+}
 </style>

@@ -56,7 +56,7 @@
               </select>
               </div>
             </div>
-            <div class="renglon">
+            <div class="renglon-img">
               <div class="nombre-campo">
                Elige una imagen
               </div>
@@ -225,6 +225,12 @@ export default {
     align-items: center;
     margin-top: 10px;
   }
+  .renglon-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
   .lista-etiqueta {
     color: #3e4e35;
     font-family: 'Strait', sans-serif;
@@ -232,9 +238,11 @@ export default {
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  @media screen and (max-width: 375px) {
-    .title {
-      font-size: 30px;
+  @media screen and (max-width: 750px) {
+    .formulario-contactanos {
+      width: 80%;
+      justify-content: center;
+      align-items: center;
     }
     .campo {
       margin: 10px 0 10px 0;
@@ -242,6 +250,45 @@ export default {
     .btn-guardar {
       justify-content: center;
       margin-top:30px;
+    }
+    .renglon {
+      width: 56%;
+      margin: 10px 0px 10px 0px;
+    }
+    .renglon-img {
+      flex-direction: column;
+    }
+    .guardar-btn {
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 30px;
+    }
+    .formulario-contactanos {
+      width: 80%;
+      justify-content: center;
+      align-items: center;
+    }
+    .campo {
+      margin: 10px 0 10px 0;
+    }
+    .btn-guardar {
+      justify-content: center;
+      margin-top:30px;
+    }
+    .renglon {
+      width: 56%;
+      margin: 10px 0px 10px 0px;
+    }
+    .renglon-img {
+      flex-direction: column;
+    }
+    .guardar-btn {
+      justify-content: center;
+      margin-bottom: 20px;
     }
   }
 </style>

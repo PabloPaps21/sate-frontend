@@ -8,7 +8,6 @@
       </video>
       </div>
     </div>
-  </div>
   <div class="cita-wrapper" style="background-image:url('/kraft.jpg')">
     <div class="cita">
       <div class="cita-texto">
@@ -355,7 +354,6 @@
     margin-bottom: 20px;
     flex-direction: column;
     align-items: center;
-    background-color: coral;
     // overflow-x: hidden;
   }
   .titulo-mapa {
@@ -656,7 +654,7 @@
       display: none;
     }
   }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 480px) {
     .proximos-cursos {
       flex-direction: column;
       justify-content: center;
@@ -664,6 +662,7 @@
       margin-top: 10px;
     }
     .prox-cursos-title {
+      margin-top: 200px;
       font-size: 25px;
     }
     .cita-wrapper {
