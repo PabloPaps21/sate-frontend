@@ -2,37 +2,28 @@
   <div class="account-wrapper">
     <div class="wishlist">
       <div class="wishlist-products">
-        <wishlistCard v-for="product in wishlist" :key="product.id" :product="product" />
+        <div v-for="order in orders" :key="order.id">
+          Yay
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { createNamespacedHelpers } from 'vuex';
-import wishlistCard from '@/components/wishlist-element.vue';
+import axios from 'axios';
 
-const { mapState, mapMutations, mapActions } = createNamespacedHelpers('wishlist');
 export default {
-  components: {
-    wishlistCard,
-  },
-  computed: {
-    ...mapState([
-      'wishlist',
-    ]),
-  },
-  methods: {
-    ...mapActions([
-      'getWishlist',
-    ]),
-    ...mapMutations([
-      'addToWishlist',
-      'removeFromWishlist',
-    ]),
+  data() {
+    return {
+      orders: [],
+    };
   },
   mounted() {
-    this.getWishlist();
+    axios.get('http://127.0.0.1:3333/order')
+      .then((response) => {
+        this.orders = response.data;
+      });
   },
 };
 </script>

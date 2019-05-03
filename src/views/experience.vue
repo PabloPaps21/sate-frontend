@@ -38,21 +38,21 @@
     </div>
     <div class="exp-wrapper">
       <div class="exp">
-        <div class="exp-icono">
+        <div class="exp-icono" v-scroll-to="'.experiences'">
           <div class="icono-container">
             <img src="/e.multisensoriales2.svg" alt="" class="img-exp"
             style="width:70px; height:61;">
           </div>
           <div class="titulo-exp">EXPERIENCIAS MULTISENSORIALES</div>
         </div>
-        <div class="exp-icono">
+        <div class="exp-icono" v-scroll-to="'.travel'">
           <div class="icono-container">
             <img src="/viajes_gastronomicos.svg" alt="" class="img-exp">
           </div>
           <div class="titulo-exp">VIAJES
             <br>GASTRONÓMICOS</div>
         </div>
-        <div class="exp-icono">
+        <div class="exp-icono" v-scroll-to="'.classes'">
           <div class="icono-container">
             <img src="/clases_cocina2.svg" alt="" class="img-exp">
           </div>
@@ -62,7 +62,7 @@
             COCINA
              </div>
         </div>
-        <div class="exp-icono">
+        <div class="exp-icono" v-scroll-to="'.catering'">
           <div class="icono-container">
             <img src="/banquetes.svg" alt="" class="img-exp">
           </div>
@@ -72,7 +72,7 @@
       </div>
     </div>
     <!-- EXPERIENCIAS -->
-    <div class="grid-wrapper">
+    <div class="grid-wrapper experiences">
       <div class="grid">
         <div class="texto-grid">
           <div class="texto-titulo-grid">
@@ -97,7 +97,7 @@
         </div>
       </div>
     </div>
-    <div class="grid-wrapper">
+    <div class="grid-wrapper travel">
       <div class="grid">
         <div class="img-grid con-grid"
         style="background-image:url('/viaje_gastro2.jpg')"></div>
@@ -124,7 +124,7 @@
         </div>
       </div>
     </div>
-    <div class="grid-wrapper">
+    <div class="grid-wrapper classes">
       <div class="grid">
         <div class="texto-grid">
           <div class="texto-titulo-grid">
@@ -148,7 +148,7 @@
         <div class="img-grid con-grid" style="background-image:url('/clases_cocina3.jpg')"></div>
       </div>
     </div>
-    <div class="grid-wrapper">
+    <div class="grid-wrapper catering">
       <div class="grid">
         <div class="img-grid con-grid" style="background-image:url('/catering3.jpg')"></div>
         <div class="texto-grid-der">
@@ -176,7 +176,7 @@
     </div>
      <!--FIN EXPERIENCIAS -->
     <!-- EXPERIENCIAS MOVIL -->
-    <div class="grid-w-m">
+    <div class="grid-w-m test">
       <div class="grid-m">
         <div class="img-grid" style="background-image:url('/experiencias_multi.jpg');"></div>
         <div class="descripcion-movil">
@@ -198,7 +198,7 @@
         </div>
       </div>
     </div>
-    <div class="grid-w-m">
+    <div class="grid-w-m travel">
       <div class="grid-m">
         <div class="img-grid" style="background-image:url('/viaje_gastro2.jpg');"></div>
         <div class="descripcion-movil">
@@ -222,7 +222,7 @@
         </div>
       </div>
     </div>
-    <div class="grid-w-m">
+    <div class="grid-w-m classes">
       <div class="grid-m">
         <div class="img-grid" style="background-image:url('/clases_cocina3.jpg');"></div>
         <div class="descripcion-movil">
@@ -244,7 +244,7 @@
         </div>
       </div>
     </div>
-    <div class="grid-w-m">
+    <div class="grid-w-m catering">
       <div class="grid-m">
         <div class="img-grid" style="background-image:url('/catering3.jpg');"></div>
         <div class="descripcion-movil">

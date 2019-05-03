@@ -77,6 +77,24 @@ export default new Router({
     {
       path: '/account',
       component: () => import('./views/account.vue'),
+      children: [
+        {
+          path: 'user',
+          component: () => import('./views/user.vue'),
+        },
+        {
+          path: 'addresses',
+          component: () => import('./views/addresses.vue'),
+        },
+        {
+          path: 'wishlist',
+          component: () => import('./views/wishlist.vue'),
+        },
+        {
+          path: 'orders',
+          component: () => import('./views/orders.vue'),
+        },
+      ],
     },
     {
       path: '/wishlist',
@@ -85,6 +103,10 @@ export default new Router({
     {
       path: '/delivery',
       component: () => import('./components/delivery.vue'),
+    },
+    {
+      path: '/admin/food-schedule',
+      component: () => import('./views/admin/foodSchedule.vue'),
     },
   ],
 });

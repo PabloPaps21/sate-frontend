@@ -11,7 +11,7 @@
   </div>
     <div class="iconos-wrapper">
       <div class="iconos">
-        <div class="eleccion-icono">
+        <div class="eleccion-icono" v-scroll-to="'.advisory'">
            <div class="icono-container">
              <img src="/asesorías.svg" alt="" class="img-icono">
            </div>
@@ -19,7 +19,7 @@
             ASESORIAS
           </div>
         </div>
-        <div class="eleccion-icono">
+        <div class="eleccion-icono" v-scroll-to="'.estilism'">
           <div class="icono-container">
             <img src="/estilismo.svg" alt="" class="img-icono">
           </div>
@@ -27,7 +27,7 @@
             ESTILISMO DE ALIMENTOS
           </div>
         </div>
-        <div class="eleccion-icono">
+        <div class="eleccion-icono" v-scroll-to="'.waste'">
           <div class="icono-container">
             <img src="/zero_wasted.svg" alt="" class="img-icono">
           </div>
@@ -37,7 +37,7 @@
         </div>
       </div>
     </div>
-    <div class="grid-wrapper">
+    <div class="grid-wrapper advisory">
       <div class="grid">
         <div class="texto-grid">
           <div class="texto-titulo-grid">
@@ -59,7 +59,7 @@
         <div class="img-grid con-grid" style="background-image:url('/asesorias.jpg')"></div>
       </div>
     </div>
-    <div class="grid-wrapper">
+    <div class="grid-wrapper estilism">
       <div class="grid">
         <div class="img-grid con-grid" style="background-image:url('/estilismo2.jpg')"></div>
         <div class="texto-grid-der">
@@ -77,7 +77,7 @@
         </div>
       </div>
     </div>
-    <div class="grid-wrapper">
+    <div class="grid-wrapper waste">
       <div class="grid">
         <div class="texto-grid">
           <div class="texto-titulo-grid">

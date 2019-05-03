@@ -19,6 +19,9 @@ const actions = {
         commit('setTags', response.data);
       });
   },
+  createMenu({}, data) {
+    return axios.post('http://127.0.0.1:3333/schedule', data);
+  },
 };
 
 const mutations = {

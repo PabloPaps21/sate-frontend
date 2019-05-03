@@ -23,11 +23,22 @@ const getters = {
     let total = 0;
     for (let i = 0; i < state.items.length; i += 1) {
       const item = state.items[i];
-      if (item.container) {
-        total += item.container * 10;
+      if (item.product.container) {
+        total += item.product.container * item.quantity * 60;
       }
     }
     return total;
+  },
+  cartIds: (state) => {
+    const cart = [];
+    for (let i = 0; i < state.items.length; i += 1) {
+      const item = state.items[i];
+      cart.push({
+        product_id: item.product.id,
+        quantity: item.quantity,
+      });
+    }
+    return cart;
   },
   foodItems: state => state.items.filter(item => item.product.type === 'FOOD'),
   marketItems: state => state.items.filter(item => item.product.type === 'MARKET'),
