@@ -230,7 +230,13 @@ export default {
       width: 100%;
     }
   }
-   @media screen and (max-width: 375px){
+  @media screen and (max-width: 750px) {
+    .slide-title {
+      font-size: 40px;
+      margin-bottom: 2px;
+    }
+  }
+   @media screen and (max-width: 480px){
     .img-slide-wrapper {
       height: 136px;
     }
@@ -244,6 +250,9 @@ export default {
       justify-content: center;
       align-items: center;
       width: 100%;
+    }
+    .cita-index {
+      padding: 0 23px 0 23px;
     }
   }
 </style>

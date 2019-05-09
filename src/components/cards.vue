@@ -178,7 +178,7 @@ export default {
   color: #4d5d44;
   line-height: 1.5;
   font-family: 'Strait', sans-serif;
-  height: 50px;
+  // height: 50px;
 }
 .active {
   filter: opacity(30%);
@@ -199,7 +199,7 @@ export default {
 @media screen and (max-width: 410px) {
   .window {
     width: 80%;
-    margin-right: 20px;
+    // margin-right: 20px;
   }
 }
 </style>

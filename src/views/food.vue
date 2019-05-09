@@ -490,6 +490,12 @@ export default {
     .conoce {
       width: 90%;
     }
+    .tags {
+      justify-content: center;
+    }
+    .cita-index {
+      padding: 0 25px 0 25px;
+    }
   }
   @media screen and (max-width: 480px) {
     .img-slide-wrapper {
@@ -526,6 +532,12 @@ export default {
     }
     .conoce {
       width: 90%;
+    }
+    .tags {
+      justify-content: center;
+    }
+    .cita-index {
+      padding: 0 25px 0 25px;
     }
   }
 </style>
