@@ -81,14 +81,14 @@
       </div>
     </div>
     <div class="category" v-for="category in filteredFood" :key="category.id">
-      <div class="menu-wrapper">
+      <div class="menu-wrapper" v-if="category.products.length > 0">
         <div class="menu">
           <div class="menu-title">
             {{ category.name }}
           </div>
         </div>
       </div>
-      <div class="alimentos-wrapper">
+      <div class="alimentos-wrapper" v-if="category.products.length > 0">
         <div class="alimentos">
           <cards
             v-for="product in category.products"

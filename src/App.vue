@@ -13,7 +13,9 @@
           </div>
           <div class="login">
             <div v-if="!user" @click="$router.push('/login')">Iniciar sesión/Registrarse</div>
-            <div v-if="user" style="margin-right: 18px;">Cuenta</div>
+            <div v-if="user" @click="$router.push('/account')" style="margin-right: 18px;">
+              Cuenta
+            </div>
             <div v-if="user" @click="logout">Cerrar sesión</div>
           </div>
         </div>

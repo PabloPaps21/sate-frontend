@@ -7,7 +7,7 @@
       </div>
       <div class="payment-row">
         Recipientes
-        <div>$</div>
+        <div>${{ recipientsPrice }}</div>
       </div>
       <div class="payment-row">
         Envio
@@ -15,7 +15,7 @@
       </div>
       <div class="payment-row total">
         Total
-        <div>${{ this.cartTotalPrice + this.deliveryFee }}</div>
+        <div>${{ cartTotalPrice + recipientsPrice + deliveryFee }}</div>
       </div>
       <div style="margin-top: 40px;" id="paypal-button-container"></div>
     </div>
@@ -24,6 +24,7 @@
 
 <script>
 /* global paypal */
+import axios from 'axios';
 import { createNamespacedHelpers } from 'vuex';
 
 const { mapState, mapGetters } = createNamespacedHelpers('cart');
@@ -39,6 +40,7 @@ export default {
     ...mapGetters([
       'cartTotalPrice',
       'recipientsPrice',
+      'cartIds',
     ]),
   },
   mounted() {
@@ -49,13 +51,19 @@ export default {
       createOrder: (data, actions) => actions.order.create({
         purchase_units: [{
           amount: {
-            value: this.cartTotalPrice + this.deliveryFee,
+            value: this.cartTotalPrice + this.recipientsPrice + this.deliveryFee,
           },
         }],
       }),
       onApprove: (data, actions) => actions.order.capture()
         .then(() => {
-          this.success = true;
+          const payload = {
+            orderID: data.orderID,
+            cart: this.cartIds,
+          };
+          axios.post('http://127.0.0.1:3333/order', payload).then(() => {
+            this.success = true;
+          });
         }),
     }).render('#paypal-button-container');
   },

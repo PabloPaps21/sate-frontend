@@ -6,8 +6,8 @@
       <video controls autoplay>
         <source src="/videos/video.mp4" type="video/mp4" style="width=100%">
       </video>
-      </div>
     </div>
+  </div>
   <div class="cita-wrapper" style="background-image:url('/kraft.jpg')">
     <div class="cita">
       <div class="cita-texto">
