@@ -653,6 +653,16 @@
     .mapa {
       display: none;
     }
+    .prox-cursos-title {
+      margin-top: 30px;
+      font-size: 25px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .prox-cursos-title {
+      margin-top: 30px;
+      font-size: 25px;
+    }
   }
   @media screen and (max-width: 480px) {
     .proximos-cursos {
@@ -662,14 +672,14 @@
       margin-top: 10px;
     }
     .prox-cursos-title {
-      margin-top: 200px;
+      margin-top: 75px;
       font-size: 25px;
     }
     .cita-wrapper {
        height: auto;
     }
     .cita {
-      width: 250px;
+      width: 75%;
     }
     .cita-texto p {
       font-size: 16px;

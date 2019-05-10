@@ -532,6 +532,9 @@
     flex-direction: column;
     margin: 20px 0 20px 0;
     line-height: 25px;
+    font-family: 'Adelle Sans Book';
+    font-weight: normal;
+    font-style: normal;
   }
   .sub-title {
     display: flex;

@@ -161,14 +161,17 @@ export default {
 .aire {
   margin-top: 20px;
   margin-bottom: 20px;
+  font-family: 'Adelle Sans Book';
+  font-weight: normal;
+  font-style: normal;
 }
 .add-to-cart {
   display:flex;
   justify-content: space-between;
 }
 .img-detalle-producto {
+  width: 246px;
   height: auto;
-  width: 320px;
   margin-right: 91px;
 }
 .contador-input {
@@ -365,8 +368,8 @@ export default {
     align-items: center;
   }
   .img-detalle-producto {
-    width: 224px;
-    height: 224px;
+    width: 246px;
+    height: auto;
     margin-left: 85px;
     display: flex;
     justify-content: center;
@@ -405,7 +408,15 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 46px;
+    margin-right: 78px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .add-to-cart {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 78px;
   }
 }
 </style>

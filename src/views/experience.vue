@@ -74,9 +74,11 @@
     <!-- EXPERIENCIAS -->
     <div class="grid-wrapper experiences">
       <div class="grid">
-        <div class="texto-grid">
-          <div class="texto-titulo-grid">
-            Experiencias Multisensoriales
+        <div class="texto-grid dos">
+          <div class="texto-titulo-grid cero">
+            Experiencias
+            <br>
+            Multisensoriales
           </div>
           <div class="descripcion-grid">
             <p>Comer es un proceso mucho más complejo que
@@ -93,7 +95,8 @@
               para crear una experiencia sublime.</p>
           </div>
         </div>
-        <div class="img-grid con-grid" style="background-image:url('/experiencias_multi.jpg');">
+        <div class="img-grid con-gridn uno"
+        style="background-image:url('/experiencias_multi.jpg');">
         </div>
       </div>
     </div>
@@ -102,8 +105,10 @@
         <div class="img-grid con-grid"
         style="background-image:url('/viaje_gastro2.jpg')"></div>
         <div class="texto-grid-der">
-          <div class="texto-titulo-grid">
-            Viajes Gastronómicos
+          <div class="texto-titulo-grid cero">
+            Viajes
+            <br>
+            Gastronómicos
           </div>
           <div class="descripcion-grid">
             <p>Una de las mejores maneras para
@@ -126,9 +131,11 @@
     </div>
     <div class="grid-wrapper classes">
       <div class="grid">
-        <div class="texto-grid">
-          <div class="texto-titulo-grid">
-            Clases de cocina
+        <div class="texto-grid dos">
+          <div class="texto-titulo-grid cero">
+            Clases de
+            <br>
+            cocina
           </div>
           <div class="descripcion-grid">
             <p>Date la oportunidad de descubrir el placer
@@ -145,15 +152,18 @@
               preparar en minutos.</p>
           </div>
         </div>
-        <div class="img-grid con-grid" style="background-image:url('/clases_cocina3.jpg')"></div>
+        <div class="img-grid con-grid uno"
+        style="background-image:url('/clases_cocina3.jpg')"></div>
       </div>
     </div>
     <div class="grid-wrapper catering">
       <div class="grid">
-        <div class="img-grid con-grid" style="background-image:url('/catering3.jpg')"></div>
-        <div class="texto-grid-der">
-          <div class="texto-titulo-grid">
-            Catering y eventos
+        <div class="img-grid con-grid uno" style="background-image:url('/catering3.jpg')"></div>
+        <div class="texto-grid-der dos">
+          <div class="texto-titulo-grid cero">
+            Catering y
+            <br>
+            eventos
           </div>
           <div class="descripcion-grid">
             <p>La comida es el centro de la vida social
@@ -175,100 +185,6 @@
       </div>
     </div>
      <!--FIN EXPERIENCIAS -->
-    <!-- EXPERIENCIAS MOVIL -->
-    <div class="grid-w-m test">
-      <div class="grid-m">
-        <div class="img-grid" style="background-image:url('/experiencias_multi.jpg');"></div>
-        <div class="descripcion-movil">
-          <div class="titulo-movil">
-            Experiencias Multisensoriales
-          </div>
-          <p>Comer es un proceso mucho más complejo que
-              simplemente degustar con nuestra boca.
-              Inconscientemente todos nuestros sentidos
-              están activos al comer e influyen mucho
-              más de lo que creemos.</p>
-            <p style="margin-top:20px;">Queremos invitarte a percibir la comida
-              como nunca antes. Pondremos en juego
-              tus sentidos para que redescubras
-              como están entrelazados e influyen
-              (cada uno de ellos) en nuestra percepción.
-              Texturas, colores, sonidos y sabores se combinarán
-              para crear una experiencia sublime.</p>
-        </div>
-      </div>
-    </div>
-    <div class="grid-w-m travel">
-      <div class="grid-m">
-        <div class="img-grid" style="background-image:url('/viaje_gastro2.jpg');"></div>
-        <div class="descripcion-movil">
-          <div class="titulo-movil">
-            Viajes gastronómicos
-          </div>
-          <p>Una de las mejores maneras para
-              conocer un país es a través de su
-              comida por lo que SATÉ organiza y
-              diseña viajes culinarios en varias
-              partes del mundo. A través de su
-              gastronomía podrás conocer a profundidad
-              la historia y riqueza cultural que ofrecen.</p>
-              <p style="margin-top:20px;">Nos adentraremos
-                en mercados locales para descubrir sus
-                ingredientes nativos, exploraremos todas
-                sus facetas culinarias para develar su esencia,
-                desde la comida callejera hasta restaurantes de
-                gran nivel. Así mismo conoceremos cocineros locales
-                que nos mostraran nuevos platillos y técnicas culinarias.</p>
-        </div>
-      </div>
-    </div>
-    <div class="grid-w-m classes">
-      <div class="grid-m">
-        <div class="img-grid" style="background-image:url('/clases_cocina3.jpg');"></div>
-        <div class="descripcion-movil">
-          <div class="titulo-movil">
-            Clases de cocina
-          </div>
-           <p>Date la oportunidad de descubrir el placer
-              de cocinar. Una habilidad básica de vida que
-              te permitirá alimentarte sanamente, ahorrar
-              dinero y ante todo, preparar deliciosos platillos
-              para ti y tus seres queridos. Aprenderás en un ambiente
-              relajado con una dinámica divertida donde todo el grupo
-              participará activamente en la elaboración de comida.</p>
-            <p style="margin-top:20px;">Saté ofrece una amplia gama
-              de cursos en los que podrás aprender a preparar pasta
-              fresca, servir una cena japonesa completa o, si lo
-              tuyo es la falta de tiempo, recetas fáciles que podrás
-              preparar en minutos.</p>
-        </div>
-      </div>
-    </div>
-    <div class="grid-w-m catering">
-      <div class="grid-m">
-        <div class="img-grid" style="background-image:url('/catering3.jpg');"></div>
-        <div class="descripcion-movil">
-          <div class="titulo-movil">
-            Catering y eventos
-          </div>
-          <p>La comida es el centro de la vida social
-              y por lo tanto la calidad de los alimentos
-              en cualquier tipo de evento es fundamental.
-              Estamos constantemente investigando para poder
-              innovar no solamente en términos de sabores y
-              platillos sino en la forma de presentarlos y
-              servirlos. Utilizamos diversas dinámicas de servicio
-              para generar una mayor integración entre los invitados.</p>
-              <p style="margin-top:20px;">La satisfacción de nuestros
-                clientes es nuestra prioridad. Para ello contamos con
-                una vasta red de proveedores en México que nos permite crear
-                todo tipo de eventos en términos de estilo y tamaño.
-                Servimos desde una cena privada en casa para invitados
-                especiales o familia hasta bodas o eventos empresariales.</p>
-        </div>
-      </div>
-    </div>
-    <!-- EXPERIENCIAS MOVIL -->
     <div class="banner-wrapper">
       <div class="banner">
         <div class="texto-banner">
@@ -423,7 +339,6 @@
     justify-content: center;
     /* align-items: center; */
     width: 50%;
-    margin-left: 20px;
   }
   .img-grid {
     width: 50%;
@@ -432,10 +347,12 @@
     background-size: cover;
   }
   .texto-titulo-grid {
+    display: flex;
     font-family: 'Strait', sans-serif;
     font-size: 35px;
     margin-bottom: 20px;
     margin-left: 17px;
+    margin-top: 43px;
   }
   .descripcion-grid {
     font-family: 'Adelle Sans Book';
@@ -557,6 +474,9 @@
       align-items: center;
       width: 100%;
     }
+    .experiencia {
+      width:90%;
+    }
     .grid {
       flex-direction: column;
       align-items: center;
@@ -564,13 +484,15 @@
       width: 100%;
     }
     .grid-wrapper {
-      display:none;
       justify-content: center;
       flex-direction: column;
       width: 100%;
+      align-items: center;
     }
      .texto-grid {
       width: 100%;
+      justify-content: center;
+      align-items: center;
     }
     .img-grid {
       width: 150px;
@@ -613,9 +535,14 @@
     width: 100%;
     background-color: #eae5dc;
     }
+    .texto-titulo-grid {
+      margin-top:30px;
+    }
+    .uno{order: 1;}
+    .dos{order: 2;}
   }
   ////media
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 480px) {
     .img-slide-wrapper {
       height: 136px;
     }
@@ -628,7 +555,7 @@
     }
     .experiencia {
       font-size: 16px;
-      width: 250px;
+      width: 75%;
     }
     .exp {
       flex-direction: column;
@@ -644,7 +571,7 @@
      .grid-wrapper {
      justify-content: center;
      flex-direction: column;
-     width: 375px;
+     width: 100%;
     }
     .descripcion-grid {
       padding: 20px 2px;
@@ -676,8 +603,15 @@
       align-items: center;
       margin-left: 0px;
     }
-    .grid-wrapper {
-      display:none;
+    // .grid-wrapper {
+    //   display:none;
+    // }
+    .texto-titulo-grid {
+      margin-top: 30px;
+      justify-content: center;
     }
+    .cero{order: 0;}
+    .uno{order: 1;}
+    .dos{order: 2;}
   }
 </style>
