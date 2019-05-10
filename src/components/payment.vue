@@ -15,7 +15,7 @@
       </div>
       <div class="payment-row total">
         Total
-        <div>${{ cartTotalPrice + recipientsPrice + deliveryFee }}</div>
+        <div>${{ (cartTotalPrice + recipientsPrice + deliveryFee).toFixed(2) }}</div>
       </div>
       <div style="margin-top: 40px;" id="paypal-button-container"></div>
     </div>
@@ -51,7 +51,7 @@ export default {
       createOrder: (data, actions) => actions.order.create({
         purchase_units: [{
           amount: {
-            value: this.cartTotalPrice + this.recipientsPrice + this.deliveryFee,
+            value: (this.cartTotalPrice + this.recipientsPrice + this.deliveryFee).toFixed(2),
           },
         }],
       }),
