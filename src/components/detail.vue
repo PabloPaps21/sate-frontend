@@ -161,6 +161,9 @@ export default {
 .aire {
   margin-top: 20px;
   margin-bottom: 20px;
+  font-family: 'Adelle Sans Book';
+  font-weight: normal;
+  font-style: normal;
 }
 .add-to-cart {
   display:flex;

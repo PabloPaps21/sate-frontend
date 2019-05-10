@@ -103,9 +103,7 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100%;
-  font-family: 'Adelle Sans Book';
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Strait', sans-serif;
   font-size: 30px;
   color: #3e4e35;
   height: 80px;

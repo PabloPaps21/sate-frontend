@@ -209,6 +209,8 @@
     font-size: 35px;
     margin-bottom: 20px;
     margin-left: 17px;
+    display: flex;
+    justify-content: center;
   }
   .descripcion-grid {
     font-family: 'Adelle Sans Book';

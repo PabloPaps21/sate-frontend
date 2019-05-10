@@ -111,9 +111,7 @@
     font-size: 30px;
     margin-bottom: 5%;
     color:#3e4e35;
-    font-family: 'Adelle Sans Book';
-    font-weight: normal;
-    font-style: normal;
+     font-family: 'Strait', sans-serif;
   }
   .formulario-contactanos-wrapper {
   display: flex;
