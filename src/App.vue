@@ -57,14 +57,14 @@
               </div> -->
               <i class="fab fa-facebook">
                 <span class="redes-fuente">
-                  <a href="https://www.facebook.com/sateconnections/" style="color: #fbfbfb;">
+                  <a href="https://www.facebook.com/sateconnections/" style="color: #e6d6ba;">
                     Facebook  
                   </a> 
                 </span>
               </i>
               <i class="fab fa-instagram instagram">
                 <span class="redes-fuente">
-                  <a href="https://www.instagram.com/sate.connections/?hl=es-la" style="color: #fbfbfb;">
+                  <a href="https://www.instagram.com/sate.connections/?hl=es-la" style="color: #e6d6ba;">
                   Instagram
                   </a>
                 </span>
@@ -282,7 +282,7 @@ a {
 .redes-fuente {
   font-family: 'Strait', sans-serif;
   font-size: 16px;
-  color: #fbfbfb;
+  color: #e6d6ba;
   text-decoration: none;
 }
 .instagram {
