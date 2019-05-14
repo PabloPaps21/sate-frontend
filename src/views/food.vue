@@ -33,22 +33,15 @@
       </div>
     </div>
     <div class="conoce-wrapper">
-      <div class="conoce">
+      <div class="conoce" v-observe-visibility="startVideos">
         <div class="video-conoce">
-          <video width="300" controls autoplay>
-            <source src="/videos/delivery_que_es.mov" type="video/mp4" style="width=100%">
-          </video>
+          <div class="wistia_responsive_padding" style="padding:100.0% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_wvcu18vq9l videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>
         </div>
         <div class="video-conoce">
-          <video width="300" controls autoplay>
-            <source src="/videos/delivery_como_funciona_final.mov"
-            type="video/mp4" style="width=100%">
-          </video>
+          <div class="wistia_responsive_padding" style="padding:100.0% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_xnjec0vnze videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>
         </div>
         <div class="video-conoce">
-          <video width="300" controls autoplay>
-            <source src="/videos/delivery_como_calentar.mov" type="video/mp4" style="width=100%">
-          </video>
+          <div class="wistia_responsive_padding" style="padding:100.0% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_hvnlliwk8y videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>
         </div>
       </div>
     </div>
@@ -107,6 +100,7 @@
 </template>
 
 <script>
+/* global Wistia */
 import { createNamespacedHelpers } from 'vuex';
 import cards from '@/components/cards.vue';
 
@@ -149,6 +143,19 @@ export default {
         this.selectedTags.push(id);
       }
     },
+    startVideos() {
+      const firstStep = Wistia.api('wvcu18vq9l');
+      const secondStep = Wistia.api('xnjec0vnze');
+      const thirdStep = Wistia.api('hvnlliwk8y');
+
+      firstStep.bind('end', () => {
+        secondStep.play();
+      });
+      secondStep.bind('end', () => {
+        thirdStep.play();
+      });
+      firstStep.play();
+    },
     ...mapActions([
       'getAllFood',
       'getTags',
@@ -188,22 +195,20 @@ export default {
   }
   .instructions-wrapper {
     display: flex;
-    height: 350px;
     width: 100%;
     justify-content: center;
   }
   .instructions {
     display: flex;
     justify-content: space-between;
-    margin-top: 60px;
-    margin-bottom: 20px;
+    padding: 60px 0;
     width: 900px;
   }
   .order {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 260px;
+    width: 31%;
   }
   .img-order {
     width: 100px;
@@ -254,13 +259,7 @@ export default {
     margin-top: 40px;
   }
   .video-conoce {
-    display: flex;
-    width: 400px;
-    height: 174px;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 31%;
   }
   .conoce-container {
     width: auto;
@@ -415,6 +414,8 @@ export default {
     border: 2px solid #3e4e35;
     padding: 6px 10px;
     cursor: pointer;
+    font-family: 'Adelle Sans Book';
+    font-size: 14px;
 
     &+ .tag {
       margin-left: 16px;

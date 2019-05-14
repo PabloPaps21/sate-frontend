@@ -4,6 +4,12 @@
     <div class="address-selection" v-if="user">
       Selecciona la dirección donde quieres recibir tu pedido:
       <div class="addresses">
+        <div class="local-address">
+          ¿No puedes recibirlo en los horarios indicados?<br>
+          Recoje tu comida en nuestra cocina<br>
+          Dirección: Adolfo Prieto 1521, Colonia Del Valle Centro<br>
+          C.P. 03100, Benito Juárez  Ciudad de México.
+        </div>
         <div class="address"
           v-for="address in user.addresses"
           :key="address.id"

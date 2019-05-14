@@ -55,6 +55,12 @@ const actions = {
         dispatch('getProducts');
       });
   },
+  getWeekOrders({ commit }) {
+    return axios.get('http://127.0.0.1:3333/admin/week-orders')
+      .then((response) => {
+        commit('setOrders', response.data);
+      });
+  },
 };
 
 const mutations = {
@@ -67,12 +73,16 @@ const mutations = {
   setTags(state, tags) {
     state.tags = tags;
   },
+  setOrders(state, orders) {
+    state.orders = orders;
+  },
 };
 
 const state = {
   categories: [],
   tags: [],
   products: [],
+  orders: [],
 };
 
 export default {

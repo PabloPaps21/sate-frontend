@@ -99,7 +99,7 @@ export default {
   z-index: 200;
 }
 .window {
-  width: 900px;
+  width: 800px;
   background-color: #eae5dc;
   padding: 40px 20px;
 }

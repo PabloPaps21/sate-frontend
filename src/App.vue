@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-    <div class="nav-link-wrapper">
+    <div class="nav-link-wrapper" :class="[ showNavbar ? '': 'hidenav']">
       <div class="nav-link">
         <div class="link">
           <router-link to="/" class="margin-link">Inicio</router-link>
@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
-    <router-view/>
+    <router-view />
     <footer>
       <div class="footer-wrapper">
         <div class="footer">
@@ -58,8 +58,8 @@
               <i class="fab fa-facebook">
                 <span class="redes-fuente">
                   <a href="https://www.facebook.com/sateconnections/" style="color: #fbfbfb;">
-                    Facebook  
-                  </a> 
+                    Facebook
+                  </a>
                 </span>
               </i>
               <i class="fab fa-instagram instagram">
@@ -117,6 +117,8 @@ export default {
   data() {
     return {
       showCart: false,
+      prevScrollPos: null,
+      showNavbar: true,
     };
   },
   computed: {
@@ -131,12 +133,28 @@ export default {
     cart,
   },
   methods: {
+    handleScroll() {
+      const currentScrollPos = window.pageYOffset;
+      if (this.prevScrollPos > currentScrollPos) {
+        this.showNavbar = true;
+      } else {
+        this.showNavbar = false;
+      }
+      this.prevScrollPos = currentScrollPos;
+    },
     ...mapActions([
       'getUser',
       'logout',
     ]),
   },
+  created() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
   mounted() {
+    this.prevScrollPos = window.pageYOffset;
     const token = localStorage.getItem('token');
 
     if (token) {
@@ -168,6 +186,9 @@ a {
   width: 900px;
    font-family: 'Strait', sans-serif;
 }
+.hidenav {
+  top: 0px !important;
+}
 .logo {
   width: auto;
   height: 71px;
@@ -189,8 +210,10 @@ a {
   width: 100%;
   background-color: #414f3a;
   justify-content: center;
-  /* position: fixed;
-  z-index: 1; */
+  position: sticky;
+  top: 90px;
+  z-index: 90;
+  transition: top 0.2s ease-in-out;
 }
 .nav-link {
   display: flex;

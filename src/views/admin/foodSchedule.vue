@@ -122,6 +122,9 @@ export default {
         });
       }
     },
+    queryDate(currentDate) {   
+      
+    },
     ...mapActions([
       'getAllFood',
       'getTags',

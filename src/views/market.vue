@@ -3,11 +3,11 @@
     <div class="img-slide-wrapper" style="background-image:url('/food-hero3.jpg')">
       <div class="slide-title"> Mercado Digital</div>
     </div>
-    <div class="explicar-wrapper">
+    <!-- <div class="explicar-wrapper">
       <div class="explicar">
         explicación
       </div>
-    </div>
+    </div> -->
     <div class="week-wrapper">
       <div class="week">
         <div class="week-title">

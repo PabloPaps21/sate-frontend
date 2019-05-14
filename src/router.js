@@ -108,5 +108,9 @@ export default new Router({
       path: '/admin/food-schedule',
       component: () => import('./views/admin/foodSchedule.vue'),
     },
+    {
+      path: '/admin/week-orders',
+      component: () => import('./views/admin/weekOrders.vue'),
+    },
   ],
 });

@@ -1,83 +1,63 @@
 <template>
-  <div class="envolver">
-    <div class="detalle-wrapper">
-      <div class="detalle-producto" style="width: 90%">
-        <img src="/ensalada.png" alt="" class="img-detalle-producto">
-        <div class="detalle">
-          <div class="nombre-producto aire">
-            <div class="nom-product">
-              {{ product.name }}
-            </div>
-            <!-- <div class="cerrar">
-             <button class="btn-cancel-check">X</button>
-            </div> -->
-          </div>
-          <div class="descripcion-producto aire">
-            {{ product.description }}
-          </div>
-          <div class="add-to-cart" style="margin-bottom:10px">
-            <div class="cantidad">
-              <button class="btn-qty" @click="removeProduct"> - </button>
-                <div class="numero">
-                  {{ quantity }}
-                </div>
-              <button class="btn-qty" @click="addProduct"> + </button>
-            </div>
-            <div class="botones" v-if="product.type === 'MARKET'">
-              <!-- <button style="margin-left:10px;" class="alimento-add-button">
-                Añadir al carrito
-              </button> -->
-              <button
-                style="margin-left:10px;"
-                class="wishlist-add-button"
-                @click="addToWishlist"
-                v-if="!isOnWishlist">
-                Añadir a la wishlist
-              </button>
-              <button
-                style="margin-left:10px;"
-                class="wishlist-add-button"
-                @click="removeFromWishlist"
-                v-else>
-                Quitar de la wishlist
-              </button>
-            </div>
-          </div>
-          <div class="categoria">
-            Categoría: {{ category }}
-          </div>
-          <div class="etiqueta">
-            Etiqueta: <span v-for="tag in product.tags" :key="tag.id">{{ tag.name }}</span>
-          </div>
-        </div>
+<div class="wrapper">
+  <div class="content">
+    <div class="images">
+      <img :src="currentImage ? currentImage : product.image" alt="" class="product-image">
+      <div class="image-gallery" v-if="product.type === 'MARKET'">
+        <img
+          v-for="image in product.images"
+          :key="image.id" :src="image.image_url"
+          class="image-button"
+          @click="currentImage = image.image_url"
+          alt="Product image">
       </div>
     </div>
-    <!-- <div class="descripcion-wrapper">
-      <div class="descripcion">
-        <div class="tags">
-          <div class="descripcion-tag descripcion-tag-fuente" style="margin-bottom:30px;">
-             Descripción
-          </div>
-          <div class="valoraciones-tag descripcion-tag-fuente">
-            Valoraciones (0)
-          </div>
-        </div>
-        <div class="texto-descripcion descripcion-tag-fuente">
-          <div style="margin-bottom:30px;">Descripción</div>
-           <p>{{ product.description }}</p>
+    <div class="detail">
+      <div class="product-name aire">
+        <div class="nom-product">
+          {{ product.name }}
         </div>
       </div>
-    </div> -->
-    <!-- <div class="prod-rel-wrapper">
-      <div class="prod-rel-titulo">
-        PRODUCTOS RELACIONADOS
+      <div class="product-description-text">
+        {{ product.description }}
+      </div>
+      <div class="add-to-cart">
+        <div class="cantidad">
+          <button class="btn-qty" @click="removeProduct"> - </button>
+            <div class="numero">
+              {{ quantity }}
+            </div>
+          <button class="btn-qty" @click="addProduct"> + </button>
+        </div>
+        <div class="buttons" v-if="product.type === 'MARKET'">
+          <!-- <button style="margin-left:10px;" class="alimento-add-button">
+            Añadir al carrito
+          </button> -->
+          <button
+            style="margin-left:10px;"
+            class="wishlist-add-button"
+            @click="addToWishlist"
+            v-if="!isOnWishlist">
+            Añadir a la wishlist
+          </button>
+          <button
+            style="margin-left:10px;"
+            class="wishlist-add-button"
+            @click="removeFromWishlist"
+            v-else>
+            Quitar de la wishlist
+          </button>
+        </div>
+      </div>
+      <div class="categoria">
+        Categoría: {{ category }}
+      </div>
+      <div class="etiqueta" v-if="product.type === 'FOOD'">
+        Etiqueta: <span v-for="tag in product.tags" :key="tag.id">{{ tag.name }}</span>
       </div>
     </div>
-    <div class="productos-relacionados-w">
-      <div class="productos-relacionados">
-      </div>
-    </div> -->
   </div>
+</div>
 </template>
 
 <script>
@@ -85,6 +65,11 @@ import { createNamespacedHelpers } from 'vuex';
 
 const { mapState, mapMutations } = createNamespacedHelpers('cart');
 export default {
+  data() {
+    return {
+      currentImage: null,
+    };
+  },
   props: {
     product: Object,
     category: String,
@@ -129,50 +114,43 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.detalle-wrapper {
+.wrapper {
   display: flex;
   width: 100%;
   justify-content: center;
 }
-.detalle-producto {
+.content {
   display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+  justify-content: space-between;
+  width: 90%;
 }
-.detalle {
+.images {
+  width: 35%;
+}
+.detail {
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   font-family: 'Strait', sans-serif;
-  width: 50%
+  width: 60%;
 }
-.nombre-producto {
+.product-name {
   display: flex;
   justify-content: space-between;
   font-family: 'Strait', sans-serif;
   font-size: 30px;
-}
-.cerrar {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 20px;
-}
-.aire {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-family: 'Adelle Sans Book';
-  font-weight: normal;
-  font-style: normal;
+  margin: 20px 0;
 }
 .add-to-cart {
-  display:flex;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
 }
-.img-detalle-producto {
-  width: 246px;
+.product-image {
+  width: 100%;
   height: auto;
-  margin-right: 91px;
 }
 .contador-input {
   width: 59px;
@@ -191,7 +169,7 @@ export default {
   margin-bottom: 20px;
   font-family: 'Strait', sans-serif;
 }
-.wishlist-add-button{
+.wishlist-add-button {
   width: 136px;
   height: 39px;
   color: #e6d6ba;
@@ -200,29 +178,29 @@ export default {
   font-family: 'Strait', sans-serif;
   background-color: #414f3a;
 }
-.descripcion-wrapper{
+.descripcion-wrapper {
   display: flex;
   width:100%;
   justify-content: center;
 }
-.descripcion{
+.descripcion {
   display:flex;
   width: 900px;
   justify-content: center;
 }
-.tags{
+.tags {
   display: flex;
   flex-direction: column;
   width: 50%;
   justify-content: center;
   align-items: center;
 }
-.prod-relacionados-wrapper{
+.prod-relacionados-wrapper {
   display: flex;
   width: 100%;
   justify-content: center;
 }
-.prod-relacionados{
+.prod-relacionados {
   display: flex;
   width: 900px;
   justify-content: center;
@@ -240,72 +218,9 @@ export default {
 .descripcion-tag-fuente{
   font-family: 'Strait', sans-serif;
 }
-.buscar-bar{
-  border: none;
-  height: 18px;
-  font-family: 'Strait', sans-serif;
-  font-size: 16px;
-  margin-right: 10px;
-}
-.conoce-titulo-wrapper{
-  display: flex;
-  width: 100%;
-  height: 100px;
-  justify-content: center;
-}
-.prod-rel-wrapper{
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-.prod-rel-titulo{
-  display: flex;
-  width: 900px;
-  justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  font-family: 'Strait', sans-serif;
-  font-size: 30px;
-}
-.productos-relacionados-w{
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-.productos-relacionados{
-  display: flex;
-  justify-content: space-around;
-  width: 900px;
-  margin-bottom: 50px;
-}
-.producto-opcion{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 202px;
-}
-.img-productos{
-  width: 200px;
-  height: 200px;
-}
-.producto-titulo{
-  text-align: center;
-  margin-top: 20px;
-  font-family: 'Strait', sans-serif;
-}
-.producto-precio{
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  font-family: 'Strait', sans-serif;
-}
-.producto-descripcion{
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 20px;
-  color: #4d5d44;
-  line-height: 2;
-  font-family: 'Strait', sans-serif;
+.product-description-text {
+  margin: 0 0 20px 0;
+  font-family: 'Adelle Sans Book';
 }
 .add-producto{
   display: flex;
@@ -321,44 +236,46 @@ export default {
 .cantidad {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
   font-family: 'Strait', sans-serif;
-  width: 33%;
-  height: 30px;
-  margin-top: 30px;
 }
 .btn-qty{
-  // border:none;
-  // font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 24px;
-  height: 20px;
+  height: 24px;
   font-family: 'Strait', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   color:black;
-  background-color: #eae5dc;
+  background-color: none;
   border: 2px solid black;
-}
-.btn-cancel-check {
- display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 20px;
-  font-family: 'Strait', sans-serif;
-  font-size: 15px;
-  color: #b92929;
-  background-color: #eae5dc;
-  border: 2px solid #b92929;
 }
 .numero{
   font-size: 30px;
+  margin-left: 20px;
+
+  & + .btn-qty {
+    margin-left: 20px;
+  }
 }
-.botones {
+.buttons {
   display: flex;
   margin-top: 25px;
+}
+.image-gallery {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  margin-top: 20px;
+  overflow-x: scroll;
+}
+.image-button {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
+.etiqueta {
+  margin-top: 14px;
 }
 @media screen and (max-width: 980px) {
   .detalle-producto {

@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueScrollTo from 'vue-scrollto';
+import VueObserveVisibility from 'vue-observe-visibility';
 import App from './App.vue';
 import router from './router';
 import store from './store/index';
@@ -17,9 +18,10 @@ Vue.use(VueScrollTo, {
   x: false,
   y: true,
 });
+Vue.use(VueObserveVisibility);
 
 new Vue({
   router,
   store,
-  render: h => h(App), 
+  render: h => h(App),
 }).$mount('#app');

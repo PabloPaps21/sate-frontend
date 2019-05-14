@@ -3,35 +3,12 @@
   <div class="about-wrapper">
     <!-- <div class="about img-about" style="background-image:url('/food-hero3.jpg')"> -->
     <div class="about img-about">
-      <video controls autoplay>
-        <source src="/videos/video.mp4" type="video/mp4" style="width=100%">
-      </video>
+      <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_f8zo1q986m videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>
     </div>
   </div>
   <div class="cita-wrapper" style="background-image:url('/kraft.jpg')">
     <div class="cita">
       <div class="cita-texto">
-        <!-- <p class="texto">
-          SATÉ es un proyecto multidisciplinario que integra diferentes industrias relacionadas
-          con la alimentación.
-          El objetivo es ofrecer un lugar de encuentro para las personas interesadas
-          en mejorar su alimentación y lograr un modo de vida más consciente y feliz
-          donde podrán obtener información, compartir ideas y experiencias.
-        </p>
-        <p class="texto">
-          Creemos que la comida es un agente de cambio crucial en temas como nutrición,
-          agricultura, economía y sustentabilidad.
-          Al ser también el centro de la vida social es un factor de conectividad cultural
-          entre todas las personas.
-        </p>
-        <p class="texto">
-          En SATÉ encontrarás la posibilidad de mejorar tus habilidades para cocinar,
-          descubrir nuevos ingredientes
-          y lugares así como ampliar tu perspectiva sobre lo que involucra comer.
-        </p>
-        <p class="texto">
-          Te invitamos a sembrar las semillas del futuro que queremos hacer realidad.
-        </p> -->
         <p class="texto">
           SATÉ es un proyecto multidisciplinario que
           integra diferentes industrias relacionadas
@@ -286,11 +263,8 @@
     justify-content: center;
   }
   .about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 900px;
-    overflow-x: hidden;
+    padding: 30px 0;
   }
   .video-about {
     display: flex;
@@ -310,13 +284,12 @@
   .cita-wrapper {
     display: flex;
     width: 100%;
-    height: 500px;
     justify-content: center;
   }
   .cita {
     display: flex;
     width:900px;
-    margin-top: 34px;
+    padding: 70px 0;
     text-align: left;
   }
   .cita-texto {
@@ -324,12 +297,15 @@
     flex-direction: column;
   }
   .cita-texto p {
-    margin-top: 30px;
     font-family: 'Adelle Sans Book';
     font-weight: normal;
     font-style: normal;
     font-size: 18px;
     line-height: 25px;
+
+    + p {
+      margin-top: 30px;
+    }
   }
   .texto {
     font-size: 20px;
@@ -445,7 +421,7 @@
   }
   .texto-banner {
     font-size: 22px;
-    font-family: 'Adelle Sans Book';
+    font-family: 'Strait', sans-serif;
     font-weight: normal;
     font-style: normal;
   }
@@ -692,9 +668,6 @@
     }
     .about {
       width: 100%;
-      height: 150px;
-      margin-top: 10px;
-      margin-bottom:10px;
     }
     .mapa {
       display: none;

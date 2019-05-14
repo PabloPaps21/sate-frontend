@@ -19,8 +19,15 @@ const actions = {
         commit('setTags', response.data);
       });
   },
+  // eslint-disable-next-line no-empty-pattern
   createMenu({}, data) {
     return axios.post('http://127.0.0.1:3333/schedule', data);
+  },
+  getAdminFood({ commit }) {
+    return axios.get('http://127.0.0.1:3333/admin/food')
+      .then((response) => {
+        commit('setFood', response.data);
+      });
   },
 };
 
