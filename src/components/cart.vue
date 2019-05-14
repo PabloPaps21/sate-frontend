@@ -86,7 +86,7 @@ export default {
 }
 .cart {
   background-color: #eae5dc;
-  width: 40%;
+  width: 48%;
   padding: 20px;
   box-sizing: border-box;
   max-height: 100%;
@@ -205,7 +205,7 @@ export default {
 }
 @media screen and (max-width: 980px){
   .cart {
-    width: 80%;
+    width: 85%;
   }
 }
 @media screen and (max-width: 550px) {

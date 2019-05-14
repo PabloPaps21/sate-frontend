@@ -65,9 +65,7 @@ export default {
     display: flex;
     justify-content: center;
     width: 700px;
-    font-family: 'Adelle Sans Book';
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Strait', sans-serif;
     font-size: 40px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -112,9 +110,7 @@ export default {
     border: 2px solid #3e4e35;
   }
   .nombre-categoria {
-    font-family: 'Adelle Sans Book';
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Strait', sans-serif;
     font-size: 20px;
     margin-left: 8px;
   }

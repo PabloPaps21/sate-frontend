@@ -35,13 +35,38 @@
     <div class="conoce-wrapper">
       <div class="conoce" v-observe-visibility="startVideos">
         <div class="video-conoce">
-          <div class="wistia_responsive_padding" style="padding:100.0% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_wvcu18vq9l videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>
+          <div class="wistia_responsive_padding"
+          style="padding:100.0% 0 0 0;position:relative;">
+            <div class="wistia_responsive_wrapper"
+            style="height:100%;left:0;position:absolute;top:0;width:100%;">
+            <div class="wistia_embed wistia_async_wvcu18vq9l videoFoam=true"
+            style="height:100%;position:relative;width:100%">&nbsp;
+            </div>
+          </div
+        ></div>
         </div>
         <div class="video-conoce">
-          <div class="wistia_responsive_padding" style="padding:100.0% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_xnjec0vnze videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>
+          <div class="wistia_responsive_padding"
+          style="padding:100.0% 0 0 0;position:relative;">
+            <div class="wistia_responsive_wrapper"
+            style="height:100%;left:0;position:absolute;top:0;width:100%;">
+              <div class="wistia_embed wistia_async_xnjec0vnze videoFoam=true"
+              style="height:100%;position:relative;width:100%">
+                &nbsp;
+              </div>
+            </div>
+          </div>
         </div>
         <div class="video-conoce">
-          <div class="wistia_responsive_padding" style="padding:100.0% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_hvnlliwk8y videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>
+          <div class="wistia_responsive_padding" style="padding:100.0% 0 0 0;position:relative;">
+            <div class="wistia_responsive_wrapper"
+            style="height:100%;left:0;position:absolute;top:0;width:100%;">
+              <div class="wistia_embed wistia_async_hvnlliwk8y videoFoam=true"
+              style="height:100%;position:relative;width:100%">
+                &nbsp;
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -247,7 +272,6 @@ export default {
   }
   .conoce-wrapper {
     display: flex;
-    height: 230px;
     width: 100%;
     justify-content: center;
     background-color: #eae5dc;
@@ -453,23 +477,24 @@ export default {
   @media screen and (max-width: 980px) {
     .conoce {
       width: 80%;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .video-conoce {
+      width: 100%;
+      & + .video-conoce {
+        margin-top: 25px;
+      }
     }
     .instructions-wrapper {
-      height: 1000px;
     }
     .instructions {
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-       margin-top: 20px;
-    }
-    .conoce-wrapper {
-      height: 900px;
-    }
-    .conoce {
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
+
+      //  margin-top: 20px;
     }
     .week-title {
       font-size: 30px;
@@ -497,6 +522,12 @@ export default {
     .cita-index {
       padding: 0 25px 0 25px;
     }
+    .order {
+      width: 80%;
+      & + .order {
+        margin-top: 25px;
+      }
+    }
   }
   @media screen and (max-width: 480px) {
     .img-slide-wrapper {
@@ -507,16 +538,13 @@ export default {
       margin-bottom: 2px;
     }
     .instructions-wrapper {
-      height: 1000px;
+      // height: 1000px;
     }
     .instructions {
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-       margin-top: 20px;
-    }
-    .conoce-wrapper {
-      height: 900px;
+      //  margin-top: 20px;
     }
     .conoce {
       flex-direction: column;

@@ -3,7 +3,16 @@
   <div class="about-wrapper">
     <!-- <div class="about img-about" style="background-image:url('/food-hero3.jpg')"> -->
     <div class="about img-about">
-      <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_f8zo1q986m videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>
+      <div class="wistia_responsive_padding"
+      style="padding:56.25% 0 0 0;position:relative;">
+      <div class="wistia_responsive_wrapper"
+      style="height:100%;left:0;position:absolute;top:0;width:100%;">
+      <div class="wistia_embed wistia_async_f8zo1q986m videoFoam=true"
+      style="height:100%;position:relative;width:100%">
+          &nbsp;
+        </div>
+      </div>
+    </div>
     </div>
   </div>
   <div class="cita-wrapper" style="background-image:url('/kraft.jpg')">
@@ -272,15 +281,6 @@
     width:100%;
     height:auto;
   }
-/*
- display: flex;
-    width: 400px;
-    height: 174px;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 10px;
-    margin-right: 10px;*/
-
   .cita-wrapper {
     display: flex;
     width: 100%;
@@ -593,7 +593,8 @@
     }
     .cita {
       width: 90%;
-      padding: 0 20px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
     .cita-texto p {
       font-size: 16px;
@@ -623,6 +624,9 @@
     }
     .curso {
       margin-top: 10px;
+    }
+    .about {
+      padding: 0px;
     }
   }
   @media screen and (max-width: 870px) {
@@ -668,6 +672,7 @@
     }
     .about {
       width: 100%;
+
     }
     .mapa {
       display: none;

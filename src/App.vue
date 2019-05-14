@@ -58,8 +58,8 @@
               <i class="fab fa-facebook">
                 <span class="redes-fuente">
                   <a href="https://www.facebook.com/sateconnections/" style="color: #e6d6ba;">
-                    Facebook  
-                  </a> 
+                    Facebook
+                  </a>
                 </span>
               </i>
               <i class="fab fa-instagram instagram">
