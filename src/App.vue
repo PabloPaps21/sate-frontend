@@ -24,7 +24,7 @@
     <div class="nav-movil-wrapper">
       <div class="nav-movil">
         <img src="/logo.svg" alt="Saté" class="logo" @click="$router.push('/')">
-        <i class="fa fa-bars barras" aria-hidden="true"></i>
+        <i class="fa fa-bars barras" aria-hidden="true" @click="showMobileNav = true"></i>
       </div>
     </div>
     <div class="nav-link-wrapper" :class="[ showNavbar ? '': 'hidenav']">
@@ -111,9 +111,9 @@
     </footer>
     <cart @close="showCart = false" :show="showCart"/>
     <!-- menu hamburguesa -->
-    <div class="menu">
+    <div class="menu" v-show="showMobileNav">
       <div class="tache">
-        <i class="fa fa-window-close" aria-hidden="true"></i>
+        <i class="fa fa-window-close" aria-hidden="true" @click="showMobileNav = false"></i>
       </div>
       <div class="menu-links">
         <img src="/logo.svg" alt="Saté" class="logo" @click="$router.push('/')">
@@ -154,6 +154,7 @@ export default {
       showCart: false,
       prevScrollPos: null,
       showNavbar: true,
+      showMobileNav: false,
     };
   },
   computed: {
