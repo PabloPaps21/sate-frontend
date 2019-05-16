@@ -113,7 +113,7 @@
     <!-- menu hamburguesa -->
     <div class="menu" v-show="showMobileNav">
       <div class="tache">
-        <i class="fa fa-window-close" aria-hidden="true" @click="showMobileNav = false"></i>
+        <i class="fas fa-times" aria-hidden="true" @click="showMobileNav = false"></i>
       </div>
       <div class="menu-links">
         <img src="/logo.svg" alt="Saté" class="logo" @click="$router.push('/')">
@@ -444,7 +444,7 @@ a {
     display: flex;
     justify-content: flex-end;
     width: 80%;
-    color: #cc1717;
+    color: #e6d6ba;
     font-size: 30px;
   }
 }
@@ -466,6 +466,9 @@ a {
 @media screen and (max-width: 480px) {
   .margin-link-movil {
     font-size: 18px;
+  }
+  .login {
+    margin-left: 0px;
   }
 }
 </style>
