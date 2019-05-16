@@ -21,6 +21,12 @@
         </div>
       </div>
     </div>
+    <div class="nav-movil-wrapper">
+      <div class="nav-movil">
+        <img src="/logo.svg" alt="Saté" class="logo" @click="$router.push('/')">
+        <i class="fa fa-bars barras" aria-hidden="true"></i>
+      </div>
+    </div>
     <div class="nav-link-wrapper" :class="[ showNavbar ? '': 'hidenav']">
       <div class="nav-link">
         <div class="link">
@@ -104,6 +110,35 @@
       </div>
     </footer>
     <cart @close="showCart = false" :show="showCart"/>
+    <!-- menu hamburguesa -->
+    <div class="menu">
+      <div class="tache">
+        <i class="fa fa-window-close" aria-hidden="true"></i>
+      </div>
+      <div class="menu-links">
+        <img src="/logo.svg" alt="Saté" class="logo" @click="$router.push('/')">
+        <div class="opciones-movil">
+          <div class="login margin-link-movil">
+            <div v-if="!user" @click="$router.push('/login')">Iniciar sesión/Registrarse</div>
+            <div v-if="user" @click="$router.push('/account')" style="margin-right: 18px;">
+              Cuenta
+            </div>
+            <div v-if="user" @click="logout">Cerrar sesión</div>
+          </div>
+          <div class="cart margin-link-movil" @click="showCart = true">
+              <p>{{ totalItems }} productos</p>
+              <a href="#"><i class="fas fa-shopping-basket logo-cart"></i></a>
+          </div>
+          <router-link to="/" class="margin-link-movil">Inicio</router-link>
+          <router-link to="/food" class="margin-link-movil">Comida en casa</router-link>
+          <router-link to="/market" class="margin-link-movil">Mercado digital</router-link>
+          <router-link to="/experience" class="margin-link-movil">
+          Experiencias culinarias</router-link>
+          <router-link to="/design" class="margin-link-movil">Food design</router-link>
+          <router-link to="/contact" class="margin-link-movil">Contacto</router-link>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -185,6 +220,12 @@ a {
   align-items: center;
   width: 900px;
    font-family: 'Strait', sans-serif;
+}
+.nav-movil-wrapper {
+  display: none;
+}
+.nav-movil {
+  display: none;
 }
 .hidenav {
   top: 0px !important;
@@ -350,6 +391,61 @@ a {
   .nav-link-wrapper{
     display: none;
   }
+  .nav-movil-wrapper {
+    display: flex;
+    justify-content: center;
+    background-color:  #414f3a;
+    padding: 10px 0 10px 0;
+    width: 100%;
+  }
+.nav-movil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+  .barras {
+    display: flex;
+    justify-content: center;
+    color:#e6d6ba;
+    width: 50px;
+  }
+  .menu {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #3e4e35;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    flex-direction: column;
+  }
+  .opciones-movil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .margin-link-movil {
+    color: #e6d6ba;
+    padding: 20px 0 20px 0;
+    font-family: 'Strait', sans-serif;
+    font-size: 25px;
+  }
+  .menu-links {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .tache {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    color: #cc1717;
+    font-size: 30px;
+  }
 }
 @media screen and (max-width: 700px) {
   .footer {
@@ -364,6 +460,11 @@ a {
   }
   .nav-link-wrapper{
     display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .margin-link-movil {
+    font-size: 18px;
   }
 }
 </style>
