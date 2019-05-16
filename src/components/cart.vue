@@ -18,7 +18,7 @@
         <row :product="item.product"/>
         <div class="linea-verde"></div>
       </div>
-      <div v-if="foodItems.length === 0 && marketItems.length === 0">
+      <div v-if="foodItems.length === 0 && marketItems.length === 0" class="haz">
         Aun no haz agregado productos a tu carrito de compra.
       </div>
     </div>
@@ -107,9 +107,7 @@ export default {
   display: flex;
   width: 100%;
   font-size: 30px;
-  font-family: 'Adelle Sans Book';
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Strait', sans-serif;
 }
 .cerrar {
   display: flex;
@@ -202,6 +200,11 @@ export default {
 .cart-products {
   flex-grow: 1;
   overflow-y: scroll;
+}
+.haz {
+  font-family: 'Adelle Sans Book';
+  font-weight: normal;
+  font-style: normal;
 }
 @media screen and (max-width: 980px){
   .cart {
