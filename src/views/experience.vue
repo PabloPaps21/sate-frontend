@@ -361,7 +361,7 @@
     font-size: 16px;
     line-height: 19px;
     padding: 20px;
-    text-align: left;
+    text-align: justify;
   }
   .banner-wrapper {
     display: flex;
@@ -380,9 +380,7 @@
   }
   .texto-banner {
     font-size: 22px;
-    font-family: 'Adelle Sans Book';
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Strait', sans-serif;
   }
   .btn-contactanos {
     background-color: #403726;
@@ -507,7 +505,7 @@
       flex-direction: column;
     }
     .btn-contactanos {
-      margin-top: 10px;
+      margin-top: 15px;
     }
     .descripcion-movil {
     margin-top: 20px;
@@ -556,6 +554,7 @@
     .experiencia {
       font-size: 16px;
       width: 75%;
+      text-align: justify;
     }
     .exp {
       flex-direction: column;
@@ -566,7 +565,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 350px;
+      width: 100%;
     }
      .grid-wrapper {
      justify-content: center;
@@ -575,7 +574,8 @@
     }
     .descripcion-grid {
       padding: 20px 2px;
-      width: 300px;
+      width: 290px;
+      text-align: justify;
       justify-content: center;
     }
     .img-grid {
@@ -586,7 +586,7 @@
       flex-direction: column;
     }
     .btn-contactanos {
-      margin-top: 10px;
+      margin-top: 15px;
     }
     .exp-icono {
       margin-top: 20px;
@@ -595,7 +595,7 @@
       margin-top: 10px;
     }
     .texto-grid {
-      width: 200px;
+      width: 90%;
     }
     .texto-grid-der {
       width: 250px;
@@ -609,6 +609,7 @@
     .texto-titulo-grid {
       margin-top: 30px;
       justify-content: center;
+      text-align: center;
     }
     .cero{order: 0;}
     .uno{order: 1;}

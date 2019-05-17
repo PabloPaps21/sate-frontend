@@ -209,7 +209,7 @@
       margin-bottom: 2px;
     }
     .contactanos {
-      width: 60%;
+      width: 80%;
     }
     .formulario-contactanos {
       width: 70%;
@@ -227,10 +227,10 @@
       margin-bottom: 2px;
     }
     .formulario-contactanos {
-      width: 60%;
+      width: 80%;
     }
     .confirmar {
-      width: 60%;
+      width: 80%;
     }
   }
 </style>

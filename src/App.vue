@@ -113,7 +113,9 @@
     <!-- menu hamburguesa -->
     <div class="menu" v-show="showMobileNav">
       <div class="tache">
-        <i class="fas fa-times" aria-hidden="true" @click="showMobileNav = false"></i>
+        <!-- <i class="fas fa-times" aria-hidden="true" @click="showMobileNav = false"></i> -->
+          <img src="/tache.svg" aria-hidden="true"
+          @click="showMobileNav = false" class="img-cerrar">
       </div>
       <div class="menu-links">
         <img src="/logo.svg" alt="Saté" class="logo" @click="$router.push('/')">
@@ -382,6 +384,7 @@ a {
   .footer {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
   .mapa-footer {
     width: 280px;
@@ -447,11 +450,16 @@ a {
     color: #e6d6ba;
     font-size: 30px;
   }
+  .img-cerrar {
+    width: 25px;
+    height: 25px;
+  }
 }
 @media screen and (max-width: 700px) {
   .footer {
     flex-direction: column;
     align-items: center;
+    width: 90%;
   }
   .mapa-footer {
     width: 280px;
@@ -469,6 +477,12 @@ a {
   }
   .login {
     margin-left: 0px;
+  }
+  .footer-opciones {
+    width: 90%;
+  }
+  .mapa-footer {
+    width: 100%;
   }
 }
 </style>

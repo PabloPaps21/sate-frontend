@@ -238,9 +238,7 @@
   }
   .texto-banner {
     font-size: 22px;
-    font-family: 'Adelle Sans Book';
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Strait', sans-serif;
   }
   .btn-contactanos {
     background-color: #403726;
@@ -364,7 +362,7 @@
       flex-direction: column;
     }
     .btn-contactanos {
-      margin-top: 10px;
+      margin-top: 15px;
     }
     .descripcion-movil {
     margin-top: 20px;
@@ -427,7 +425,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 350px;
+      width: 100%;
     }
     .grid-wrapper {
       justify-content: center;
@@ -444,6 +442,8 @@
     .texto-titulo-grid {
       margin-top: 30px;
       justify-content: center;
+      text-align: center;
+      margin-left: 0px;
     }
     .img-grid {
       width: 150px;
@@ -451,14 +451,15 @@
     }
     .descripcion-grid {
       padding: 20px 2px;
-      width: 300px;
+      width: 290px;
+      text-align: justify;
       justify-content: center;
     }
     .banner {
       flex-direction: column;
     }
     .btn-contactanos {
-      margin-top: 10px;
+      margin-top: 15px;
     }
     .descripcion-movil {
     margin-top: 20px;
@@ -490,6 +491,9 @@
       justify-content: center;
       align-items: center;
       margin-left: 0px;
+    }
+    .eleccion-icono {
+      margin-top: 30px;
     }
     .cero{order: 0;}
     .uno{order: 1;}

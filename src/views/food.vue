@@ -514,7 +514,7 @@ export default {
       justify-content: center;
     }
     .conoce {
-      width: 90%;
+      width: 45%;
     }
     .tags {
       justify-content: center;

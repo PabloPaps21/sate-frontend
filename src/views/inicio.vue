@@ -422,8 +422,8 @@
   .texto-banner {
     font-size: 22px;
     font-family: 'Strait', sans-serif;
-    font-weight: normal;
-    font-style: normal;
+    // font-weight: normal;
+    // font-style: normal;
   }
   .btn-contactanos {
     background-color: #403726;
@@ -620,7 +620,7 @@
       width: 75px;
     }
     .btn-contactanos {
-      margin-top: 5px;
+      margin-top: 15px;
     }
     .curso {
       margin-top: 10px;
@@ -672,16 +672,16 @@
     }
     .about {
       width: 100%;
-
     }
     .mapa {
       display: none;
     }
     .btn-contactanos {
-      margin-top: 5px;
+      margin-top: 15px;
     }
     .curso {
       margin-top: 10px;
+      width: 90%;
     }
   }
 </style>
