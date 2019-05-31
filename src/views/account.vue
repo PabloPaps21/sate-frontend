@@ -47,6 +47,7 @@ export default {
 .account-wrapper {
   display: flex;
   justify-content: center;
+  background-color: #eae5dc;
 }
 .account {
   display: flex;
