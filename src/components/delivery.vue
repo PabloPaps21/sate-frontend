@@ -4,27 +4,44 @@
     <div class="address-selection" v-if="user">
       Selecciona la dirección donde quieres recibir tu pedido:
       <div class="addresses">
-        <div class="local-address">
-          ¿No puedes recibirlo en los horarios indicados?<br>
-          Recoje tu comida en nuestra cocina<br>
-          Dirección: Adolfo Prieto 1521, Colonia Del Valle Centro<br>
-          C.P. 03100, Benito Juárez  Ciudad de México.
-        </div>
+        <NewAddress class="new-button" />
         <div class="address"
           v-for="address in user.addresses"
           :key="address.id"
           :class="[address.id === id ? 'selected-address' : '']"
           @click="selectAddress(address)">
-          <div class="address-item">Dirección: {{ address.address }}</div>
-          <div class="address-item">Interior: {{ address.apartment }}</div>
-          <div class="address-item">Colonia: {{ address.city }}</div>
-          <div class="address-item">Teléfono: {{ address.phone_number }}</div>
+          <div class="address-row">
+            {{ address.street }}, {{ address.number_ext }}, {{ address.number_int }}.
+          </div>
+          <div class="address-row">
+            {{ address.district }}, {{ address.city }}. {{ address.state }}
+          </div>
+          <div class="address-row">
+            Tel. {{ address.phone_number }}
+          </div>
+        </div>
+        <div
+          class="address"
+          :class="[id === 0 ? 'selected-address' : '']"
+          @click="localDelivery">
+          <div class="address-row">
+            ¿No puedes recibirlo en los horarios indicados?
+          </div>
+          <div class="address-row">
+            Recoje tu comida en nuestra cocina
+          </div>
+          <div class="address-row">
+            Dirección: Adolfo Prieto 1521, Colonia Del Valle Centro
+          </div>
+          <div class="address-row">
+            C.P. 03100, Benito Juárez  Ciudad de México.
+          </div>
         </div>
       </div>
     </div>
-    <div class="delivery-fare">
+    <div class="delivery-fare" >
       <div style="margin-bottom: 20px; font-size: 24px;">Costo del envio:</div>
-      ${{ (distance/1000 * 10.1) > 35 || distance === 0 ? (distance/1000 * 10.1) : 35 }}
+      ${{ deliveryFee ? deliveryFee : 0 }}
     </div>
     <div class="button-wrapper" v-if="ready">
       <div class="button" @click="$emit('next')">Siguiente</div>
@@ -35,6 +52,7 @@
 
 <script>
 /* global google */
+import NewAddress from '@/components/NewAddress.vue';
 import { createNamespacedHelpers } from 'vuex';
 
 const { mapState, mapActions } = createNamespacedHelpers('user');
@@ -43,13 +61,15 @@ export default {
   data() {
     return {
       origin: 'Adolfo Prieto 1521, Del Valle Centro',
-      address: 'Extremadura 127, Insurgentes Mixcoac',
       distance: 0,
       id: null,
       ready: false,
     };
   },
   computed: {
+    deliveryFee() {
+      return this.$store.state.cart.deliveryFee;
+    },
     ...mapState([
       'user',
     ]),
@@ -58,7 +78,12 @@ export default {
     selectAddress(address) {
       // Save current address for delivery;
       this.id = address.id;
-      this.calculate(`${address.address}, ${address.city}`);
+      this.calculate(`${address.street} ${address.number_ext}, ${address.district}`);
+    },
+    localDelivery() {
+      this.ready = true;
+      this.id = 0;
+      this.setDeliveryFee(0);
     },
     calculate(destinations) {
       const service = new google.maps.DistanceMatrixService();
@@ -84,6 +109,9 @@ export default {
       'getUser',
     ]),
   },
+  components: {
+    NewAddress,
+  },
   mounted() {
     this.getUser();
   },
@@ -107,6 +135,7 @@ export default {
   display: flex;
   flex-direction: column;
   font-family: 'Adelle Sans Book';
+  width: 50%;
 }
 .addresses {
   width: 100%;
@@ -114,14 +143,13 @@ export default {
   flex-direction: column;
 }
 .address {
-  width: 100%;
-  font-family: inherit;
+  font-family: 'Adelle Sans Book';
+  border: 1px solid rgb(196, 196, 196);
   display: flex;
   flex-direction: column;
-  border: 2px solid #000;
-  padding: 15px 20px;
+  margin-bottom: 15px;
+  padding: 24px;
   box-sizing: border-box;
-  margin-top: 20px;
   cursor: pointer;
 }
 .delivery-fare {
@@ -133,11 +161,13 @@ export default {
   flex-direction: column;
   font-size: 42px;
 }
-.address-item {
-  padding: 5px;
+.address-row {
+  & + .address-row {
+    margin-top: 14px;
+  }
 }
 .selected-address {
-  border: 2px solid #5d7750;
+  border: 1px solid #5d7750;
   color: #5d7750;
 }
 .button-wrapper {
@@ -157,6 +187,21 @@ export default {
   height: 38px;
   background-color: #eae5dc;
   border: 2px solid black;
+}
+.new-button {
+  width: 100%;
+  margin: 20px 0;
+}
+.local-address {
+  width: 100%;
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  cursor: pointer;
 }
 @media screen and (max-width: 980px) {
   .delivery {

@@ -45,59 +45,6 @@
         </div>
       </div>
     </div>
-    <div class="separador-wrapper">
-      <div class="separador">
-        <div class="titulo-separador">
-          Datos Envío
-        </div>
-        <div class="separador-sub">
-          Datos que nos serviran para realizar el envío
-        </div>
-      </div>
-    </div>
-    <div class="formulario-adress-wrapper">
-      <div class="formulario-adress">
-        <div class="pass-usr" style="margin-top: 20px;">
-          País: <span class="advertencia">*</span>  México
-        </div>
-        <div class="pass-usr" style="margin-top: 20px;">
-          Dirección <span class="advertencia">*</span>
-        </div>
-        <div class="campo">
-          <input type="text" class="campo-formulario" v-model="data.address">
-        </div>
-        <div class="pass-usr" style="margin-top: 20px;">
-          Apartamento/Habitación,etc. (opcional)
-        </div>
-        <div class="campo">
-          <input type="text" class="campo-formulario" v-model="data.apartment">
-        </div>
-        <div class="pass-usr" style="margin-top: 20px;">
-          Localidad / Ciudad <span class="advertencia">*</span>
-        </div>
-        <div class="campo">
-          <input type="text" class="campo-formulario" v-model="data.city">
-        </div>
-        <div class="pass-usr" style="margin-top: 20px;">
-          Región / Provincia <span class="advertencia">*</span>
-        </div>
-        <div class="campo">
-          <input type="text" class="campo-formulario" v-model="data.state">
-        </div>
-        <div class="pass-usr" style="margin-top: 20px;">
-          Código postal <span class="advertencia">*</span>
-        </div>
-        <div class="campo">
-          <input type="text" class="campo-formulario" v-model="data.postal_code">
-        </div>
-        <div class="pass-usr" style="margin-top: 20px;">
-          Teléfono <span class="advertencia">*</span>
-        </div>
-        <div class="campo">
-          <input type="text" class="campo-formulario" v-model="data.phone_number">
-        </div>
-      </div>
-    </div>
     <div class="confirmar-wrapper">
       <div class="confirmar" style="margin-top: 20px;">
         <div class="acceder-btn">
@@ -122,12 +69,6 @@ export default {
         name: '',
         email: '',
         password: '',
-        address: '',
-        apartment: '',
-        city: '',
-        state: '',
-        postal_code: '',
-        phone_number: '',
       },
       passwordConfirmation: '',
     };

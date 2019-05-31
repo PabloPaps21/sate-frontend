@@ -306,7 +306,7 @@ export default {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 130px;
+    margin-top: 80px;
   }
   .week-title {
     text-align: center;
@@ -433,6 +433,8 @@ export default {
   .tags {
     width: 900px;
     display: flex;
+    margin: 10px 0;
+    flex-wrap: wrap;
   }
   .tag {
     border: 2px solid #3e4e35;
@@ -440,6 +442,7 @@ export default {
     cursor: pointer;
     font-family: 'Adelle Sans Book';
     font-size: 14px;
+    margin: 5px 0;
 
     &+ .tag {
       margin-left: 16px;
@@ -517,7 +520,7 @@ export default {
       width: 45%;
     }
     .tags {
-      justify-content: center;
+      width: 90%;
     }
     .cita-index {
       padding: 0 25px 0 25px;

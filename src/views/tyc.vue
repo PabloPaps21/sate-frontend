@@ -642,7 +642,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .tyc-wrapper  {
     display: flex;
     justify-content: center;

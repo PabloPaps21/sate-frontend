@@ -64,6 +64,7 @@ export default {
         includeDisabled: true,
       },
       selectedIds: [],
+      editId: null,
     };
   },
   computed: {
@@ -78,8 +79,7 @@ export default {
         return null;
       }
       const startMoment = moment(this.startDate);
-      startMoment.hour(0);
-      startMoment.minute(0);
+      startMoment.startOf('day');
       return startMoment;
     },
     endMoment() {
@@ -89,11 +89,12 @@ export default {
       const startMoment = moment(this.startDate);
       const resultDate = startMoment.add(6, 'd');
       resultDate.hour(18);
-      resultDate.minute(0);
+      resultDate.startOf('hour');
       return resultDate;
     },
     ...mapState([
       'allFood',
+      'menu',
     ]),
   },
   methods: {
@@ -101,6 +102,7 @@ export default {
       this.highlighted.from = date;
       const resultDate = moment(date).add(6, 'd').toDate();
       this.highlighted.to = resultDate;
+      this.queryDate(moment(date).startOf('day').format('YYYY-MM-DD HH:mm:ss'));
     },
     clickFood(id) {
       const index = this.selectedIds.indexOf(id);
@@ -112,29 +114,53 @@ export default {
     },
     submitMenu() {
       if (this.activeButton) {
-        const dbStartDate = this.startMoment.format('YYYY-MM-DD HH:mm:ss');
-        const dbEndDate = this.endMoment.format('YYYY-MM-DD HH:mm:ss');
+        if (this.editId) {
+          this.editMenu({
+            id: this.editId,
+            selected_ids: this.selectedIds,
+          }).then(() => {
+            this.$router.push('/food');
+          });
+        } else {
+          const dbStartDate = this.startMoment.format('YYYY-MM-DD HH:mm:ss');
+          const dbEndDate = this.endMoment.format('YYYY-MM-DD HH:mm:ss');
 
-        this.createMenu({
-          start_date: dbStartDate,
-          end_date: dbEndDate,
-          selected_ids: this.selectedIds,
-        });
+          this.createMenu({
+            start_date: dbStartDate,
+            end_date: dbEndDate,
+            selected_ids: this.selectedIds,
+          }).then(() => {
+            this.$router.push('/food');
+          });
+        }
       }
     },
-    queryDate(currentDate) {
+    queryDate(date) {
+      this.selectedIds = [];
+      this.editId = null;
+      this.getMenu(date).then(() => {
+        if (this.menu[0]) {
+          this.editId = this.menu[0].id;
+          for (let i = 0; i < this.menu[0].products.length; i += 1) {
+            const element = this.menu[0].products[i];
+            this.selectedIds.push(element.id);
+          }
+        }
+      });
     },
     ...mapActions([
-      'getAllFood',
+      'getAdminFood',
       'getTags',
       'createMenu',
+      'getMenu',
+      'editMenu',
     ]),
   },
   components: {
     datepicker,
   },
   mounted() {
-    this.getAllFood();
+    this.getAdminFood();
   },
 };
 </script>

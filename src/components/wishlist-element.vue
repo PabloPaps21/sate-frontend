@@ -72,7 +72,7 @@ export default {
 .product {
   width: 100%;
   display: flex;
-  border-bottom: 1px solid #000;;
+  border-bottom: 1px solid rgb(207, 207, 207);
   padding: 16px 0;
   align-items: center;
 }

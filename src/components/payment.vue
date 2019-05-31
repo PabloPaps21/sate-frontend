@@ -61,7 +61,7 @@ export default {
             orderID: data.orderID,
             cart: this.cartIds,
           };
-          axios.post('http://127.0.0.1:3333/order', payload).then(() => {
+          axios.post(`${process.env.VUE_APP_SERVER_URL}/order`, payload).then(() => {
             this.success = true;
           });
         }),

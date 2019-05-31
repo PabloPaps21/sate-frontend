@@ -95,15 +95,12 @@
               para crear una experiencia sublime.</p>
           </div>
         </div>
-        <div class="img-grid con-gridn uno"
-        style="background-image:url('/experiencias_multi.jpg');">
-        </div>
+        <img class="img-grid con-gridn uno" src="/experiencias_multi.jpg">
       </div>
     </div>
     <div class="grid-wrapper travel">
       <div class="grid">
-        <div class="img-grid con-grid"
-        style="background-image:url('/viaje_gastro2.jpg')"></div>
+        <img class="img-grid con-gridn" src="/viaje_gastro2.jpg">
         <div class="texto-grid-der">
           <div class="texto-titulo-grid cero">
             Viajes
@@ -152,13 +149,12 @@
               preparar en minutos.</p>
           </div>
         </div>
-        <div class="img-grid con-grid uno"
-        style="background-image:url('/clases_cocina3.jpg')"></div>
+        <img class="img-grid con-gridn uno" src="/clases_cocina3.jpg">
       </div>
     </div>
     <div class="grid-wrapper catering">
       <div class="grid">
-        <div class="img-grid con-grid uno" style="background-image:url('/catering3.jpg')"></div>
+        <img class="img-grid con-grid uno" src="/catering3.jpg">
         <div class="texto-grid-der dos">
           <div class="texto-titulo-grid cero">
             Catering y

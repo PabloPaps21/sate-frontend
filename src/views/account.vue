@@ -66,7 +66,6 @@ export default {
 .menu {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   flex-direction: column;
   align-items: center;
   width: 29%;
@@ -94,9 +93,15 @@ export default {
   .header {
     font-size: 30px;
   }
-  .menu-item {
-    width: 50%;
-    font-size: 16px;
+}
+@media screen and (max-width: 900px) {
+  .menu {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .menu-content {
+    width: 100%;
+    padding: 0 20px;
   }
 }
 </style>
