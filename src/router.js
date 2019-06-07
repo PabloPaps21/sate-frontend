@@ -55,16 +55,12 @@ export default new Router({
       component: () => import('./views/resume.vue'),
     },
     {
-      path: '/categories',
+      path: '/admin/categories',
       component: () => import('./views/categories.vue'),
     },
     {
-      path: '/tags',
+      path: '/admin/tags',
       component: () => import('./views/tags.vue'),
-    },
-    {
-      path: '/products',
-      component: () => import('./views/products.vue'),
     },
     {
       path: '/tyc',
@@ -105,12 +101,27 @@ export default new Router({
       component: () => import('./components/delivery.vue'),
     },
     {
+      path: '/admin/products',
+      component: () => import('./views/products.vue'),
+    },
+    {
       path: '/admin/food-schedule',
-      component: () => import('./views/admin/foodSchedule.vue'),
+      component: () => import('./views/admin/FoodSchedule.vue'),
     },
     {
       path: '/admin/week-orders',
-      component: () => import('./views/admin/weekOrders.vue'),
+      component: () => import('./views/admin/WeekOrders.vue'),
+    },
+    {
+      path: '/admin/new-product',
+      component: () => import('./views/admin/NewProduct.vue'),
+    },
+    {
+      path: '/admin/new-product/:id',
+      component: () => import('./views/admin/NewProduct.vue'),
     },
   ],
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  },
 });

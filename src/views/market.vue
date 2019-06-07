@@ -111,7 +111,7 @@ export default {
     position: relative;
   }
   .slide-title{
-    color:#eae5dc;
+    color: #e6d6ba;
     margin-bottom: 30px;
     font-size: 56px;
     font-family: 'Strait', sans-serif;

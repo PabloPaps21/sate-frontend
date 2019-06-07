@@ -490,7 +490,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .politics-wrapper {
     display: flex;
     justify-content: center;

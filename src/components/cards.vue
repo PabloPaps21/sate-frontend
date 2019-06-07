@@ -6,15 +6,15 @@
           <div style="position: absolute; z-index: 2">{{ quantity }}</div>
           <div class="img-productos"
             style="position: absolute; z-index: 0"
-            :class="{ active: quantity }"
-            :style="{ backgroundImage: `url(${'/ensalada.png'})` }">
+            :class="{ active: quantity, circle: product.type === 'FOOD' }"
+            :style="{ backgroundImage: `url(${product.image})` }">
           </div>
         </div>
         <div class="producto-titulo">
           {{ product.name }}
         </div>
         <div class="producto-precio">
-          ${{ product.price }}
+          ${{ product.price.toFixed(2) }}
         </div>
         <div class="producto-descripcion">
             {{ product.description.substring(0, 55) }}
@@ -99,9 +99,9 @@ export default {
   z-index: 200;
 }
 .window {
-  width: 800px;
+  width: 700px;
   background-color: #eae5dc;
-  padding: 40px 20px;
+  padding: 45px;
 }
 .productos-wrapper{
   display: flex;
@@ -124,12 +124,14 @@ export default {
 .img-productos{
   width: 200px;
   height: 200px;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Strait', sans-serif;
   font-size: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .producto-titulo{
   text-align: center;
@@ -185,6 +187,9 @@ export default {
 }
 .buttons {
   display: flex;
+}
+.circle {
+  border-radius: 50%;
 }
 @media screen and (max-width: 980px) {
   .window {

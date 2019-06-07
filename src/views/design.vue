@@ -56,12 +56,12 @@
             </p>
           </div>
         </div>
-        <div class="img-grid con-grid uno" style="background-image:url('/asesorias.jpg')"></div>
+        <img class="img-grid con-grid uno" src="/asesorias.jpg">
       </div>
     </div>
     <div class="grid-wrapper estilism">
       <div class="grid">
-        <div class="img-grid con-grid uno" style="background-image:url('/estilismo2.jpg')"></div>
+        <img class="img-grid con-grid uno" src="/estilismo.jpg">
         <div class="texto-grid-der dos">
           <div class="texto-titulo-grid">
             Estilismo de Alimentos
@@ -101,7 +101,7 @@
             </p>
           </div>
         </div>
-        <div class="img-grid con-grid uno" style="background-image:url('/zero_waste.jpg')"></div>
+        <img class="img-grid con-grid uno" src="/zero_waste.jpg">
       </div>
     </div>
     <div class="banner-wrapper">

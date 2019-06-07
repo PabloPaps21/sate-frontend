@@ -2,19 +2,19 @@ import axios from 'axios';
 
 const actions = {
   getWishlist({ commit }) {
-    return axios.get('http://127.0.0.1:3333/wishlist')
+    return axios.get(`${process.env.VUE_APP_SERVER_URL}/wishlist`)
       .then((response) => {
         commit('setWishlist', response.data);
       });
   },
   addToWishlist({ dispatch }, payload) {
-    return axios.post('http://127.0.0.1:3333/wishlist', { productId: payload })
+    return axios.post(`${process.env.VUE_APP_SERVER_URL}/wishlist`, { productId: payload })
       .then(() => {
         dispatch('getWishlist');
       });
   },
   removeFromWishlist({ dispatch }, payload) {
-    return axios.delete(`http://127.0.0.1:3333/wishlist/${payload}`)
+    return axios.delete(`${process.env.VUE_APP_SERVER_URL}/wishlist/${payload}`)
       .then(() => {
         dispatch('getWishlist');
       });

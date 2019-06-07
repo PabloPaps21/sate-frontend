@@ -138,7 +138,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .background {
     position: fixed;
     top: 0;

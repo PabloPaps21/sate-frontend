@@ -159,6 +159,11 @@ export default {
       showMobileNav: false,
     };
   },
+  watch: {
+    $route() {
+      this.showMobileNav = false;
+    },
+  },
   computed: {
     totalItems() {
       return this.$store.getters['cart/cartTotalItems'];

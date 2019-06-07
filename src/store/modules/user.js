@@ -4,11 +4,11 @@ import router from '../../router';
 const actions = {
   // eslint-disable-next-line
   createUser({}, payload) {
-    return axios.post('http://127.0.0.1:3333/user', payload);
+    return axios.post(`${process.env.VUE_APP_SERVER_URL}/user`, payload);
   },
   // eslint-disable-next-line
   login({ dispatch }, payload) {
-    return axios.post('http://127.0.0.1:3333/login', payload)
+    return axios.post(`${process.env.VUE_APP_SERVER_URL}/login`, payload)
       .then((response) => {
         localStorage.setItem('token', response.data.token);
         axios.defaults.headers.common.Authorization = `Bearer ${response.data.token}`;
@@ -20,7 +20,7 @@ const actions = {
     commit('setUser', null);
   },
   getUser({ commit }) {
-    return axios.get('http://127.0.0.1:3333/user')
+    return axios.get(`${process.env.VUE_APP_SERVER_URL}/user`)
       .then((response) => {
         commit('setUser', response.data);
       })
@@ -28,6 +28,12 @@ const actions = {
         localStorage.removeItem('token');
         commit('setUser', null);
         router.push('/login');
+      });
+  },
+  createAddress({ dispatch }, payload) {
+    return axios.post(`${process.env.VUE_APP_SERVER_URL}/addresses`, payload)
+      .then(() => {
+        dispatch('getUser');
       });
   },
 };
