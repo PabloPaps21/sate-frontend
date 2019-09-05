@@ -1,5 +1,4 @@
 import axios from 'axios';
-import router from '../../router';
 
 const actions = {
   // eslint-disable-next-line
@@ -13,6 +12,7 @@ const actions = {
         localStorage.setItem('token', response.data.token);
         axios.defaults.headers.common.Authorization = `Bearer ${response.data.token}`;
         dispatch('getUser');
+        return response;
       });
   },
   logout({ commit }) {
@@ -27,11 +27,16 @@ const actions = {
       .catch(() => {
         localStorage.removeItem('token');
         commit('setUser', null);
-        router.push('/login');
       });
   },
   createAddress({ dispatch }, payload) {
     return axios.post(`${process.env.VUE_APP_SERVER_URL}/addresses`, payload)
+      .then(() => {
+        dispatch('getUser');
+      });
+  },
+  deleteAddress({ dispatch }, payload) {
+    return axios.delete(`${process.env.VUE_APP_SERVER_URL}/addresses/${payload}`)
       .then(() => {
         dispatch('getUser');
       });

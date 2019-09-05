@@ -37,84 +37,66 @@
         </div>
       </div>
     </div>
-    <div class="grid-wrapper advisory">
-      <div class="grid">
-        <div class="texto-grid dos">
-          <div class="texto-titulo-grid">
-            Asesorias
-          </div>
-          <div class="descripcion-grid">
-            <p>
-              En Saté contamos con profesionales con
-            experiencia en cocina, diseño o administración
-            para poder ayudarte a hacer tus proyectos realidad
-            de la mejor manera. Acércate a nosotros con tus ideas
-            y nosotros te orientamos en áreas que incluyen creación
-            de recetas, desarrollo de menús, campañas publicitarias,
-            fotografía de alimentos, diseño de productos para tu cocina,
-            asesoría para restaurantes y capacitación de personal.
-            </p>
-          </div>
-        </div>
-        <img class="img-grid con-grid uno" src="/asesorias.jpg">
-      </div>
-    </div>
-    <div class="grid-wrapper estilism">
-      <div class="grid">
-        <img class="img-grid con-grid uno" src="/estilismo.jpg">
-        <div class="texto-grid-der dos">
-          <div class="texto-titulo-grid">
-            Estilismo de Alimentos
-          </div>
-          <div class="descripcion-grid">
-            <p>Dentro de la gama de servicios en SATÉ,
-              ofrecemos estilismo de alimentos que consiste
-              en presentar la comida de manera armónica y atractiva.
-              Dicha presentación tiene varios objetivos, como lo son:
-              fotografía para empaques, medios publicitarios y editoriales
-              así como videos promocionales dentro de la industria de la gastronomía.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="grid-wrapper waste">
-      <div class="grid">
-        <div class="texto-grid dos">
-          <div class="texto-titulo-grid">
-            Zero Waste
-          </div>
-          <div class="descripcion-grid">
-            <p>
-              Para nosotros es muy importante ser una empresa
-              sustentable, que no genere desechos y sea saludable
-              para todos, queremos que nuestros usuarios consuman
-              conscientemente, para esto ofrecemos una gama de productos
-              hechos a partir de materiales naturales que evitan el consumo
-              innecesario de plástico.
-            </p>
-            <p style="margin-top:20px;">
-              Con nuestra experiencia en esta área y los
-              productos que manejamos queremos ayudarte a
-              convertir tu negocio en uno que no genere
-              desechos y que invite a la gente a reducir su
-              consumo de plástico.
-            </p>
-          </div>
-        </div>
-        <img class="img-grid con-grid uno" src="/zero_waste.jpg">
-      </div>
-    </div>
-    <div class="banner-wrapper">
-      <div class="banner">
-        <div class="texto-banner">
-          Se parte de la experiencia Saté
-        </div>
-        <router-link to="/contact" class="btn-contactanos">CONTÁCTANOS</router-link>
-      </div>
-    </div>
+    <InfoRow
+      class="experience-row"
+      title="Asesorias"
+      image="/asesorias.jpg">
+      <p> En Saté contamos con profesionales con
+        experiencia en cocina, diseño o administración
+        para poder ayudarte a hacer tus proyectos realidad
+        de la mejor manera. Acércate a nosotros con tus ideas
+        y nosotros te orientamos en áreas que incluyen creación
+        de recetas, desarrollo de menús, campañas publicitarias,
+        fotografía de alimentos, diseño de productos para tu cocina,
+        asesoría para restaurantes y capacitación de personal.</p>
+    </InfoRow>
+    <InfoRow
+      class="experience-row"
+      title="Estilismo de Alimentos"
+      image="/estilismo.jpg">
+      <p>Dentro de la gama de servicios en SATÉ,
+        ofrecemos estilismo de alimentos que consiste
+        en presentar la comida de manera armónica y atractiva.
+        Dicha presentación tiene varios objetivos, como lo son:
+        fotografía para empaques, medios publicitarios y editoriales
+        así como videos promocionales dentro de la industria de la gastronomía.</p>
+    </InfoRow>
+    <InfoRow
+      class="experience-row"
+      title="Zero Waste"
+      image="/zero_waste.jpg">
+      <p>Para nosotros es muy importante ser una empresa
+        sustentable, que no genere desechos y sea saludable
+        para todos, queremos que nuestros usuarios consuman
+        conscientemente, para esto ofrecemos una gama de productos
+        hechos a partir de materiales naturales que evitan el consumo
+        innecesario de plástico.</p>
+      <p>Con nuestra experiencia en esta área y los
+        productos que manejamos queremos ayudarte a
+        convertir tu negocio en uno que no genere
+        desechos y que invite a la gente a reducir su
+        consumo de plástico.</p>
+    </InfoRow>
+    <Banner class="banner-spacing" />
   </div>
 </template>
+
+<script>
+import Banner from '@/components/Banner.vue';
+import InfoRow from '@/components/InfoRow.vue';
+
+export default {
+  components: {
+    Banner,
+    InfoRow,
+  },
+};
+</script>
+
 <style lang="scss" scoped>
+.envolver {
+  background-color: #eae5dc;
+}
 .img-slide-wrapper {
     display: flex;
     height: 444px;
@@ -139,6 +121,7 @@
     width: 100%;
     justify-content: center;
     background-color: #eae5dc;
+    margin-bottom: 50px;
   }
   .iconos {
     display: flex;
@@ -300,6 +283,29 @@
     font-style: normal;
     font-size: 16px;
   }
+  .experience-row {
+    p {
+      line-height: 20px;
+
+      & + p {
+        margin-top: 20px;
+      }
+    }
+    &:nth-child(odd) {
+      /deep/ .image {
+        order: 2;
+      }
+      /deep/ .text {
+        order: 1;
+      }
+    }
+    & + .experience-row {
+      margin-top: 50px;
+    }
+  }
+  .banner-spacing {
+    margin-top: 80px;
+  }
   @media screen and (max-width:980px){
     .grid {
       width: 90%;
@@ -318,6 +324,20 @@
       margin-top: 0px;
     }
   }
+
+  @media screen and (max-width: 800px) {
+    .experience-row {
+      &:nth-child(odd) {
+        /deep/ .image {
+          order: 1;
+        }
+        /deep/ .text {
+          order: 2;
+        }
+      }
+    }
+  }
+
   @media screen and (max-width: 680px) {
     .img-slide-wrapper {
       height: 136px;

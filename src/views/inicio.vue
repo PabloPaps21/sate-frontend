@@ -45,16 +45,24 @@
       </div>
     </div>
   </div>
-  <div class="banner-wrapper">
-    <div class="banner">
-      <div class="texto-banner">
-          Se parte de la experiencia Saté
-      </div>
-      <router-link to="/contact" class="btn-contactanos">CONTÁCTANOS</router-link>
+  <div class="calendar-wrapper">
+      <Calendar />
     </div>
-  </div>
+  <Banner />
 </div>
 </template>
+
+<script>
+import Banner from '@/components/Banner.vue';
+import Calendar from '@/components/Calendar.vue';
+
+export default {
+  components: {
+    Banner,
+    Calendar,
+  },
+};
+</script>
 
 <style lang="scss" scoped>
   .about-wrapper {
@@ -196,59 +204,6 @@
     border: 2px solid black;
     text-decoration: none;
   }
-  .banner-wrapper {
-    display: flex;
-    width: 100%;
-    height: 140px;
-    background-color: #403726;
-    justify-content: center;
-    align-items: center;
-  }
-  .banner {
-    display: flex;
-    width: 900px;
-    color:#fff;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .texto-banner {
-    font-size: 22px;
-    font-family: 'Strait', sans-serif;
-    // font-weight: normal;
-    // font-style: normal;
-  }
-  .btn-contactanos {
-    background-color: #403726;
-    color: #fff;
-    border: 2px solid #fff;
-    width:120px;
-    height:48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 13px;
-    font-family: 'Strait', sans-serif;
-    text-decoration: none;
-  }
-  .mapa-wrapper {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    background-color: #eae5dc;
-  }
-  .mapa {
-    display: flex;
-    justify-content: center;
-    width: 900px;
-    margin-top: 126px;
-    margin-bottom: 153px;
-    flex-direction: column;
-    align-items: center;
-  }
-  .img-mapa {
-    width: 900px;
-    height: auto;
-  }
   .renglon {
     display: flex;
     justify-content: space-between;
@@ -359,17 +314,15 @@
   }
   .font-link {
     color: #e6d6ba;
-  text-decoration: none;
+    text-decoration: none;
   }
-  //  @media screen and (max-width: 906px){
-  //    .banner {
-  //     width: 790px;
-  //   }
-  //   .cita {
-  //     width: 90%;
-  //     padding: 0 20px;
-  //   }
-  //  }
+  .calendar-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 50px 0;
+    background-color: #eae5dc;
+  }
   @media screen and (max-width: 980px) {
     .about {
       width: 100%;

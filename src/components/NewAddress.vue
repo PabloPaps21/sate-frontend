@@ -64,7 +64,7 @@
         v-model="data.phone_number">
     </label>
     <div class="submit-wrapper">
-      <div class="submit" @click="createAddress(data)">
+      <div class="submit" @click="newAddress">
         Guardar
       </div>
     </div>
@@ -93,6 +93,21 @@ export default {
     };
   },
   methods: {
+    newAddress() {
+      this.createAddress(this.data).then(() => {
+        this.data = {
+          street: '',
+          number_ext: '',
+          number_int: '',
+          district: '',
+          city: '',
+          state: '',
+          postal_code: '',
+          phone_number: '',
+        };
+        this.open = false;
+      });
+    },
     ...mapActions([
       'createAddress',
     ]),
@@ -108,7 +123,7 @@ export default {
   width: 100%;
   font-family: 'Adelle Sans Book';
   padding: 24px;
-  border: 1px solid rgb(196, 196, 196);
+  border: 1px solid gray;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;

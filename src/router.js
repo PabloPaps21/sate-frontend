@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import axios from 'axios';
 import Inicio from './views/inicio.vue';
 
 Vue.use(Router);
@@ -28,7 +29,11 @@ export default new Router({
     },
     {
       path: '/experience',
-      component: () => import('./views/experience.vue'),
+      component: () => import('./views/Experience.vue'),
+    },
+    {
+      path: '/calendar',
+      component: () => import('./views/Calendar.vue'),
     },
     {
       path: '/design',
@@ -40,27 +45,38 @@ export default new Router({
     },
     {
       path: '/login',
-      component: () => import('./views/login.vue'),
+      component: () => import('./views/Login.vue'),
     },
     {
       path: '/register',
-      component: () => import('./views/register.vue'),
+      component: () => import('./views/Register.vue'),
+    },
+    {
+      path: '/verify/:code',
+      beforeEnter: (to, from, next) => {
+        const { params } = to;
+        axios.get(`${process.env.VUE_APP_SERVER_URL}/verify/${params.code}`)
+          .then(() => {
+            next('/login');
+          });
+      },
+    },
+    {
+      path: '/forgot-password',
+      component: () => import('./views/ForgotPassword.vue'),
+    },
+    {
+      path: '/reset-password/:token',
+      component: () => import('./views/ResetPassword.vue'),
     },
     {
       path: '/checkout',
-      component: () => import('./views/checkout.vue'),
-    },
-    {
-      path: '/resume',
-      component: () => import('./views/resume.vue'),
+      component: () => import('./views/Checkout.vue'),
     },
     {
       path: '/admin/categories',
-      component: () => import('./views/categories.vue'),
-    },
-    {
-      path: '/admin/tags',
-      component: () => import('./views/tags.vue'),
+      component: () => import('./views/admin/CategoriesAndTags.vue'),
+      meta: { requiresAdmin: true },
     },
     {
       path: '/tyc',
@@ -97,28 +113,44 @@ export default new Router({
       component: () => import('./views/wishlist.vue'),
     },
     {
-      path: '/delivery',
-      component: () => import('./components/delivery.vue'),
+      path: '/admin',
+      component: () => import('./views/AdminMenu.vue'),
+      meta: { requiresAdmin: true },
     },
     {
       path: '/admin/products',
       component: () => import('./views/products.vue'),
+      meta: { requiresAdmin: true },
+    },
+    {
+      path: '/admin/events',
+      component: () => import('./views/admin/NewEvent.vue'),
+      meta: { requiresAdmin: true },
+    },
+    {
+      path: '/admin/events/:id',
+      component: () => import('./views/admin/NewEvent.vue'),
+      meta: { requiresAdmin: true },
     },
     {
       path: '/admin/food-schedule',
       component: () => import('./views/admin/FoodSchedule.vue'),
+      meta: { requiresAdmin: true },
     },
     {
       path: '/admin/week-orders',
       component: () => import('./views/admin/WeekOrders.vue'),
+      meta: { requiresAdmin: true },
     },
     {
       path: '/admin/new-product',
       component: () => import('./views/admin/NewProduct.vue'),
+      meta: { requiresAdmin: true },
     },
     {
       path: '/admin/new-product/:id',
       component: () => import('./views/admin/NewProduct.vue'),
+      meta: { requiresAdmin: true },
     },
   ],
   scrollBehavior() {

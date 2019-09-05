@@ -1,33 +1,25 @@
 <template>
-  <div class="envolver">
-    <div class="columnas-wrapper">
-      <div class="columnas">
-        <div class="columnas-particular">
-          <div class="descripcion">
-            <img src="/ensalada.png" alt="" class="img-descripcion-checkout">
-            <div class="texto-checkout">
-              <div>{{ product.name }}</div>
-              <div>${{ product.price }}</div>
-            </div>
-          </div>
-          <div class="numeros">
-            <div class="precio-unitario">
-              ${{ product.price }}
-            </div>
-            <div class="cantidad">
-              <button class="btn-qty" @click="removeProduct"> - </button>
-              {{ quantity }}
-              <button class="btn-qty" @click="addProduct"> + </button>
-            </div>
-            <div class="cuenta-check">
-              ${{ quantity * product.price }}
-            </div>
-            <button class="btn-cancel-check" @click="removeAll">X</button>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="cart-row">
+  <div
+    :style="{ backgroundImage: `url('${product.image}')` }"
+    class="product-image">
   </div>
+  <div class="product-name">{{ product.name }}</div>
+  <div class="controls-row">
+    <div class="price">
+      ${{ product.price }}
+    </div>
+    <div class="quantity-controls">
+      <button class="btn-qty" @click="removeProduct"> - </button>
+      {{ quantity }}
+      <button class="btn-qty" @click="addProduct"> + </button>
+    </div>
+    <div class="total">
+      ${{ quantity * product.price }}
+    </div>
+    <button class="remove-button" @click="removeAll">X</button>
+  </div>
+</div>
 </template>
 
 <script>
@@ -71,179 +63,85 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.columnas-wrapper {
+.cart-row {
   display: flex;
   width: 100%;
-  justify-content: center;
-  background-color: #eae5dc;
-}
-.columnas {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  flex-direction: column;
-  height: 140px;
-  // background-color: purple;
-}
-.columnas-particular {
-  display: flex;
-  width: 100%;
-  align-items: center;
-}
-.descripcion {
-  display: flex;
-  height: 150px;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  flex-grow: 0;
-  flex-shrink: 2;
+  padding: 15px 0;
+  font-family: 'Adelle Sans Book';
 }
-.img-descripcion-checkout{
-  height: auto;
-  width: 80px;
+.product-image {
+  width: 10%;
+  flex-shrink: 0;
+  padding-bottom: 10%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
-.texto-checkout {
-  display: flex;
-  line-height: 25px;
-  width: 40%;
-  flex-direction: column;
-  justify-content: center;
-  font-family: 'Strait', sans-serif;
-  font-size: 15px;
+.product-name {
+  width: 25%;
+  flex-shrink: 0;
 }
-.cantidad {
-  display: flex;
-  justify-content: space-evenly;
-  font-family: 'Strait', sans-serif;
-  font-size: 15px;
-  width: 33%;
+.price {
+  width: 30%;
+  text-align: center;
 }
-.btn-qty{
+.total {
+  width: 30%;
+  text-align: center;
+}
+.btn-qty {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 24px;
-  height: 20px;
+  height: 24px;
   font-family: 'Strait', sans-serif;
   font-size: 15px;
-  color:black;
-  background-color: #eae5dc;
+  color: black;
+  background-color: transparent;
   border: 2px solid black;
 }
-.numeros {
+.quantity-controls {
   display: flex;
-  width: 100%;
-  height: 150px;
+  width: 30%;
   align-items: center;
-  font-family: 'Strait', sans-serif;
   font-size: 15px;
-  justify-content: center;
-  flex-grow: 1;
-  flex-shrink: 1;
+  justify-content: space-between;
 }
-.precio-unitario {
+.remove-button {
   display: flex;
-  width: 33%;
-  justify-content: center;
-}
-.cuenta-check {
-  display: flex;
-  width: 33%;
-  justify-content: center;
-}
-.btn-cancel-check {
- display: flex;
   justify-content: center;
   align-items: center;
   width: 24px;
-  height: 20px;
+  height: 24px;
   font-family: 'Strait', sans-serif;
   font-size: 15px;
   color: #b92929;
   background-color: #eae5dc;
   border: 2px solid #b92929;
 }
-@media screen and (max-width: 814px) {
-  .descripcion {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 26%;
-  }
-  .texto-checkout {
-    justify-content: center;
-    align-items: center;
-  }
-   .numeros {
-   margin-right: 43px;
-   //flex-direction: column;
-   width: 50%;
- }
+.controls-row {
+  display: flex;
+  align-items: center;
+  width: 60%;
 }
-// @media screen and (max-width: 375px) {
-//   .columnas-particular {
-//     flex-direction: column;
-//     justify-content: center;
-//     height: 10%;
-//   }
-//   .descripcion {
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     width: 40%;
-//   }
-//   .numeros {
-//   //  flex-direction: column;
-//    width: 60%;
-//    justify-content: center;
-//   }
-//   .precio-unitario {
-//     width: 14%;
-//   }
-//   .cantidad {
-//     width: 26%;
-//   }
-//   .cuenta-check {
-//     width: 18%;
-//   }
-// }
 @media screen and (max-width: 480px) {
-  .columnas-particular {
-    flex-direction: column;
-    justify-content: center;
-    height: 20%;
+  .product-image {
+    width: 25%;
+    padding-bottom: 25%;
   }
-  .columnas {
-    height: 140px;
-    margin-top: 50px;
-    // background-color: purple;
+  .product-name {
+    width: 70%;
   }
-  .descripcion {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 40%;
-    margin-bottom: 60px;
+  .cart-row {
+    flex-wrap: wrap;
   }
-  .numeros {
-  //  flex-direction: column;
-   width: 100%;
-   justify-content: center;
-   align-items: center;
-  }
-  .precio-unitario {
-    width: 20%;
-  }
-  .cantidad {
-    width: 26%;
-  }
-  .cuenta-check {
-    width: 18%;
+  .controls-row {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: space-around;
   }
 }
 </style>

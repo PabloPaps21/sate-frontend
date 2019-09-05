@@ -36,6 +36,7 @@
           <router-link to="/experience" class="margin-link">Experiencias culinarias</router-link>
           <router-link to="/design" class="margin-link">Food design</router-link>
           <router-link to="/contact" class="margin-link">Contacto</router-link>
+          <router-link to="/calendar" class="margin-link">Calendario</router-link>
         </div>
       </div>
     </div>
@@ -49,28 +50,16 @@
               Síguenos en:
             </div>
             <div class="redes-sociales">
-              <!-- <div class="logos-redes">
-                <img src="/face.svg" alt="" class="color-logo">
-                <span class="redes-fuente">
-                  Facebook
-                </span>
-              </div>
-              <div class="logos-redes">
-                <img src="/insta.svg" alt="" class="color-logo">
-                <span class="redes-fuente">
-                  Instagram
-                </span>
-              </div> -->
               <i class="fab fa-facebook">
                 <span class="redes-fuente">
-                  <a href="https://www.facebook.com/sateconnections/" style="color: #e6d6ba;">
+                  <a href="https://www.facebook.com/sateconnections/" style="color: #e6d6ba;" target="_blank">
                     Facebook
                   </a>
                 </span>
               </i>
               <i class="fab fa-instagram instagram">
                 <span class="redes-fuente">
-                  <a href="https://www.instagram.com/sate.connections/?hl=es-la" style="color: #e6d6ba;">
+                  <a href="https://www.instagram.com/sate.connections/?hl=es-la" style="color: #e6d6ba;" target="_blank">
                   Instagram
                   </a>
                 </span>
@@ -103,7 +92,7 @@
               Encuentranos en:
             </div>
             <div class="mapa-footer">
-              <img src="/mapa.png" alt="mapa" class="mapa-footer" style="width=100%">
+              <div class="mapouter"><div class="gmap_canvas"><iframe width="300" height="170" id="gmap_canvas" src="https://maps.google.com/maps?q=Adolfo%20Prieto%201521%2C%20Col%20del%20Valle%20Centro&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>Google Maps Generator by <a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div></div>
             </div>
           </div>
         </div>
@@ -160,8 +149,15 @@ export default {
     };
   },
   watch: {
-    $route() {
+    $route(to) {
       this.showMobileNav = false;
+      this.getUser().then(() => {
+        if (to.matched.some(record => record.meta.requiresAdmin)) {
+          if (!this.user || (this.user && !this.user.is_admin)) {
+            this.$router.push('/');
+          }
+        }
+      });
     },
   },
   computed: {
@@ -384,6 +380,18 @@ a {
 .logos-redes {
   width: 20px;
   height: 20px;
+}
+.mapouter {
+  position:relative;
+  text-align:right;
+  height:170px;
+  width:300px;
+}
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height:170px;
+  width:300px;
 }
 @media screen and (max-width: 980px) {
   .footer {

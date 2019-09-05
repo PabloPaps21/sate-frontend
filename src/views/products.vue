@@ -1,7 +1,14 @@
 <template>
 <div class="wrapper">
   <div class="content">
-    <div class="header">Productos</div>
+    <div class="header">
+      <div class="header-text">
+        Productos
+      </div>
+      <div class="header-button" @click="$router.push('/admin/new-product')" >
+        Añadir nuevo
+      </div>
+    </div>
     <div class="product" v-for="product in products" :key="product.id">
       <div class="product-img"
         :style="{ backgroundImage: `url(${product.image ? product.image : '/food-hero3.jpg'})` }">
@@ -9,11 +16,13 @@
       <div class="product-info">
         <div class="product-name">{{ product.name }}</div>
         <div class="product-price">${{ product.price.toFixed(2) }}</div>
-        <div class="edit" @click="$router.push(`/admin/new-product/${product.id}`)">
-          Editar
-        </div>
-        <div class="remove" @click="deleteProduct(product.id)">
-          Eliminar
+        <div class="product-actions">
+          <div class="edit" @click="$router.push(`/admin/new-product/${product.id}`)">
+            Editar
+          </div>
+          <div class="remove" @click="deleteProduct(product.id)">
+            Eliminar
+          </div>
         </div>
       </div>
     </div>
@@ -58,18 +67,34 @@ export default {
   justify-content: space-between;
 }
 .header {
-  font-size: 32px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.header-text {
+  font-size: 32px;
+}
+.header-button {
+  background-color: #414f3a;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 15px;
 }
 .product {
   display: flex;
-  width: 49%;
+  width: 48%;
   margin-top: 20px;
+  border: 1px solid #c4c4c4;
+  border-radius: 6px;
 }
 .product-img {
-  height: 80px;
-  width: 80px;
+  height: 90px;
+  width: 90px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -77,16 +102,21 @@ export default {
 }
 .product-info {
   display: flex;
-  margin-left: 20px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 16px;
 }
 .product-name {
-  font-size: 20px;
+  font-size: 18px;
   width: 100%;
 }
 .product-price {
-  margin-right: 10px;
   width: 100%;
+}
+.product-actions {
+  width: 100%;
+  display: flex;
+  font-size: 15px;
 }
 .edit {
   color: rgb(136, 136, 2);

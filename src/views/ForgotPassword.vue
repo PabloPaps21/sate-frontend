@@ -1,70 +1,44 @@
 <template>
   <div class="register-wrapper">
     <div class="register" v-if="!successScreen">
-      <div class="title">Bienvenido a la familia</div>
+      <div class="title">¿Olvidaste tu contraseña?</div>
       <div class="subtitle">
-        Registrate en Saté para comenzar a vivir la experiencia culinaria.
+        Si ya tenias una cuenta con nosotros pero olvidaste tu contraseña proporcionanos
+        tu correo electrónico y te enviaremos instrucciones para restaurar tu contraseña.
       </div>
-      <form class="form" @submit.prevent="newUser">
+      <form class="form" @submit.prevent="forgotPassword">
         <label class="label">
-          Nombre completo:
-          <input type="text" class="input" v-model="data.name">
-        </label>
-        <label class="label">
-          Correo Electrónico
+          Correo electrónico registrado:
           <input type="text" class="input" v-model="data.email">
         </label>
-        <label class="label">
-          Contraseña
-          <input type="password" class="input" v-model="data.password">
-        </label>
-        <label class="label">
-          Confirma tu contraseña:
-          {{ data.password !== passwordConfirmation ? 'Las contraseñas no coinciden' : '' }}
-          <input type="password" class="input" v-model="passwordConfirmation">
-        </label>
-        <div class="terms-input">
-          <input type="checkbox" v-model="termsAccepted">
-          Acepto los terminos y condiciones de uso.
-        </div>
-        <div class="error-message" v-if="errorMessage">
-          {{ errorMessage }}
-        </div>
         <div class="button-wrapper">
           <input
             type="submit"
             class="submit-button"
             :class="[ !validData ? 'disabled' : '' ]"
-            value="Registrarse">
+            value="Recuperar">
         </div>
       </form>
     </div>
     <div class="register" v-else>
       <div class="title">Gracias</div>
       <div class="subtitle">
-        Revisa tu bandeja de correo y sigue el link para validar tu
-        correo electrónico
+        Revisa tu bandeja de correo electrónico y sigue las instrucciones
+        para restaurar tu contraseña
       </div>
     </div>
   </div>
 </template>
 <script>
-import { createNamespacedHelpers } from 'vuex';
-
-const { mapActions } = createNamespacedHelpers('user');
+import axios from 'axios';
 
 export default {
   data() {
     return {
       data: {
-        name: '',
         email: '',
-        password: '',
       },
-      passwordConfirmation: '',
-      termsAccepted: false,
       successScreen: false,
-      errorMessage: null,
     };
   },
   computed: {
@@ -75,30 +49,20 @@ export default {
       return false;
     },
     validData() {
-      if (this.data.name && this.data.password && this.validEmail && this.termsAccepted) {
+      if (this.data.email && this.validEmail) {
         return true;
       }
       return false;
     },
   },
   methods: {
-    newUser() {
+    forgotPassword() {
       if (this.validData) {
-        this.errorMessage = null;
-        this.createUser(this.data)
-          .then(() => {
-            this.successScreen = true;
-          })
-          .catch((error) => {
-            if (error.response.data === 'User already exists') {
-              this.errorMessage = 'El usuario ya esta registrado. Intenta inciar sesión';
-            }
-          });
+        axios.post(`${process.env.VUE_APP_SERVER_URL}/forgot`, this.data).then(() => {
+          this.successScreen = true;
+        });
       }
     },
-    ...mapActions([
-      'createUser',
-    ]),
   },
 };
 </script>
@@ -123,6 +87,7 @@ export default {
 .subtitle {
   font-family: 'Adelle Sans Book';
   margin-bottom: 26px;
+  line-height: 20px;
 }
 .form {
   display: flex;
@@ -150,15 +115,6 @@ export default {
     border-color: #3e4e35;
   }
 }
-.terms-input {
-  margin-top: 20px;
-  display: flex;
-  align-items: baseline;
-
-  input {
-    margin-right: 8px;
-  }
-}
 .button-wrapper {
   width: 100%;
   display: flex;
@@ -180,9 +136,5 @@ export default {
 .disabled {
   filter: opacity(30%);
   cursor: not-allowed;
-}
-.error-message {
-  color: red;
-  margin-top: 20px;
 }
 </style>

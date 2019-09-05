@@ -13,23 +13,28 @@
         <div class="week-title">
           Productos
         </div>
-        <!-- <div class="week-date">
-          28/ENE/2019
-        </div> -->
-        <div class="cita-index">
-          Con tu ayuda, beneficiarás a muchas personas.
-        </div>
-        <!-- <div class="cita-index">
-            Con cariño preparada para ti.
-        </div> -->
       </div>
     </div>
-    <div class="alimentos-wrapper">
-      <div class="alimentos">
-        <cards
-          v-for="product in allProducts"
-          :key="product.id"
-          :product="product" />
+    <div
+      class="category"
+      v-for="category in filteredProducts"
+      :key="category.id"
+      :id="`category-${category.id}`">
+      <div class="menu-wrapper">
+        <div class="menu">
+          <div class="menu-title">
+            {{ category.name }}
+          </div>
+        </div>
+      </div>
+      <div class="alimentos-wrapper">
+        <div class="alimentos">
+          <cards
+            v-for="product in category.products"
+            :key="product.id"
+            :category="category.name"
+            :product="product" />
+        </div>
       </div>
     </div>
   </div>
@@ -46,6 +51,9 @@ export default {
     cards,
   },
   computed: {
+    filteredProducts() {
+      return this.allProducts.filter(category => category.products.length > 0);
+    },
     ...mapState([
       'allProducts',
     ]),

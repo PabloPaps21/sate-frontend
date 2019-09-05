@@ -64,6 +64,12 @@ const mutations = {
       state.items = state.items.filter(item => item.product.id !== product.id);
     }
   },
+  removeAllFromCart(state, product) {
+    const cartItem = state.items.find(item => item.product.id === product.id);
+    if (cartItem) {
+      state.items = state.items.filter(item => item.product.id !== product.id);
+    }
+  },
   setDeliveryFee(state, fee) {
     state.deliveryFee = fee;
   },

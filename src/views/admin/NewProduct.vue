@@ -85,6 +85,19 @@
         </div>
         <div style="width: 100%;" v-show="data.type === 'MARKET'">
           <div class="form-element-full">
+            <div class="label-text">Categoria</div>
+            <div class="radio-select">
+              <div
+                class="radio-button"
+                @click="data.category = category.id"
+                :class="{ 'active-radio': data.category === category.id }"
+                style="margin: 5px;"
+                v-for="category in categories" :key="category.id">
+                {{ category.name }}
+              </div>
+            </div>
+          </div>
+          <div class="form-element-full">
             <div class="label-text">Imagenes</div>
             <div class="images-list">
               <div

@@ -1,78 +1,58 @@
 <template>
   <div class="register-wrapper">
     <div class="register">
-      <div class="title">Bienvenido a Saté</div>
+      <div class="title">Estamos a punto de terminar</div>
       <div class="subtitle">
-        Si ya tienes una cuenta con nosotros proporcionanos tu usuario y
-        contraseña o <a href="/register">registrate</a>.
+        Para terminar de recuperar el acceso a tu cuenta de Saté necesitamos
+        que nos proporciones una nueva contraseña de acceso.
       </div>
-      <form class="form" @submit.prevent="loginAction">
+      <form class="form" @submit.prevent="forgotPassword">
         <label class="label">
-          Correo electrónico:
-          <input type="text" class="input" v-model="data.email">
+          Contraseña nueva:
+          <input type="password" class="input" v-model="data.newPassword">
         </label>
-        <label class="label">
-          Contraseña:
-          <input type="password" class="input" v-model="data.password">
-        </label>
-        <div class="forgot-button">
-          <a href="/forgot-password">¿Olvidate tu contraseña?</a>
-          <div class="error-message">{{ errorMessage }}</div>
-        </div>
         <div class="button-wrapper">
           <input
             type="submit"
             class="submit-button"
             :class="[ !validData ? 'disabled' : '' ]"
-            value="Iniciar sesión">
+            value="Cambiar contraseña">
         </div>
       </form>
     </div>
   </div>
 </template>
 <script>
-import { createNamespacedHelpers } from 'vuex';
-
-const { mapActions } = createNamespacedHelpers('user');
+import axios from 'axios';
 
 export default {
   data() {
     return {
       data: {
-        email: '',
-        password: '',
+        newPassword: '',
+        token: null,
       },
-      errorMessage: null,
     };
   },
   computed: {
     validData() {
-      if (this.data.email && this.data.password) {
+      if (this.data.newPassword) {
         return true;
       }
       return false;
     },
   },
   methods: {
-    loginAction() {
-      this.errorMessage = null;
-      this.login(this.data)
-        .then(() => {
-          this.$router.push('/');
-        })
-        .catch((error) => {
-          if (error.response.data[0].field === 'email') {
-            this.errorMessage = 'Usuario no registrado';
-          } else if (error.response.data[0].field === 'password') {
-            this.errorMessage = 'Contraseña incorrecta';
-          } else {
-            this.errorMessage = 'Algo salio mal';
-          }
+    forgotPassword() {
+      if (this.validData) {
+        axios.post(`${process.env.VUE_APP_SERVER_URL}/reset`, this.data).then(() => {
+          this.$router.push('/login');
         });
+      }
     },
-    ...mapActions([
-      'login',
-    ]),
+  },
+  mounted() {
+    this.data.token = this.$route.params.token;
   },
 };
 </script>
@@ -146,25 +126,5 @@ export default {
 .disabled {
   filter: opacity(30%);
   cursor: not-allowed;
-}
-.forgot-button {
-  margin-top: 25px;
-  display: flex;
-  justify-content: space-between;
-
-  a {
-    color: #414f3a;
-    text-decoration: none;
-    padding-bottom: 2px;
-    border-bottom: 1px solid gray;
-  }
-
-  a:visited {
-    color: inherit;
-    text-decoration: none;
-  }
-}
-.error-message {
-  color: red;
 }
 </style>

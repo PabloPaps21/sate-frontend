@@ -1,7 +1,10 @@
 <template>
 <div class="content">
   <div class="images">
-    <img :src="currentImage ? currentImage : product.image" alt="" class="product-image">
+    <div
+      :style="{ backgroundImage: `url('${currentImage ? currentImage : product.image}')` }"
+      class="product-image">
+    </div>
     <div
       class="image-gallery"
       v-if="product.type === 'MARKET' && product.images && product.images.length > 0">
@@ -19,6 +22,9 @@
     <div class="description">
       {{ product.description }}
     </div>
+    <div class="price">
+      ${{ product.price }}
+    </div>
     <div class="interactions">
       <div class="cantidad">
         <button class="button-quantity " @click="removeProduct"> - </button>
@@ -27,19 +33,32 @@
           </div>
         <button class="button-quantity " @click="addProduct"> + </button>
       </div>
-      <div class="buttons" v-if="product.type === 'MARKET'">
+      <div class="buttons">
         <button
-          class="wishlist-button"
-          @click="addToWishlist"
-          v-if="!isOnWishlist">
-          Añadir a la wishlist
+          class="cart-button"
+          @click="addProduct"
+          v-if="quantity === 0">
+          Añadir al carrito
         </button>
         <button
-          class="wishlist-button"
-          @click="removeFromWishlist"
+          class="cart-button"
+          @click="removeAllFromCart(product)"
           v-else>
-          Quitar de la wishlist
+          Quitar del carrito
         </button>
+        <div class="wishlist-button" v-if="product.type === 'MARKET'" @click="clickOnWishlist">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 19.481 19.481" enable-background="new 0 0 19.481 19.481" width="20px" height="20px">
+            <path
+              d="m10.201,.758l2.478,5.865 6.344,.545c0.44,0.038 0.619,0.587 0.285,0.876l-4.812,4.169
+              1.442,6.202c0.1,0.431-0.367,0.77-0.745,0.541l-5.452-3.288-5.452,3.288c-0.379
+              0.228-0.845-0.111-0.745-0.541l1.442-6.202-4.813-4.17c-0.334-0.289-0.156-0.838
+              0.285-0.876l6.344-.545 2.478-5.864c0.172-0.408 0.749-0.408 0.921,0z"
+              class="active-path"
+              stroke="#414f3a"
+              :fill="isOnWishlist ? '#414f3a' : 'transparent'"/>
+          </svg>
+          Wishlist
+        </div>
       </div>
     </div>
     <div class="category">
@@ -82,11 +101,12 @@ export default {
     ]),
   },
   methods: {
-    addToWishlist() {
-      this.$store.dispatch('wishlist/addToWishlist', this.product.id);
-    },
-    removeFromWishlist() {
-      this.$store.dispatch('wishlist/removeFromWishlist', this.product.id);
+    clickOnWishlist() {
+      if (this.isOnWishlist) {
+        this.$store.dispatch('wishlist/removeFromWishlist', this.product.id);
+      } else {
+        this.$store.dispatch('wishlist/addToWishlist', this.product.id);
+      }
     },
     addProduct() {
       this.addToCart(this.product);
@@ -97,6 +117,7 @@ export default {
     ...mapMutations([
       'addToCart',
       'removeFromCart',
+      'removeAllFromCart',
     ]),
   },
   mounted() {
@@ -135,7 +156,9 @@ export default {
 }
 .product-image {
   width: 100%;
-  height: auto;
+  padding-bottom: 100%;
+  background-position: center;
+  background-size: cover;
 }
 .alimento-add-button {
   width: 136px;
@@ -144,7 +167,7 @@ export default {
   border: 2px solid black;
   font-family: 'Strait', sans-serif;
 }
-.wishlist-button {
+.cart-button {
   width: 136px;
   height: 39px;
   color: #e6d6ba;
@@ -152,13 +175,30 @@ export default {
   font-family: 'Strait', sans-serif;
   background-color: #414f3a;
 }
+.wishlist-button {
+  display: flex;
+  width: 20px;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+  cursor: pointer;
+  margin-left: 35px;
+
+  svg {
+    margin-bottom: 4px;
+  }
+}
 .ingredientes{
   line-height: 2;
 }
 .description {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   font-family: 'Adelle Sans Book';
   width: 100%;
+}
+.price {
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 .cantidad {
   display: flex;
@@ -187,6 +227,7 @@ export default {
 }
 .buttons {
   display: flex;
+  align-items: center;
 }
 .image-gallery {
   width: 100%;
@@ -224,7 +265,14 @@ export default {
     width: 100%;
   }
   .product-image {
-    width: 50%;
+    width: 80%;
+    padding-bottom: 80%;
+  }
+  .interactions {
+    flex-direction: column;
+  }
+  .wishlist-button {
+    margin-top: 25px;
   }
 }
 </style>

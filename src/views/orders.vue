@@ -30,7 +30,7 @@ export default {
     };
   },
   mounted() {
-    moment.locale('es');
+    this.moment.locale('es');
     axios.get(`${process.env.VUE_APP_SERVER_URL}/order`)
       .then((response) => {
         this.orders = response.data;

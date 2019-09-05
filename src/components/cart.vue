@@ -33,7 +33,7 @@
               ${{ cartTotalPrice }}
             </div>
           </div>
-          <button class="pagar" @click="$router.push('/resume'); closeModal()">
+          <button class="pagar" @click="$router.push('/checkout'); closeModal()">
             COMPLETAR PEDIDO
           </button>
         </div>
@@ -101,7 +101,7 @@ export default {
   font-style: normal;
   color:#3e4e35;
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .titulo {
   display: flex;
@@ -183,8 +183,6 @@ export default {
   border-bottom: 1px solid #3e4e357c;
   font-size: 2px;
   height: 2px;
-  margin-bottom: 15px;
-  margin-right: 15px;
 }
 /deep/ .columnas-particular {
   // flex-direction: column;
@@ -222,11 +220,6 @@ export default {
   }
   .checkout{
     width: 100%;
-  }
-  .linea-verde {
-    margin-top: 100px;
-    margin-bottom: 15px;
-    margin-right: 15px;
   }
 }
 </style>

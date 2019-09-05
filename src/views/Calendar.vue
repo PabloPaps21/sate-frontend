@@ -1,150 +1,7 @@
 <template>
   <div class="envolver">
-    <div class="img-slide-wrapper" style="background-image:url('/food-hero3.jpg')">
-      <div class="slide-title">
-        Experiencia Saté
-      </div>
-    </div>
-    <div class="about-wrapper">
-      <div class="about img-about" style="background-image:url('/food-hero3.jpg')">
-      </div>
-    </div>
-    <div class="exp-titulo-wrapper">
-      <div class="exp-titulo">
-        Experiencias Culinarias
-      </div>
-    </div>
-    <div class="experiencia-wrapper">
-      <div class="experiencia">
-        <p>
-          Los sabores los podemos percibir de ciertas
-          formas que van mucho más allá del paladar,
-          podemos degustar con la vista, a través de
-          olores o incluso de experiencias que relacionan
-          nuestro entorno con la comida. Queremos que vivas
-          la comida de todas las maneras que no imaginas
-          posibles, para esto diseñamos una serie de experiencias
-          culinarias que cambian de acuerdo a la temporada y que
-          le van a dar un giro a la manera en la que consumes tus
-          alimentos.
-        </p>
-      </div>
-    </div>
-    <div class="exp-wrapper">
-      <div class="exp">
-        <div class="exp-icono" v-scroll-to="'.experiences'">
-          <div class="icono-container">
-            <img src="/e.multisensoriales2.svg" alt="" class="img-exp"
-            style="width:70px; height:61;">
-          </div>
-          <div class="titulo-exp">EXPERIENCIAS MULTISENSORIALES</div>
-        </div>
-        <div class="exp-icono" v-scroll-to="'.travel'">
-          <div class="icono-container">
-            <img src="/viajes_gastronomicos.svg" alt="" class="img-exp">
-          </div>
-          <div class="titulo-exp">VIAJES
-            <br>GASTRONÓMICOS</div>
-        </div>
-        <div class="exp-icono" v-scroll-to="'.classes'">
-          <div class="icono-container">
-            <img src="/clases_cocina2.svg" alt="" class="img-exp">
-          </div>
-          <div class="titulo-exp">
-            CLASES DE
-            <br>
-            COCINA
-             </div>
-        </div>
-        <div class="exp-icono" v-scroll-to="'.catering'">
-          <div class="icono-container">
-            <img src="/banquetes.svg" alt="" class="img-exp">
-          </div>
-          <div class="titulo-exp">CATERING Y
-            <br> EVENTOS</div>
-        </div>
-      </div>
-    </div>
-    <!-- EXPERIENCIAS -->
-    <InfoRow
-      class="experience-row"
-      title="Experiencias Multisensoriales"
-      image="/experiencias_multi.jpg">
-      <p>Comer es un proceso mucho más complejo que
-        simplemente degustar con nuestra boca.
-        Inconscientemente todos nuestros sentidos
-        están activos al comer e influyen mucho
-        más de lo que creemos.</p>
-      <p>Queremos invitarte a percibir la comida
-        como nunca antes. Pondremos en juego
-        tus sentidos para que redescubras
-        como están entrelazados e influyen
-        (cada uno de ellos) en nuestra percepción.
-        Texturas, colores, sonidos y sabores se combinarán
-        para crear una experiencia sublime.</p>
-    </InfoRow>
-    <InfoRow
-      class="experience-row"
-      title="Viajes Gastronómicos"
-      image="/viaje_gastro2.jpg">
-      <p>Una de las mejores maneras para
-        conocer un país es a través de su
-        comida por lo que SATÉ organiza y
-        diseña viajes culinarios en varias
-        partes del mundo. A través de su
-        gastronomía podrás conocer a profundidad
-        la historia y riqueza cultural que ofrecen.</p>
-      <p>Nos adentraremos
-        en mercados locales para descubrir sus
-        ingredientes nativos, exploraremos todas
-        sus facetas culinarias para develar su esencia,
-        desde la comida callejera hasta restaurantes de
-        gran nivel. Así mismo conoceremos cocineros locales
-        que nos mostraran nuevos platillos y técnicas culinarias.</p>
-    </InfoRow>
-    <InfoRow
-      class="experience-row"
-      title="Clases de Cocina"
-      image="/clases_cocina3.jpg">
-      <p>Date la oportunidad de descubrir el placer
-        de cocinar. Una habilidad básica de vida que
-        te permitirá alimentarte sanamente, ahorrar
-        dinero y ante todo, preparar deliciosos platillos
-        para ti y tus seres queridos. Aprenderás en un ambiente
-        relajado con una dinámica divertida donde todo el grupo
-        participará activamente en la elaboración de comida.</p>
-      <p>Saté ofrece una amplia gama
-        de cursos en los que podrás aprender a preparar pasta
-        fresca, servir una cena japonesa completa o, si lo
-        tuyo es la falta de tiempo, recetas fáciles que podrás
-        preparar en minutos.</p>
-    </InfoRow>
-    <InfoRow
-      class="experience-row"
-      title="Catering y eventos"
-      image="/catering3.jpg">
-      <p>La comida es el centro de la vida social
-        y por lo tanto la calidad de los alimentos
-        en cualquier tipo de evento es fundamental.
-        Estamos constantemente investigando para poder
-        innovar no solamente en términos de sabores y
-        platillos sino en la forma de presentarlos y
-        servirlos. Utilizamos diversas dinámicas de servicio
-        para generar una mayor integración entre los invitados.</p>
-      <p>La satisfacción de nuestros
-        clientes es nuestra prioridad. Para ello contamos con
-        una vasta red de proveedores en México que nos permite crear
-        todo tipo de eventos en términos de estilo y tamaño.
-        Servimos desde una cena privada en casa para invitados
-        especiales o familia hasta bodas o eventos empresariales.</p>
-    </InfoRow>
-    <div class="events-list-wrapper">
-      <div class="events-list">
-
-      </div>
-    </div>
     <div class="calendar-wrapper">
-      <Calendar />
+      <Calendar :fullView="true" />
     </div>
     <Banner class="banner-spacing" />
   </div>
@@ -152,13 +9,11 @@
 
 <script>
 import Banner from '@/components/Banner.vue';
-import InfoRow from '@/components/InfoRow.vue';
 import Calendar from '@/components/Calendar.vue';
 
 export default {
   components: {
     Banner,
-    InfoRow,
     Calendar,
   },
 };
@@ -251,9 +106,9 @@ export default {
   font-weight: 600 !important;
 }
 .exp-wrapper {
-  display: flex;
-  width: 100%;
-  justify-content: center;
+display: flex;
+width: 100%;
+justify-content: center;
   background-color: #eae5dc;
 }
 .exp {
@@ -312,7 +167,7 @@ export default {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  padding-top: 30px;
 }
 .events-list-wrapper {
   display: flex;

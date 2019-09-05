@@ -73,6 +73,30 @@ const actions = {
         commit('setOrders', response.data);
       });
   },
+  getEvent({ commit }, payload) {
+    return axios.get(`${process.env.VUE_APP_SERVER_URL}/admin/event/${payload}`)
+      .then((response) => {
+        commit('setEvent', response.data);
+      });
+  },
+  editEvent({ dispatch }, payload) {
+    return axios.patch(`${process.env.VUE_APP_SERVER_URL}/admin/event/${payload.id}`, payload.data)
+      .then(() => {
+        dispatch('getEvent', payload.id);
+      });
+  },
+  // eslint-disable-next-line no-empty-pattern
+  createEvent({}, payload) {
+    return axios.post(`${process.env.VUE_APP_SERVER_URL}/admin/event`, payload)
+      .then(response => response.data);
+  },
+  // eslint-disable-next-line no-empty-pattern
+  createDate({ dispatch }, payload) {
+    return axios.post(`${process.env.VUE_APP_SERVER_URL}/admin/event/${payload.id}/dates`, payload.data)
+      .then(() => {
+        dispatch('getEvent', payload.id);
+      });
+  },
 };
 
 const mutations = {
@@ -91,6 +115,9 @@ const mutations = {
   setOrders(state, orders) {
     state.orders = orders;
   },
+  setEvent(state, event) {
+    state.event = event;
+  },
 };
 
 const state = {
@@ -99,6 +126,7 @@ const state = {
   products: [],
   orders: [],
   product: {},
+  event: {},
 };
 
 export default {

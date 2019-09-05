@@ -39,13 +39,6 @@
         </div>
       </div>
     </div>
-    <div class="delivery-fare" >
-      <div style="margin-bottom: 20px; font-size: 24px;">Costo del envio:</div>
-      ${{ deliveryFee ? deliveryFee : 0 }}
-    </div>
-    <div class="button-wrapper" v-if="ready">
-      <div class="button" @click="$emit('next')">Siguiente</div>
-    </div>
   </div>
 </div>
 </template>
@@ -128,14 +121,14 @@ export default {
 .delivery {
   width: 900px;
   display: flex;
-  padding: 60px 0;
+  padding: 10px 0 0 0;
   flex-wrap: wrap;
 }
 .address-selection {
   display: flex;
   flex-direction: column;
   font-family: 'Adelle Sans Book';
-  width: 50%;
+  width: 100%;
 }
 .addresses {
   width: 100%;

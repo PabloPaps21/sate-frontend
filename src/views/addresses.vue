@@ -4,6 +4,7 @@
     <div class="address"
       v-for="address in user.addresses"
       :key="address.id">
+      <div class="remove-button" @click="deleteAddress(address.id)">X</div>
       <div class="address-row">
         {{ address.street }}, {{ address.number_ext }}, {{ address.number_int }}.
       </div>
@@ -21,9 +22,14 @@
 import NewAddress from '@/components/NewAddress.vue';
 import { createNamespacedHelpers } from 'vuex';
 
-const { mapState } = createNamespacedHelpers('user');
+const { mapState, mapActions } = createNamespacedHelpers('user');
 
 export default {
+  methods: {
+    ...mapActions([
+      'deleteAddress',
+    ]),
+  },
   computed: {
     ...mapState([
       'user',
@@ -38,14 +44,21 @@ export default {
 <style lang="scss" scoped>
 .address {
   font-family: 'Adelle Sans Book';
-  border: 1px solid rgb(196, 196, 196);
+  border: 1px solid gray;
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
   padding: 24px;
+  position: relative;
 }
 .new-button {
   margin-bottom: 24px;
+}
+.remove-button {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  cursor: pointer;
 }
 .address-row {
   & + .address-row {

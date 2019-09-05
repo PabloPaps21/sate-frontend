@@ -76,7 +76,7 @@
           Menú de la semana
         </div>
         <div class="week-date">
-          28/ENE/2019
+          {{ startMoment.format('DD/MMM/YY') }} - {{ endMoment.format('DD/MMM/YY') }}
         </div>
         <div class="cita-index">
             Esperamos que encuentres la comida que más se acomode a tus necesidades.
@@ -86,8 +86,22 @@
         </div>
       </div>
     </div>
+    <div class="categories-menu-wrapper">
+      <div class="categories-menu">
+        <div
+          class="category-button"
+          v-for="category in filteredFood"
+          :key="category.id"
+          v-scroll-to="`#category-${category.id}`">
+          {{ category.name }}
+        </div>
+      </div>
+    </div>
     <div class="tags-wrapper">
       <div class="tags">
+        <div class="tags-description">
+          Da clic para filtrar nuestros alimentos segun tus necesidades personales:
+        </div>
         <div
           class="tag"
           v-for="tag in tags"
@@ -98,15 +112,19 @@
         </div>
       </div>
     </div>
-    <div class="category" v-for="category in filteredFood" :key="category.id">
-      <div class="menu-wrapper" v-if="category.products.length > 0">
+    <div
+      class="category"
+      v-for="category in filteredFood"
+      :key="category.id"
+      :id="`category-${category.id}`">
+      <div class="menu-wrapper">
         <div class="menu">
           <div class="menu-title">
             {{ category.name }}
           </div>
         </div>
       </div>
-      <div class="alimentos-wrapper" v-if="category.products.length > 0">
+      <div class="alimentos-wrapper">
         <div class="alimentos">
           <cards
             v-for="product in category.products"
@@ -118,7 +136,7 @@
     </div>
     <div class="completar-wrapper">
       <div class="completar">
-        <router-link to="/resume" class="btn-completar">COMPLETAR PEDIDO</router-link>
+        <router-link to="/checkout" class="btn-completar">COMPLETAR PEDIDO</router-link>
       </div>
     </div>
   </div>
@@ -126,6 +144,7 @@
 
 <script>
 /* global Wistia */
+import moment from 'moment';
 import { createNamespacedHelpers } from 'vuex';
 import cards from '@/components/cards.vue';
 
@@ -144,6 +163,7 @@ export default {
     filteredFood() {
       if (this.selectedTags.length > 0) {
         const result = this.allFood
+          .filter(category => category.products.length > 0)
           .map(category => ({
             id: category.id,
             name: category.name,
@@ -152,7 +172,20 @@ export default {
           }));
         return result;
       }
-      return this.allFood;
+      return this.allFood.filter(category => category.products.length > 0);
+    },
+    startMoment() {
+      const startDate = moment();
+      startDate.day(1);
+      startDate.startOf('day');
+      return startDate;
+    },
+    endMoment() {
+      const endMoment = moment();
+      endMoment.day(7);
+      endMoment.hour(18);
+      endMoment.startOf('hour');
+      return endMoment;
     },
     ...mapState([
       'allFood',
@@ -345,7 +378,6 @@ export default {
   .menu-title {
     font-size: 30px;
     margin-bottom: 30px;
-    margin-top:30px;
     font-family: 'Adelle Sans Book';
     font-weight: normal;
     font-style: normal;
@@ -433,8 +465,13 @@ export default {
   .tags {
     width: 900px;
     display: flex;
-    margin: 10px 0;
+    margin: 10px 0 50px 0;
     flex-wrap: wrap;
+  }
+  .tags-description {
+    width: 100%;
+    font-family: 'Adelle Sans Book';
+    margin-bottom: 10px;
   }
   .tag {
     border: 2px solid #3e4e35;
@@ -476,6 +513,26 @@ export default {
     font-family: 'Strait', sans-serif;
     text-decoration: none;
   }
+  .categories-menu-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #eae5dc;
+  }
+  .categories-menu {
+    width: 900px;
+    display: flex;
+    padding: 14px 0 20px 0;
+    justify-content: center;
+  }
+  .category-button {
+    font-family: 'Strait', sans-serif;
+    padding-bottom: 5px;
+    margin: 0 16px;
+    border-bottom: 2px solid #414f3a;
+    font-size: 20px;
+    cursor: pointer;
+  }
   ///query
   @media screen and (max-width: 980px) {
     .conoce {
@@ -489,8 +546,6 @@ export default {
       & + .video-conoce {
         margin-top: 25px;
       }
-    }
-    .instructions-wrapper {
     }
     .instructions {
       flex-direction: column;
